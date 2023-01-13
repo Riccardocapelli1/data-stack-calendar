@@ -1,4 +1,19 @@
-body {
+/* Titolo */
+h1 {
+    background-color: black;
     color: green;
-    font-family: monospace;
- }
+    font-family: 'Roboto', sans-serif;
+  }
+  
+/* Titoli dei paragrafi */
+h2 {
+    background-color: black;
+    color: green;
+    font-family: 'Open Sans', sans-serif;
+}
+  
+body {
+    background-color: black;
+    color: green;
+    font-family: 'Inconsolata', monospace;
+}
