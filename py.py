@@ -27,11 +27,11 @@ df = df[df['Tweet'].str.contains('event|conference')]
 
 
 def make_link(text):
-    # Cerca una stringa http o https nella variabile text
-    match = re.search("(http|https)://\S+", text)
-    if match:
-        # Se trova una stringa http o https, sostituiscila con un hyperlink
-        text = re.sub(match.group(), f'<a href="{match.group()}">{match.group()}</a>', text)
+    # Cerca tutte le occorrenze di link nella stringa
+    links = re.findall(r'(https?:\/\/\S+)', text)
+    # Sostituisci ogni occorrenza di link con il link cliccabile
+    for link in links:
+        text = text.replace(link, f'<a href="{link}">{link}</a>')
     return text
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
@@ -57,7 +57,9 @@ for _, row in df.iterrows():
         date = row["Time"]
         text = make_link(row["Tweet"])
         
-        html_content += f"  <h2>{user} date: {date}</h2>\n"
+        #html_content += f"  <h2>{user} date: {date}</h2>\n"
+        html_content += f"  <h2 class='right-aligned'>date: {date}</h2>\n"  
+        html_content += f"  <h2{user}\n"
         html_content += f"  <p>{text}</p>\n"
 
 html_content += "</body>\n"
