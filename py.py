@@ -9,14 +9,14 @@ auth.set_access_token(os.environ["ACCESS_TOKEN"], os.environ["ACCESS_TOKEN_SECRE
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 # Crea una lista dei profili di cui vuoi scaricare i tweet
-profiles = ["airflow", "getdbt", "dbt_labs","tableau","microsoft","apachesuperset"]
+profiles = ["apachesuperset","ApacheAirflow","awscloud","AirbyteHQ","Azure","dagster","DataCouncilAI","getdbt","dbt_labs","expectgreatdata","googlecloud","lightdash_devs","tableau","Materialize","meltanodata","montecarlodata","MSPowerBI","PrefectIO","singer_io","SnowflakeDB","thoughtspot","OpenLineage"]
 
 # Crea una lista vuota per i tweet
 tweets = []
 
 # Scarica i tweet dei profili specificati
 for profile in profiles:
-    for tweet in api.user_timeline(screen_name=profile, count=20, include_rts=False, tweet_mode="extended"):
+    for tweet in api.user_timeline(screen_name=profile, count=12, include_rts=False, tweet_mode="extended"):
         tweets.append([tweet.created_at, tweet.user.screen_name, tweet.full_text])
 
 # Crea un dataframe dei tweet scaricati
