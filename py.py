@@ -22,6 +22,9 @@ for profile in profiles:
 # Crea un dataframe dei tweet scaricati
 df = pd.DataFrame(tweets, columns=['Time', 'User', 'Tweet'])
 
+#Conversione della colonna Time
+df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H-%M-S%').dt.strftime('%Y-%m-%d %H-%M')
+
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df = df[df['Tweet'].str.contains('event|conference')]
 
