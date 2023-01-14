@@ -1,17 +1,10 @@
 import tweepy
 import pandas as pd
 import argparse
-import os 
+import os
 
-# Accedi alla secret chiamata "" utilizzando il modulo `parser`
-parser = argparse.ArgumentParser()
-consumer_key = parser.add_argument("consumer_key", type=str, help="consumer_key")
-consumer_secret = parser.add_argument("consumer_secret", type=str, help="consumer_secret")
-access_token = parser.add_argument("access_token", type=str, help="access_token")
-access_token_secret = parser.add_argument("access_token_secret", type=str, help="access_token_secret")
-
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
+auth = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"], os.environ["CONSUMER_SECRET"])
+auth.set_access_token(os.environ["ACCESS_TOKEN"], os.environ["ACCESS_TOKEN_SECRET"])
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 # Crea una lista dei profili di cui vuoi scaricare i tweet
