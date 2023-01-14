@@ -37,7 +37,7 @@ jobs:
         consumer_secret: ${{ secrets.CONSUMER_SECRET }} 
         access_token: ${{ secrets.ACCESS_TOKEN }} 
         access_token_secret: ${{ secrets.ACCESS_TOKEN_SECRET }} 
-      run: python main.py 
+      run: python py.py 
     - name: Update landing page content
       run: |
         git checkout master
