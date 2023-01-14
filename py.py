@@ -64,7 +64,7 @@ for _, row in df.iterrows():
         
         date = row["Time"]
         text = make_link(row["Tweet"])
-        html_content += f"  <h3 date: {date}</h3>\n"  
+        html_content += f" <h3 date='{date}'>{date}</h3>\n"
         html_content += f"  <p>{text}</p>\n"
 
 html_content += "</body>\n"
