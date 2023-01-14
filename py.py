@@ -5,10 +5,10 @@ import os
 
 # Accedi alla secret chiamata "" utilizzando il modulo `parser`
 parser = argparse.ArgumentParser()
-parser.add_argument("consumer_key", required=True, help="consumer_key")
-parser.add_argument("consumer_secret", required=True, help="consumer_secret")
-parser.add_argument("access_token", required=True, help="access_token")
-parser.add_argument("access_token_secret", required=True, help="access_token_secret")
+consumer_key = parser.add_argument("consumer_key", help="consumer_key")
+consumer_secret = parser.add_argument("consumer_secret", help="consumer_secret")
+access_token = parser.add_argument("access_token", help="access_token")
+access_token_secret = parser.add_argument("access_token_secret", help="access_token_secret")
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
