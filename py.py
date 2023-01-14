@@ -1,8 +1,9 @@
 import tweepy
 import pandas as pd
-import argparse
 import os
+import re
 
+# Replace these with your own API keys and secrets
 auth = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"], os.environ["CONSUMER_SECRET"])
 auth.set_access_token(os.environ["ACCESS_TOKEN"], os.environ["ACCESS_TOKEN_SECRET"])
 api = tweepy.API(auth, wait_on_rate_limit=True)
@@ -20,6 +21,18 @@ for profile in profiles:
 
 # Crea un dataframe dei tweet scaricati
 df = pd.DataFrame(tweets, columns=['Time', 'User', 'Tweet'])
+
+# Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
+df = df[df['Tweet'].str.contains('event|conference')]
+
+
+def make_link(text):
+    # Cerca una stringa http o https nella variabile text
+    match = re.search("(http|https)://\S+", text)
+    if match:
+        # Se trova una stringa http o https, sostituiscila con un hyperlink
+        text = re.sub(match.group(), f'<a href="{match.group()}">{match.group()}</a>', text)
+    return text
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df = df[df['Tweet'].str.contains('event|conference')]
@@ -42,7 +55,7 @@ html_content += "  <p>A modern data stack calendar aggregating events and confer
 for _, row in df.iterrows():
         user = row["User"]
         date = row["Time"]
-        text = row["Tweet"]
+        text = make_link(row["Tweet"])
         
         html_content += f"  <h2>{user} date: {date}</h2>\n"
         html_content += f"  <p>{text}</p>\n"
