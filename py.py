@@ -52,15 +52,20 @@ html_content += "<body>\n"
 html_content += "  <h1>Events and conferences list updated every 24H</h1>\n"
 html_content += "  <p>A modern data stack calendar aggregating events and conferences from Twitter for data engineers, analytics engineers and data analysts.</p>\n"
 
+current_user = df.iloc[0]["User"]
+html_content += f"  <h2>{current_user}</h2>\n"
+
 for _, row in df.iterrows():
         user = row["User"]
         date = row["Time"]
         text = make_link(row["Tweet"])
         
-        #html_content += f"  <h2>{user} date: {date}</h2>\n"
-        html_content += f"  <h2 class='right-aligned'>date: {date}</h2>\n"  
-        html_content += f"  <h2{user}\n"
-        html_content += f"  <p>{text}</p>\n"
+        if user != current_user:
+            current_user = user
+            html_content += f"  <h2>{current_user}</h2>\n"
+ 
+            html_content += f"  <h3 date: {date}</h3>\n"  
+            html_content += f"  <p>{text}</p>\n"
 
 html_content += "</body>\n"
 html_content += "</html>\n"
