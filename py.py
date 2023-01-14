@@ -1,11 +1,14 @@
 import tweepy
 import pandas as pd
+import argparse
+import os 
 
-# Autenticazione con le tue chiavi di Twitter
-consumer_key = 'Goowh3AzIK9PpTUpdpnrAQGYp'
-consumer_secret = 'lV0eGyTUJjcSPYLIPJZk2cg1x6MCZjmazXdsolJPMB4R7VSRaQ'
-access_token = '1607466746612531206-qJ3L9tuG9RDyey0E71ZVkiAboGdZ2M'
-access_token_secret = 'y0Irfmbpt8cJFbGY9LEcnVevVWdfzIqpjdbG0ChSawrei'
+# Accedi alla secret chiamata "" utilizzando il modulo `parser`
+parser = argparse.ArgumentParser()
+parser.add_argument("consumer_key", required=True, help="consumer_key")
+parser.add_argument("consumer_secret", required=True, help="consumer_secret")
+parser.add_argument("access_token", required=True, help="access_token")
+parser.add_argument("access_token_secret", required=True, help="access_token_secret")
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
