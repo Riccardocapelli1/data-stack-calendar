@@ -41,8 +41,8 @@ jobs:
       
     - name: Setup Git identity
       run: |
-         git config --global user.email "you@example.com"
-         git config --global user.name "Your Name"
+         git config --global user.email "riccardocapellimi91@gmail.com"
+         git config --global user.name "Riccardocapelli1"
     - name: Update landing page content
       run: |
         git checkout master
