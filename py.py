@@ -23,7 +23,7 @@ for profile in profiles:
 df = pd.DataFrame(tweets, columns=['Time', 'User', 'Tweet'])
 
 #Conversione della colonna Time
-df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H-%M-S%').dt.strftime('%Y-%m-%d %H-%M')
+df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'day: ' + x.strftime('%Y-%m-%d') + '; time: ' + x.strftime('%H:%M'))
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df = df[df['Tweet'].str.contains('event|conference')]
@@ -63,7 +63,7 @@ for _, row in df.iterrows():
         
         if user != current_user:
             current_user = user
-            html_content += f"  <h2>{current_user}</h2>\n"
+            html_content += f"  <h2 class='h2'>{current_user}</h2>\n"
         
         date = row["Time"]
         text = make_link(row["Tweet"])
