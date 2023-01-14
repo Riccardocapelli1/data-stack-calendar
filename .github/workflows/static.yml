@@ -5,38 +5,52 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+    - name: Install dependencies
+      run: |
+        python -m pip install pip
+        python -m pip install tweepy
+        python -m pip install pandas
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Run Python script
+      env: 
+        consumer_key: ${{ secrets.CONSUMER_KEY }} 
+        consumer_secret: ${{ secrets.CONSUMER_SECRET }} 
+        access_token: ${{ secrets.ACCESS_TOKEN }} 
+        access_token_secret: ${{ secrets.ACCESS_TOKEN_SECRET }} 
+      run: python main.py 
+    - name: Update landing page content
+      run: |
+        git checkout master
+        # Modify the content of the landing page using the data extracted by the Python script
+        git commit -a -m "Update landing page content"
+        git push origin master
+    - name: Setup Pages
+      uses: actions/configure-pages@v2
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        # Upload entire repository
+        path: '.'
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
