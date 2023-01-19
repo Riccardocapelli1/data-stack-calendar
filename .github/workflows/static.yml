@@ -1,7 +1,10 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
-
+# Controls when the workflow will run
 on:
+  schedule:
+    # Update theme automatically everyday at 00:00 UTC
+    - cron: "0 0 * * *"
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
