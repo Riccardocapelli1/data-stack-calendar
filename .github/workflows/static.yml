@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   schedule:
     # Update theme automatically everyday at 00:00 UTC
-    - cron: "0 0 * * *"
+    - cron: "30 21 * * *"
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
