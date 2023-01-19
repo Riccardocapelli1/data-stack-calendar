@@ -9,7 +9,7 @@ auth.set_access_token(os.environ["ACCESS_TOKEN"], os.environ["ACCESS_TOKEN_SECRE
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 # Crea una lista dei profili di cui vuoi scaricare i tweet
-profiles = ["AirbyteHQ","ApacheAirflow","apachesuperset","awscloud","Azure","Azure_Synapse","code","dagster","dbt_labs","getdbt","expectgreatdata","github","gitlab","googlecloud","lightdash_devs","Materialize","meltanodata","montecarlodata","MSPowerBI","PrefectIO","singer_io","SnowflakeDB","tableau","thoughtspot","OpenLineage"]
+profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","apachekafka","apachesuperset","awscloud","Azure","Azure_Synapse","code","confluentinc","dask_dev","dagster","dbt_labs","Docker","DeepMind","duckdb","fastdotai","getdbt","grafana","elastic","expectgreatdata","github","gitlab","googlecloud","kubernetesio","lightdash_devs","Materialize","meltanodata","motherduck","montecarlodata","MSPowerBI","numpy_team","OpenAI","OpenLineage","pandas_dev","PyData","ProjectJupyter","PrometheusIO","PrefectIO","singer_io","SnowflakeDB","tableau","thecubejs","thoughtspot"]
 
 # Crea una lista vuota per i tweet
 tweets = []
