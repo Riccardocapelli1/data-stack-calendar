@@ -9,24 +9,24 @@ auth.set_access_token(os.environ["ACCESS_TOKEN"], os.environ["ACCESS_TOKEN_SECRE
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 # Crea una lista dei profili di cui vuoi scaricare i tweet
-profiles = ["apachesuperset","ApacheAirflow","awscloud","AirbyteHQ","Azure","dagster","DataCouncilAI","getdbt","dbt_labs","expectgreatdata","googlecloud","lightdash_devs","tableau","Materialize","meltanodata","montecarlodata","MSPowerBI","PrefectIO","singer_io","SnowflakeDB","thoughtspot","OpenLineage"]
+profiles = ["AirbyteHQ","ApacheAirflow","apachesuperset","awscloud","Azure","Azure_Synapse","code","dagster","dbt_labs","getdbt","expectgreatdata","github","gitlab","googlecloud","lightdash_devs","Materialize","meltanodata","montecarlodata","MSPowerBI","PrefectIO","singer_io","SnowflakeDB","tableau","thoughtspot","OpenLineage"]
 
 # Crea una lista vuota per i tweet
 tweets = []
 
 # Scarica i tweet dei profili specificati
 for profile in profiles:
-    for tweet in api.user_timeline(screen_name=profile, count=30, include_rts=False, tweet_mode="extended"):
+    for tweet in api.user_timeline(screen_name=profile, count=100, include_rts=False, tweet_mode="extended"):
         tweets.append([tweet.created_at, tweet.user.screen_name, tweet.full_text])
 
 # Crea un dataframe dei tweet scaricati
 df = pd.DataFrame(tweets, columns=['Time', 'User', 'Tweet'])
 
 #Conversione della colonna Time
-df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'day: ' + x.strftime('%Y-%m-%d') + '; time: ' + x.strftime('%H:%M'))
+df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df = df[df['Tweet'].str.contains('event|conference')]
+df = df[df['Tweet'].str.contains('event|conference|course|webinar|class')]
 
 
 def make_link(text):
@@ -36,9 +36,6 @@ def make_link(text):
     for link in links:
         text = text.replace(link, f'<a href="{link}">{link}</a>')
     return text
-
-# Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df = df[df['Tweet'].str.contains('event|conference')]
 
 # Crea una stringa vuota per il contenuto del file HTML
 html_content = ""
