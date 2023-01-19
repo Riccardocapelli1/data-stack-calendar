@@ -8,8 +8,10 @@ auth = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"], os.environ["CONSUMER_SECR
 auth.set_access_token(os.environ["ACCESS_TOKEN"], os.environ["ACCESS_TOKEN_SECRET"])
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
+
 # Crea una lista dei profili di cui vuoi scaricare i tweet
-profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","apachekafka","apachesuperset","awscloud","Azure","Azure_Synapse","code","confluentinc","dask_dev","dagster","dbt_labs","Docker","DeepMind","duckdb","fastdotai","getdbt","grafana","elastic","expectgreatdata","github","gitlab","googlecloud","kubernetesio","lightdash_devs","Materialize","meltanodata","motherduck","montecarlodata","MSPowerBI","numpy_team","OpenAI","OpenLineage","pandas_dev","PyData","ProjectJupyter","PrometheusIO","PrefectIO","singer_io","SnowflakeDB","tableau","thecubejs","thoughtspot"]
+profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","apachekafka","apachesuperset","awscloud","Azure","Azure_Synapse","code","confluentinc","dask_dev","dagster","dbt_labs","Docker","DeepMind","duckdb","fastdotai","getdbt","grafana","elastic","expectgreatdata","github","gitlab","googlecloud","kubernetesio","lightdash_devs","Materialize","meltanodata","Metabase","motherduck","montecarlodata","MSPowerBI","numpy_team","OpenAI","OpenLineage","pandas_dev","PyData","ProjectJupyter","PrometheusIO","PrefectIO","singer_io","SnowflakeDB","tableau","thecubejs","thoughtspot"]
+
 
 # Crea una lista vuota per i tweet
 tweets = []
@@ -25,8 +27,10 @@ df = pd.DataFrame(tweets, columns=['Time', 'User', 'Tweet'])
 #Conversione della colonna Time
 df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
 
+
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df = df[df['Tweet'].str.contains('event|conference|course|webinar|class')]
+df = df[df['Tweet'].str.contains('event|conference|learn|webinar|free resources|free courses')]
+df = df[~df['Tweet'].str.contains('of courses')]
 
 
 def make_link(text):
