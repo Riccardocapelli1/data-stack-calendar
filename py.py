@@ -31,9 +31,8 @@ df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda
 df["User"] = df["User"].str.upper()
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df = df[df['Tweet'].str.contains('event |event?|event!|event!|event.|event:|event,|event;|conference|Podcast|podcast|Badge|badge|certific|webinar|free resources|free courses|free learning')]
-df = df[~df['Tweet'].str.contains('of courses|event log|blog post')]
-
+df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Podcast|podcast|Badge|badge|Certific|certific|Webinar|webinar|free resources|free courses|free learning')]
+df = df[~df['Tweet'].str.contains('of courses|event log|blog post|steven')]
 
 def make_link(text):
     # Cerca tutte le occorrenze di link nella stringa
