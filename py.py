@@ -77,6 +77,9 @@ for _, row in df.iterrows():
         html_content += f"  <p>{text}</p>\n"
 
 html_content += "</body>\n"
+html_content += "<footer>\n"
+html_content += "  <p>made with love for the community by Riccardo</p>\n"
+html_content += "</footer>\n"
 html_content += "</html>\n"
 
 with open("./index.html", "w") as f:
