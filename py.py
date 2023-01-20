@@ -32,7 +32,7 @@ df["User"] = df["User"].str.upper()
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df = df[df['Tweet'].str.contains('event|conference|podcast|badge|certific|webinar|free resources|free courses|free learning')]
-df = df[~df['Tweet'].str.contains('of courses|event log')]
+df = df[~df['Tweet'].str.contains('of courses|event log|blog post')]
 
 
 def make_link(text):
