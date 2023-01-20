@@ -53,7 +53,7 @@ html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
 #insert top button
-html_content += "  <button id="top-button">Torna in cima</button>\n"
+html_content += "  <button id='top-button'>Torna in cima</button>\n"
 
 html_content += "  <title>Modern-data-stack events and conferences for the analytics community</title>\n"
 html_content += "</head>\n"
