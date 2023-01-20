@@ -49,6 +49,7 @@ html_content  = "<!DOCTYPE html>\n"
 html_content += "<html>\n"
 html_content += "<head>\n"
 html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css'>\n"
+html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
 html_content += "  <title>Modern-data-stack events and conferences for the analytics community</title>\n"
 html_content += "</head>\n"
@@ -57,7 +58,8 @@ html_content += "  <h1>Events and conferences list updated every 24H</h1>\n"
 html_content += "  <p>A modern data stack calendar aggregating events and conferences from Twitter for data engineers, analytics engineers and data analysts.</p>\n"
 
 current_user = df.iloc[0]["User"]
-html_content += f"  <h2>{current_user}</h2>\n"
+#html_content += f"  <h2>{current_user}</h2>\n"
+html_content += f"  <h2 class='h2' style='font-weight: bold; text-transform: uppercase; margin: 2em 0;'>{current_user}</h2>\n"
 
 for _, row in df.iterrows():
         user = row["User"]
