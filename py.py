@@ -58,18 +58,29 @@ html_content += "<body>\n"
 html_content += "  <h1>Events and conferences list updated every 24H</h1>\n"
 html_content += "  <p>A modern data stack calendar aggregating events and conferences from Twitter for data engineers, analytics engineers and data analysts.</p>\n"
 
-current_user = df.iloc[0]["User"]
-#html_content += f"  <h2>{current_user}</h2>\n"
-html_content += f"  <h2 class='h2' style='font-weight: bold; text-transform: uppercase; margin: 2em 0;'>{current_user}</h2>\n"
-
+# Utilizza un ciclo for per aggiungere gli utenti al dizionario e tenere traccia della loro posizione nell'HTML
+pos = 0
 for _, row in df.iterrows():
-        user = row["User"]
-        
-        if user != current_user:
-            current_user = user
-            #html_content += f"  <h2 class='h2'>{current_user}</h2>\n"
-            html_content += f"  <h2 class='h2' style='font-weight: bold; text-transform: uppercase; margin: 2em 0;'>{current_user}</h2>\n"
-        
+    user = row["User"]
+    if user not in user:
+        user[user] = pos
+        pos += 1
+
+# Utilizza un ciclo for per creare un elenco di link agli utenti nell'HTML
+html_content += "  <h3>Index of users</h3>\n"
+html_content += "  <ul>\n"
+for user in user:
+    html_content += f"    <li><a href='#user{user[user]}'>{user}</a></li>\n"
+html_content += "  </ul>\n"
+
+# Utilizza un ciclo for per iterare attraverso ogni riga del dataframe
+index_user = df.iloc[0]["User"]
+for _, row in df.iterrows():
+    user = row["User"]
+    if user != index_user:
+        index_user = user
+        # Crea un'ancora per ogni utente nell'HTML
+        html_content += f"  <h2 class='h2' style='font-weight: bold; text-transform: uppercase; margin: 2em 0;' id='user{index_user[user]}'>{user}</h2>\n"        
         date = row["Time"]
         text = make_link(row["Tweet"])
         html_content += f" <h3 date='{date}'>{date}</h3>\n"
