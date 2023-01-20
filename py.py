@@ -83,7 +83,8 @@ for _, row in df.iterrows():
     if user != current_user:
         current_user = user
         # Crea un'ancora per ogni utente nell'HTML
-        html_content += f"  <h2 class='h2' style='font-weight: bold; text-transform: uppercase; margin: 2em 0;' id='user{users_dict[user]}'>{user}</h2>\n"        date = row["Time"]
+        html_content += f"  <h2 class='h2' style='font-weight: bold; text-transform: uppercase; margin: 2em 0;' id='user{users_dict[user]}'>{user}</h2>\n"        
+        date = row["Time"]
         text = make_link(row["Tweet"])
         html_content += f" <h3 date='{date}'>{date}</h3>\n"
         html_content += f"  <p>{text}</p>\n"
