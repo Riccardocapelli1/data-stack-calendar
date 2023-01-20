@@ -10,7 +10,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 
 
 # Crea una lista dei profili di cui vuoi scaricare i tweet
-profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","apachesuperset","awscloud","Azure","Azure_Synapse","ClickHouseDB","code","confluentinc","dask_dev","dagster","dbt_labs","DeepMind","Docker","druidio","duckdb","elastic","expectgreatdata","fastdotai","getdbt","github","gitlab","googlecloud","grafana","ksqlDB","kubernetesio","lightdash_devs","mariadb","Materialize","meltanodata","Metabase","MySQL","motherduck","montecarlodata","MSPowerBI","numpy_team","OpenAI","OpenLineage","pandas_dev","PyData","PostgreSQL","ProjectJupyter","PrometheusIO","PrefectIO","ScyllaDB","singer_io","SnowflakeDB","SQLServer","tableau","thecubejs","thoughtspot"]
+profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","apachesuperset","awscloud","Azure","Azure_Synapse","ClickHouseDB","code","confluentinc","dask_dev","dagster","dbt_labs","DeepMind","Docker","druidio","duckdb","elastic","expectgreatdata","fastdotai","getdbt","github","gitlab","googlecloud","grafana","ksqlDB","kubernetesio","lightdash_devs","mariadb","Materialize","meltanodata","Metabase","MySQL","motherduck","montecarlodata","MSPowerBI","numpy_team","pandas_dev","PyData","PostgreSQL","ProjectJupyter","PrefectIO","ScyllaDB","singer_io","SnowflakeDB","SQLServer","tableau","thecubejs","thoughtspot"]
 
 
 # Crea una lista vuota per i tweet
@@ -31,7 +31,7 @@ df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda
 df["User"] = df["User"].str.upper()
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df = df[df['Tweet'].str.contains('event|conference|podcast|badge|certific|webinar|free resources|free courses|free learning')]
+df = df[df['Tweet'].str.contains('event |event?|event!|event!|event.|event:|event,|event;|conference|Podcast|podcast|Badge|badge|certific|webinar|free resources|free courses|free learning')]
 df = df[~df['Tweet'].str.contains('of courses|event log|blog post')]
 
 
