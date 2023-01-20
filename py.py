@@ -83,7 +83,7 @@ html_content += "  </ul>\n"
 # Utilizza un ciclo for per iterare attraverso ogni riga del dataframe
 current_user = df.iloc[0]["User"]
 for _, row in df.iterrows():
-    user = row["User"]
+user = row["User"]
     #if user != current_user:
     current_user = user
     
@@ -96,7 +96,7 @@ for _, row in df.iterrows():
 
 html_content += "</body>\n"
 html_content += "<footer>\n"
-html_content += "  <p>made with love for the community by Riccardo</p>\n"
+html_content += "  <p>Made with love for the community by Riccardo</p>\n"
 html_content += "</footer>\n"
 html_content += "</html>\n"
 
