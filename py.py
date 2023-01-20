@@ -10,7 +10,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 
 
 # Crea una lista dei profili di cui vuoi scaricare i tweet
-profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","apachekafka","apachesuperset","awscloud","Azure","Azure_Synapse","code","confluentinc","dask_dev","dagster","dbt_labs","Docker","DeepMind","duckdb","fastdotai","getdbt","grafana","elastic","expectgreatdata","github","gitlab","googlecloud","kubernetesio","lightdash_devs","Materialize","meltanodata","Metabase","motherduck","montecarlodata","MSPowerBI","numpy_team","OpenAI","OpenLineage","pandas_dev","PyData","ProjectJupyter","PrometheusIO","PrefectIO","singer_io","SnowflakeDB","tableau","thecubejs","thoughtspot"]
+profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","apachesuperset","awscloud","Azure","Azure_Synapse","ClickHouseDB","code","confluentinc","dask_dev","dagster","dbt_labs","DeepMind","Docker","druidio","duckdb","elastic","expectgreatdata","fastdotai","getdbt","github","gitlab","googlecloud","grafana","ksqlDB","kubernetesio","lightdash_devs","mariadb","Materialize","meltanodata","Metabase","MySQL","motherduck","montecarlodata","MSPowerBI","numpy_team","OpenAI","OpenLineage","pandas_dev","PyData","PostgreSQL","ProjectJupyter","PrometheusIO","PrefectIO","ScyllaDB","singer_io","SnowflakeDB","SQLServer","tableau","thecubejs","thoughtspot"]
 
 
 # Crea una lista vuota per i tweet
