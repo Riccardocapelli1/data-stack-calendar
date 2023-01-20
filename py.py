@@ -70,7 +70,7 @@ for _, row in df.iterrows():
         pos += 1
 
 # Utilizza un ciclo for per creare un elenco di link agli utenti nell'HTML
-html_content += "  <h3>Index of users</h3>\n"
+html_content += "  <h3>List of Authors</h3>\n"
 html_content += "  <ul>\n"
 for user in users_dict:
     html_content += f"    <li><a href='#user{users_dict[user]}'>{user}</a></li>\n"

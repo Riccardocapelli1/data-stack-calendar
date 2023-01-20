@@ -1,10 +1,10 @@
 
 body {
-  background-color: black;
+  background-color: rgb(37, 26, 26);
 }
 
 body, p, h1, h2, h3 {
-  color: white;
+  color: rgb(235, 201, 201);
   font: "mono-space"
 }
 
@@ -14,6 +14,26 @@ body, p, h1, h2, h3 {
 
 .header {
   margin-top: 10px;
+}
+
+/* Imposta il colore dei link su azzurro chiaro */
+a {
+  color: rgb(75, 209, 243);
+}
+
+/* Imposta un colore diverso per i link quando vengono passati con il mouse */
+a:hover {
+  color: rgb(0, 102, 255);
+}
+
+/* Imposta un colore diverso per i link quando vengono cliccati */
+a:active {
+  color: green;
+}
+
+/* Imposta un colore diverso per i link già visitati */
+a:visited {
+  color: purple;
 }
 
 @media only screen and (max-width: 600px) {
