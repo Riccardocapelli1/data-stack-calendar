@@ -1,5 +1,23 @@
+
 body {
-    background-color: black;
-    color: green;
-    font-family: monospace;
- }
+  background-color: black;
+}
+
+body, p, h1, h2, h3 {
+  color: white;
+}
+
+.container {
+  margin: 20px;
+}
+
+.header {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    margin: 10px;
+  }
+}
