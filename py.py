@@ -69,25 +69,22 @@ for _, row in df.iterrows():
         users_dict[user] = pos
         pos += 1
 
-# Utilizza un ciclo for per creare un elenco di link agli utenti nell'HTML
+#Utilizza un ciclo for per creare un elenco di link agli utenti nell'HTML
 html_content += "  <h3>List of Authors</h3>\n"
 html_content += "  <ul>\n"
 for user in users_dict:
     html_content += f"    <li><a href='#user{users_dict[user]}'>{user}</a></li>\n"
 html_content += "  </ul>\n"
 
-# Utilizza un ciclo for per iterare attraverso ogni riga del dataframe
 current_user = df.iloc[0]["User"]
+# Crea un'ancora per ogni utente nell'HTML
+html_content += f"  <h2 class='h2' style='font-weight: bold; text-transform: uppercase; margin: 2em 0;' id='user{users_dict[user]}'>{current_user}</h2>\n"
+
 for _, row in df.iterrows():
-    user = row["User"]
-    if user != current_user:
-        current_user = user
-        # Crea un'ancora per ogni utente nell'HTML
-        html_content += f"  <h2 class='h2' style='font-weight: bold; text-transform: uppercase; margin: 2em 0;' id='user{users_dict[user]}'>{user}</h2>\n"        
-        date = row["Time"]
-        text = make_link(row["Tweet"])
-        html_content += f" <h3 date='{date}'>{date}</h3>\n"
-        html_content += f"  <p>{text}</p>\n"
+    date = row["Time"]
+    text = make_link(row["Tweet"])
+    html_content += f" <h3 date='{date}'>{date}</h3>\n"
+    html_content += f"  <p>{text}</p>\n"
 
 html_content += "</body>\n"
 html_content += "<footer>\n"
