@@ -1,11 +1,3 @@
-#top-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(37, 26, 26);
-    color: white;
-}
-
 body {
   background-color: rgb(37, 26, 26);
 }

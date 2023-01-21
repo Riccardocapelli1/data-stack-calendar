@@ -54,7 +54,7 @@ html_content += "  <meta name='viewport' content='width=device-width, initial-sc
 html_content += "  <script src='assets/script.js'></script>\n"
 #insert top button
 #html_content += "  <button id='top-button'>Back to top</button>\n"
-html_content += "  <button id='top-button'><i class='fas fa-arrow-up'></i></button>\n"
+#html_content += "  <button id='top-button'><i class='fas fa-arrow-up'></i></button>\n"
 
 html_content += "  <title>Modern-data-stack events and conferences for the analytics community</title>\n"
 html_content += "</head>\n"
