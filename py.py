@@ -52,15 +52,11 @@ html_content += "<head>\n"
 html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css'>\n"
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
-#insert top button
-#html_content += "  <button id='top-button'>Back to top</button>\n"
-#html_content += "  <button id='top-button'><i class='fas fa-arrow-up'></i></button>\n"
 
-html_content += "  <title>Modern-data-stack events and conferences for the analytics community</title>\n"
+html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 html_content += "</head>\n"
 html_content += "<body>\n"
-html_content += "  <h1>Events and conferences list updated every 24H</h1>\n"
-#html_content += "  <p>A modern data stack calendar aggregating events and conferences from Twitter for data engineers, analytics engineers and data analysts.</p>\n"
+html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
 html_content += "  <p>A tweet aggregator site dysplaying events, conferences, podcast, traingings that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
 
 #, Crea un dizionario vuoto per gli utenti
