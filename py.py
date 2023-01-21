@@ -60,9 +60,10 @@ html_content += "  <title>Modern-data-stack events and conferences for the analy
 html_content += "</head>\n"
 html_content += "<body>\n"
 html_content += "  <h1>Events and conferences list updated every 24H</h1>\n"
-html_content += "  <p>A modern data stack calendar aggregating events and conferences from Twitter for data engineers, analytics engineers and data analysts.</p>\n"
+#html_content += "  <p>A modern data stack calendar aggregating events and conferences from Twitter for data engineers, analytics engineers and data analysts.</p>\n"
+html_content += "  <p>A tweet aggregator site dysplaying events, conferences, podcast, traingings that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
 
-# Crea un dizionario vuoto per gli utenti
+#, Crea un dizionario vuoto per gli utenti
 users_dict = {}
 
 # Utilizza un ciclo for per aggiungere gli utenti al dizionario e tenere traccia della loro posizione nell'HTML
