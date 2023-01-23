@@ -71,7 +71,8 @@ columns=['date', 'occurrence', 'keyword']
 df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
 # Crea il grafico utilizzando Plotly
-fig = px.line(df3, x='date' , y='occurrence', color='keyword')
+#fig = px.line(df3, x='date' , y='occurrence', color='keyword')
+fig = px.area(df3, facet_col='occurrence', facet_col_wrap=2)
 
 def make_link(text):
     # Cerca tutte le occorrenze di link nella stringa
