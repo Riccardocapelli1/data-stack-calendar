@@ -43,24 +43,24 @@ df = df[~df['Tweet'].str.contains('of courses|event log|blog post|steven')]
 df2 = df.copy()
 
 # aggiungere una colonna "keyword" vuota
-df2["keyword"] = ""
+df2['keyword' ] = ""
 
 # aggiungere una colonna "date" con la data e ora attuali
-df2["date"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+df2['date'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # ciclo for per verificare se una stringa contiene una parola chiave
 for index, row in df2.iterrows():
-    Tweet = row["Tweet"]
+    Tweet = row['Tweet']
     for keyword in keywords:
         if keyword in Tweet:
             df2.at[index, "keyword"] = keyword
             break
 
 # eliminare righe senza keyword
-df2 = df2[df2["keyword"] != ""]
+df2 = df2[df2['keyword'] != ""]
 
 # raggruppare i dati per data e keyword e contare le occorrenze
-df2 = df2.groupby(["date", "keyword"]).size().reset_index(name="occurrence")
+df2 = df2.groupby(['date', 'keyword']).size().reset_index(name='occurrence')
 
 # salvare i dati in un file csv
 df2.to_csv("tweet_data.csv", mode='a', header=False, index=False)
@@ -69,7 +69,7 @@ df2.to_csv("tweet_data.csv", mode='a', header=False, index=False)
 df3 = pd.read_csv("tweet_data.csv")
 
 # Crea il grafico utilizzando Plotly
-fig = px.line(df3, x="date", y="occurrence", color="keyword")
+fig = px.line(df3, x='date' , y='occurrence', color='keyword')
 
 def make_link(text):
     # Cerca tutte le occorrenze di link nella stringa
