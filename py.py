@@ -66,7 +66,9 @@ df2 = df2.groupby(['date', 'keyword']).size().reset_index(name='occurrence')
 df2.to_csv("tweet_data.csv", mode='a', header=False, index=False)
 
 # Leggi i dati dal file CSV
-df3 = pd.read_csv("tweet_data.csv")
+#df3 = pd.read_csv("tweet_data.csv")
+columns=['date', 'occurrence', 'keyword'] 
+df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
 # Crea il grafico utilizzando Plotly
 fig = px.line(df3, x='date' , y='occurrence', color='keyword')
