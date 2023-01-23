@@ -3,7 +3,8 @@ import pandas as pd
 import os
 import re
 from datetime import datetime
-import plotly.express as px
+#import plotly.express as px
+import matplotlib.pyplot as plt
 
 
 # Replace these with your own API keys and secrets
@@ -72,7 +73,20 @@ df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
 # Crea il grafico utilizzando Plotly
 #fig = px.line(df3, x='date' , y='occurrence', color='keyword')
-fig = px.area(df3, facet_col='occurrence', facet_col_wrap=2)
+
+# Crea un grafico a linee per ogni keyword
+for keyword in df3["keyword"].unique():
+    keyword_data = df3[df3["keyword"] == keyword]
+    plt.plot(keyword_data["date"], keyword_data["occurrence"], label=keyword)
+
+# Aggiungi una legenda e titoli
+plt.legend()
+plt.xlabel("Date")
+plt.ylabel("Occurrence")
+plt.title("Occurrence of keywords in tweets")
+
+# Salva il grafico in un file PNG
+plt.savefig("assets/tweet_data.png")
 
 def make_link(text):
     # Cerca tutte le occorrenze di link nella stringa
@@ -95,7 +109,9 @@ html_content += "  <script src='assets/script.js'></script>\n"
 
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 # Genera il codice HTML per incorporare il grafico nel tuo file HTML
-html_content += fig.to_html()
+#html_content += fig.to_html()
+html_content += "<img src='assets/tweet_data.png'>"
+
 html_content += "</head>\n"
 html_content += "<body>\n"
 html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
