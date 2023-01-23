@@ -50,6 +50,7 @@ jobs:
     - name: Update landing page content
       run: |
         git checkout master
+        git add --all
         # Modify the content of the landing page using the data extracted by the Python script
         git commit -a -m "Update landing page content"
         git push origin master
