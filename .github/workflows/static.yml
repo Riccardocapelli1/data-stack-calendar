@@ -32,7 +32,7 @@ jobs:
         python -m pip install pip
         python -m pip install tweepy
         python -m pip install pandas
-        python -m pip install plotly
+        python -m pip install matplotlib
     - name: Checkout
       uses: actions/checkout@v2
     - name: Run Python script
