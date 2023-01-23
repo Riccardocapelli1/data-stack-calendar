@@ -74,7 +74,11 @@ df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 # Crea il grafico utilizzando Plotly
 #fig = px.line(df3, x='date' , y='occurrence', color='keyword')
 
-# Crea un grafico a linee per ogni keyword
+# imposta lo sfondo del grafico con il colore RGB desiderato
+plt.style.use('dark_background')
+fig, ax = plt.subplots()
+fig.set_facecolor((37/255, 26/255, 26/255))
+
 for keyword in df3["keyword"].unique():
     keyword_data = df3[df3["keyword"] == keyword]
     plt.plot(keyword_data["date"], keyword_data["occurrence"], label=keyword)
