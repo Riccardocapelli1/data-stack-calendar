@@ -46,7 +46,7 @@ df2 = df.copy()
 df2['keyword' ] = ""
 
 # aggiungere una colonna "date" con la data e ora attuali
-df2['date'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+df2['date'] = datetime.now().strftime("%Y-%m-%d")
 
 # ciclo for per verificare se una stringa contiene una parola chiave
 for index, row in df2.iterrows():
