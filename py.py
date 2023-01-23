@@ -50,9 +50,9 @@ df2["date"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # ciclo for per verificare se una stringa contiene una parola chiave
 for index, row in df2.iterrows():
-    text = row["text"]
+    Tweet = row["Tweet"]
     for keyword in keywords:
-        if keyword in text:
+        if keyword in Tweet:
             df2.at[index, "keyword"] = keyword
             break
 
