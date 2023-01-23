@@ -66,10 +66,10 @@ df2 = df2.groupby(["date", "keyword"]).size().reset_index(name="occurrence")
 df2.to_csv("tweet_data.csv", mode='a', header=False, index=False)
 
 # Leggi i dati dal file CSV
-df = pd.read_csv("tweet_data.csv")
+df3 = pd.read_csv("tweet_data.csv")
 
 # Crea il grafico utilizzando Plotly
-fig = px.line(df, x="date", y="occurrence", color="keyword")
+fig = px.line(df3, x="date", y="occurrence", color="keyword")
 
 def make_link(text):
     # Cerca tutte le occorrenze di link nella stringa
