@@ -2,6 +2,9 @@ import tweepy
 import pandas as pd
 import os
 import re
+from datetime import datetime
+import plotly.express as px
+
 
 # Replace these with your own API keys and secrets
 auth = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"], os.environ["CONSUMER_SECRET"])
@@ -9,9 +12,11 @@ auth.set_access_token(os.environ["ACCESS_TOKEN"], os.environ["ACCESS_TOKEN_SECRE
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 
-# Crea una lista dei profili di cui vuoi scaricare i tweet
+#df Crea una lista dei profili di cui vuoi scaricare i tweet
 profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","apachesuperset","awscloud","Azure","Azure_Synapse","ClickHouseDB","code","confluentinc","dask_dev","dagster","dbt_labs","DeepMind","Docker","druidio","duckdb","elastic","expectgreatdata","fastdotai","getdbt","github","gitlab","googlecloud","grafana","ksqlDB","kubernetesio","lightdash_devs","mariadb","Materialize","meltanodata","Metabase","MySQL","motherduck","montecarlodata","MSPowerBI","numpy_team","pandas_dev","PyData","PostgreSQL","ProjectJupyter","PrefectIO","ScyllaDB","singer_io","SnowflakeDB","SQLServer","tableau","thecubejs","thoughtspot"]
 
+#df2 definire le keyword da cercare
+keywords = ["conference", "event", "podcast", "course", "training", "badge"]
 
 # Crea una lista vuota per i tweet
 tweets = []
@@ -34,6 +39,38 @@ df["User"] = df["User"].str.upper()
 df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Podcast|podcast|Badge|badge|Certific|certific|Webinar|webinar|free resources|free courses|free learning')]
 df = df[~df['Tweet'].str.contains('of courses|event log|blog post|steven')]
 
+# creare una copia del dataframe
+df2 = df.copy()
+
+# aggiungere una colonna "keyword" vuota
+df2["keyword"] = ""
+
+# aggiungere una colonna "date" con la data e ora attuali
+df2["date"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+# ciclo for per verificare se una stringa contiene una parola chiave
+for index, row in df2.iterrows():
+    text = row["text"]
+    for keyword in keywords:
+        if keyword in text:
+            df2.at[index, "keyword"] = keyword
+            break
+
+# eliminare righe senza keyword
+df2 = df2[df2["keyword"] != ""]
+
+# raggruppare i dati per data e keyword e contare le occorrenze
+df2 = df2.groupby(["date", "keyword"]).size().reset_index(name="occurrence")
+
+# salvare i dati in un file csv
+df2.to_csv("tweet_data.csv", mode='a', header=False, index=False)
+
+# Leggi i dati dal file CSV
+df = pd.read_csv("tweet_data.csv")
+
+# Crea il grafico utilizzando Plotly
+fig = px.line(df, x="date", y="occurrence", color="keyword")
+
 def make_link(text):
     # Cerca tutte le occorrenze di link nella stringa
     links = re.findall(r'(https?:\/\/\S+)', text)
@@ -54,6 +91,8 @@ html_content += "  <meta name='viewport' content='width=device-width, initial-sc
 html_content += "  <script src='assets/script.js'></script>\n"
 
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
+# Genera il codice HTML per incorporare il grafico nel tuo file HTML
+html_content += fig.to_html()
 html_content += "</head>\n"
 html_content += "<body>\n"
 html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
