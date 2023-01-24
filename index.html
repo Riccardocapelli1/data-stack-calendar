@@ -4,7 +4,41 @@
   <link rel='stylesheet' type='text/css' href='assets/style.css'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <script src='assets/script.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js'></script>
   <title>Hacked-data-stack intel for the data and analytics communities</title>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    datasets: [
+{ label: '1', data: [{x: '2023-01-23 23:37:02', y: badge},{x: '2023-01-23 23:37:02', y: training},{x: '2023-01-23 23:40:52', y: badge},{x: '2023-01-23 23:40:52', y: training},{x: '2023-01-23 23:56:14', y: badge},{x: '2023-01-23 23:56:14', y: training},{x: '2023-01-24 00:14:15', y: badge},{x: '2023-01-24 00:14:15', y: training},{x: '2023-01-24 20:05:32', y: badge},{x: '2023-01-24 20:05:32', y: training},{x: '2023-01-24 20:26:33', y: badge},{x: '2023-01-24 20:26:33', y: training}]},
+{ label: '27', data: [{x: '2023-01-23 23:37:02', y: conference},{x: '2023-01-23 23:40:52', y: conference},{x: '2023-01-23 23:56:14', y: conference},{x: '2023-01-24 00:14:15', y: conference}]},
+{ label: '2', data: [{x: '2023-01-23 23:37:02', y: course},{x: '2023-01-23 23:40:52', y: course},{x: '2023-01-23 23:56:14', y: course},{x: '2023-01-24 00:14:15', y: course},{x: '2023-01-24 20:05:32', y: course},{x: '2023-01-24 20:26:33', y: course}]},
+{ label: '78', data: [{x: '2023-01-23 23:37:02', y: event},{x: '2023-01-23 23:40:52', y: event},{x: '2023-01-23 23:56:14', y: event},{x: '2023-01-24 00:14:15', y: event}]},
+{ label: '11', data: [{x: '2023-01-23 23:37:02', y: podcast},{x: '2023-01-23 23:40:52', y: podcast},{x: '2023-01-23 23:56:14', y: podcast},{x: '2023-01-24 00:14:15', y: podcast},{x: '2023-01-24 20:05:32', y: podcast},{x: '2023-01-24 20:26:33', y: podcast}]},
+{ label: '26', data: [{x: '2023-01-24 20:05:32', y: conference},{x: '2023-01-24 20:26:33', y: conference}]},
+{ label: '79', data: [{x: '2023-01-24 20:05:32', y: event},{x: '2023-01-24 20:26:33', y: event}]}
+    ]
+  },
+  options: {
+ scales: {
+ xAxes: [{
+ type: 'time',
+ time: { unit: 'day' }
+ }],
+ yAxes: [{
+ ticks: {
+ beginAtZero: true
+ }
+ }]
+ }
+ }
+});
+</script>
+<div class='container'>
+<canvas id='myChart'></canvas>
+</div>
 </head>
 <body>
   <h1>Events, conferences, podcast and training list up-to-date</h1>
