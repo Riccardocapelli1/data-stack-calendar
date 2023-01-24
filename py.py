@@ -80,7 +80,8 @@ plt.style.use('dark_background')
 fig, ax = plt.subplots()
 fig.set_facecolor((37/255, 26/255, 26/255))
 
-#for keyword in df3["keyword"].unique():
+#iterate over keyword values found
+for keyword in df3["keyword"].unique():
     keyword_data = df3[df3["keyword"] == keyword]
     plt.plot(keyword_data["date"], keyword_data["occurrence"], label=keyword)
 
