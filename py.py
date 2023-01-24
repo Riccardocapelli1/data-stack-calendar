@@ -70,61 +70,6 @@ df2.to_csv("tweet_data.csv", mode='a', header=False, index=False)
 columns=['date', 'occurrence', 'keyword'] 
 df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
-### Crea il grafico utilizzando Plotly
-#fig = px.line(df3, x='date' , y='occurrence', color='keyword')
-
-
-### Crea il grafico utilizzando Matplotlib
-# imposta lo sfondo del grafico con il colore RGB desiderato
-plt.style.use('dark_background')
-fig, ax = plt.subplots()
-fig.set_facecolor((37/255, 26/255, 26/255))
-
-#iterate over keyword values found
-for keyword in df3["keyword"].unique():
-    #keyword_data = df3[df3["keyword"] == keyword]
-    #plt.plot(keyword_data["date"], keyword_data["occurrence"], label=keyword) 
-    keyword_date = df3[df3["date"] == date]
-    keyword_data = df3[df3["occurrence"] == occurrence]
-    plt.plot(keyword_date["date"], keyword_data["occurrence"], label=keyword)
- 
-
-# Aggiungi una legenda e titoli
-plt.legend()
-plt.xlabel("Date")
-plt.ylabel("Occurrence")
-plt.title("Occurrence of keywords in tweets")
-
-# Salva il grafico in un file PNG
-plt.savefig("assets/tweet_data.png")
-
-
-### Crea il grafico utilizzando Plotly
-# Crea una lista di colori per ogni keyword
-colors = {
-    "conference": "rgb(37, 26, 26)",
-    "event": "rgb(37, 26, 26)",
-    "podcast": "rgb(37, 26, 26)",
-    "course": "rgb(37, 26, 26)",
-    "training": "rgb(37, 26, 26)",
-    "badge": "rgb(37, 26, 26)"
-}
-
-# Crea un grafico a area per ogni keyword
-fig = px.area(df3, x='date', y='occurrence', color='keyword', color_discrete_map=colors)
-
-# Modifica l'aspetto del grafico
-fig.update_layout(
-    paper_bgcolor='rgb(37, 26, 26)',
-    plot_bgcolor='rgb(37, 26, 26)',
-    xaxis_title="Date",
-    yaxis_title="Occurrence"
-)
-
-# Salva il grafico in un file HTML
-fig.write_html("tweet_data.html")
-###
-
 # crea contenuto html principale
 def make_link(text):
     # Cerca tutte le occorrenze di link nella stringa
@@ -146,10 +91,6 @@ html_content += "  <meta name='viewport' content='width=device-width, initial-sc
 html_content += "  <script src='assets/script.js'></script>\n"
 
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
-# Genera il codice HTML per incorporare il grafico nel tuo file HTML
-#html_content += fig.to_html()
-html_content += "<img src='assets/tweet_data.png' width='400' height='300'>"
-#html_content += "  <iframe src='tweet_data.html' width='400' height='300'></iframe>"
 
 html_content += "</head>\n"
 html_content += "<body>\n"
