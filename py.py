@@ -4,7 +4,7 @@ import os
 import re
 from datetime import datetime
 import plotly.express as px
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 
 # Replace these with your own API keys and secrets
@@ -67,7 +67,6 @@ df2 = df2.groupby(['date', 'keyword']).size().reset_index(name='occurrence')
 df2.to_csv("tweet_data.csv", mode='a', header=False, index=False)
 
 # Leggi i dati dal file CSV
-#df3 = pd.read_csv("tweet_data.csv")
 columns=['date', 'occurrence', 'keyword'] 
 df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
@@ -77,22 +76,23 @@ df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
 ### Crea il grafico utilizzando Matplotlib
 # imposta lo sfondo del grafico con il colore RGB desiderato
-#plt.style.use('dark_background')
-#fig, ax = plt.subplots()
-#fig.set_facecolor((37/255, 26/255, 26/255))
-#
+plt.style.use('dark_background')
+fig, ax = plt.subplots()
+fig.set_facecolor((37/255, 26/255, 26/255))
+
 #for keyword in df3["keyword"].unique():
-#    keyword_data = df3[df3["keyword"] == keyword]
-#    plt.plot(keyword_data["date"], keyword_data["occurrence"], label=keyword)
+    keyword_data = df3[df3["keyword"] == keyword]
+    plt.plot(keyword_data["date"], keyword_data["occurrence"], label=keyword)
 
 # Aggiungi una legenda e titoli
-#plt.legend()
-#plt.xlabel("Date")
-#plt.ylabel("Occurrence")
-#plt.title("Occurrence of keywords in tweets")
+plt.legend()
+plt.xlabel("Date")
+plt.ylabel("Occurrence")
+plt.title("Occurrence of keywords in tweets")
 
 # Salva il grafico in un file PNG
-#plt.savefig("assets/tweet_data.png")
+plt.savefig("assets/tweet_data.png")
+
 
 ### Crea il grafico utilizzando Plotly
 # Crea una lista di colori per ogni keyword
@@ -143,8 +143,8 @@ html_content += "  <script src='assets/script.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 # Genera il codice HTML per incorporare il grafico nel tuo file HTML
 #html_content += fig.to_html()
-#html_content += "<img src='assets/tweet_data.png'>"
-html_content += "  <iframe src='tweet_data.html' width='400' height='300'></iframe>"
+html_content += "<img src='assets/tweet_data.png' width='400' height='300'>"
+#html_content += "  <iframe src='tweet_data.html' width='400' height='300'></iframe>"
 
 html_content += "</head>\n"
 html_content += "<body>\n"
