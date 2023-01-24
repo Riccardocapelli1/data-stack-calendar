@@ -70,6 +70,25 @@ df2.to_csv("tweet_data.csv", mode='a', header=False, index=False)
 columns=['date', 'occurrence', 'keyword'] 
 df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
+###
+# Crea una stringa vuota per i dati del grafico
+chart_data = ""
+
+# Ciclo for per generare i dati del grafico per ogni keyword
+for keyword in df3["keyword"].unique():
+    keyword_data = df3[df3["keyword"] == keyword]
+    chart_data += f"{{ label: '{keyword}', data: ["
+    for index, row in keyword_data.iterrows():
+        chart_data += f"{{x: '{row['date']}', y: {row['occurrence']}}},"
+    chart_data = chart_data[:-1] # Rimuovi l'ultima virgola
+    chart_data += "]},\n"
+
+# Rimuovi l'ultima virgola e newline dai dati del grafico
+chart_data = chart_data[:-2]
+###
+
+
+
 # crea contenuto html principale
 def make_link(text):
     # Cerca tutte le occorrenze di link nella stringa
@@ -89,8 +108,38 @@ html_content += "<head>\n"
 html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css'>\n"
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
-
+html_content += "  <script src='https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
+
+# Aggiungi il codice per il grafico all'html_content
+html_content += "<script>\n"
+html_content += "var ctx = document.getElementById('myChart').getContext('2d');\n"
+html_content += "var myChart = new Chart(ctx, {\n"
+html_content += "  type: 'line',\n"
+html_content += "  data: {\n"
+html_content += "    datasets: [\n"
+html_content += chart_data + "\n"
+html_content += "    ]\n"
+html_content += "  },\n"
+html_content += "  options: {\n"
+html_content += " scales: {\n"
+html_content += " xAxes: [{\n"
+html_content += " type: 'time',\n"
+html_content += " time: { unit: 'day' }\n"
+html_content += " }],\n"
+html_content += " yAxes: [{\n"
+html_content += " ticks: {\n"
+html_content += " beginAtZero: true\n"
+html_content += " }\n"
+html_content += " }]\n"
+html_content += " }\n"
+html_content += " }\n"
+html_content += "});\n"
+html_content += "</script>\n"
+html_content += "<div class='container'>\n"
+html_content += "<canvas id='myChart'></canvas>\n"
+html_content += "</div>\n"
+
 
 html_content += "</head>\n"
 html_content += "<body>\n"
