@@ -3,15 +3,11 @@ import pandas as pd
 import os
 import re
 from datetime import datetime
-import plotly.express as px
-import matplotlib.pyplot as plt
-
 
 # Replace these with your own API keys and secrets
 auth = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"], os.environ["CONSUMER_SECRET"])
 auth.set_access_token(os.environ["ACCESS_TOKEN"], os.environ["ACCESS_TOKEN_SECRET"])
 api = tweepy.API(auth, wait_on_rate_limit=True)
-
 
 #df Crea una lista dei profili di cui vuoi scaricare i tweet
 profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","apachesuperset","awscloud","Azure","Azure_Synapse","ClickHouseDB","code","confluentinc","dask_dev","dagster","dbt_labs","DeepMind","Docker","druidio","duckdb","elastic","expectgreatdata","fastdotai","getdbt","github","gitlab","googlecloud","grafana","ksqlDB","kubernetesio","lightdash_devs","mariadb","Materialize","meltanodata","Metabase","MySQL","motherduck","montecarlodata","MSPowerBI","numpy_team","pandas_dev","PyData","PostgreSQL","ProjectJupyter","PrefectIO","ScyllaDB","singer_io","SnowflakeDB","SQLServer","tableau","thecubejs","thoughtspot"]
@@ -86,7 +82,6 @@ for keyword in df3["keyword"].unique():
 # Rimuovi l'ultima virgola e newline dai dati del grafico
 chart_data = chart_data[:-2]
 ###
-
 
 
 # crea contenuto html principale
