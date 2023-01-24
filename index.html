@@ -4,21 +4,24 @@
   <link rel='stylesheet' type='text/css' href='assets/style.css'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <script src='assets/script.js'></script>
-  <script src='https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js'></script>
   <title>Hacked-data-stack intel for the data and analytics communities</title>
+<div class='container'>
+<canvas id='myChart'></canvas>
+</div>
+  <script src='https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js'></script>
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'line',
   data: {
     datasets: [
-{ label: '1', data: [{x: '2023-01-23 23:37:02', y: badge},{x: '2023-01-23 23:37:02', y: training},{x: '2023-01-23 23:40:52', y: badge},{x: '2023-01-23 23:40:52', y: training},{x: '2023-01-23 23:56:14', y: badge},{x: '2023-01-23 23:56:14', y: training},{x: '2023-01-24 00:14:15', y: badge},{x: '2023-01-24 00:14:15', y: training},{x: '2023-01-24 20:05:32', y: badge},{x: '2023-01-24 20:05:32', y: training},{x: '2023-01-24 20:26:33', y: badge},{x: '2023-01-24 20:26:33', y: training}]},
+{ label: '1', data: [{x: '2023-01-23 23:37:02', y: badge},{x: '2023-01-23 23:37:02', y: training},{x: '2023-01-23 23:40:52', y: badge},{x: '2023-01-23 23:40:52', y: training},{x: '2023-01-23 23:56:14', y: badge},{x: '2023-01-23 23:56:14', y: training},{x: '2023-01-24 00:14:15', y: badge},{x: '2023-01-24 00:14:15', y: training},{x: '2023-01-24 20:05:32', y: badge},{x: '2023-01-24 20:05:32', y: training},{x: '2023-01-24 20:26:33', y: badge},{x: '2023-01-24 20:26:33', y: training},{x: '2023-01-24 21:12:08', y: badge},{x: '2023-01-24 21:12:08', y: training}]},
 { label: '27', data: [{x: '2023-01-23 23:37:02', y: conference},{x: '2023-01-23 23:40:52', y: conference},{x: '2023-01-23 23:56:14', y: conference},{x: '2023-01-24 00:14:15', y: conference}]},
-{ label: '2', data: [{x: '2023-01-23 23:37:02', y: course},{x: '2023-01-23 23:40:52', y: course},{x: '2023-01-23 23:56:14', y: course},{x: '2023-01-24 00:14:15', y: course},{x: '2023-01-24 20:05:32', y: course},{x: '2023-01-24 20:26:33', y: course}]},
+{ label: '2', data: [{x: '2023-01-23 23:37:02', y: course},{x: '2023-01-23 23:40:52', y: course},{x: '2023-01-23 23:56:14', y: course},{x: '2023-01-24 00:14:15', y: course},{x: '2023-01-24 20:05:32', y: course},{x: '2023-01-24 20:26:33', y: course},{x: '2023-01-24 21:12:08', y: course}]},
 { label: '78', data: [{x: '2023-01-23 23:37:02', y: event},{x: '2023-01-23 23:40:52', y: event},{x: '2023-01-23 23:56:14', y: event},{x: '2023-01-24 00:14:15', y: event}]},
-{ label: '11', data: [{x: '2023-01-23 23:37:02', y: podcast},{x: '2023-01-23 23:40:52', y: podcast},{x: '2023-01-23 23:56:14', y: podcast},{x: '2023-01-24 00:14:15', y: podcast},{x: '2023-01-24 20:05:32', y: podcast},{x: '2023-01-24 20:26:33', y: podcast}]},
-{ label: '26', data: [{x: '2023-01-24 20:05:32', y: conference},{x: '2023-01-24 20:26:33', y: conference}]},
-{ label: '79', data: [{x: '2023-01-24 20:05:32', y: event},{x: '2023-01-24 20:26:33', y: event}]}
+{ label: '11', data: [{x: '2023-01-23 23:37:02', y: podcast},{x: '2023-01-23 23:40:52', y: podcast},{x: '2023-01-23 23:56:14', y: podcast},{x: '2023-01-24 00:14:15', y: podcast},{x: '2023-01-24 20:05:32', y: podcast},{x: '2023-01-24 20:26:33', y: podcast},{x: '2023-01-24 21:12:08', y: podcast}]},
+{ label: '26', data: [{x: '2023-01-24 20:05:32', y: conference},{x: '2023-01-24 20:26:33', y: conference},{x: '2023-01-24 21:12:08', y: conference}]},
+{ label: '79', data: [{x: '2023-01-24 20:05:32', y: event},{x: '2023-01-24 20:26:33', y: event},{x: '2023-01-24 21:12:08', y: event}]}
     ]
   },
   options: {
@@ -36,9 +39,6 @@ var myChart = new Chart(ctx, {
  }
 });
 </script>
-<div class='container'>
-<canvas id='myChart'></canvas>
-</div>
 </head>
 <body>
   <h1>Events, conferences, podcast and training list up-to-date</h1>
@@ -610,9 +610,6 @@ Join us at #ElasticON Global on March 7-8 to access all new technical deep dives
   <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user15'>EXPECTGREATDATA</h2>
  <h3 date='Posted on: 2022-08-16; at: 17:07'>Posted on: 2022-08-16; at: 17:07</h3>
   <p>“Data flowing through in a way that’s unexpected is gonna break your app.” Listen to our co-founder and head of partnerships @bhcas talk with @jpruth about broken apps and #dataquality on the new @InformationWeek 2-Minute Toolkit Podcast 👉 <a href="https://t.co/FdhjDvQ6Zb">https://t.co/FdhjDvQ6Zb</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user15'>EXPECTGREATDATA</h2>
- <h3 date='Posted on: 2022-07-28; at: 17:06'>Posted on: 2022-07-28; at: 17:06</h3>
-  <p>Join our next Community Event Aug 16: @htahir111 presenting @zenml_io / integration with GX + Bogdan Volodarskiy from @Provectus_inc presenting “Data Quality Comparison on AWS Glue and Great Expectations” 👉 <a href="https://t.co/1P4NcU7gtE">https://t.co/1P4NcU7gtE</a></p>
   <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user16'>GETDBT</h2>
  <h3 date='Posted on: 2022-09-08; at: 20:28'>Posted on: 2022-09-08; at: 20:28</h3>
   <p>🎟️ @coalesceconf is offering Coalesce Hub Scholarships sponsored by @workstreamhq and @fivetran. 
