@@ -108,8 +108,12 @@ html_content += "<head>\n"
 html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css'>\n"
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
-html_content += "  <script src='https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
+
+html_content += "<div class='container'>\n"
+html_content += "<canvas id='myChart'></canvas>\n"
+html_content += "</div>\n"
+html_content += "  <script src='https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js'></script>\n"
 
 # Aggiungi il codice per il grafico all'html_content
 html_content += "<script>\n"
@@ -136,9 +140,6 @@ html_content += " }\n"
 html_content += " }\n"
 html_content += "});\n"
 html_content += "</script>\n"
-html_content += "<div class='container'>\n"
-html_content += "<canvas id='myChart'></canvas>\n"
-html_content += "</div>\n"
 
 
 html_content += "</head>\n"
