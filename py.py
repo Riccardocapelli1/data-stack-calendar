@@ -82,8 +82,12 @@ fig.set_facecolor((37/255, 26/255, 26/255))
 
 #iterate over keyword values found
 for keyword in df3["keyword"].unique():
-    keyword_data = df3[df3["keyword"] == keyword]
-    plt.plot(keyword_data["date"], keyword_data["occurrence"], label=keyword)
+    #keyword_data = df3[df3["keyword"] == keyword]
+    #plt.plot(keyword_data["date"], keyword_data["occurrence"], label=keyword) 
+    keyword_date = df3[df3["date"] == date]
+    keyword_data = df3[df3["occurrence"] == occurrence]
+    plt.plot(keyword_date["date"], keyword_data["occurrence"], label=keyword)
+ 
 
 # Aggiungi una legenda e titoli
 plt.legend()
