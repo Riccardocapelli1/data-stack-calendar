@@ -108,7 +108,7 @@ html_content += "  <title>Hacked-data-stack intel for the data and analytics com
 html_content += "<div class='container'>\n"
 html_content += "<canvas id='myChart'></canvas>\n"
 html_content += "</div>\n"
-html_content += "  <script src='https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js'></script>\n"
+html_content += "  <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>\n"
 
 # Aggiungi il codice per il grafico all'html_content
 html_content += "<script>\n"
