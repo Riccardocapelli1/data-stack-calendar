@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import re
 from datetime import datetime
+import dateutil.parser as parser
 
 # Replace these with your own API keys and secrets
 auth = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"], os.environ["CONSUMER_SECRET"])
@@ -75,7 +76,8 @@ for keyword in df3["keyword"].unique():
     keyword_data = df3[df3["keyword"] == keyword]
     chart_data += f"{{ label: '{keyword}', data: ["
     for index, row in keyword_data.iterrows():
-        chart_data += f"{{x: '{row['date']}', y: {row['occurrence']}}},"
+        date = parser.parse(row['date']).strftime("%Y-%m-%d %H:%M:%S")
+        chart_data += f"{{x: '{date}', y: {int(row['occurrence'])}}},"
     chart_data = chart_data[:-1] # Rimuovi l'ultima virgola
     chart_data += "]},\n"
 
