@@ -41,3 +41,16 @@ a:visited {
     margin: 10px;
   }
 }
+/* Imposta le dimensioni del grafico per la visualizzazione da desktop */
+#myChart {
+  width: 600px;
+  height: 400px;
+}
+
+/* Imposta le dimensioni del grafico per la visualizzazione da mobile */
+@media only screen and (max-width: 600px) {
+  #myChart {
+    width: 300px;
+    height: 200px;
+  }
+}

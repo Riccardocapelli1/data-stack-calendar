@@ -67,17 +67,21 @@ df2.to_csv("tweet_data.csv", mode='a', header=False, index=False)
 columns=['date', 'keyword','occurrence'] 
 df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
+df3['date'] = pd.to_datetime(df3['date'])
+df3['year_month'] = df3['date'].dt.to_period('M')
+df3_grouped = df3.groupby(['year_month','keyword']).agg({'occurrence': 'max'}).reset_index()
+
 ###
 # Crea una stringa vuota per i dati del grafico
 chart_data = ""
 
 # Ciclo for per generare i dati del grafico per ogni keyword
-for keyword in df3["keyword"].unique():
-    keyword_data = df3[df3["keyword"] == keyword]
+for keyword in df3_grouped["keyword"].unique():
+    keyword_data = df3_grouped[df3_grouped["keyword"] == keyword]
     chart_data += f"{{ label: '{keyword}', data: ["
     for index, row in keyword_data.iterrows():
-        date = parser.parse(row['date']).strftime("%Y-%m-%d %H:%M:%S")
-        chart_data += f"{{x: '{date}', y: {int(row['occurrence'])}}},"
+        year_month = parser.parse(row['year_month']).strftime("%Y-%m-%d %H:%M:%S")
+        chart_data += f"{{x: '{year_month}', y: {int(row['occurrence'])}}},"
     chart_data = chart_data[:-1] # Rimuovi l'ultima virgola
     chart_data += "]},\n"
 
