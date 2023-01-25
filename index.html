@@ -9,36 +9,6 @@
 <canvas id='myChart'></canvas>
 </div>
   <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
-<script>
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    datasets: [
-{ label: '1', data: [{x: '2023-01-23 23:37:02', y: badge},{x: '2023-01-23 23:37:02', y: training},{x: '2023-01-23 23:40:52', y: badge},{x: '2023-01-23 23:40:52', y: training},{x: '2023-01-23 23:56:14', y: badge},{x: '2023-01-23 23:56:14', y: training},{x: '2023-01-24 00:14:15', y: badge},{x: '2023-01-24 00:14:15', y: training},{x: '2023-01-24 20:05:32', y: badge},{x: '2023-01-24 20:05:32', y: training},{x: '2023-01-24 20:26:33', y: badge},{x: '2023-01-24 20:26:33', y: training},{x: '2023-01-24 21:12:08', y: badge},{x: '2023-01-24 21:12:08', y: training},{x: '2023-01-24 21:17:35', y: badge},{x: '2023-01-24 21:17:35', y: training}]},
-{ label: '27', data: [{x: '2023-01-23 23:37:02', y: conference},{x: '2023-01-23 23:40:52', y: conference},{x: '2023-01-23 23:56:14', y: conference},{x: '2023-01-24 00:14:15', y: conference}]},
-{ label: '2', data: [{x: '2023-01-23 23:37:02', y: course},{x: '2023-01-23 23:40:52', y: course},{x: '2023-01-23 23:56:14', y: course},{x: '2023-01-24 00:14:15', y: course},{x: '2023-01-24 20:05:32', y: course},{x: '2023-01-24 20:26:33', y: course},{x: '2023-01-24 21:12:08', y: course},{x: '2023-01-24 21:17:35', y: course}]},
-{ label: '78', data: [{x: '2023-01-23 23:37:02', y: event},{x: '2023-01-23 23:40:52', y: event},{x: '2023-01-23 23:56:14', y: event},{x: '2023-01-24 00:14:15', y: event}]},
-{ label: '11', data: [{x: '2023-01-23 23:37:02', y: podcast},{x: '2023-01-23 23:40:52', y: podcast},{x: '2023-01-23 23:56:14', y: podcast},{x: '2023-01-24 00:14:15', y: podcast},{x: '2023-01-24 20:05:32', y: podcast},{x: '2023-01-24 20:26:33', y: podcast},{x: '2023-01-24 21:12:08', y: podcast},{x: '2023-01-24 21:17:35', y: podcast}]},
-{ label: '26', data: [{x: '2023-01-24 20:05:32', y: conference},{x: '2023-01-24 20:26:33', y: conference},{x: '2023-01-24 21:12:08', y: conference},{x: '2023-01-24 21:17:35', y: conference}]},
-{ label: '79', data: [{x: '2023-01-24 20:05:32', y: event},{x: '2023-01-24 20:26:33', y: event},{x: '2023-01-24 21:12:08', y: event},{x: '2023-01-24 21:17:35', y: event}]}
-    ]
-  },
-  options: {
- scales: {
- xAxes: [{
- type: 'time',
- time: { unit: 'day' }
- }],
- yAxes: [{
- ticks: {
- beginAtZero: true
- }
- }]
- }
- }
-});
-</script>
 </head>
 <body>
   <h1>Events, conferences, podcast and training list up-to-date</h1>
@@ -877,12 +847,6 @@ Our on-demand webinar gets into the nitty-gritty: <a href="https://t.co/99oVDeyH
 Get on #MariaDB monitoring and alerting with #SkySQL! In this on-demand webinar, we’ll show you how to prevent downtime and solve problems.
 
 <a href="https://t.co/eLYcE8a5KM">https://t.co/eLYcE8a5KM</a> <a href="https://t.co/fRolRz28FI">https://t.co/fRolRz28FI</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user23'>MARIADB</h2>
- <h3 date='Posted on: 2023-01-07; at: 16:50'>Posted on: 2023-01-07; at: 16:50</h3>
-  <p>An application that handles mixed workloads without messy, cumbersome architecture is possible. ✨
-
-Lucky for you, we’ve broken down HOW in our on-demand webinar. 👀 
-<a href="https://t.co/T6H6aypF3p">https://t.co/T6H6aypF3p</a></p>
   <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user24'>MELTANODATA</h2>
  <h3 date='Posted on: 2022-10-27; at: 16:01'>Posted on: 2022-10-27; at: 16:01</h3>
   <p>#TapToberfest2022 is almost at an end, and we’d love to see what you were able to work on!🙌 Don’t worry, it doesn’t have to be perfect or completely finished. Reach out to Amanda on our #taptoberfest-2022 slack channel to find out more!
@@ -1300,13 +1264,6 @@ Thank you to all of our guests and listeners who made season 3 a success!  <a h
 💪 How business analytics leadership can solve the major problems of our time
 
 @BIScorecard discusses these topics and more on the latest episode of @EM360Tech Podcast <a href="https://t.co/fxlHjVAJuP">https://t.co/fxlHjVAJuP</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user41'>THOUGHTSPOT</h2>
- <h3 date='Posted on: 2022-12-06; at: 13:23'>Posted on: 2022-12-06; at: 13:23</h3>
-  <p>Analytics Engineers rejoice! ThoughtSpot and 
-@AirbyteHQ  are teaming up to streamline #analytics use case deployment.  Learn how in just 10 minutes at our session at the Airbyte move(data) virtual conference this Thursday Dec 8.
-
-RSVP <a href="https://t.co/5fTdPaVTDO">https://t.co/5fTdPaVTDO</a>
-#moderndatastack <a href="https://t.co/DrihYhX7k1">https://t.co/DrihYhX7k1</a></p>
 </body>
 <footer>
   <p>Made with love for the community by Riccardo</p>
