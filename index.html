@@ -5,12 +5,12 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <script src='assets/script.js'></script>
   <title>Hacked-data-stack intel for the data and analytics communities</title>
-<div class='container'>
-<canvas id='myChart'></canvas>
-</div>
   <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
   <h1>Events, conferences, podcast and training list up-to-date</h1>
   <p>A tweet aggregator site dysplaying events, conferences, podcast, traingings that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>
+<div class='container'>
+<canvas id='myChart'></canvas>
+</div>
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
@@ -29,7 +29,11 @@ var myChart = new Chart(ctx, {
     scales: {
       xAxes: [{
         type: 'time',
-        time: { unit: 'day' }
+        time: {
+        unit: 'month',
+        displayFormats: {
+            month: 'YYYY-MM'
+        }
       }],
       yAxes: [{
         ticks: {
@@ -930,6 +934,10 @@ You can move beyond proactive scheduling-based approaches - into a world where y
  <h3 date='Posted on: 2022-11-10; at: 17:57'>Posted on: 2022-11-10; at: 17:57</h3>
   <p>@gmiretti We first announced our open source launch at @PyDataDC so PyData conferences have always been special to us - thanks for the shoutout!</p>
   <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user36'>SCYLLADB</h2>
+ <h3 date='Posted on: 2023-01-25; at: 23:00'>Posted on: 2023-01-25; at: 23:00</h3>
+  <p>Want to learn how to build a #DynamoDB compatible apps that can be deployed anywhere you want? Our on-demand webinar provides a technical roadmap to help you get the most out of your current database infrastructure: <a href="https://t.co/7cvaBdfjez">https://t.co/7cvaBdfjez</a>
+
+#ScyllaDB #NoSQL <a href="https://t.co/TZAru6NLhQ">https://t.co/TZAru6NLhQ</a></p>
  <h3 date='Posted on: 2023-01-25; at: 19:01'>Posted on: 2023-01-25; at: 19:01</h3>
   <p>If you have scaling issues or concerns, do not miss our January 26 webinar with @TomerSand and @PeterCorless. They'll share how enterprise companies are beating scaling challenges and have an interactive Q&amp;A for you to participate in. <a href="https://t.co/gUKZwkAYmp">https://t.co/gUKZwkAYmp</a>
 
