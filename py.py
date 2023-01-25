@@ -109,15 +109,16 @@ html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
+html_content += "  <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>\n"
 
+# Titolo all'html_content
+html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
+html_content += "  <p>A tweet aggregator site dysplaying events, conferences, podcast, traingings that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
+
+# Aggiungi il codice per il grafico all'html_content
 html_content += "<div class='container'>\n"
 html_content += "<canvas id='myChart'></canvas>\n"
 html_content += "</div>\n"
-html_content += "  <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>\n"
-
-# Aggiungi il codice per il grafico all'html_content
-html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
-html_content += "  <p>A tweet aggregator site dysplaying events, conferences, podcast, traingings that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
 html_content += "<script>\n"
 html_content += "var ctx = document.getElementById('myChart').getContext('2d');\n"
 html_content += "var myChart = new Chart(ctx, {\n"
@@ -131,7 +132,11 @@ html_content += "  options: {\n"
 html_content += "    scales: {\n"
 html_content += "      xAxes: [{\n"
 html_content += "        type: 'time',\n"
-html_content += "        time: { unit: 'day' }\n"
+html_content += "        time: {\n"
+html_content += "        unit: 'month',\n"
+html_content += "        displayFormats: {\n"
+html_content += "            month: 'YYYY-MM'\n"
+html_content += "        }\n"
 html_content += "      }],\n"
 html_content += "      yAxes: [{\n"
 html_content += "        ticks: {\n"
