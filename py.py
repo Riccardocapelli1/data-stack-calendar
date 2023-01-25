@@ -80,8 +80,7 @@ for keyword in df3_grouped["keyword"].unique():
     keyword_data = df3_grouped[df3_grouped["keyword"] == keyword]
     chart_data += f"{{ label: '{keyword}', data: ["
     for index, row in keyword_data.iterrows():
-        year_month = parser.parse(row['year_month']).strftime("%Y-%m-%d %H:%M:%S")
-        chart_data += f"{{x: '{year_month}', y: {int(row['occurrence'])}}},"
+        chart_data += f"{{x: '{row['year_month']}', y: {row['occurrence']}}},"
     chart_data = chart_data[:-1] # Rimuovi l'ultima virgola
     chart_data += "]},\n"
 
