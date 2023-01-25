@@ -1,3 +1,22 @@
+var data = {
+  labels: df3.date,
+  datasets: [
+    {
+      label: 'occurrence',
+      data: df3.occurrence,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgba(255, 99, 132, 1)',
+    }
+  ]
+};
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    options: {}
+});
+
 // Seleziona tutti i titoli dei paragrafi
 const paragraphs = document.querySelectorAll("h2");
 
