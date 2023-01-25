@@ -116,6 +116,8 @@ html_content += "</div>\n"
 html_content += "  <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>\n"
 
 # Aggiungi il codice per il grafico all'html_content
+html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
+html_content += "  <p>A tweet aggregator site dysplaying events, conferences, podcast, traingings that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
 html_content += "<script>\n"
 html_content += "var ctx = document.getElementById('myChart').getContext('2d');\n"
 html_content += "var myChart = new Chart(ctx, {\n"
@@ -140,12 +142,11 @@ html_content += "    }\n"
 html_content += "  }\n"
 html_content += "});\n"
 html_content += "</script>\n"
+html_content += "  <p>Kewords tweeted stats</p>\n"
 
 
 html_content += "</head>\n"
 html_content += "<body>\n"
-html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
-html_content += "  <p>A tweet aggregator site dysplaying events, conferences, podcast, traingings that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
 
 #, Crea un dizionario vuoto per gli utenti
 users_dict = {}
@@ -169,11 +170,11 @@ html_content += "  </ul>\n"
 current_user = df.iloc[0]["User"]
 for _, row in df.iterrows():
     user = row["User"]
-    #if user != current_user:
-    current_user = user
+    if user != current_user:
+        current_user = user
     
     # Crea un'ancora per ogni utente nell'HTML
-    html_content += f"  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user{users_dict[user]}'>{user}</h2>\n"        
+        html_content += f"  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user{users_dict[user]}'>{user}</h2>\n"        
     date = row["Time"]
     text = make_link(row["Tweet"])
     html_content += f" <h3 date='{date}'>{date}</h3>\n"
