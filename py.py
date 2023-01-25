@@ -64,7 +64,7 @@ df2 = df2.groupby(['date', 'keyword']).size().reset_index(name='occurrence')
 df2.to_csv("tweet_data.csv", mode='a', header=False, index=False)
 
 # Leggi i dati dal file CSV
-columns=['date', 'occurrence', 'keyword'] 
+columns=['date', 'keyword','occurrence'] 
 df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
 ###
