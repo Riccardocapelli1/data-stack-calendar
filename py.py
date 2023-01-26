@@ -68,7 +68,7 @@ columns=['date', 'keyword','occurrence']
 df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
 df3['date'] = pd.to_datetime(df3['date'])
-df3['year_month'] = df3['date'].dt.to_period('M')
+df3['year_month'] = df3['date'].dt.to_period('D')
 df3_grouped = df3.groupby(['year_month','keyword']).agg({'occurrence': 'max'}).reset_index()
 
 ###
@@ -133,9 +133,9 @@ html_content += "    scales: {\n"
 html_content += "      xAxes: [{\n"
 html_content += "        type: 'time',\n"
 html_content += "        time: {\n"
-html_content += "           unit: 'month',\n"
+html_content += "           unit: 'day',\n"
 html_content += "           displayFormats: {\n"
-html_content += "            month: 'YYYY-MM'\n"
+html_content += "            month: 'YYYY-MM-DD'\n"
 html_content += "           }\n"
 html_content += "        }\n"
 html_content += "      }],\n"
