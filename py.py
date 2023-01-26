@@ -14,7 +14,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","apachesuperset","awscloud","Azure","Azure_Synapse","ClickHouseDB","code","confluentinc","dask_dev","dagster","dbt_labs","DeepMind","Docker","druidio","duckdb","elastic","expectgreatdata","fastdotai","getdbt","github","gitlab","googlecloud","grafana","ksqlDB","kubernetesio","lightdash_devs","mariadb","Materialize","meltanodata","Metabase","MySQL","motherduck","montecarlodata","MSPowerBI","numpy_team","pandas_dev","PyData","PostgreSQL","ProjectJupyter","PrefectIO","ScyllaDB","singer_io","SnowflakeDB","SQLServer","tableau","thecubejs","thoughtspot"]
 
 #df2 definire le keyword da cercare
-keywords = ["conference", "event", "podcast", "course", "training", "badge"," "]
+keywords = ["conference", "event", "podcast", "course", "training", "badge"]
 
 # Crea una lista vuota per i tweet
 tweets = []
@@ -38,9 +38,6 @@ df["User"] = df["User"].str.upper()
 df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Podcast|podcast|Badge|badge|Certific|certific|Webinar|webinar|free resources|free courses|free learning')]
 df = df[~df['Tweet'].str.contains('of courses|event log|blog post|steven')]
 
-# salvare i dati in un file csv
-##df.to_csv("tweet_data.csv", mode='a', header=False, index=False)
-
 # creare una copia del dataframe
 df2 = df.copy()
 
@@ -48,7 +45,6 @@ df2 = df.copy()
 df2['keyword' ] = ""
 
 # aggiungere una colonna "date" con la data e ora attuali
-###df2['date'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 df2['date'] = df['Posting_Time']
 
 # ciclo for per verificare se una stringa contiene una parola chiave
