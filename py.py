@@ -14,7 +14,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","apachesuperset","awscloud","Azure","Azure_Synapse","ClickHouseDB","code","confluentinc","dask_dev","dagster","dbt_labs","DeepMind","Docker","druidio","duckdb","elastic","expectgreatdata","fastdotai","getdbt","github","gitlab","googlecloud","grafana","ksqlDB","kubernetesio","lightdash_devs","mariadb","Materialize","meltanodata","Metabase","MySQL","motherduck","montecarlodata","MSPowerBI","numpy_team","pandas_dev","PyData","PostgreSQL","ProjectJupyter","PrefectIO","ScyllaDB","singer_io","SnowflakeDB","SQLServer","tableau","thecubejs","thoughtspot"]
 
 #df2 definire le keyword da cercare
-keywords = ["conference", "event", "podcast", "course", "training", "certification", "badge"]
+keywords = ["BADGE", "CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "TRAINING"]
 
 # Crea una lista vuota per i tweet
 tweets = []
@@ -47,6 +47,7 @@ df2['keyword' ] = ""
 df2['date'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # ciclo for per verificare se una stringa contiene una parola chiave
+df2['Tweet'] = df2['Tweet'].str.upper()
 for index, row in df2.iterrows():
     Tweet = row['Tweet']
     for keyword in keywords:
