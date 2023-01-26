@@ -17,12 +17,12 @@ var myChart = new Chart(ctx, {
   type: 'line',
   data: {
     datasets: [
-{ label: 'badge', data: [{x: '2023-01', y: 1}]},
-{ label: 'conference', data: [{x: '2023-01', y: 27}]},
-{ label: 'course', data: [{x: '2023-01', y: 2}]},
-{ label: 'event', data: [{x: '2023-01', y: 82}]},
-{ label: 'podcast', data: [{x: '2023-01', y: 11}]},
-{ label: 'training', data: [{x: '2023-01', y: 1}]}
+{ label: 'badge', data: [{x: '2023-01', y: 6}]},
+{ label: 'conference', data: [{x: '2023-01', y: 51}]},
+{ label: 'course', data: [{x: '2023-01', y: 4}]},
+{ label: 'event', data: [{x: '2023-01', y: 174}]},
+{ label: 'podcast', data: [{x: '2023-01', y: 21}]},
+{ label: 'training', data: [{x: '2023-01', y: 3}]}
     ]
   },
   options: {
@@ -51,47 +51,54 @@ var myChart = new Chart(ctx, {
   <h3>List of Authors</h3>
   <ul>
     <li><a href='#user0'>AIRBYTEHQ</a></li>
-    <li><a href='#user1'>APACHEKAFKA</a></li>
-    <li><a href='#user2'>APACHENIFI</a></li>
-    <li><a href='#user3'>APACHESUPERSET</a></li>
-    <li><a href='#user4'>AWSCLOUD</a></li>
-    <li><a href='#user5'>AZURE</a></li>
-    <li><a href='#user6'>AZURE_SYNAPSE</a></li>
-    <li><a href='#user7'>CLICKHOUSEDB</a></li>
-    <li><a href='#user8'>CONFLUENTINC</a></li>
-    <li><a href='#user9'>DASK_DEV</a></li>
-    <li><a href='#user10'>DAGSTER</a></li>
-    <li><a href='#user11'>DBT_LABS</a></li>
-    <li><a href='#user12'>DEEPMIND</a></li>
-    <li><a href='#user13'>DRUIDIO</a></li>
-    <li><a href='#user14'>ELASTIC</a></li>
-    <li><a href='#user15'>EXPECTGREATDATA</a></li>
-    <li><a href='#user16'>GETDBT</a></li>
-    <li><a href='#user17'>GITHUB</a></li>
-    <li><a href='#user18'>GOOGLECLOUD</a></li>
-    <li><a href='#user19'>GRAFANA</a></li>
-    <li><a href='#user20'>KSQLDB</a></li>
-    <li><a href='#user21'>KUBERNETESIO</a></li>
-    <li><a href='#user22'>LIGHTDASH_DEVS</a></li>
-    <li><a href='#user23'>MARIADB</a></li>
-    <li><a href='#user24'>MELTANODATA</a></li>
-    <li><a href='#user25'>METABASE</a></li>
-    <li><a href='#user26'>MYSQL</a></li>
-    <li><a href='#user27'>MOTHERDUCK</a></li>
-    <li><a href='#user28'>MONTECARLODATA</a></li>
-    <li><a href='#user29'>MSPOWERBI</a></li>
-    <li><a href='#user30'>NUMPY_TEAM</a></li>
-    <li><a href='#user31'>PANDAS_DEV</a></li>
-    <li><a href='#user32'>PYDATA</a></li>
-    <li><a href='#user33'>POSTGRESQL</a></li>
-    <li><a href='#user34'>PROJECTJUPYTER</a></li>
-    <li><a href='#user35'>PREFECTIO</a></li>
-    <li><a href='#user36'>SCYLLADB</a></li>
-    <li><a href='#user37'>SNOWFLAKEDB</a></li>
-    <li><a href='#user38'>SQLSERVER</a></li>
-    <li><a href='#user39'>TABLEAU</a></li>
-    <li><a href='#user40'>THECUBEJS</a></li>
-    <li><a href='#user41'>THOUGHTSPOT</a></li>
+    <li><a href='#user1'>APACHEAIRFLOW</a></li>
+    <li><a href='#user2'>APACHEFLINK</a></li>
+    <li><a href='#user3'>APACHEKAFKA</a></li>
+    <li><a href='#user4'>APACHENIFI</a></li>
+    <li><a href='#user5'>APACHEPINOT</a></li>
+    <li><a href='#user6'>APACHESUPERSET</a></li>
+    <li><a href='#user7'>AWSCLOUD</a></li>
+    <li><a href='#user8'>AZURE</a></li>
+    <li><a href='#user9'>AZURE_SYNAPSE</a></li>
+    <li><a href='#user10'>CLICKHOUSEDB</a></li>
+    <li><a href='#user11'>CODE</a></li>
+    <li><a href='#user12'>CONFLUENTINC</a></li>
+    <li><a href='#user13'>DASK_DEV</a></li>
+    <li><a href='#user14'>DAGSTER</a></li>
+    <li><a href='#user15'>DBT_LABS</a></li>
+    <li><a href='#user16'>DEEPMIND</a></li>
+    <li><a href='#user17'>DOCKER</a></li>
+    <li><a href='#user18'>DRUIDIO</a></li>
+    <li><a href='#user19'>ELASTIC</a></li>
+    <li><a href='#user20'>EXPECTGREATDATA</a></li>
+    <li><a href='#user21'>FASTDOTAI</a></li>
+    <li><a href='#user22'>GETDBT</a></li>
+    <li><a href='#user23'>GITHUB</a></li>
+    <li><a href='#user24'>GITLAB</a></li>
+    <li><a href='#user25'>GOOGLECLOUD</a></li>
+    <li><a href='#user26'>GRAFANA</a></li>
+    <li><a href='#user27'>KSQLDB</a></li>
+    <li><a href='#user28'>KUBERNETESIO</a></li>
+    <li><a href='#user29'>LIGHTDASH_DEVS</a></li>
+    <li><a href='#user30'>MARIADB</a></li>
+    <li><a href='#user31'>MELTANODATA</a></li>
+    <li><a href='#user32'>METABASE</a></li>
+    <li><a href='#user33'>MYSQL</a></li>
+    <li><a href='#user34'>MOTHERDUCK</a></li>
+    <li><a href='#user35'>MONTECARLODATA</a></li>
+    <li><a href='#user36'>MSPOWERBI</a></li>
+    <li><a href='#user37'>NUMPY_TEAM</a></li>
+    <li><a href='#user38'>PANDAS_DEV</a></li>
+    <li><a href='#user39'>PYDATA</a></li>
+    <li><a href='#user40'>POSTGRESQL</a></li>
+    <li><a href='#user41'>PROJECTJUPYTER</a></li>
+    <li><a href='#user42'>PREFECTIO</a></li>
+    <li><a href='#user43'>SCYLLADB</a></li>
+    <li><a href='#user44'>SNOWFLAKEDB</a></li>
+    <li><a href='#user45'>SQLSERVER</a></li>
+    <li><a href='#user46'>TABLEAU</a></li>
+    <li><a href='#user47'>THECUBEJS</a></li>
+    <li><a href='#user48'>THOUGHTSPOT</a></li>
   </ul>
   <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user0'>AIRBYTEHQ</h2>
  <h3 date='Posted on: 2022-12-08; at: 14:06'>Posted on: 2022-12-08; at: 14:06</h3>
@@ -126,15 +133,73 @@ See the incredible lineup here:
 <a href="https://t.co/n7VosW2MO3">https://t.co/n7VosW2MO3</a> 
 
 Have you registered yet?</p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user1'>APACHEKAFKA</h2>
+ <h3 date='Posted on: 2022-11-09; at: 21:31'>Posted on: 2022-11-09; at: 21:31</h3>
+  <p>With a new in-region hosting option, GDPR-compliant data processing &amp; ISO 27001 certification, we’re excited to announce that Airbyte Cloud is now available in Europe! ✈️
+
+Read more about our expansion and how to get started with Airbyte Cloud today. 👇
+
+<a href="https://t.co/lwPRcgUzJX">https://t.co/lwPRcgUzJX</a> <a href="https://t.co/4LyqvV1z8E">https://t.co/4LyqvV1z8E</a></p>
+ <h3 date='Posted on: 2022-10-26; at: 02:29'>Posted on: 2022-10-26; at: 02:29</h3>
+  <p>Hex? Preset? Mode? Tableau?
+
+Have opinions about BI? Come fill out our STATE OF DATA ENGINEERING survey
+
+<a href="https://t.co/OhxIqkeT01">https://t.co/OhxIqkeT01</a>
+
+And weigh in on:
+
+- best data substack
+- best data youtube
+- best data podcast
+- best data community
+
+Be the first to get results + special🐙 swag! <a href="https://t.co/Gvz2hpErrK">https://t.co/Gvz2hpErrK</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user1'>APACHEAIRFLOW</h2>
+ <h3 date='Posted on: 2022-05-23; at: 12:24'>Posted on: 2022-05-23; at: 12:24</h3>
+  <p>Airflow Summit starts today! A hybrid event lasting a week with 13 in-person events that will be streamed live to our Global audience!!
+
+Register now if you have not yet: <a href="https://t.co/14pBRjxCRb">https://t.co/14pBRjxCRb</a>
+
+#AirflowSummit #AirflowSummit2022 @AirflowSummit <a href="https://t.co/W3BcYvHMKm">https://t.co/W3BcYvHMKm</a> <a href="https://t.co/QD5B1OlxGL">https://t.co/QD5B1OlxGL</a></p>
+ <h3 date='Posted on: 2022-05-21; at: 22:53'>Posted on: 2022-05-21; at: 22:53</h3>
+  <p>Airflow Summit is happening next week in hybrid format. Register to the global event for attending all the sessions, and if you are attending an onsite location, also register to it. 
+
+Register now!: <a href="https://t.co/pIblLe2F1t">https://t.co/pIblLe2F1t</a>
+
+#DataPipelines #OpenSource <a href="https://t.co/ag5Cv474yS">https://t.co/ag5Cv474yS</a></p>
+ <h3 date='Posted on: 2022-05-16; at: 19:41'>Posted on: 2022-05-16; at: 19:41</h3>
+  <p>The next week is a Big week for Airflow community. This is a week of @AirflowSummit ! 
+
+We are busy with rehearsals and preparing swags for the local events, but we had time for short info on our blog. 
+
+<a href="https://t.co/JKVxnaT3cA">https://t.co/JKVxnaT3cA</a>
+
+Register if you have not done so yet!</p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user2'>APACHEFLINK</h2>
+ <h3 date='Posted on: 2021-10-21; at: 16:11'>Posted on: 2021-10-21; at: 16:11</h3>
+  <p>Less than an hour until our Ask Me Anything event! 
+
+You can still sign up and check it out via either of the Meetup links below! <a href="https://t.co/f29tGrAtsJ">https://t.co/f29tGrAtsJ</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user3'>APACHEKAFKA</h2>
  <h3 date='Posted on: 2022-05-25; at: 04:22'>Posted on: 2022-05-25; at: 04:22</h3>
   <p>CfP for Current (aka #KafkaSummit) 2022 in Austin, TX, is open. It’s exciting to see Kafka Summit extending its scope to the broader event streaming ecosystem!
 
 <a href="https://t.co/Cm1LpUMeCV">https://t.co/Cm1LpUMeCV</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user2'>APACHENIFI</h2>
+ <h3 date='Posted on: 2020-07-19; at: 18:12'>Posted on: 2020-07-19; at: 18:12</h3>
+  <p>Event streaming is on the rise! <a href="https://t.co/xlC9KyVJli">https://t.co/xlC9KyVJli</a></p>
+ <h3 date='Posted on: 2020-05-17; at: 20:26'>Posted on: 2020-05-17; at: 20:26</h3>
+  <p>Last chance to submit a proposal for Kafka Summit 2020. The event will be virtual and free to attend this year. <a href="https://t.co/kiXrvf7SoA">https://t.co/kiXrvf7SoA</a></p>
+ <h3 date='Posted on: 2020-05-06; at: 04:09'>Posted on: 2020-05-06; at: 04:09</h3>
+  <p>Ensuring you’ve purged all copies of an item from a distributed micro services architecture can be really tricky. @TwitterEng talks about modeling a “delete event” in Kafka to ensure that all services successfully perform the deletion. <a href="https://t.co/JFTp6FE2bT">https://t.co/JFTp6FE2bT</a></p>
+ <h3 date='Posted on: 2020-04-12; at: 21:32'>Posted on: 2020-04-12; at: 21:32</h3>
+  <p>Preventing Fraud and Fighting Account Takeovers with Kafka Streams <a href="https://t.co/VSTcCVh55U">https://t.co/VSTcCVh55U</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user4'>APACHENIFI</h2>
  <h3 date='Posted on: 2018-06-22; at: 20:27'>Posted on: 2018-06-22; at: 20:27</h3>
   <p>@DataEngPodcast Our PMC and committers list is full of good people. For a start, @YolandaMDavis , @joewitt26 , @aldrinpiri , @mattgilman , @BBende , @trixpan , @kevdoran , @Ijokarumawak , @mattyb149 , and @yolopey are all options. <a href="https://t.co/xhGFskP6ha">https://t.co/xhGFskP6ha</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user3'>APACHESUPERSET</h2>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user5'>APACHEPINOT</h2>
+ <h3 date='Posted on: 2021-12-13; at: 18:46'>Posted on: 2021-12-13; at: 18:46</h3>
+  <p>Lookup join feature being explained by @richbird9 , which lets you decorate your events with data from a dimension table, all within Pinot! 🔍 <a href="https://t.co/dd1ha3lHE0">https://t.co/dd1ha3lHE0</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user6'>APACHESUPERSET</h2>
  <h3 date='Posted on: 2021-04-29; at: 20:07'>Posted on: 2021-04-29; at: 20:07</h3>
   <p>#MayThe4th is coming up! 
 
@@ -149,7 +214,7 @@ Way ahead of you! 👇
 @bitsondatadev will do a fun demo visualizing data from joined from @MongoDB and @ApachePinot using @trinodb and @apachesuperset 📈
 
 Sign up here: <a href="https://t.co/JtdDefWKAK">https://t.co/JtdDefWKAK</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user4'>AWSCLOUD</h2>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user7'>AWSCLOUD</h2>
  <h3 date='Posted on: 2023-01-17; at: 21:25'>Posted on: 2023-01-17; at: 21:25</h3>
   <p>Today’s episode of the #TheOfficialAWSPodcast is here. 🎙️ Tune in to learn about #AWS Lambda SnapStart for Java, delivering up to 10x faster function startup performance. 🎧➡️🔗 <a href="https://t.co/JgVutSd1H9">https://t.co/JgVutSd1H9</a> #CloudComputing #Developer <a href="https://t.co/RIkvUkA8Dt">https://t.co/RIkvUkA8Dt</a></p>
  <h3 date='Posted on: 2023-01-09; at: 17:16'>Posted on: 2023-01-09; at: 17:16</h3>
@@ -168,7 +233,27 @@ We chat with the team to learn how this service can help you analyze petabytes o
   <p>Partner with #AWS Training and Certification and provide your teams with skills for modern application container management and serverless architecture. ☁️🤝👥 #CloudComputing #Developer <a href="https://t.co/4nKLEOt2tW">https://t.co/4nKLEOt2tW</a> <a href="https://t.co/hhbkNCfRtw">https://t.co/hhbkNCfRtw</a></p>
  <h3 date='Posted on: 2022-12-19; at: 18:21'>Posted on: 2022-12-19; at: 18:21</h3>
   <p>In today's episode of #TheOfficialAWSPodcast you'll hear how Amazon QuickSight Paginated Reports let you create, schedule, &amp; share highly formatted, critical reports at scale. ☁️💻📈 #AWS #CloudComputing #Developer Listen now. 🎧➡️ <a href="https://t.co/vbnKAVWOT6">https://t.co/vbnKAVWOT6</a> <a href="https://t.co/1QBdGcQRKi">https://t.co/1QBdGcQRKi</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user5'>AZURE</h2>
+ <h3 date='Posted on: 2022-12-14; at: 18:49'>Posted on: 2022-12-14; at: 18:49</h3>
+  <p>Today's episode of #TheOfficialAWSPodcast is here. 🎙️ Tune in to hear from the Amazon OpenSearch Serverless team &amp; learn how this new offering gives you the tools to search &amp; analyze petabyte-scale workloads with ease. 🎧 #AWS #CloudComputing #Developer <a href="https://t.co/YhEULj82y5">https://t.co/YhEULj82y5</a> <a href="https://t.co/8E2djYVpz3">https://t.co/8E2djYVpz3</a></p>
+ <h3 date='Posted on: 2022-12-08; at: 17:57'>Posted on: 2022-12-08; at: 17:57</h3>
+  <p>Check out the last #reInvent recap episode from #TheOfficialAWSPodcast. 🎙️ Host Simon Elisha dives into a quick recap of Werner's keynote &amp; all the news you won't want to miss. 🎧 #AWS <a href="https://t.co/gXVmv6X5pL">https://t.co/gXVmv6X5pL</a> <a href="https://t.co/oeHiKfoFpn">https://t.co/oeHiKfoFpn</a></p>
+ <h3 date='Posted on: 2022-12-08; at: 04:23'>Posted on: 2022-12-08; at: 04:23</h3>
+  <p>@ScienceLogic It was so great having you at the event! Until next time! 😀 👋 ☁️</p>
+ <h3 date='Posted on: 2022-12-07; at: 19:09'>Posted on: 2022-12-07; at: 19:09</h3>
+  <p>#TheOfficialAWSPodcast is here with a quick recap of all the data &amp; #MachineLearning goodness from Swami's #reInvent keynote! ☁️🗝️ Tune in to hear all the details. 👩‍💻🎧👨‍💻 <a href="https://t.co/OQAEWxTnUh">https://t.co/OQAEWxTnUh</a> <a href="https://t.co/URPttbiS3Y">https://t.co/URPttbiS3Y</a></p>
+ <h3 date='Posted on: 2022-12-06; at: 16:33'>Posted on: 2022-12-06; at: 16:33</h3>
+  <p>Missed any #reInvent keynotes last week? 🤔 
+
+Well fear not, #TheOfficialAWSPodcast is here with a few handy recaps to catch you up on all the exciting news &amp; announcements. 📜✨ Tune in now to hear about Adam's keynote. 🎧 #AWS <a href="https://t.co/EFmeyKs4nA">https://t.co/EFmeyKs4nA</a> <a href="https://t.co/t2wiLBKG85">https://t.co/t2wiLBKG85</a></p>
+ <h3 date='Posted on: 2022-12-05; at: 21:37'>Posted on: 2022-12-05; at: 21:37</h3>
+  <p>Today's episode of #TheOfficialAWSPodcast is here. 🎧
+
+Join host Simon Elisha &amp; learn about #AWS SimSpace Weaver 🖥️ This new service lets you create expansive spatial simulation worlds with millions of dynamic entities interacting in real time. ☁️🗺️
+
+🔗 <a href="https://t.co/Jde53lAjSU">https://t.co/Jde53lAjSU</a> <a href="https://t.co/p1e1QEoOfq">https://t.co/p1e1QEoOfq</a></p>
+ <h3 date='Posted on: 2022-12-05; at: 19:24'>Posted on: 2022-12-05; at: 19:24</h3>
+  <p>@AUHKumar1 Great job! 🎉 🙌  What certificate will you be getting next? 😀 <a href="https://t.co/zzHSytv39l">https://t.co/zzHSytv39l</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user8'>AZURE</h2>
  <h3 date='Posted on: 2023-01-26; at: 20:00'>Posted on: 2023-01-26; at: 20:00</h3>
   <p>⬇️ Reduce costs. 
 🗂️ Minimize complexity. 
@@ -195,7 +280,32 @@ Start learning #Azure today with new role-based guides that feature learning cou
   <p>Interact directly with the #Azure Database for MySQL product group through a new series of monthly live webinars! 
 
 Join the upcoming session on January 11 at 7:30 AM PT to learn about migration, get demos of new features, and more: <a href="https://t.co/3mvXNBQ7i5">https://t.co/3mvXNBQ7i5</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user6'>AZURE_SYNAPSE</h2>
+ <h3 date='Posted on: 2022-12-16; at: 23:00'>Posted on: 2022-12-16; at: 23:00</h3>
+  <p>Do your database administration skills span from on-premises to the cloud? 
+
+Are you ready to work toward an #Azure Database Administrator Associate certification?
+
+Take an updated exam: <a href="https://t.co/S95nFTw9rR">https://t.co/S95nFTw9rR</a> #Certification</p>
+ <h3 date='Posted on: 2022-12-16; at: 21:30'>Posted on: 2022-12-16; at: 21:30</h3>
+  <p>✨🏅 Get that “fresh certification” feeling by renewing your Microsoft Certification! 
+
+The annual assessment is short, free, and gives your skills a serious boost—get started: <a href="https://t.co/fqqRTj0PRj">https://t.co/fqqRTj0PRj</a> #Azure <a href="https://t.co/MsvqdlHhYV">https://t.co/MsvqdlHhYV</a></p>
+ <h3 date='Posted on: 2022-12-16; at: 20:00'>Posted on: 2022-12-16; at: 20:00</h3>
+  <p>Become a Microsoft #Azure cloud professional with our new Connected Learning Experience program!
+
+Save time by personalizing your path and earn your certificate of completion at your own pace: <a href="https://t.co/ounz2NRRZH">https://t.co/ounz2NRRZH</a> <a href="https://t.co/725uZ4UgyF">https://t.co/725uZ4UgyF</a></p>
+ <h3 date='Posted on: 2022-12-14; at: 22:12'>Posted on: 2022-12-14; at: 22:12</h3>
+  <p>@rafal_fitt We’re continuing to develop new guides all the time, so stay tuned for updates! Don't forget to check out the Azure training and certifications homepage; <a href="https://t.co/0aH4hinZP2">https://t.co/0aH4hinZP2</a> and Azure Skills Navigator guides for more! <a href="https://t.co/gh912GACvt">https://t.co/gh912GACvt</a></p>
+ <h3 date='Posted on: 2022-12-13; at: 19:00'>Posted on: 2022-12-13; at: 19:00</h3>
+  <p>Migrating to #Azure can drive business value and improve ROI. Learn how from Microsoft experts in this webinar: <a href="https://t.co/LfqsZPF7EH">https://t.co/LfqsZPF7EH</a></p>
+ <h3 date='Posted on: 2022-12-01; at: 17:00'>Posted on: 2022-12-01; at: 17:00</h3>
+  <p>The Microsoft Intelligent Data Platform helps you:
+
+✔️ Focus on business value creation
+✔️ Improve time to insight
+
+And so much more! Get the details in this live webinar: <a href="https://t.co/cykfOWsWdW">https://t.co/cykfOWsWdW</a> <a href="https://t.co/JO9Q3TiuuF">https://t.co/JO9Q3TiuuF</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user9'>AZURE_SYNAPSE</h2>
  <h3 date='Posted on: 2023-01-26; at: 17:00'>Posted on: 2023-01-26; at: 17:00</h3>
   <p>The @datatoboggan Winter Edition 2023 lands on Saturday, January 28. This online event features two tracks of #AzureSynapse sessions covering #SQLPools, Lakehouse architecture, Security, #PowerBI, and so much more!
 
@@ -224,7 +334,41 @@ Maybe you gained a new skill, earned a new certification, or attended your first
   <p>Thanks to our speakers @bobwardms and @SQLBoyWonder for a great Ask the Experts session, and a special thank you to all of our attendees for making this first in-person event a success!
 
 If you're not already signed up, become a #SynapseInfluencer today: <a href="https://t.co/dp94SbdVoJ">https://t.co/dp94SbdVoJ</a> <a href="https://t.co/JpA62Q6nSE">https://t.co/JpA62Q6nSE</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user7'>CLICKHOUSEDB</h2>
+ <h3 date='Posted on: 2022-11-17; at: 21:06'>Posted on: 2022-11-17; at: 21:06</h3>
+  <p>👀 Here's a sneak peek of all the #SynapseInfluencers swag we'll be giving away at today's #AzureSynapse Ask the Experts event taking place LIVE at #PASSDataCommunitySummit with @bobwardms and @SQLBoyWonder!
+
+Join us in the #Microsoft booth at 2PM to grab yours! <a href="https://t.co/Y4IW4TbEHK">https://t.co/Y4IW4TbEHK</a></p>
+ <h3 date='Posted on: 2022-11-14; at: 16:00'>Posted on: 2022-11-14; at: 16:00</h3>
+  <p>#PASSDataCommunitySummit kicks off today with Pre-conference sessions from #Microsoft's @NikoNeugebauer and @danimir, and a hands-on #SQLServer 2022 workshop tomorrow with @bobwardms, Marisa Mathews, and @SQLDBA.
+
+Check out the full schedule here: <a href="https://t.co/GDp71UA7W4">https://t.co/GDp71UA7W4</a></p>
+ <h3 date='Posted on: 2022-11-07; at: 18:48'>Posted on: 2022-11-07; at: 18:48</h3>
+  <p>The @PASSDataSummit kicks off next week! Head over to the #PASSDataCommunitySummit conference website to check out all of the great #AzureSynapse-focused sessions and speakers including @joanalytics, @dustinvannoy, @DesertIsleSQL, @MrAndyCutler, and more: <a href="https://t.co/pF4HPCRJBd">https://t.co/pF4HPCRJBd</a></p>
+ <h3 date='Posted on: 2022-10-28; at: 16:00'>Posted on: 2022-10-28; at: 16:00</h3>
+  <p>Following on from last week's look back at the importance of inbound security, Vengatesh Parasuraman walks you through Outbound Security, Managed Private Endpoint Connections, and how to prevent #data exfiltration in #AzureSynapse: <a href="https://t.co/axJYCOmvVc">https://t.co/axJYCOmvVc</a>
+
+#InfoSec #DataSecurity</p>
+ <h3 date='Posted on: 2022-10-18; at: 15:00'>Posted on: 2022-10-18; at: 15:00</h3>
+  <p>Relive some of the amazing content from last week's #MSIgnite conference and find out more about the latest #AzureSynapse and @MSPowerBI updates in this overview from @MS_KellyKaye and @kimmanis: <a href="https://t.co/YTlbeMbOFK">https://t.co/YTlbeMbOFK</a>
+
+#TutorialTuesday</p>
+ <h3 date='Posted on: 2022-10-12; at: 17:39'>Posted on: 2022-10-12; at: 17:39</h3>
+  <p>#MSIgnite is now live!
+
+ICYMI: Check out this #Microsoft Ignite overview from @RMajidimehr to learn more about what you can expect at this week's conference: <a href="https://t.co/Z6D8aVYjVF">https://t.co/Z6D8aVYjVF</a></p>
+ <h3 date='Posted on: 2022-10-11; at: 17:30'>Posted on: 2022-10-11; at: 17:30</h3>
+  <p>Microsoft Ignite is one of the #data community's biggest events, and it takes place this week, October 12-14! Learn more about what to expect at this year's virtual and in-person conference in this overview from @RMajidimehr: <a href="https://t.co/RfIZSSNysl">https://t.co/RfIZSSNysl</a>
+
+#MSIgnite #AzureSynapse</p>
+ <h3 date='Posted on: 2022-10-11; at: 16:00'>Posted on: 2022-10-11; at: 16:00</h3>
+  <p>.@MS_Ignite kicks off tomorrow! Be sure to follow the hashtags #MSIgnite, #Azure, #AzureSynapse, and #SynapseInfluencers for all of the latest updates from the event, as they happen!
+
+Learn more about the conference themes, sessions, and speakers here: <a href="https://t.co/esf3RKAwTz">https://t.co/esf3RKAwTz</a></p>
+ <h3 date='Posted on: 2022-10-10; at: 15:30'>Posted on: 2022-10-10; at: 15:30</h3>
+  <p>You can now catch up on our last #SynapseInfluencers Ask the Experts session with @ssabat and @narainabhishek here: <a href="https://t.co/hPMdmqd0zL">https://t.co/hPMdmqd0zL</a>
+
+Don't miss our next ATE event with @tzvia and @UriB_Data where they'll be discussing all things @AzDataExplorer: <a href="https://t.co/1FeKhIODnj">https://t.co/1FeKhIODnj</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user10'>CLICKHOUSEDB</h2>
  <h3 date='Posted on: 2023-01-19; at: 15:51'>Posted on: 2023-01-19; at: 15:51</h3>
   <p>Don’t miss our webinar with @dbt_labs on Jan 24! Learn how to combine the strengths of dbt and ClickHouse as well as the best practices and gotchas of using the ClickHouse - dbt connector in production.
 
@@ -241,7 +385,97 @@ If you're not already signed up, become a #SynapseInfluencer today: <a href="htt
   <p>22.11 is almost here! Join us for a release webinar on November 17 and hear from Alexey directly. The calls are always exciting, and the community chat and Q&amp;A lively. Come prepared with your questions for the team.
 
 <a href="https://t.co/7xupyneFF3">https://t.co/7xupyneFF3</a> <a href="https://t.co/jEpUTUmxMY">https://t.co/jEpUTUmxMY</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user8'>CONFLUENTINC</h2>
+ <h3 date='Posted on: 2022-10-26; at: 15:52'>Posted on: 2022-10-26; at: 15:52</h3>
+  <p>The 22.10 release webinar starts in about 8 minutes. Register now to join us...
+
+<a href="https://t.co/7UtwMmuOop">https://t.co/7UtwMmuOop</a></p>
+ <h3 date='Posted on: 2022-10-25; at: 16:30'>Posted on: 2022-10-25; at: 16:30</h3>
+  <p>Composable protocols, backups to S3, and statistical functions…oh my! You won’t want to miss tomorrow’s ClickHouse release webinar. Register now for the event and bring your questions 
+
+<a href="https://t.co/hDjrn83laZ">https://t.co/hDjrn83laZ</a> <a href="https://t.co/B1Sb0IuDtA">https://t.co/B1Sb0IuDtA</a></p>
+ <h3 date='Posted on: 2022-10-24; at: 15:27'>Posted on: 2022-10-24; at: 15:27</h3>
+  <p>It’s a week of amazing webinars here at ClickHouse. Including the 22.10 release and an introduction to ClickHouse Cloud.
+
+Register at <a href="https://t.co/PLaeZoX1Rq">https://t.co/PLaeZoX1Rq</a></p>
+ <h3 date='Posted on: 2022-10-07; at: 16:56'>Posted on: 2022-10-07; at: 16:56</h3>
+  <p>How fast can you ingest data in ClickHouse Cloud? So fast. Sign up for your free trial in our public beta at <a href="https://t.co/3wsSm6oXlZ.">https://t.co/3wsSm6oXlZ.</a>
+
+And don't forget about our webinar answering your questions on 27 October.
+
+<a href="https://t.co/rbF6fkm8fV">https://t.co/rbF6fkm8fV</a> <a href="https://t.co/nA6pMHWYCf">https://t.co/nA6pMHWYCf</a></p>
+ <h3 date='Posted on: 2022-10-06; at: 16:36'>Posted on: 2022-10-06; at: 16:36</h3>
+  <p>Want to learn more about the only ClickHouse service provided by the creators of ClickHouse? Check out our webinar on ClickHouse Cloud to learn how it works and how to get started. 
+
+<a href="https://t.co/rbF6fklAqn">https://t.co/rbF6fklAqn</a> <a href="https://t.co/Mh6OA5S8pR">https://t.co/Mh6OA5S8pR</a></p>
+ <h3 date='Posted on: 2022-09-22; at: 15:50'>Posted on: 2022-09-22; at: 15:50</h3>
+  <p>v22.9 Release Webinar is starting soon!
+<a href="https://t.co/OcD8E4zeSh">https://t.co/OcD8E4zeSh</a></p>
+ <h3 date='Posted on: 2022-09-20; at: 16:53'>Posted on: 2022-09-20; at: 16:53</h3>
+  <p>A “composable cache” in ClickHouse? Interested in precisely what that means, and why it matters to you? Join us for the release webinar!
+
+Date: September 22, 2022
+Time: 9:00 AM (PST) 6:00 PM (CEST)
+
+<a href="https://t.co/OcD8E4yH2J">https://t.co/OcD8E4yH2J</a></p>
+ <h3 date='Posted on: 2022-09-14; at: 16:14'>Posted on: 2022-09-14; at: 16:14</h3>
+  <p>22.9 is almost here! Join us for a release webinar on September 22nd and hear from Alexey directly. The calls are always exciting, and the community chat and Q&amp;A lively. Come prepared with your questions for the team.
+
+<a href="https://t.co/OcD8E4zeSh">https://t.co/OcD8E4zeSh</a> <a href="https://t.co/hYah40hAzz">https://t.co/hYah40hAzz</a></p>
+ <h3 date='Posted on: 2022-08-18; at: 15:23'>Posted on: 2022-08-18; at: 15:23</h3>
+  <p>Schools back in session! Continue your learning at the v22.8 Release Webinar today at 9 am PST / 6 pm CEST
+<a href="https://t.co/ubfXhy8IbR">https://t.co/ubfXhy8IbR</a></p>
+ <h3 date='Posted on: 2022-08-16; at: 13:00'>Posted on: 2022-08-16; at: 13:00</h3>
+  <p>v22.8 is a Long Term Support LTS release and it is the first release to introduce lightweight delete support. Register today to attend the v22.8 Release Webinar on Thursday, August 18 @ 9 am PST / 6 pm CEST. 
+
+<a href="https://t.co/ubfXhxR7kj">https://t.co/ubfXhxR7kj</a></p>
+ <h3 date='Posted on: 2022-08-10; at: 17:17'>Posted on: 2022-08-10; at: 17:17</h3>
+  <p>Catch it if you can! Join us on the ClickHouse v22.8 Release Webinar next Thursday, August 18 @ 9 am PST / 6 pm CEST.
+<a href="https://t.co/ubfXhy8IbR">https://t.co/ubfXhy8IbR</a></p>
+ <h3 date='Posted on: 2022-08-09; at: 18:33'>Posted on: 2022-08-09; at: 18:33</h3>
+  <p>The flexibility of Airbyte with the speed of ClickHouse. Follow along as we use Airbyte to ingest millions of events stored in S3 into ClickHouse
+
+<a href="https://t.co/NP5GRgjXjy">https://t.co/NP5GRgjXjy</a></p>
+ <h3 date='Posted on: 2022-08-03; at: 16:50'>Posted on: 2022-08-03; at: 16:50</h3>
+  <p>Join us for a release webinar on August 18 and hear from Alexey directly. The calls are always lively, and the interaction with the community is quite useful. Come prepared with your questions for the team.
+<a href="https://t.co/lrOQN97KUP">https://t.co/lrOQN97KUP</a></p>
+ <h3 date='Posted on: 2022-07-21; at: 15:56'>Posted on: 2022-07-21; at: 15:56</h3>
+  <p>Release Webinar is starting soon! (9am PDT)
+Register here to join on Zoom.
+<a href="https://t.co/ap2zb4vUXg">https://t.co/ap2zb4vUXg</a>
+
+We will be streaming on YouTube as well.
+<a href="https://t.co/RrMAU9DVj5">https://t.co/RrMAU9DVj5</a></p>
+ <h3 date='Posted on: 2022-07-20; at: 18:12'>Posted on: 2022-07-20; at: 18:12</h3>
+  <p>In our upcoming release webinar tomorrow (9am PT), we will discuss v22.7. Including the announcement of new JOIN algorithms. Bring your questions and join the community to celebrate this release.
+
+Register Now!
+<a href="https://t.co/AiBv9rtSZV">https://t.co/AiBv9rtSZV</a></p>
+ <h3 date='Posted on: 2022-07-08; at: 12:28'>Posted on: 2022-07-08; at: 12:28</h3>
+  <p>22.7 is almost here! Join us for a release webinar on July 21st and hear from Alexey directly. The calls are always lively, and the interaction with the community is quite useful. Come prepared with your questions for the team.
+
+<a href="https://t.co/qyYebYRY9F">https://t.co/qyYebYRY9F</a></p>
+ <h3 date='Posted on: 2022-06-16; at: 14:21'>Posted on: 2022-06-16; at: 14:21</h3>
+  <p>In our 22.6 release, there are 19 new features and 27 performance optimizations. From new JSON format support to adding AArch64 as a first-class citizen. Join our release webinar today (9am PT, 6pm CET) to hear the details and see the demos. 
+<a href="https://t.co/uLC8gk6gUW">https://t.co/uLC8gk6gUW</a></p>
+ <h3 date='Posted on: 2022-06-14; at: 16:56'>Posted on: 2022-06-14; at: 16:56</h3>
+  <p>The next release (v22.6) rapidly approaches! Join us for a live webinar, Q&amp;A, and time to hang out with the ClickHouse community online.
+<a href="https://t.co/uLC8gk6gUW">https://t.co/uLC8gk6gUW</a></p>
+ <h3 date='Posted on: 2022-05-19; at: 13:49'>Posted on: 2022-05-19; at: 13:49</h3>
+  <p>22.5 is nearly here!
+
+To get an overview of the features, and a demo or two, join us as Alexey chats with the community in today’s release event.
+
+<a href="https://t.co/CtNkqWhsoA">https://t.co/CtNkqWhsoA</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user11'>CODE</h2>
+ <h3 date='Posted on: 2022-10-06; at: 18:13'>Posted on: 2022-10-06; at: 18:13</h3>
+  <p>There's lots more, including a bunch of improvements for extension authors to things like customized context menus for webviews, badges for tree views and checkboxes for tree items. <a href="https://t.co/i4stYwvxu5">https://t.co/i4stYwvxu5</a></p>
+ <h3 date='Posted on: 2022-10-06; at: 18:12'>Posted on: 2022-10-06; at: 18:12</h3>
+  <p>Extensions requiring attention appear at the top of the default Installed section of the Extensions view. 
+
+Also, the badge on the Extensions icon in the Activity Bar now shows the number of all extensions requiring attention.
+
+Just reload the editor already. <a href="https://t.co/8tk3ZCSxQ4">https://t.co/8tk3ZCSxQ4</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user12'>CONFLUENTINC</h2>
  <h3 date='Posted on: 2023-01-25; at: 22:05'>Posted on: 2023-01-25; at: 22:05</h3>
   <p>🤔 What is a Kafka Consumer? 
 Producers write events to Apache Kafka, while consumers read and process these events. @TheDanicaFine explains how consumers work and how to configure them.  
@@ -304,10 +538,37 @@ Catch the full series here → <a href="https://t.co/C9IMG5oBYd">https://t.co/C9
 RSVP here 👉 <a href="https://t.co/SkEzppQfLp">https://t.co/SkEzppQfLp</a> <a href="https://t.co/CtB8EbPOjP">https://t.co/CtB8EbPOjP</a></p>
  <h3 date='Posted on: 2022-12-05; at: 20:05'>Posted on: 2022-12-05; at: 20:05</h3>
   <p>The #datamesh concept is relatively new but the problems it proposes to solve are not. Our 🆕 Ebook covers the historical issues of data access, how data mesh architecture can solve these problems, and how event streams play into this modern data stack. <a href="https://t.co/DJp0KfJlvj">https://t.co/DJp0KfJlvj</a> <a href="https://t.co/nWS5RsyerP">https://t.co/nWS5RsyerP</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user9'>DASK_DEV</h2>
+ <h3 date='Posted on: 2022-11-16; at: 20:05'>Posted on: 2022-11-16; at: 20:05</h3>
+  <p>Find out why an event-driven #datamesh built on @apachekafka provides the best way to access important business data and unify the operational and analytical planes. 
+📕Get the Ebook on Data Mesh by @adambellemare:  <a href="https://t.co/DJp0KfrK6J">https://t.co/DJp0KfrK6J</a> <a href="https://t.co/NMQrtr42Nh">https://t.co/NMQrtr42Nh</a></p>
+ <h3 date='Posted on: 2022-11-15; at: 17:00'>Posted on: 2022-11-15; at: 17:00</h3>
+  <p>🚚 What's it like to treat your data as a product? @krisajenkins talks to Florian Albrecht on #StreamingAudio about @hermesDE’s journey to an @apachekafka event-driven architecture and how the #datamesh approach enables self-service data for teams: <a href="https://t.co/mnLyeQb0vr">https://t.co/mnLyeQb0vr</a> <a href="https://t.co/3xGENoyHgc">https://t.co/3xGENoyHgc</a></p>
+ <h3 date='Posted on: 2022-11-10; at: 20:05'>Posted on: 2022-11-10; at: 20:05</h3>
+  <p>Will you be at #AFROTECH2022? 
+Come say hi at booth #1722! 👋
+ 
+We're thrilled to be a sponsor of this year's AfroTech Conference, and we'll be hiring across all orgs. 👀
+ 
+See you in ATX! 🤠 <a href="https://t.co/MYCSU9IFD1">https://t.co/MYCSU9IFD1</a></p>
+ <h3 date='Posted on: 2022-11-09; at: 18:00'>Posted on: 2022-11-09; at: 18:00</h3>
+  <p>🤔 Will stream processing ever fully replace batch? On #StreamingAudio, @krisajenkins, @takidau, @esammer, @notamyfromdbt, @AdiPolak share their thoughts in #current22 on obstacles preventing streaming adoption today: <a href="https://t.co/kZTgtLV2Zo">https://t.co/kZTgtLV2Zo</a> <a href="https://t.co/Pwl47dUOKm">https://t.co/Pwl47dUOKm</a></p>
+ <h3 date='Posted on: 2022-11-04; at: 18:05'>Posted on: 2022-11-04; at: 18:05</h3>
+  <p>Create a #datamesh of continually updating event-streams on @apachekafka. Gain enterprise-wide, no-wait access to both fresh &amp; historical data. 
+📕 Get the Ebook on Data Mesh here 👉 <a href="https://t.co/DJp0KfJlvj">https://t.co/DJp0KfJlvj</a> <a href="https://t.co/zH5iurzFDD">https://t.co/zH5iurzFDD</a></p>
+ <h3 date='Posted on: 2022-11-03; at: 20:05'>Posted on: 2022-11-03; at: 20:05</h3>
+  <p>Facing barriers 🚧 on your journey to a ☁️ data warehouse? You're not alone!
+
+Join our webinar with @awscloud to see how you can start immediately migrating to Amazon Redshift across on-prem and cloud environments to unlock value, faster. ⏩
+
+Sign up 👉 <a href="https://t.co/PLIYIUAf6x">https://t.co/PLIYIUAf6x</a> <a href="https://t.co/pDOhxPosxl">https://t.co/pDOhxPosxl</a></p>
+ <h3 date='Posted on: 2022-11-03; at: 16:00'>Posted on: 2022-11-03; at: 16:00</h3>
+  <p>What is it like to stream data at scale for cyber threat prevention? 🔐 @krisajenkins talks to @jaredthecoder and @brbrown of @security_score on #StreamingAudio about their learnings and best practices for building real-time data pipelines on the Cloud: <a href="https://t.co/VaZRCZiiaY">https://t.co/VaZRCZiiaY</a> <a href="https://t.co/uwQUVRHPYh">https://t.co/uwQUVRHPYh</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user13'>DASK_DEV</h2>
  <h3 date='Posted on: 2022-06-14; at: 17:37'>Posted on: 2022-06-14; at: 17:37</h3>
   <p>As part of the @dask_dev rebrand we have refreshed our YouTube channel <a href="https://t.co/8aOomr7Dcy.">https://t.co/8aOomr7Dcy.</a> Here is a new video from a recent event @odsc  <a href="https://t.co/9Msp7pNiE5">https://t.co/9Msp7pNiE5</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user10'>DAGSTER</h2>
+ <h3 date='Posted on: 2022-04-01; at: 18:32'>Posted on: 2022-04-01; at: 18:32</h3>
+  <p>The distributed dashboard has some new plots showing cluster-wide bandwidths for memory, disk, and network. It also has a new plot tracking event loop health. Thanks @mrocklin! <a href="https://t.co/tjfbYLNTwR">https://t.co/tjfbYLNTwR</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user14'>DAGSTER</h2>
  <h3 date='Posted on: 2023-01-20; at: 17:00'>Posted on: 2023-01-20; at: 17:00</h3>
   <p>Catch Jonathan Neo from @canva at this year's Data Teams Summit on Jan 25th as he presents:
 
@@ -357,7 +618,25 @@ Google: <a href="https://t.co/UXo5sIwzsS">https://t.co/UXo5sIwzsS</a>
 Office365: <a href="https://t.co/l4gsJa5coz">https://t.co/l4gsJa5coz</a>
 iCal: <a href="https://t.co/sSg7M6y6G7">https://t.co/sSg7M6y6G7</a>
 Yahoo: <a href="https://t.co/pMrpggz0pv">https://t.co/pMrpggz0pv</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user11'>DBT_LABS</h2>
+ <h3 date='Posted on: 2022-11-06; at: 19:18'>Posted on: 2022-11-06; at: 19:18</h3>
+  <p>(5/5) Also at @airbyteHQ’s Move(Data) event on Dec 7th/8th, @benpankow will be providing a hands-on overview of the new  Dagster-@AirbyteHQ integration.
+
+See: <a href="https://t.co/IVKj9KUFCl">https://t.co/IVKj9KUFCl</a></p>
+ <h3 date='Posted on: 2022-11-06; at: 19:18'>Posted on: 2022-11-06; at: 19:18</h3>
+  <p>Dagster is on the road. Come meet us at one of the following events:
+
+@PyData @pydatanyc NYC Nov 9th (this coming Wednesday)
+
+@Altinity hosted OSA CON 2022 on Nov 15th
+
+@AirbyteHQ ‘s Move(Data) Dec 7th-8th
+
+… details below. (1/5)</p>
+ <h3 date='Posted on: 2022-11-03; at: 19:55'>Posted on: 2022-11-03; at: 19:55</h3>
+  <p>Join us at @PyData NYC on Nov 11th at the Microsoft Conference Center, Times Square as @noteable_io demos a very slick use of Dagster in "Troubleshooting your Data Workflows with Noteable + Dagster: A live debugging of failed jobs."
+
+<a href="https://t.co/YEgeL9xnJE">https://t.co/YEgeL9xnJE</a> <a href="https://t.co/AYH7a3tJ8V">https://t.co/AYH7a3tJ8V</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user15'>DBT_LABS</h2>
  <h3 date='Posted on: 2023-01-03; at: 17:13'>Posted on: 2023-01-03; at: 17:13</h3>
   <p>New or intermediate @Snowflake developer? We've teamed with @MTL_analytics and Snowflake on a webinar that discusses using dbt to get the most of out Snowflake's flexible compute model. Join us on January 18 to learn more 👉 <a href="https://t.co/4OAL8oucXv">https://t.co/4OAL8oucXv</a></p>
  <h3 date='Posted on: 2022-10-17; at: 19:39'>Posted on: 2022-10-17; at: 19:39</h3>
@@ -435,7 +714,7 @@ We're excited to learn with you.
 #dbtcoalesce
 
 <a href="https://t.co/NOxzj36ijo">https://t.co/NOxzj36ijo</a> <a href="https://t.co/XusLm1kXxG">https://t.co/XusLm1kXxG</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user12'>DEEPMIND</h2>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user16'>DEEPMIND</h2>
  <h3 date='Posted on: 2023-01-10; at: 14:18'>Posted on: 2023-01-10; at: 14:18</h3>
   <p>We’re thrilled that DeepMind: The Podcast has won Best Host in Listener's Choice for @FryRSquared at the @SignalAwards! 🏆
 
@@ -485,7 +764,49 @@ DeepMind will be presenting over 40 research papers, hosting ten demos and suppo
 
 👋 Come visit us and say hi!
 📍Booth #609, Hall G <a href="https://t.co/1feb5t9uZu">https://t.co/1feb5t9uZu</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user13'>DRUIDIO</h2>
+ <h3 date='Posted on: 2022-11-07; at: 13:06'>Posted on: 2022-11-07; at: 13:06</h3>
+  <p>What does the scholarship offer to students from underrepresented groups?
+
+⚪ Financial support to study graduate courses relating to AI and adjacent fields
+⚪ Support from a DeepMind mentor
+⚪ Opportunities to attend leading AI academic conferences 
+
+<a href="https://t.co/Gxw6TSVcWu">https://t.co/Gxw6TSVcWu</a> <a href="https://t.co/sKNoYO5bnb">https://t.co/sKNoYO5bnb</a></p>
+ <h3 date='Posted on: 2022-11-02; at: 13:27'>Posted on: 2022-11-02; at: 13:27</h3>
+  <p>In the podcast, we explore how AI is being used to advance science with #AlphaFold, help reunite speech-impaired users with their original voices, take football to the next level with @LFC - and more.
+
+Catch up now, wherever you get your podcasts: <a href="https://t.co/Iu6kIbrW8g">https://t.co/Iu6kIbrW8g</a> 🎧</p>
+ <h3 date='Posted on: 2022-11-02; at: 13:24'>Posted on: 2022-11-02; at: 13:24</h3>
+  <p>We’re incredibly excited that Season 2 of DeepMind: The Podcast hosted by @FryRsquared is a Gold Lovie 𝘢𝘯𝘥 People's Lovie Winner at this year’s @lovieawards. 🏆
+
+Thank you to all our listeners who voted for us! 🤝
+Here’s our acceptance speech.⬇️ <a href="https://t.co/JGWWScA0mh">https://t.co/JGWWScA0mh</a> #Lovies <a href="https://t.co/hvIAfnnMIU">https://t.co/hvIAfnnMIU</a></p>
+ <h3 date='Posted on: 2022-10-14; at: 10:04'>Posted on: 2022-10-14; at: 10:04</h3>
+  <p>Applications to attend @Khipu_AI close today! Join our team and many others for an amazing lineup of speakers and workshops at the leading conference focused on strengthening the AI &amp; ML communities in Latin America: <a href="https://t.co/xu4EbrbeTC">https://t.co/xu4EbrbeTC</a> 
+#khipu2023 <a href="https://t.co/G4OpaWVQca">https://t.co/G4OpaWVQca</a></p>
+ <h3 date='Posted on: 2022-10-05; at: 15:11'>Posted on: 2022-10-05; at: 15:11</h3>
+  <p>Starting from scratch, #AlphaTensor gradually improves from finding the “class-room” algorithm to discovering historical algorithms such as Strassen’s - eventually surpassing them. This work is an example of how AI can advance the field of algorithmic discovery. 2/</p>
+ <h3 date='Posted on: 2022-09-29; at: 16:43'>Posted on: 2022-09-29; at: 16:43</h3>
+  <p>📢Voting for The People's Lovie is open until Thursday, 6 October at 23:59 GMT📢
+
+Still need to catch up on Season 2? All episodes are available wherever you get your podcasts! 2/2</p>
+ <h3 date='Posted on: 2022-09-29; at: 16:43'>Posted on: 2022-09-29; at: 16:43</h3>
+  <p>Calling all fans of DeepMind: The Podcast…we’ve been named as a finalist for a People’s @lovieawards! 
+
+If you enjoyed our exploration of AGI, robotics, the Serengeti (&amp; more) with the wonderful @FryRsquared, vote for us at <a href="https://t.co/DxzCvRr66m">https://t.co/DxzCvRr66m</a> 
+
+#Lovies 1/ <a href="https://t.co/Yi7O1Cl85Z">https://t.co/Yi7O1Cl85Z</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user17'>DOCKER</h2>
+ <h3 date='Posted on: 2022-11-23; at: 16:39'>Posted on: 2022-11-23; at: 16:39</h3>
+  <p>Winter is coming. We know what is coming with it...a *krilly* happy hour event at @Minus5IceBar during @AWSreInvent. Join us for swag, drinks, apps, and of course, warm coats upon entry...❄️❄️❄️
+
+Details: <a href="https://t.co/wlvZ7582fl">https://t.co/wlvZ7582fl</a>
+
+#AWSreInvent 
+#AWS_Partner <a href="https://t.co/2HIDJPhRTH">https://t.co/2HIDJPhRTH</a></p>
+ <h3 date='Posted on: 2022-11-18; at: 19:40'>Posted on: 2022-11-18; at: 19:40</h3>
+  <p>DYK the postal service has a new creed? 📬 "Neither snow nor rain nor heat nor gloom of night can prevent the automation of API tests and debugging in #Docker." Here's how to leverage @getpostman's Newman #DockerExtension: <a href="https://t.co/M2IH39m6CD">https://t.co/M2IH39m6CD</a> <a href="https://t.co/PzAD4Vo8zN">https://t.co/PzAD4Vo8zN</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user18'>DRUIDIO</h2>
  <h3 date='Posted on: 2022-06-16; at: 15:37'>Posted on: 2022-06-16; at: 15:37</h3>
   <p>The first local edition of Druid Summit is taking place in Sydney on June 23. Don't miss the opportunity to learn from data experts from @Atlassian, @Paytm &amp; @confluentinc in this half-day event dedicated to #ApacheDruid. Register today (it's free!): <a href="https://t.co/vnYVZmNlot">https://t.co/vnYVZmNlot</a></p>
  <h3 date='Posted on: 2022-03-23; at: 15:50'>Posted on: 2022-03-23; at: 15:50</h3>
@@ -493,21 +814,139 @@ DeepMind will be presenting over 40 research papers, hosting ten demos and suppo
  <h3 date='Posted on: 2022-03-16; at: 23:46'>Posted on: 2022-03-16; at: 23:46</h3>
   <p>Developers, this is for you! Imply and @confluentinc are co-hosting this virtual event on 17 March. Don’t miss learning how you can use #ApacheDruid &amp; @apachekafka to build apps that bring together streaming data + interactive analytics. 
 Register here: <a href="https://t.co/Wkgt0A2jO9">https://t.co/Wkgt0A2jO9</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user14'>ELASTIC</h2>
+ <h3 date='Posted on: 2022-02-15; at: 19:01'>Posted on: 2022-02-15; at: 19:01</h3>
+  <p>We're headed to Denver for an in-person #ApacheDruid event. Yes, in person! Charter Communications will show us their observability use case, and Ibotta will talk fraud detection. It's happening on 3/3 at 5:30pm MST. 
+RSVP today; it's free! <a href="https://t.co/3KXF8sPiWI">https://t.co/3KXF8sPiWI</a></p>
+ <h3 date='Posted on: 2022-02-07; at: 16:31'>Posted on: 2022-02-07; at: 16:31</h3>
+  <p>What happened when @Reddit switched to #ApacheDruid for their advertising analytics application? Hundreds of billions of events are now analyzed 3x faster, with better uptime, and with less code in their app. Read their story. #adtech #ApacheDruid 
+<a href="https://t.co/mBlgvhQwk6">https://t.co/mBlgvhQwk6</a></p>
+ <h3 date='Posted on: 2021-11-30; at: 23:37'>Posted on: 2021-11-30; at: 23:37</h3>
+  <p>What is Apache Druid® Basics training? Four modules – including videos, labs &amp; further reading – designed to elevate your #ApacheDruid knowledge. There's more: a shiny new certificate to show off after completion! Get started here: <a href="https://t.co/wFFtQnksTc">https://t.co/wFFtQnksTc</a> <a href="https://t.co/mlTqlEVHeQ">https://t.co/mlTqlEVHeQ</a></p>
+ <h3 date='Posted on: 2021-11-05; at: 14:48'>Posted on: 2021-11-05; at: 14:48</h3>
+  <p>Last few days to sign up for Druid Summit! The event is virtual and free. Druid PMC Chair @gianmerlino  be announcing #ProjectShapeshift, which will include major architecture upgrades to #ApacheDruid. <a href="https://t.co/iNhgfRDeRk">https://t.co/iNhgfRDeRk</a></p>
+ <h3 date='Posted on: 2021-10-08; at: 15:38'>Posted on: 2021-10-08; at: 15:38</h3>
+  <p>The 5th edition of #DruidSummit will still be virtual but even better than last year, so you don't want to miss it! Register today for this free event and stay up-to-date on everything happening with @druidio. Check it out!
+#ApacheDruid
+Register here: <a href="https://t.co/iNhgfRDeRk">https://t.co/iNhgfRDeRk</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user19'>ELASTIC</h2>
  <h3 date='Posted on: 2023-01-13; at: 17:00'>Posted on: 2023-01-13; at: 17:00</h3>
   <p>Our biggest virtual user conference of the year is back...and free to attend!
 
 Join us at #ElasticON Global on March 7-8 to access all new technical deep dives, live hands-on workshops, user stories and more. Register here: <a href="https://t.co/yiefrF7iMi">https://t.co/yiefrF7iMi</a> <a href="https://t.co/xjcqyLmhhP">https://t.co/xjcqyLmhhP</a></p>
  <h3 date='Posted on: 2022-12-13; at: 21:20'>Posted on: 2022-12-13; at: 21:20</h3>
   <p>Step 1: Once you’ve created a user log in, add custom info to click through events. See how: <a href="https://t.co/XfEh0QVKiO">https://t.co/XfEh0QVKiO</a> <a href="https://t.co/sY8nDrvaWL">https://t.co/sY8nDrvaWL</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user15'>EXPECTGREATDATA</h2>
+ <h3 date='Posted on: 2022-11-22; at: 15:30'>Posted on: 2022-11-22; at: 15:30</h3>
+  <p>The power of automation, as shared by Adam Button @Sitecore:
+
+👏 Fully functional 24/7 SOC setup 
+
+👏 100% incidents mitigated everyone month
+
+👏 Average fix time of 13 minutes 
+
+👏 3600 events per week handled by 2 SoC analysts 
+
+#ElasticON #ElasticONAMS2022 <a href="https://t.co/Os1FDQTFZO">https://t.co/Os1FDQTFZO</a></p>
+ <h3 date='Posted on: 2022-11-16; at: 21:05'>Posted on: 2022-11-16; at: 21:05</h3>
+  <p>Our Certified Professional of the Year award recognizes an individual who received their Elastic Certification and went on to give back to the Elastic community. Last year’s recipient, Felipe Queiroz, shares how winning this award impacted his career: <a href="https://t.co/dJ6oeAoQFu">https://t.co/dJ6oeAoQFu</a> <a href="https://t.co/ega8AwHY6i">https://t.co/ega8AwHY6i</a></p>
+ <h3 date='Posted on: 2022-11-16; at: 14:26'>Posted on: 2022-11-16; at: 14:26</h3>
+  <p>Mandy Andress shares her perspective on the Elastic Global Threat Report and why it's crucial for organizations to prioritize basic security fundamentals to prevent and protect against potential threats. Learn more here: <a href="https://t.co/sMcj4gwPFR">https://t.co/sMcj4gwPFR</a>
+
+#ElasticSecurityLabs</p>
+ <h3 date='Posted on: 2022-11-04; at: 14:28'>Posted on: 2022-11-04; at: 14:28</h3>
+  <p>Prevent, detect and respond to threats faster and at scale with our free #ElasticFundamentals Security Quick Start! Users will learn how to ingest data from endpoints in order to stream, detect and visualize threats in real-time. Get started now → <a href="https://t.co/fZwBdq9Py7">https://t.co/fZwBdq9Py7</a> <a href="https://t.co/9Jqkd6a4uM">https://t.co/9Jqkd6a4uM</a></p>
+ <h3 date='Posted on: 2022-11-02; at: 18:48'>Posted on: 2022-11-02; at: 18:48</h3>
+  <p>@shrikar84 Yes! Sessions are being recorded and will be available after the event.</p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user20'>EXPECTGREATDATA</h2>
  <h3 date='Posted on: 2022-11-08; at: 21:15'>Posted on: 2022-11-08; at: 21:15</h3>
   <p>Our next Community Event is Tues, Nov. 15 at 12pm EDT! Join us to hear community celebrations, a roadmap update, and a company use case for GX! <a href="https://t.co/OZeJYNCsdx">https://t.co/OZeJYNCsdx</a></p>
  <h3 date='Posted on: 2022-09-13; at: 22:40'>Posted on: 2022-09-13; at: 22:40</h3>
   <p>Our next Community Event is Tuesday, Sept 20th @ 12:00 pm (EDT), with one major presentation: our CTO @jpcampbell42 will be presenting a new Great Expectations feature, Data Assistants! Get the invite: <a href="https://t.co/skrc7q2nLy">https://t.co/skrc7q2nLy</a></p>
  <h3 date='Posted on: 2022-08-16; at: 17:07'>Posted on: 2022-08-16; at: 17:07</h3>
   <p>“Data flowing through in a way that’s unexpected is gonna break your app.” Listen to our co-founder and head of partnerships @bhcas talk with @jpruth about broken apps and #dataquality on the new @InformationWeek 2-Minute Toolkit Podcast 👉 <a href="https://t.co/FdhjDvQ6Zb">https://t.co/FdhjDvQ6Zb</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user16'>GETDBT</h2>
+ <h3 date='Posted on: 2022-07-28; at: 17:06'>Posted on: 2022-07-28; at: 17:06</h3>
+  <p>Join our next Community Event Aug 16: @htahir111 presenting @zenml_io / integration with GX + Bogdan Volodarskiy from @Provectus_inc presenting “Data Quality Comparison on AWS Glue and Great Expectations” 👉 <a href="https://t.co/1P4NcU7gtE">https://t.co/1P4NcU7gtE</a></p>
+ <h3 date='Posted on: 2022-06-21; at: 16:00'>Posted on: 2022-06-21; at: 16:00</h3>
+  <p>The Community Event starts now! Join us here: <a href="https://t.co/1P4NcTPFC6">https://t.co/1P4NcTPFC6</a>
+
+Or jump into the slack for the link: <a href="https://t.co/c0tH3HUvjO">https://t.co/c0tH3HUvjO</a></p>
+ <h3 date='Posted on: 2022-06-07; at: 22:15'>Posted on: 2022-06-07; at: 22:15</h3>
+  <p>Check out our guest from last month's event featuring @tftiv and Jeremy Goodsitt of @CapitalOneTech who presented their DataProfiler Package: <a href="https://t.co/w4PjJaP2ym">https://t.co/w4PjJaP2ym</a></p>
+ <h3 date='Posted on: 2022-06-07; at: 22:15'>Posted on: 2022-06-07; at: 22:15</h3>
+  <p>Our community event is Tuesday, June 21, 12:00pm (EDT)!
+The event will include our product roadmap update, a feature demo, and @bitsondatadev from @trinodb
+will be presenting: "Expecting Greatness From Trino, A Ludicrously Fast Query Engine." 
+
+Join here: <a href="https://t.co/2aK0Vk2oKp">https://t.co/2aK0Vk2oKp</a> <a href="https://t.co/H4qo7ZSzJj">https://t.co/H4qo7ZSzJj</a></p>
+ <h3 date='Posted on: 2022-05-18; at: 23:11'>Posted on: 2022-05-18; at: 23:11</h3>
+  <p>Great Day 1 of #applyconf, the ML data engineering conference! Looking forward to more sessions, networking opportunities, and workshops tomorrow! We are proud to sponsor! <a href="https://t.co/fSzomkUKTf">https://t.co/fSzomkUKTf</a> #DataEngineering #MachineLearning @TectonAI <a href="https://t.co/IDy1AO6gi8">https://t.co/IDy1AO6gi8</a></p>
+ <h3 date='Posted on: 2022-05-18; at: 15:01'>Posted on: 2022-05-18; at: 15:01</h3>
+  <p>The wait is over for #applyconf, the ML data engineering conference this week (May 18-19)! We are excited to sponsor! Two engaging days of curated sessions, networking opportunities, and workshops! <a href="https://t.co/ccTLIHzrn7">https://t.co/ccTLIHzrn7</a> #DataEngineering #MachineLearning @TectonAI</p>
+ <h3 date='Posted on: 2022-05-16; at: 19:26'>Posted on: 2022-05-16; at: 19:26</h3>
+  <p>Our community event is tomorrow at 12:00 pm ET! Featuring Jeremy Goodsitt and @tftiv of 
+@CapitalOneTech to talk about CapitalOne DataProfiler Package <a href="https://t.co/EdRACUwC5Z">https://t.co/EdRACUwC5Z</a> and Rob Lim will demo 
+@expectgreatdata and can interact with IoT! 
+Join us <a href="https://t.co/1P4NcTPFC6">https://t.co/1P4NcTPFC6</a> <a href="https://t.co/IR23dkgsBe">https://t.co/IR23dkgsBe</a></p>
+ <h3 date='Posted on: 2022-05-13; at: 22:06'>Posted on: 2022-05-13; at: 22:06</h3>
+  <p>🎉  We are proud sponsors of #applyconf, the ML data engineering conference this week (May 18-19)! Get ready for two engaging days of curated sessions, networking opportunities, and workshops. Register 👉 <a href="https://t.co/ccTLIHhPYx">https://t.co/ccTLIHhPYx</a> #DataEngineering #MachineLearning @TectonAI</p>
+ <h3 date='Posted on: 2022-05-10; at: 22:10'>Posted on: 2022-05-10; at: 22:10</h3>
+  <p>Our community event is next Tuesday 12:00 pm ET! Featuring Jeremy Goodsitt and Taylor Turner of @CapitalOneTech to talk about CapitalOne DataProfiler Package <a href="https://t.co/EdRACUwC5Z">https://t.co/EdRACUwC5Z</a> and Rob Lim will demo @expectgreatdata and can interact with IoT! 
+Join us <a href="https://t.co/1P4NcTPFC6">https://t.co/1P4NcTPFC6</a> <a href="https://t.co/4hiiLcAbJl">https://t.co/4hiiLcAbJl</a></p>
+ <h3 date='Posted on: 2022-05-03; at: 21:05'>Posted on: 2022-05-03; at: 21:05</h3>
+  <p>Please join us at @starburstdata's Cinco De Trino event to see @jpcampbell42 present the Trino @expectgreatdata integration for the very first time! 
+
+Join here: <a href="https://t.co/zerEMDNNSZ">https://t.co/zerEMDNNSZ</a> <a href="https://t.co/Re7uEYbHuR">https://t.co/Re7uEYbHuR</a></p>
+ <h3 date='Posted on: 2022-04-25; at: 18:30'>Posted on: 2022-04-25; at: 18:30</h3>
+  <p>Our monthly community event was last week and it included a product roadmap update, a preview of the new DataAssistants feature, and a demo of @meltano and their integration with Great Expectations. Check it out here: <a href="https://t.co/WEr5XfbFyt">https://t.co/WEr5XfbFyt</a></p>
+ <h3 date='Posted on: 2022-04-22; at: 16:08'>Posted on: 2022-04-22; at: 16:08</h3>
+  <p>We joined hundreds of data geeks for a few jam-packed days in Austin. Here are our biggest takeaways from this year’s @DataCouncilAI conference 👉  <a href="https://t.co/NhuHeqw0Mq">https://t.co/NhuHeqw0Mq</a> 
+
+#DataCouncilAI #DataQuality #DataScientist</p>
+ <h3 date='Posted on: 2022-04-12; at: 22:20'>Posted on: 2022-04-12; at: 22:20</h3>
+  <p>Our Monthy Community event is next week on Tuesday at 12:00pm ET! We will be joined by the @meltanodata team to talk about Meltano and the integration with Great Expectations. Join us here: <a href="https://t.co/skrc7q1PW0">https://t.co/skrc7q1PW0</a> <a href="https://t.co/YDCrMrezF8">https://t.co/YDCrMrezF8</a></p>
+ <h3 date='Posted on: 2022-03-28; at: 19:23'>Posted on: 2022-03-28; at: 19:23</h3>
+  <p>Join us tomorrow for a special webinar event with @PrefectIO
+
+We'll dive into the newly improved Prefect integration and explore how our platforms work together to help data teams increase data reliability and confidence. 
+
+See you tomorrow! 👉<a href="https://t.co/kOXBizY5jz">https://t.co/kOXBizY5jz</a> <a href="https://t.co/omY45eTSB1">https://t.co/omY45eTSB1</a></p>
+ <h3 date='Posted on: 2022-03-18; at: 16:54'>Posted on: 2022-03-18; at: 16:54</h3>
+  <p>Just in time for the new #Batman movie 😀 – not to mention a great in-person event to network, learn, and eat world-famous BBQ while experiencing #Austin by boat! <a href="https://t.co/Ry3SAxXEs1">https://t.co/Ry3SAxXEs1</a></p>
+ <h3 date='Posted on: 2022-03-01; at: 13:33'>Posted on: 2022-03-01; at: 13:33</h3>
+  <p>Join the Webinar tomorrow or the next day to learn how to create a custom Expectation!
+
+This hackathon event is for anyone interested in learning how to create and contribute a custom Expectation
+
+Hackathon: <a href="https://t.co/JrzLRlfaK6">https://t.co/JrzLRlfaK6</a>
+Events: <a href="https://t.co/yOwrP0FGb4">https://t.co/yOwrP0FGb4</a></p>
+ <h3 date='Posted on: 2022-02-24; at: 14:07'>Posted on: 2022-02-24; at: 14:07</h3>
+  <p>Join our webinar: "How To Contribute an Expectation to Great Expectations" on 03/02 or 03/03.
+
+This hackathon event is for anyone interested in learning how to create and contribute a custom Expectation
+
+Hackathon: <a href="https://t.co/JrzLRlfaK6">https://t.co/JrzLRlfaK6</a>
+Events: <a href="https://t.co/yOwrP0FGb4">https://t.co/yOwrP0FGb4</a> <a href="https://t.co/hOgt4OAPEK">https://t.co/hOgt4OAPEK</a></p>
+ <h3 date='Posted on: 2022-02-22; at: 17:11'>Posted on: 2022-02-22; at: 17:11</h3>
+  <p>#DataQuality comes from the needs of the organization. Learn why data engineers need to be guardians of data and liaisons for quality, as revealed in this webinar on February 22. <a href="https://t.co/fLLZrkWanJ">https://t.co/fLLZrkWanJ</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user21'>FASTDOTAI</h2>
+ <h3 date='Posted on: 2021-01-04; at: 23:58'>Posted on: 2021-01-04; at: 23:58</h3>
+  <p>New #ghapi release: v0.1.14. <a href="https://t.co/6v2z29tB5l">https://t.co/6v2z29tB5l</a>
+
+### New Features
+
+- `text` property for `GhEvent` ([#23](<a href="https://t.co/TkkR2wiiyf))">https://t.co/TkkR2wiiyf))</a>
+
+### Bugs Squashed
+
+- broken links in index.html page ([#27](<a href="https://t.co/Jz55oLTlsn…">https://t.co/Jz55oLTlsn…</a></p>
+ <h3 date='Posted on: 2020-12-21; at: 22:46'>Posted on: 2020-12-21; at: 22:46</h3>
+  <p>New #fastcore release: v1.3.13. <a href="https://t.co/vSHkZ3lYAd">https://t.co/vSHkZ3lYAd</a>
+
+### New Features
+- add  `EventTimer` ([#263](<a href="https://t.co/sDwlqHokBd))">https://t.co/sDwlqHokBd))</a>
+- Store kwargs in `store_attr  ([#262](<a href="https://t.co/ui6cbwVBLR))">https://t.co/ui6cbwVBLR))</a>
+- add `trun…</p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user22'>GETDBT</h2>
  <h3 date='Posted on: 2022-09-08; at: 20:28'>Posted on: 2022-09-08; at: 20:28</h3>
   <p>🎟️ @coalesceconf is offering Coalesce Hub Scholarships sponsored by @workstreamhq and @fivetran. 
 
@@ -522,7 +961,27 @@ Join us at #ElasticON Global on March 7-8 to access all new technical deep dives
 
 Get the goods⬇️
 <a href="https://t.co/NmtttD5TRF">https://t.co/NmtttD5TRF</a> <a href="https://t.co/IpH7mbg9lR">https://t.co/IpH7mbg9lR</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user17'>GITHUB</h2>
+ <h3 date='Posted on: 2022-06-07; at: 12:32'>Posted on: 2022-06-07; at: 12:32</h3>
+  <p>Looking for a summer project? 🤓 We've got a suggestion.
+
+✨Introducing:✨The Analytics Engineering Certification exam, the first credential you can earn under the new 🏅 dbt Certification Program.
+
+Registration opens today! More in our announcement: <a href="https://t.co/DYoM0LzNS2">https://t.co/DYoM0LzNS2</a></p>
+ <h3 date='Posted on: 2022-05-24; at: 20:22'>Posted on: 2022-05-24; at: 20:22</h3>
+  <p>🗓️There are 4 in-person and 1 virtual dbt Meetups scheduled in June.
+
+📍Locations include Boise, London, Sydney, New York, and Lagos! 🇺🇸🇬🇧🇦🇺🗽🇳🇬 
+
+🙋RSVP &amp; invite a friend. Check out the dbt Community Meetup Groups and stay tuned for upcoming events. <a href="https://t.co/mhNQjuwRnF">https://t.co/mhNQjuwRnF</a></p>
+ <h3 date='Posted on: 2022-04-01; at: 17:14'>Posted on: 2022-04-01; at: 17:14</h3>
+  <p>Why bother quickly scrambling to tackle data quality issues... when you can just prevent them instead? 🙅‍♀️
+
+@datafoldcom's new dbt integration helps you quickly  surface unexpected impact from code changes, right in your dbt pull request.
+
+More here: <a href="https://t.co/U3PTrpDnOZ">https://t.co/U3PTrpDnOZ</a> <a href="https://t.co/Rk9coSYGFn">https://t.co/Rk9coSYGFn</a></p>
+ <h3 date='Posted on: 2021-11-29; at: 15:34'>Posted on: 2021-11-29; at: 15:34</h3>
+  <p>@VarunTripurneni @HeySweet @getdbt_support @jthandy Hi Varun - sorry to hear about this issue! Our support team was able to unlock your account. We are investigating why this occurred &amp; future prevention. We’ve sent you an email in your existing ticket and look forward to continuing to support your team.</p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user23'>GITHUB</h2>
  <h3 date='Posted on: 2023-01-21; at: 18:02'>Posted on: 2023-01-21; at: 18:02</h3>
   <p>Tune into The ReadME Podcast to hear from @sudobunni about livestreaming and chasing inspiration. Plus, decluttering for developers, open source mentors, and the 6-month effort to define GitOps. <a href="https://t.co/cXOLBjabc1">https://t.co/cXOLBjabc1</a> <a href="https://t.co/SW0dxcMMfV">https://t.co/SW0dxcMMfV</a></p>
  <h3 date='Posted on: 2023-01-20; at: 15:09'>Posted on: 2023-01-20; at: 15:09</h3>
@@ -534,7 +993,47 @@ Stay tuned for our next episode coming this Tuesday.
 <a href="https://t.co/L7WOT4YHyN">https://t.co/L7WOT4YHyN</a></p>
  <h3 date='Posted on: 2023-01-13; at: 00:48'>Posted on: 2023-01-13; at: 00:48</h3>
   <p>New this week: Project events in your Issue and Pull Request timelines + Issue Form updates 👀 <a href="https://t.co/rcAcOapMJm">https://t.co/rcAcOapMJm</a> <a href="https://t.co/gfCOW8szOi">https://t.co/gfCOW8szOi</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user18'>GOOGLECLOUD</h2>
+ <h3 date='Posted on: 2022-12-21; at: 22:02'>Posted on: 2022-12-21; at: 22:02</h3>
+  <p>Working on a year-end review? GitHub Achievements may be able to help! Achievements celebrate and showcase your journey on GitHub, painting a picture you and the work you’re passionate about. So go check your profile and see what badges you’ve earned! 🌟 <a href="https://t.co/uZtgC2D5dv">https://t.co/uZtgC2D5dv</a></p>
+ <h3 date='Posted on: 2022-12-21; at: 15:59'>Posted on: 2022-12-21; at: 15:59</h3>
+  <p>🎉 You hired a new developer onto your team!
+
+But now they have to spend hours configuring their dev environment. It’s frustrating and prevents them from writing code.
+
+Here’s how GitHub Codespaces can help. <a href="https://t.co/1JBmqSsD7u">https://t.co/1JBmqSsD7u</a></p>
+ <h3 date='Posted on: 2022-12-15; at: 20:18'>Posted on: 2022-12-15; at: 20:18</h3>
+  <p>Our latest podcast is here, and it's all about gaming—our hosts get nostalgic about their childhood games, we look at the virtual world of gaming, the open source community's role in democratizing game development and much more. <a href="https://t.co/L7WOT4YHyN">https://t.co/L7WOT4YHyN</a></p>
+ <h3 date='Posted on: 2022-12-15; at: 17:18'>Posted on: 2022-12-15; at: 17:18</h3>
+  <p>Secret scanning customers can now leverage push protection for custom patterns – meaning you can can proactively prevent and safeguard your custom secrets from being leaked. <a href="https://t.co/19QyaoVY3U">https://t.co/19QyaoVY3U</a></p>
+ <h3 date='Posted on: 2022-12-15; at: 01:17'>Posted on: 2022-12-15; at: 01:17</h3>
+  <p>Our friends at the Mechanical Ink podcast chat with @naytrishroff &amp; @abbycabs about the GitHub Accelerator, the M12 GitHub fund, and open source programs at GitHub.
+
+🎙 Tune in:
+<a href="https://t.co/b7kOumznk4">https://t.co/b7kOumznk4</a></p>
+ <h3 date='Posted on: 2022-12-08; at: 20:56'>Posted on: 2022-12-08; at: 20:56</h3>
+  <p>Our next podcast episode drops next week. In the meantime, want to learn more about the myth of the lone hacker or what it takes to manage an open source business? Then check out our last episode. <a href="https://t.co/7U7oQ5ESkE">https://t.co/7U7oQ5ESkE</a></p>
+ <h3 date='Posted on: 2022-12-02; at: 00:25'>Posted on: 2022-12-02; at: 00:25</h3>
+  <p>Developers write the code that introduces vulnerabilities and they write the code that fixes them. And developers have the power to prevent vulnerabilities from being introduced in the first place. Learn how GitHub security can help you stay secure. <a href="https://t.co/lU9Hq0ido0">https://t.co/lU9Hq0ido0</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user24'>GITLAB</h2>
+ <h3 date='Posted on: 2022-11-30; at: 11:57'>Posted on: 2022-11-30; at: 11:57</h3>
+  <p>It's not too late to hang out with us at @AWSreInvent!
+
+Throw some darts, talk #DevOps, and enjoy food and drink while @djgraffiti spins at our happy hour event tonight at 6:30 pm. 
+
+Register here. 👉 <a href="https://t.co/5Xx9MUI2pH">https://t.co/5Xx9MUI2pH</a>
+
+#AWSReinvent #AWSPartner</p>
+ <h3 date='Posted on: 2022-11-23; at: 11:45'>Posted on: 2022-11-23; at: 11:45</h3>
+  <p>We're counting down until @AWSreInvent in Vegas November 28-December 2. What can you expect?
+
+💡 Lighting talks
+🦊 GitLab Swag
+👋 DevOps experts to answer your questions 
+
+Check out our event page here for our full schedule. <a href="https://t.co/y8PF8qbAEL">https://t.co/y8PF8qbAEL</a> 
+
+#AWSreInvent #AWSPartner</p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user25'>GOOGLECLOUD</h2>
  <h3 date='Posted on: 2023-01-22; at: 00:44'>Posted on: 2023-01-22; at: 00:44</h3>
   <p>@harkal444 Hello Siddheshwar! Thanks for reaching out, we're sorry to hear you have not received your certification. Could you please DM us your email address, your ticket number and the date when it was completed? We'll gladly take a look. -SR <a href="https://t.co/0GGxaO38T2">https://t.co/0GGxaO38T2</a></p>
  <h3 date='Posted on: 2023-01-21; at: 22:06'>Posted on: 2023-01-21; at: 22:06</h3>
@@ -552,7 +1051,20 @@ Register for updates on the 2023 calendar → <a href="https://t.co/LEzElz0S3e">
  -JG</p>
  <h3 date='Posted on: 2023-01-09; at: 06:09'>Posted on: 2023-01-09; at: 06:09</h3>
   <p>@VarunHasteer Thanks for clarifying. You may use this form <a href="https://t.co/XrDlaYQlYI">https://t.co/XrDlaYQlYI</a> to contact our certifications support team. Cheers! -EC</p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user19'>GRAFANA</h2>
+ <h3 date='Posted on: 2023-01-04; at: 17:03'>Posted on: 2023-01-04; at: 17:03</h3>
+  <p>How do IT leaders view public clouds?
+What do they expect from cloud providers?
+
+Find out at our upcoming webinar on January 31 with @forrester's Research Analyst, Bill Martorelli → <a href="https://t.co/WYR4kXFalA">https://t.co/WYR4kXFalA</a>
+
+#CloudMigration #PublicCloud <a href="https://t.co/qGT9k52220">https://t.co/qGT9k52220</a></p>
+ <h3 date='Posted on: 2022-12-20; at: 13:52'>Posted on: 2022-12-20; at: 13:52</h3>
+  <p>@Srithesamaritan Hi there, thanks for reaching out! Can you please DM us the link of the certification? And the confirmation email you received? We'd like to take a closer look! -WV</p>
+ <h3 date='Posted on: 2022-12-18; at: 20:57'>Posted on: 2022-12-18; at: 20:57</h3>
+  <p>Should you show off your Google Cloud certification accomplishment? Certainly 😎
+
+Check out the Google Cloud certified digital toolkit for all Google Cloud certified individuals, certification merch that honors sustainability, and more → <a href="https://t.co/3aGWttmyxJ">https://t.co/3aGWttmyxJ</a> <a href="https://t.co/cEdlGgyIyq">https://t.co/cEdlGgyIyq</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user26'>GRAFANA</h2>
  <h3 date='Posted on: 2023-01-26; at: 19:27'>Posted on: 2023-01-26; at: 19:27</h3>
   <p>We are all excited to be at FOSDEM in person again!  If you have never heard about FOSDEM check out today's post and get all the details on this amazing (and free to attendees) event as well as information on talks by Grafanistas and where to find us.
 
@@ -631,19 +1143,91 @@ Check out this upcoming webinar on December 14th and build on the knowledge shar
   <p>Check out this great webinar hosted by Isovalent, available on demand now and learn how Isovalent &amp; Grafana team up to provide powerful observability for service connectivity.
 
 <a href="https://t.co/UgWuPYiI2T">https://t.co/UgWuPYiI2T</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user20'>KSQLDB</h2>
+ <h3 date='Posted on: 2022-11-28; at: 14:49'>Posted on: 2022-11-28; at: 14:49</h3>
+  <p>Grafana’s Loki is an open source project for logging aggregation.  In our December 8th webinar you’ll hear about the key benefits of Loki and learn how to create metrics from logs and alert on your logs with powerful Prometheus-style alerting rules.
+<a href="https://t.co/DMWBdGdEGc">https://t.co/DMWBdGdEGc</a></p>
+ <h3 date='Posted on: 2022-11-15; at: 08:04'>Posted on: 2022-11-15; at: 08:04</h3>
+  <p>Enterprises that use Prometheus at scale face scalability, availability, legacy, and security challenges. Grafana Labs provides a simple, scalable solution for unifying your metrics across multiple systems.  Join our webinar this Wednesday and learn how.
+<a href="https://t.co/TTu05ZBSVX">https://t.co/TTu05ZBSVX</a></p>
+ <h3 date='Posted on: 2022-11-11; at: 13:44'>Posted on: 2022-11-11; at: 13:44</h3>
+  <p>Learn how @isovalent &amp; Grafana team up to provide powerful observability for service connectivity, made possible by innovations at the Linux kernel layer eBPF next Tuesday in this webinar hosted by Isovalent.
+<a href="https://t.co/UgWuPYiI2T">https://t.co/UgWuPYiI2T</a></p>
+ <h3 date='Posted on: 2022-11-08; at: 14:45'>Posted on: 2022-11-08; at: 14:45</h3>
+  <p>Along with metrics and logs, tracing is one of the three pillars of modern observability. In our upcoming Nov 16th webinar we will use an instrumented application to demonstrate how to use logs and Prometheus exemplars to find traces effectively in Tempo.
+
+<a href="https://t.co/L1C9GyIjGy">https://t.co/L1C9GyIjGy</a></p>
+ <h3 date='Posted on: 2022-11-08; at: 05:01'>Posted on: 2022-11-08; at: 05:01</h3>
+  <p>Join us four hours from now for today's webinar which will reveal insights for operating Grafana Loki at high efficiency and getting maximum performance for your queries.
+
+<a href="https://t.co/ulIi9X52qR">https://t.co/ulIi9X52qR</a></p>
+ <h3 date='Posted on: 2022-11-04; at: 07:39'>Posted on: 2022-11-04; at: 07:39</h3>
+  <p>In our November 16th webinar, we’ll talk about some of the challenges users encounter when scaling their metrics systems, with a particular focus on Prometheus, the newly released Grafana Mimir and Graphite.  Be sure to sign up to join us.
+
+<a href="https://t.co/TTu05ZBSVX">https://t.co/TTu05ZBSVX</a> <a href="https://t.co/JnWacNdkzw">https://t.co/JnWacNdkzw</a></p>
+ <h3 date='Posted on: 2022-10-28; at: 07:32'>Posted on: 2022-10-28; at: 07:32</h3>
+  <p>Join us for this webinar November 8th, as we reveal insights for operating Grafana Loki at high efficiency and getting maximum performance for your queries. We’ll also go over tips and tricks on how to use some lesser known LogQL features.
+
+<a href="https://t.co/ulIi9XmDPr">https://t.co/ulIi9XmDPr</a> <a href="https://t.co/FzgqFWSQRa">https://t.co/FzgqFWSQRa</a></p>
+ <h3 date='Posted on: 2022-10-27; at: 19:57'>Posted on: 2022-10-27; at: 19:57</h3>
+  <p>If you're not able to join us in person for the premier conference on Observability from Grafana, #ObservabilityCON 2022 in NYC next week you don't have to miss out. Sign up here to join in remotely and stream the keynotes live.
+
+<a href="https://t.co/Tpumd4rXGF">https://t.co/Tpumd4rXGF</a> <a href="https://t.co/56JYLfvwiF">https://t.co/56JYLfvwiF</a></p>
+ <h3 date='Posted on: 2022-10-27; at: 17:23'>Posted on: 2022-10-27; at: 17:23</h3>
+  <p>Take a look back at GrafanaLive, a series of in-person events hosted by Grafana in 18 cities across the globe to bring together the open source community.
+
+<a href="https://t.co/E0meyWI5w0">https://t.co/E0meyWI5w0</a> <a href="https://t.co/XMcfq5TeS6">https://t.co/XMcfq5TeS6</a></p>
+ <h3 date='Posted on: 2022-10-25; at: 18:48'>Posted on: 2022-10-25; at: 18:48</h3>
+  <p>Get started with Grafana the easy way this Thursday by joining this webinar that covers the basics of Grafana dashboards and will get you started connecting disparate sources of information into a single pane view of your systems.
+
+<a href="https://t.co/5QkTpwjeLp">https://t.co/5QkTpwjeLp</a> <a href="https://t.co/SoWDv9rj40">https://t.co/SoWDv9rj40</a></p>
+ <h3 date='Posted on: 2022-10-19; at: 17:23'>Posted on: 2022-10-19; at: 17:23</h3>
+  <p>Want to get started unifying your metrics and creating beautiful dashboards that give you insights into your systems at a glance?   Don't miss out on this webinar on getting started with Grafana next Thursday, October 27.
+
+<a href="https://t.co/5QkTpwjMAX">https://t.co/5QkTpwjMAX</a></p>
+ <h3 date='Posted on: 2022-10-18; at: 13:22'>Posted on: 2022-10-18; at: 13:22</h3>
+  <p>🐦 Early bird pricing for #ObservabilityCON 2022 in NYC ends this Friday! 🐤 
+
+Move fast if you don't want to miss out on the premier conference on Observability from Grafana, and register today.
+
+<a href="https://t.co/QcNYpGvz4N">https://t.co/QcNYpGvz4N</a> <a href="https://t.co/Ng6qHDwDYT">https://t.co/Ng6qHDwDYT</a></p>
+ <h3 date='Posted on: 2022-10-14; at: 16:08'>Posted on: 2022-10-14; at: 16:08</h3>
+  <p>Time is quickly running out for you to join us in NYC at the world’s premier conference on observability hosted by Grafana, #ObservabilityCON 2022.  Tickets are running out fast so register today to secure your spot!
+
+<a href="https://t.co/QcNYpGvz4N">https://t.co/QcNYpGvz4N</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user27'>KSQLDB</h2>
  <h3 date='Posted on: 2021-09-22; at: 14:56'>Posted on: 2021-09-22; at: 14:56</h3>
   <p>Driving company-wide event streaming and log-based change data capture at @boltapp, powered by @apachekafka,  ksqlDB, and @debezium. It's today's #StreamingAudio rewind: <a href="https://t.co/HcsRvrK67J">https://t.co/HcsRvrK67J</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user21'>KUBERNETESIO</h2>
+ <h3 date='Posted on: 2020-11-05; at: 18:12'>Posted on: 2020-11-05; at: 18:12</h3>
+  <p>🎁 We're exciting to announce that pull queries (point-in-time lookups over materialized views) are now available for everyone in @confluentinc Cloud! Build an event streaming app with zero infrastructure using managed Kafka, connectors, and @ksqlDB. <a href="https://t.co/iwnSTRF0eU">https://t.co/iwnSTRF0eU</a></p>
+ <h3 date='Posted on: 2020-10-07; at: 15:14'>Posted on: 2020-10-07; at: 15:14</h3>
+  <p>Coming soon to @ksqlDB: variable substitution. This makes it easier to build production-tooling around your event streaming applications. <a href="https://t.co/xzIsLArTRh">https://t.co/xzIsLArTRh</a></p>
+ <h3 date='Posted on: 2020-07-31; at: 16:00'>Posted on: 2020-07-31; at: 16:00</h3>
+  <p>One of ksqlDB's advantages as an event streaming database is that it deeply integrates with @apachekafka. You can clearly see this in its treatment of record keys. Check out this deep dive by Andy Coates on how it works. <a href="https://t.co/XBlBOaUjXC">https://t.co/XBlBOaUjXC</a> <a href="https://t.co/rUWK1aVYoR">https://t.co/rUWK1aVYoR</a></p>
+ <h3 date='Posted on: 2020-05-26; at: 16:59'>Posted on: 2020-05-26; at: 16:59</h3>
+  <p>Build real-time applications with @ksqlDB, @elastic, and @apachekafka Connect that run persistent queries over event streams. In this clickstream demo, @bbejeck explains how to build an event-driven application. <a href="https://t.co/tgsONnC0lG">https://t.co/tgsONnC0lG</a> <a href="https://t.co/khtNb9vbk9">https://t.co/khtNb9vbk9</a></p>
+ <h3 date='Posted on: 2020-05-21; at: 14:35'>Posted on: 2020-05-21; at: 14:35</h3>
+  <p>📙 New how-to guide: ksqlDB lets you use event attributes as timestamps for time-related processing. This is called event-time, and it lets you deal with out-of-order data. <a href="https://t.co/Jn0X0wtZVI">https://t.co/Jn0X0wtZVI</a></p>
+ <h3 date='Posted on: 2020-05-14; at: 15:16'>Posted on: 2020-05-14; at: 15:16</h3>
+  <p>ksqlDB makes working with protobuf serialized events as simple as JSON or Avro. Just set value_format to = 'protobuf' and away you go! Getting started is easy. <a href="https://t.co/MOqlEMJWRc">https://t.co/MOqlEMJWRc</a></p>
+ <h3 date='Posted on: 2020-04-24; at: 14:39'>Posted on: 2020-04-24; at: 14:39</h3>
+  <p>📩New end-to-end tutorial: build an event-driven microservice. Ingest events with @apachekafka, spot patterns of interest with @ksqlDB, then trigger email alerts with @SendGrid.
+
+<a href="https://t.co/BEs8i2uPE8">https://t.co/BEs8i2uPE8</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user28'>KUBERNETESIO</h2>
  <h3 date='Posted on: 2022-06-06; at: 15:24'>Posted on: 2022-06-06; at: 15:24</h3>
   <p>#Kubernetes v1.24 has introduced a new alpha-level feature that prevents unauthorized users from modifying the volume mode of a #PersistentVolumeClaim created from an existing VolumeSnapshot in the #Kubernetes cluster.
 
 Check out more the blog! <a href="https://t.co/MeiKI5GwTr">https://t.co/MeiKI5GwTr</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user22'>LIGHTDASH_DEVS</h2>
+ <h3 date='Posted on: 2022-01-12; at: 15:44'>Posted on: 2022-01-12; at: 15:44</h3>
+  <p>☁️ Check out the blog for all the Kubernetes 1.23 content. Next up: Prevent PersistentVolume leaks when deleting out of order <a href="https://t.co/1frMA6dy7L">https://t.co/1frMA6dy7L</a> 
+✏️ Deepak Kinni <a href="https://t.co/v98eS2Oyoz">https://t.co/v98eS2Oyoz</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user29'>LIGHTDASH_DEVS</h2>
  <h3 date='Posted on: 2022-08-24; at: 13:38'>Posted on: 2022-08-24; at: 13:38</h3>
   <p>Listen to @datumnite chat on the latest episode of Meet The Analytics Stack podcast on all things Lightdash, what we're building and why new data tooling is only useful if you can point to how it improves someone's quality of life! 
 <a href="https://t.co/az1horTbEm">https://t.co/az1horTbEm</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user23'>MARIADB</h2>
+ <h3 date='Posted on: 2021-10-28; at: 19:01'>Posted on: 2021-10-28; at: 19:01</h3>
+  <p>We spoke to Tobias @DataEngPodcast to talk metrics and the future of BI. Hot takes 4 U. Full episode at: <a href="https://t.co/YZbOk9w8NY">https://t.co/YZbOk9w8NY</a> <a href="https://t.co/UKkJhk8PR4">https://t.co/UKkJhk8PR4</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user30'>MARIADB</h2>
  <h3 date='Posted on: 2023-01-24; at: 15:59'>Posted on: 2023-01-24; at: 15:59</h3>
   <p>Change is good! 👍 And #FinancialService institutions need change to compete with big #tech and #FinTech startups.
 
@@ -706,7 +1290,102 @@ Learn the ins and outs to optimize performance with our on-demand webinar.
 
 Get ready to go beyond the basics! 
 <a href="https://t.co/Q4xbH8NuO2">https://t.co/Q4xbH8NuO2</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user24'>MELTANODATA</h2>
+ <h3 date='Posted on: 2023-01-10; at: 15:47'>Posted on: 2023-01-10; at: 15:47</h3>
+  <p>The future is coming. It’s time to future-proof with #MariaDB #Xpand! 
+
+Learn how to modernize your #DBaaS with real-world examples of #Xpand on @GoogleCloud (with @SADA) in our on-demand webinar. 
+
+➡️ <a href="https://t.co/9YaI6N0mCw">https://t.co/9YaI6N0mCw</a> <a href="https://t.co/uGE5rDChsZ">https://t.co/uGE5rDChsZ</a></p>
+ <h3 date='Posted on: 2023-01-10; at: 00:05'>Posted on: 2023-01-10; at: 00:05</h3>
+  <p>Here at #MariaDB, we’re an open book 📖 so let's read up!🔍
+
+Find out how MariaDB #SkySQL compares to #AmazonAurora in terms of features, price, and capabilities. 
+
+Our on-demand webinar gets into the nitty-gritty: <a href="https://t.co/99oVDeyHgK">https://t.co/99oVDeyHgK</a> <a href="https://t.co/E3LgqD1nKc">https://t.co/E3LgqD1nKc</a></p>
+ <h3 date='Posted on: 2023-01-09; at: 18:35'>Posted on: 2023-01-09; at: 18:35</h3>
+  <p>Want to keep your #database running smoothly?
+
+Get on #MariaDB monitoring and alerting with #SkySQL! In this on-demand webinar, we’ll show you how to prevent downtime and solve problems.
+
+<a href="https://t.co/eLYcE8a5KM">https://t.co/eLYcE8a5KM</a> <a href="https://t.co/fRolRz28FI">https://t.co/fRolRz28FI</a></p>
+ <h3 date='Posted on: 2023-01-07; at: 16:50'>Posted on: 2023-01-07; at: 16:50</h3>
+  <p>An application that handles mixed workloads without messy, cumbersome architecture is possible. ✨
+
+Lucky for you, we’ve broken down HOW in our on-demand webinar. 👀 
+<a href="https://t.co/T6H6aypF3p">https://t.co/T6H6aypF3p</a></p>
+ <h3 date='Posted on: 2023-01-06; at: 15:18'>Posted on: 2023-01-06; at: 15:18</h3>
+  <p>A battle royale, but make it #DBaaS: #MariaDB #SkySQL vs #RDS vs #Aurora. 👊
+
+Tune in on Jan. 19 🗓️ for our LIVE webinar to see which is the best AWS-hosted #DBaaS: <a href="https://t.co/6OzXXAaJGi">https://t.co/6OzXXAaJGi</a> 
+
+You don’t want to miss this fighting match. 💥 <a href="https://t.co/PCo9EQGYVw">https://t.co/PCo9EQGYVw</a></p>
+ <h3 date='Posted on: 2023-01-04; at: 15:11'>Posted on: 2023-01-04; at: 15:11</h3>
+  <p>Humans can’t be available 24/7, but your business’ #data architecture should be.
+
+Our webinar walks through how to make architectural choices and trade-offs for absolute availability in the #cloud. ☁️
+<a href="https://t.co/e0aKwJ9vvp">https://t.co/e0aKwJ9vvp</a></p>
+ <h3 date='Posted on: 2022-12-30; at: 15:02'>Posted on: 2022-12-30; at: 15:02</h3>
+  <p>Say “goodbye” to #2022 and “hello” to #2023. 👋
+
+Let’s kick-start the new year with 2022’s TOP webinar: Understand #DistributedSQL Architecture. ➡️ <a href="https://t.co/g80aYqRiTj">https://t.co/g80aYqRiTj</a>  
+
+Make it part of your #NewYears resolution to review the basics of distributed SQL <a href="https://t.co/nosLiKE4Jw">https://t.co/nosLiKE4Jw</a></p>
+ <h3 date='Posted on: 2022-12-29; at: 23:50'>Posted on: 2022-12-29; at: 23:50</h3>
+  <p>Do you know how to compare the performance of reactive vs. traditional services?
+
+If you do, you can determine if your applications can benefit from reactive programming.
+
+Explore our on-demand webinar to learn more: <a href="https://t.co/fgZz98iL4B.">https://t.co/fgZz98iL4B.</a></p>
+ <h3 date='Posted on: 2022-12-29; at: 14:56'>Posted on: 2022-12-29; at: 14:56</h3>
+  <p>Before we crush it in 2023 👊 we need to understand the basics.
+
+Get a quick refresh with our 2nd most watched webinar of 2022: What Is #DistributedSQL?
+
+How does it work? What are the benefits and drawbacks?
+
+Get your questions answered: <a href="https://t.co/taEgASIeCK.">https://t.co/taEgASIeCK.</a></p>
+ <h3 date='Posted on: 2022-12-28; at: 14:59'>Posted on: 2022-12-28; at: 14:59</h3>
+  <p>A #NewYear is all about making positive changes.
+
+Make a shift with our #2022 top webinars! Coming in 3rd place: How to Migrate from #Oracle to #MariaDB.
+
+We’ve outlined the process for a smooth migration and even demonstrated schema migration.
+<a href="https://t.co/aFaTMQ6tTR">https://t.co/aFaTMQ6tTR</a></p>
+ <h3 date='Posted on: 2022-12-28; at: 00:05'>Posted on: 2022-12-28; at: 00:05</h3>
+  <p>Temporal tables are used when #data and its validity changes over time.
+
+Get a comprehensive overview of temporal tables and learn how to query various types in our on-demand webinar. 
+
+The more you know, the better! 👇
+<a href="https://t.co/HgJ3jLgdgX">https://t.co/HgJ3jLgdgX</a></p>
+ <h3 date='Posted on: 2022-12-27; at: 15:49'>Posted on: 2022-12-27; at: 15:49</h3>
+  <p>Let the countdown to #2023 continue with the top webinars of #2022. 🎉
+
+In 4th place: #DistributedSQL: #MariaDB #Xpand vs. #CockroachDB.
+
+We compare the architecture of both #databases, relative feature sets, and performance benchmarks. 👀
+
+<a href="https://t.co/9XeGGZ0XgF">https://t.co/9XeGGZ0XgF</a> <a href="https://t.co/i2PqGyMHxR">https://t.co/i2PqGyMHxR</a></p>
+ <h3 date='Posted on: 2022-12-26; at: 23:32'>Posted on: 2022-12-26; at: 23:32</h3>
+  <p>Change is good! 👍 And #FinancialService institutions need change to compete with big #tech and #FinTech startups.
+
+Tune into our on-demand webinar and learn how reimagined #DistributedSQL databases can level up transactions.
+<a href="https://t.co/XlndEbaeOm">https://t.co/XlndEbaeOm</a></p>
+ <h3 date='Posted on: 2022-12-26; at: 22:14'>Posted on: 2022-12-26; at: 22:14</h3>
+  <p>Another day, another top webinar of #2022.
+
+The 5th top webinar of 2022: Best Practices for a Comprehensive Business Continuity Plan with #MariaDB.
+
+Reminder: Get an effective backup and restore strategy in place for the new year.
+<a href="https://t.co/gxlcWoij3V">https://t.co/gxlcWoij3V</a></p>
+ <h3 date='Posted on: 2022-12-23; at: 15:04'>Posted on: 2022-12-23; at: 15:04</h3>
+  <p>The countdown to 2023 isn't complete without another top 2022 webinar.
+
+Coming in at 6th: Using #Nodejs with #MariaDB: From Basics to Best Practices.
+
+If you haven’t seen it already, we demonstrate how to get started using our Node.js connector. 💻
+<a href="https://t.co/kQAAxoHiiQ">https://t.co/kQAAxoHiiQ</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user31'>MELTANODATA</h2>
  <h3 date='Posted on: 2022-10-27; at: 16:01'>Posted on: 2022-10-27; at: 16:01</h3>
   <p>#TapToberfest2022 is almost at an end, and we’d love to see what you were able to work on!🙌 Don’t worry, it doesn’t have to be perfect or completely finished. Reach out to Amanda on our #taptoberfest-2022 slack channel to find out more!
 
@@ -743,7 +1422,18 @@ Get ready to go beyond the basics!
 Stay tuned for the next couple of days to register! 
 
 #meltano #dataops #dataintegration #dataevent #dataplatform <a href="https://t.co/NzPUl0YdCa">https://t.co/NzPUl0YdCa</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user25'>METABASE</h2>
+ <h3 date='Posted on: 2022-08-08; at: 14:47'>Posted on: 2022-08-08; at: 14:47</h3>
+  <p>If your company is relatively new to #RemoteWork, this podcast is for you! @tayloramurphy shared with @kenyarmosh his experience as a remote work pro at #Meltano, where we’re proud #RemoteFirst advocates as well. 💪😎 Check out the full episode: <a href="https://t.co/5ZcnR0abkz">https://t.co/5ZcnR0abkz</a> <a href="https://t.co/TCbItTf15K">https://t.co/TCbItTf15K</a></p>
+ <h3 date='Posted on: 2022-06-07; at: 21:11'>Posted on: 2022-06-07; at: 21:11</h3>
+  <p>It’s launch week! We are beyond excited for #Meltanov2 and we can’t wait to share it with you. 😊 Add these events to your calendar to join us live: <a href="https://t.co/o3U4zNibBN">https://t.co/o3U4zNibBN</a> or watch them later in our YouTube channel. See you this Wednesday! 🎉 #meltano #opensource #DataOps <a href="https://t.co/BHnPd4qe7E">https://t.co/BHnPd4qe7E</a></p>
+ <h3 date='Posted on: 2022-06-02; at: 19:48'>Posted on: 2022-06-02; at: 19:48</h3>
+  <p>Finally met one of our most active community members, @derekvisch from @AutoIDM at @DataConnectConf 😎
+
+#DataConnect2022 #dataevents #ohio #meltano #autoidm <a href="https://t.co/mMsfOUrBdh">https://t.co/mMsfOUrBdh</a></p>
+ <h3 date='Posted on: 2022-05-30; at: 17:20'>Posted on: 2022-05-30; at: 17:20</h3>
+  <p>Visit us this week at the 2022 DataConnect Conference on June 2-3 in Columbus, OH! <a href="https://t.co/T1ByY8lWXy">https://t.co/T1ByY8lWXy</a> 
+#DataConnectConf2022 <a href="https://t.co/3Wbvege46X">https://t.co/3Wbvege46X</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user32'>METABASE</h2>
  <h3 date='Posted on: 2023-01-26; at: 15:12'>Posted on: 2023-01-26; at: 15:12</h3>
   <p>💬 We'll discuss:
 
@@ -767,7 +1457,18 @@ Meet one of our event’s guests - @amoghito, co-founder of @eeselapp, and previ
   <p>Join us next Thursday to hear Amogh sharing an electrifying tale of missing events and spreadsheet madness.
 Make sure to RSVP 👇
 <a href="https://t.co/YXrKKncAnn">https://t.co/YXrKKncAnn</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user26'>MYSQL</h2>
+ <h3 date='Posted on: 2022-06-22; at: 15:38'>Posted on: 2022-06-22; at: 15:38</h3>
+  <p>Interested in Marketing Automation? @MauticCommunity is hosting a webinar on building interactive marketing dashboards 👇 <a href="https://t.co/M0OB7qYqzO">https://t.co/M0OB7qYqzO</a></p>
+ <h3 date='Posted on: 2022-06-07; at: 19:54'>Posted on: 2022-06-07; at: 19:54</h3>
+  <p>In London? @fireboltHQ and @markrittman are hosting an event with lots of data, beer, and data engineering insights. <a href="https://t.co/Z8TYCACbj1">https://t.co/Z8TYCACbj1</a></p>
+ <h3 date='Posted on: 2022-06-06; at: 18:03'>Posted on: 2022-06-06; at: 18:03</h3>
+  <p>1/ 
+
+Event instrumentation is great, but requires a lot of discipline. 
+
+With Metabase, you can use your own production database to identify trends about who is using your product, and how. 
+🤓Less planning --&gt;🌎 more exploration.</p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user33'>MYSQL</h2>
  <h3 date='Posted on: 2023-01-24; at: 16:58'>Posted on: 2023-01-24; at: 16:58</h3>
   <p>[Webinar] Jan 26, 10AM PT. Learn how <a href="https://t.co/tY15Ie5Nlf">https://t.co/tY15Ie5Nlf</a> leverages MySQL High Availability on OCI to turbocharge its Conversation AI engine. <a href="https://t.co/gQ6zkRP18R">https://t.co/gQ6zkRP18R</a>
 #MySQL #MySQLHeatWave #AI #HighAvailability #Oraclecloud <a href="https://t.co/d4xFn4mgjp">https://t.co/d4xFn4mgjp</a></p>
@@ -824,20 +1525,153 @@ Make sure to RSVP 👇
  <h3 date='Posted on: 2022-10-10; at: 13:51'>Posted on: 2022-10-10; at: 13:51</h3>
   <p>[Podcast] @LastWeekinAWS, Corey Quinn Takes MySQL HeatWave on AWS for a Test Drive. "I’m really optimistic about what the launch of this service portends for Oracle.” <a href="https://t.co/n26f0Zey2m">https://t.co/n26f0Zey2m</a>
 #MySQL #MySQLHeatWave #AWS #Oracle</p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user27'>MOTHERDUCK</h2>
+ <h3 date='Posted on: 2022-10-05; at: 20:30'>Posted on: 2022-10-05; at: 20:30</h3>
+  <p>[Event] OCT 10-14. GITEX, Dubai. Join the MySQL dolphins, booth D50 Hall4. Learn about MySQL &amp; MySQL HeatWave. Presentations from CloudMe and Tamam Finance. Test drive an F1 in our simulator. Learn more: <a href="https://t.co/Q5LPAhoWTc">https://t.co/Q5LPAhoWTc</a>
+#MySQL #MySQLHeatWave #GITEX #Oracle <a href="https://t.co/9FyXK6HwJY">https://t.co/9FyXK6HwJY</a></p>
+ <h3 date='Posted on: 2022-10-05; at: 15:58'>Posted on: 2022-10-05; at: 15:58</h3>
+  <p>[Event: Oracle CloudWorld] OCT 17-20 in Las Vegas. Learn what's new with MySQL, MySQL HeatWave on AWS, Machine Learning, MySQL at 8X8, NVIDIA, Toyota, and more. Only 2 weeks left, register now:<a href="https://t.co/9ffqPzWyNu">https://t.co/9ffqPzWyNu</a> <a href="https://t.co/ur3jIvWZ74">https://t.co/ur3jIvWZ74</a></p>
+ <h3 date='Posted on: 2022-10-03; at: 16:17'>Posted on: 2022-10-03; at: 16:17</h3>
+  <p>[Hands-on-Lab] OCT 6th. 10AM PT. MySQL HeatWave —In-Memory Query Accelerator with Built-in Machine Learning Capabilities. Webinar registrants will receive $500 credit to try MySQL HeatWave for 30 days.<a href="https://t.co/a8uhZAqyP1">https://t.co/a8uhZAqyP1</a> <a href="https://t.co/k1N5icbFZI">https://t.co/k1N5icbFZI</a></p>
+ <h3 date='Posted on: 2022-09-27; at: 13:08'>Posted on: 2022-09-27; at: 13:08</h3>
+  <p>[MySQL Day Sao Paulo] Great turn out at today's first 2022, in-person, MySQL event in Brazil. A BIG thank you to the Brazilian dolphins for managing the event.
+#MySQL #MySQLHeatWave #MySQLDay <a href="https://t.co/bNco74jXvr">https://t.co/bNco74jXvr</a></p>
+ <h3 date='Posted on: 2022-09-26; at: 08:30'>Posted on: 2022-09-26; at: 08:30</h3>
+  <p>[MySQL Day Rome] SEP 28. Free event. Learn what's new with #MySQL. Plus, security and performance best practices, and more. <a href="https://t.co/9pAVaAMK8y">https://t.co/9pAVaAMK8y</a> <a href="https://t.co/JTjrotBpvB">https://t.co/JTjrotBpvB</a></p>
+ <h3 date='Posted on: 2022-09-22; at: 11:49'>Posted on: 2022-09-22; at: 11:49</h3>
+  <p>[MySQL Day Madrid] Full house. Thanks to the Universidad Complutense de Madrid for the testimonial and to the Spanish dolphins for managing the event. #MySQL #MySQLHeatWave #Madrid <a href="https://t.co/JbBKjXXutE">https://t.co/JbBKjXXutE</a></p>
+ <h3 date='Posted on: 2022-09-19; at: 20:27'>Posted on: 2022-09-19; at: 20:27</h3>
+  <p>[Live Webinar] Sep 22, 2022. 10AM PST. MySQL HeatWave in Depth: Machine Learning-based Automation – MySQL AutoPilot.
+Learn more: <a href="https://t.co/B3cwMQCI01">https://t.co/B3cwMQCI01</a>
+#MySQL #MySQLHeatWave #MachineLearning <a href="https://t.co/rddhq1QUK3">https://t.co/rddhq1QUK3</a></p>
+ <h3 date='Posted on: 2022-09-19; at: 06:00'>Posted on: 2022-09-19; at: 06:00</h3>
+  <p>[Free In-Person Event] September 22. 9h30 to 15h30. Madrid, Spain. Join us at Oracle España
+Paseo de la Castellana 81, to learn about what's new with MySQL, and more. See full agenda and register now:<a href="https://t.co/oFSgyQkUbH">https://t.co/oFSgyQkUbH</a>
+#MySQL #MySQLDay #MySQLHeatWave #Madrid <a href="https://t.co/lJjv87FDZn">https://t.co/lJjv87FDZn</a></p>
+ <h3 date='Posted on: 2022-09-15; at: 08:25'>Posted on: 2022-09-15; at: 08:25</h3>
+  <p>[Live Webinar] SEPT 15, 10AM PST. MySQL Database Architectures - High Availability and Disaster Recovery Solution. Includes introduction of MySQL InnoDB Cluster and MySQL InnoDB ReplicaSet. Register:<a href="https://t.co/5SR0GQY19t">https://t.co/5SR0GQY19t</a> <a href="https://t.co/mYnWHSvlsg">https://t.co/mYnWHSvlsg</a></p>
+ <h3 date='Posted on: 2022-09-13; at: 17:00'>Posted on: 2022-09-13; at: 17:00</h3>
+  <p>[Live Webinar] Sep 15, 10AM PT. MySQL Database Architectures - High Availability and Disaster Recovery Solutions.  Includes: introduction of MySQL InnoDB Cluster and MySQL InnoDB ReplicaSet. Register now: <a href="https://t.co/5T1ku6K9t3">https://t.co/5T1ku6K9t3</a>
+#MySQL #HighAvailability #DisasterRecovery #InnoDB <a href="https://t.co/e5ItC4nPmo">https://t.co/e5ItC4nPmo</a></p>
+ <h3 date='Posted on: 2022-09-13; at: 02:21'>Posted on: 2022-09-13; at: 02:21</h3>
+  <p>[Live Webinar] Sep 14, 10AM PT. Backup and Disaster Recovery in the Cloud for On-Premises MySQL. Learn more: <a href="https://t.co/QEgTiJekKS">https://t.co/QEgTiJekKS</a>
+#MySQL #Security #dataprotection #DatabaseBackup #DisasterRecovery <a href="https://t.co/s4USOd1hiy">https://t.co/s4USOd1hiy</a></p>
+ <h3 date='Posted on: 2022-09-05; at: 17:14'>Posted on: 2022-09-05; at: 17:14</h3>
+  <p>[Webinar] Sept 8, 10AM PT.  MySQL for Beginners: Using MySQL in the cloud. Get up and running faster with MySQL HeatWave. <a href="https://t.co/sfCnlE2g5L">https://t.co/sfCnlE2g5L</a>
+#MySQL #Cloud #MySQLHeatWave #Beginners <a href="https://t.co/KIUPq1L7N3">https://t.co/KIUPq1L7N3</a></p>
+ <h3 date='Posted on: 2022-08-29; at: 17:06'>Posted on: 2022-08-29; at: 17:06</h3>
+  <p>[Live Webinar] Sept 1. 10AM PST. Increase protection and turbocharge your MySQL database with encryption, auditing, high availability/scalability extensions, online backup, monitoring, management, Oracle support, and more. <a href="https://t.co/tY3ZZyYatA">https://t.co/tY3ZZyYatA</a>
+#MySQL #dataprotection <a href="https://t.co/4p1zyi8SOS">https://t.co/4p1zyi8SOS</a></p>
+ <h3 date='Posted on: 2022-08-24; at: 21:38'>Posted on: 2022-08-24; at: 21:38</h3>
+  <p>[Live Webinar] August 25. 10AM PT. Discover how data integration with a graphical designer, ensure that information is timely, accurate, and consistent across complex system. <a href="https://t.co/0dXN1wWhLW">https://t.co/0dXN1wWhLW</a>
+#MySQL #Analytics #OAC #MySQLHeatWave <a href="https://t.co/rOvuhMnuJl">https://t.co/rOvuhMnuJl</a></p>
+ <h3 date='Posted on: 2022-08-17; at: 04:58'>Posted on: 2022-08-17; at: 04:58</h3>
+  <p>[Live Webinar] Aug 18, 10AM PT. Benefits of Using Oracle MySQL Enterprise Edition. Discover the highest levels of security and best way to protect your data. <a href="https://t.co/i7mOtcxFUC">https://t.co/i7mOtcxFUC</a>
+#MySQL #database #security #dataprotection <a href="https://t.co/Im5tr74u9F">https://t.co/Im5tr74u9F</a></p>
+ <h3 date='Posted on: 2022-08-04; at: 00:49'>Posted on: 2022-08-04; at: 00:49</h3>
+  <p>[Live Webinar] AUG 11, 10AM PT. MySQL HeatWave for FinTech and Financial Services. Covers Market trends, the FinTech ecosystem, use cases, customer references, and more.<a href="https://t.co/IZncG4E6pW">https://t.co/IZncG4E6pW</a>
+#MySQL #Fintech #financialservices #MySQLHeatWave <a href="https://t.co/EhxWfc1aEp">https://t.co/EhxWfc1aEp</a></p>
+ <h3 date='Posted on: 2022-07-26; at: 04:37'>Posted on: 2022-07-26; at: 04:37</h3>
+  <p>[Webinar] July 28. 10AM PT. Benefits of Using MySQL HeatWave for SaaS applications. Includes use cases from leading SaaS companies. <a href="https://t.co/75OTAy6LA6">https://t.co/75OTAy6LA6</a>
+#MySQL #MySQLHeatWave #SaaS #Database #Cloud <a href="https://t.co/8iGMUuEdzW">https://t.co/8iGMUuEdzW</a></p>
+ <h3 date='Posted on: 2022-07-25; at: 21:59'>Posted on: 2022-07-25; at: 21:59</h3>
+  <p>[Conference] Join us this week at Scale in Los Angeles.  Check the MySQL sessions. Visit our booth #115. See our latest innovations. Meet you all there. <a href="https://t.co/xT1Y6ncDKR">https://t.co/xT1Y6ncDKR</a> 
+#MySQL #Linux #databases #opensource #sql #dba #DevOps <a href="https://t.co/0piTm1ae75">https://t.co/0piTm1ae75</a></p>
+ <h3 date='Posted on: 2022-07-18; at: 13:00'>Posted on: 2022-07-18; at: 13:00</h3>
+  <p>[Live Webinar] July 21. 10AM PT.  MySQL for Beginners. Covers essential tools, steps to install and configure MySQL Server, queries, common pitfalls to avoid, and more. <a href="https://t.co/0q02eXGEaV">https://t.co/0q02eXGEaV</a>
+#MySQL #Beginners <a href="https://t.co/T0E4XYaN23">https://t.co/T0E4XYaN23</a></p>
+ <h3 date='Posted on: 2022-07-12; at: 01:03'>Posted on: 2022-07-12; at: 01:03</h3>
+  <p>[Live Webinar] July 13. 10AM PT.  Top Reasons to Use Oracle MySQL HeatWave in the cloud. Faster queries, No ETL, real-time analytics, significant savings, and more. <a href="https://t.co/33PktLnCNF">https://t.co/33PktLnCNF</a>
+#MySQL #MySQLHeatWave #Analytics <a href="https://t.co/njDNHuX1Ig">https://t.co/njDNHuX1Ig</a></p>
+ <h3 date='Posted on: 2022-07-05; at: 16:50'>Posted on: 2022-07-05; at: 16:50</h3>
+  <p>[Live Webinar] July 7 - 10AM PST. Learn why ISVs select #MySQL as their #embedded database, from usability, full technical support, a dual license model, low TCO, and more. <a href="https://t.co/LcB68ZP8IM">https://t.co/LcB68ZP8IM</a> <a href="https://t.co/dJuFr2RiCF">https://t.co/dJuFr2RiCF</a></p>
+ <h3 date='Posted on: 2022-06-22; at: 18:46'>Posted on: 2022-06-22; at: 18:46</h3>
+  <p>[Live Webinar] June 23, 2022. 10AM PT. Learn how MySQL is making FinTech and Financial Services companies more competitive. 
+<a href="https://t.co/kMRIje3cvj">https://t.co/kMRIje3cvj</a>
+#MySQL #Fintech #financialservices <a href="https://t.co/52QXfVezTH">https://t.co/52QXfVezTH</a></p>
+ <h3 date='Posted on: 2022-06-08; at: 22:25'>Posted on: 2022-06-08; at: 22:25</h3>
+  <p>[Webinar] June 9, 2022. 10AM PT. Learn how to easily migrate your on-premises MySQL databases to the Cloud. <a href="https://t.co/490bJdXhTT">https://t.co/490bJdXhTT</a>
+#MySQL #MySQLHeatWave #database #Cloud <a href="https://t.co/TEMj0S8IuV">https://t.co/TEMj0S8IuV</a></p>
+ <h3 date='Posted on: 2022-06-07; at: 19:57'>Posted on: 2022-06-07; at: 19:57</h3>
+  <p>[Webinar] June 8, 2022 – 10AM PT. Achieve the highest levels of MySQL security with the latest MySQL Enterprise Edition. <a href="https://t.co/Q1dYUUnE9I">https://t.co/Q1dYUUnE9I</a>
+#MySQL #MySQLEE #Security #GDPR #PCI #DSS #HIPAA <a href="https://t.co/fSjnjnIs65">https://t.co/fSjnjnIs65</a></p>
+ <h3 date='Posted on: 2022-06-01; at: 23:32'>Posted on: 2022-06-01; at: 23:32</h3>
+  <p>[Webinar] June 8, 2022 – 10AM PT. Discover how to achieve the highest levels of MySQL security with the latest MySQL Enterprise Edition. <a href="https://t.co/Q1dYUUnE9I">https://t.co/Q1dYUUnE9I</a>
+#MySQL #MySQLEE #Security #GDPR #PCI #DSS #HIPAA <a href="https://t.co/tOvDMAlSx3">https://t.co/tOvDMAlSx3</a></p>
+ <h3 date='Posted on: 2022-05-25; at: 14:31'>Posted on: 2022-05-25; at: 14:31</h3>
+  <p>[Webinar] May 26, 10AM PT. MySQL HeatWave Database Service for Query Acceleration. Covers market trends, benefits over competition and on-premises, use cases, success stories, and more. <a href="https://t.co/w5RHbKHt2A">https://t.co/w5RHbKHt2A</a>
+#MySQL #MySQLHeatWave #Cloud #Database <a href="https://t.co/2IUt71rfuS">https://t.co/2IUt71rfuS</a></p>
+ <h3 date='Posted on: 2022-05-12; at: 16:15'>Posted on: 2022-05-12; at: 16:15</h3>
+  <p>[Live Webinar] May 18, 9AM PT. MySQL for Beginners. Learn the best practices, tools to use, and more. <a href="https://t.co/OjeQEu0YAX::">https://t.co/OjeQEu0YAX::</a>
+#MySQL #MySQLHeatwave #Beginners #Database <a href="https://t.co/0sWicTaHVl">https://t.co/0sWicTaHVl</a></p>
+ <h3 date='Posted on: 2022-05-11; at: 17:21'>Posted on: 2022-05-11; at: 17:21</h3>
+  <p>[Live Webinar] TH May 12. 9AM PT. MySQL Operator on Kubernetes. Learn how to run MySQL for micro-services applications. Best practices for setup, scaling, HA. Includes demo. <a href="https://t.co/LxkBATOzQv">https://t.co/LxkBATOzQv</a>
+#MySQL #Kubernetes <a href="https://t.co/GB1YwBW4Cy">https://t.co/GB1YwBW4Cy</a></p>
+ <h3 date='Posted on: 2022-04-26; at: 13:00'>Posted on: 2022-04-26; at: 13:00</h3>
+  <p>[Webinar] April 28, 2022. 9AM PT. What's new with MySQL.  Learn the newest features from the latest releases. <a href="https://t.co/r8A7dbzdqF">https://t.co/r8A7dbzdqF</a> <a href="https://t.co/uzz3n4MSlX">https://t.co/uzz3n4MSlX</a></p>
+ <h3 date='Posted on: 2022-04-24; at: 10:40'>Posted on: 2022-04-24; at: 10:40</h3>
+  <p>[Webinar} APR 26, 10AM CET. MySQL for Beginners. How to get started and best practices.  Register now: <a href="https://t.co/OPCdcQzj6S">https://t.co/OPCdcQzj6S</a>
+#MySQL #MySQLHeatWave <a href="https://t.co/i2Hz3OKnSG">https://t.co/i2Hz3OKnSG</a></p>
+ <h3 date='Posted on: 2022-04-12; at: 01:05'>Posted on: 2022-04-12; at: 01:05</h3>
+  <p>[Live Webinar] APR 13. 9AM PT. Discover MySQL HeatWave ML. Run machine learning training, inference and explanations, all within MySQL <a href="https://t.co/p8yONsfJnH">https://t.co/p8yONsfJnH</a>
+#MySQL #MySQLHeatWave #MachineLearning <a href="https://t.co/UCVLd1DHpn">https://t.co/UCVLd1DHpn</a></p>
+ <h3 date='Posted on: 2022-03-31; at: 17:00'>Posted on: 2022-03-31; at: 17:00</h3>
+  <p>🎵“It’s like a HeatWave, burning in my heart…”🔥 listen as Chief Cloud Economist @QuinnyPig interviews Nipun Agarwal about the #MySQL HeatWave #MachineLearning news on his “Screaming in the Cloud” podcast series: <a href="https://t.co/CoguamDR77">https://t.co/CoguamDR77</a> <a href="https://t.co/DIy5erLA5b">https://t.co/DIy5erLA5b</a></p>
+ <h3 date='Posted on: 2022-03-31; at: 16:00'>Posted on: 2022-03-31; at: 16:00</h3>
+  <p>[Customer Success] Metaverse startup @VRGlass migrated all its data to #MySQL HeatWave from AWS EC2. Within 3 hours, it achieved 5X better performance at half the cost for an event with 1M+ visitors. Watch the video testimonial: <a href="https://t.co/ziNkRhpiZt">https://t.co/ziNkRhpiZt</a> <a href="https://t.co/WIq7VBvbHh">https://t.co/WIq7VBvbHh</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user34'>MOTHERDUCK</h2>
  <h3 date='Posted on: 2022-10-17; at: 21:26'>Posted on: 2022-10-17; at: 21:26</h3>
   <p>Dear all those @coalesceconf attendees with zoomorphic tendencies: you’ll find @thetinot quacking away at the conference. Join his raft in NOLA, get to know each other and share your love of data. 
 
 #DuckDB #DataEngineering #DataAnalytics</p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user28'>MONTECARLODATA</h2>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user35'>MONTECARLODATA</h2>
  <h3 date='Posted on: 2023-01-25; at: 18:37'>Posted on: 2023-01-25; at: 18:37</h3>
   <p>Data contracts=preventing service changes from making unwanted schema changes (yay!), but what if you rolled out contracts in the data warehouses? 🤔Chad Sanderson shares what data teams can expect when implementing data contracts within the warehouse: <a href="https://t.co/TmqJG84XjG">https://t.co/TmqJG84XjG</a> <a href="https://t.co/kpUdiA2EIF">https://t.co/kpUdiA2EIF</a></p>
  <h3 date='Posted on: 2023-01-05; at: 18:24'>Posted on: 2023-01-05; at: 18:24</h3>
   <p>In Denver on January 17th? Join us along with @fivetran, @HightouchData , and @SeattleDataGuy for an exclusive networking event with Adam Woods, the CEO at @choozle and architect of the company’s modern (and reliable!) data stack. Learn more: <a href="https://t.co/aoY2aguIDM">https://t.co/aoY2aguIDM</a> <a href="https://t.co/Qgz2Tm4lJ2">https://t.co/Qgz2Tm4lJ2</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user29'>MSPOWERBI</h2>
+ <h3 date='Posted on: 2022-11-10; at: 15:19'>Posted on: 2022-11-10; at: 15:19</h3>
+  <p>Missed the chance to catch some of the data industry’s most prominent voices during our annual event, IMPACT: The Data Observability Summit? 
+
+Good news! Watch all breakout sessions of the data-driven pioneers like @Roche, @Checkout, @FOXTV, and more: <a href="https://t.co/ZznHmEYJSV">https://t.co/ZznHmEYJSV</a> <a href="https://t.co/4t1l8SqFxS">https://t.co/4t1l8SqFxS</a></p>
+ <h3 date='Posted on: 2022-11-01; at: 17:13'>Posted on: 2022-11-01; at: 17:13</h3>
+  <p>How do you know if your early-stage startup data team is ready to scale data quality?
+
+Our Field CTO, @shane_m5, shares his thoughts on @moderndatastack’s recent podcast episode: <a href="https://t.co/wCyjY1RWX7">https://t.co/wCyjY1RWX7</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user36'>MSPOWERBI</h2>
  <h3 date='Posted on: 2022-12-27; at: 19:03'>Posted on: 2022-12-27; at: 19:03</h3>
   <p>@ScholasticaOla We're rooting for you! If you decide to take the certification exam, we recommend checking out the free learning path and other resources that can be found on this page here: <a href="https://t.co/KyZyod4Z14">https://t.co/KyZyod4Z14</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user30'>NUMPY_TEAM</h2>
+ <h3 date='Posted on: 2022-09-13; at: 16:00'>Posted on: 2022-09-13; at: 16:00</h3>
+  <p>Combine the flexibility of Microsoft Excel with the capabilities of Power BI to create connected data analytical solutions—boosting productivity and driving effective business decisions.
+
+Watch the webinar for more: <a href="https://t.co/sJcBMqo6vH">https://t.co/sJcBMqo6vH</a> #PowerBI #Excel <a href="https://t.co/KA16uyUZpE">https://t.co/KA16uyUZpE</a></p>
+ <h3 date='Posted on: 2022-09-06; at: 16:00'>Posted on: 2022-09-06; at: 16:00</h3>
+  <p>Find out how you can integrate #PowerBI data reporting and analytics capabilities into SharePoint sites.
+
+Watch the webinar to learn more: <a href="https://t.co/kKs33exQxb">https://t.co/kKs33exQxb</a> #SharePoint <a href="https://t.co/13l5I4N66Q">https://t.co/13l5I4N66Q</a></p>
+ <h3 date='Posted on: 2022-08-28; at: 16:00'>Posted on: 2022-08-28; at: 16:00</h3>
+  <p>Join us for the fourth edition of our webinar series on modeling data in #PowerBI!
+
+In this session, learn how to combine different techniques to implement calculation groups and optimize composite models: <a href="https://t.co/G9NHFS82un">https://t.co/G9NHFS82un</a> <a href="https://t.co/zSqnVweIxT">https://t.co/zSqnVweIxT</a></p>
+ <h3 date='Posted on: 2022-08-25; at: 17:16'>Posted on: 2022-08-25; at: 17:16</h3>
+  <p>@its_fremax Hi there, we're excited for you to start learning Power BI! We recommend checking out our certification and training courses here: <a href="https://t.co/WXAhCZfJIU">https://t.co/WXAhCZfJIU</a>
+
+Let us know if you have any questions.</p>
+ <h3 date='Posted on: 2022-08-22; at: 16:00'>Posted on: 2022-08-22; at: 16:00</h3>
+  <p>Track data-driven progress and measure impact in one centralized location with #PowerBI metrics to drive alignment across your organization.
+
+Watch the webinar to learn more: <a href="https://t.co/MDyEtjAdtq">https://t.co/MDyEtjAdtq</a> <a href="https://t.co/RQALUmqyNS">https://t.co/RQALUmqyNS</a></p>
+ <h3 date='Posted on: 2022-08-20; at: 18:00'>Posted on: 2022-08-20; at: 18:00</h3>
+  <p>Read the #PowerBI August 2022 Feature Summary for details on updates including our data loss prevention policy, the new “Select sensitivity label” dialog, and more: <a href="https://t.co/g63pB9GnXl">https://t.co/g63pB9GnXl</a> <a href="https://t.co/AEbFgdzyUK">https://t.co/AEbFgdzyUK</a></p>
+ <h3 date='Posted on: 2022-08-18; at: 20:00'>Posted on: 2022-08-18; at: 20:00</h3>
+  <p>Craft presentations with live data by using the #PowerBI data storytelling integration for PowerPoint!
+
+Watch the webinar to learn how you can create compelling narratives with analytical support: <a href="https://t.co/6b57Zo0N9p">https://t.co/6b57Zo0N9p</a> <a href="https://t.co/JsSiUqEoxJ">https://t.co/JsSiUqEoxJ</a></p>
+ <h3 date='Posted on: 2022-08-13; at: 03:36'>Posted on: 2022-08-13; at: 03:36</h3>
+  <p>@JamesDBartlett3 Congratulations on your first certification, James🥳</p>
+ <h3 date='Posted on: 2022-08-01; at: 16:00'>Posted on: 2022-08-01; at: 16:00</h3>
+  <p>Check out #PowerBI at the first Microsoft Power Platform Conference! We'll have workshops, sessions, and more.
+
+Join us September 18–23 in Orlando, FL. Register today: <a href="https://t.co/9gFamYEQjj">https://t.co/9gFamYEQjj</a> #MPPC22 #PowerPlatform <a href="https://t.co/Udkwuykwzk">https://t.co/Udkwuykwzk</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user37'>NUMPY_TEAM</h2>
  <h3 date='Posted on: 2022-11-15; at: 05:14'>Posted on: 2022-11-15; at: 05:14</h3>
   <p>The next NumPy Newcomers Hour will be held this Thurs, November 17th at 8 pm UTC.
 Ross Barnowski, a NumPy maintainer and postdoc scholar at @UCBIDS, will talk about the content and maintenance of the /numpy-tutorials.
@@ -847,10 +1681,19 @@ For more info about this event, visit: <a href="https://t.co/dJx8dAMCSM">https:/
 For more info about this event, visit: <a href="https://t.co/zBtoBjBzvB">https://t.co/zBtoBjBzvB</a> <a href="https://t.co/BSPmH9Z2BJ">https://t.co/BSPmH9Z2BJ</a></p>
  <h3 date='Posted on: 2020-10-12; at: 19:54'>Posted on: 2020-10-12; at: 19:54</h3>
   <p>We also see this event as an opportunity to connect with potential contributors, especially from groups underrepresented in STEM and open source. If you would like to learn about the various roles in the project and the types of work we do please join us at the event. 2/2</p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user31'>PANDAS_DEV</h2>
+ <h3 date='Posted on: 2020-04-09; at: 03:40'>Posted on: 2020-04-09; at: 03:40</h3>
+  <p>@__qualname__ @teoliphant 4/8 Homogeneously typed object arrays will be a thing eventually, this would allow you to specialize ufuncs (better).</p>
+ <h3 date='Posted on: 2020-01-27; at: 13:06'>Posted on: 2020-01-27; at: 13:06</h3>
+  <p>NumPy @UMengineering event
+When: January 30th, 2020, at 1:30 pm.
+Where: Room 3725, Bob and Betty Beyster Building, 2260 Hayward St, Ann Arbor, MI 48109. 
+The event is open to the general public.
+@UMich @michigandaily @PyDataAnnArbor @MichiganPython
+#NumPy #UMich 2/2</p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user38'>PANDAS_DEV</h2>
  <h3 date='Posted on: 2021-01-11; at: 13:49'>Posted on: 2021-01-11; at: 13:49</h3>
   <p>Check out this webinar from @openteamsinc with one of our maintainers @jorisvdbossche on a few things going on in pandas land. Thanks @openteamsinc for organizing! <a href="https://t.co/yJyTdBRawi">https://t.co/yJyTdBRawi</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user32'>PYDATA</h2>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user39'>PYDATA</h2>
  <h3 date='Posted on: 2023-01-25; at: 18:01'>Posted on: 2023-01-25; at: 18:01</h3>
   <p>Our new PyData Rome chapter will host its second Meetup event this Friday, January 27! Luigi Selmi will be leading a presentation on Copernicus Services and how to use this data to develop Jupyter Notebooks with Python
 
@@ -886,14 +1729,72 @@ Main conference and tickets at <a href="https://t.co/l25XGtWarE">https://t.co/l2
   <p>⭕ Before the main PyData Global conference, the committee runs an Expert Briefings series- these are presented by individuals who are key contributors to the PyData community and have extensive experience in their respective domains.</p>
  <h3 date='Posted on: 2022-11-22; at: 23:33'>Posted on: 2022-11-22; at: 23:33</h3>
   <p>📢 PyData Global 2022 has several sprints aimed at, or approachable by new contributors! Find out more about the conference and purchase tickets at <a href="https://t.co/l25XGtVCC6">https://t.co/l25XGtVCC6</a> <a href="https://t.co/U8jV6kWhtU">https://t.co/U8jV6kWhtU</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user33'>POSTGRESQL</h2>
+ <h3 date='Posted on: 2022-11-21; at: 23:19'>Posted on: 2022-11-21; at: 23:19</h3>
+  <p>📢 PyData Global 2022 has several sprints aimed at, or approachable by new contributors! Find out more about the conference and purchase tickets at <a href="https://t.co/l25XGtVCC6">https://t.co/l25XGtVCC6</a> <a href="https://t.co/jEVAOq83Ai">https://t.co/jEVAOq83Ai</a></p>
+ <h3 date='Posted on: 2022-11-18; at: 16:31'>Posted on: 2022-11-18; at: 16:31</h3>
+  <p>Before the main PyData Global conference, the committee runs an Expert Briefings series- these are presented by individuals who are key contributors to the PyData community and have extensive experience in their respective domains. <a href="https://t.co/pat7SaClnT">https://t.co/pat7SaClnT</a></p>
+ <h3 date='Posted on: 2022-11-16; at: 23:00'>Posted on: 2022-11-16; at: 23:00</h3>
+  <p>We are excited to share the schedule is live for PyData Global 2022!
+<a href="https://t.co/FiPEUCyZlk">https://t.co/FiPEUCyZlk</a>
+
+We hope you will join us on Dec. 1-3 for a packed virtual conference full of exceptional keynotes, talks, sprints, social events, and so much more! 
+
+🎟️: <a href="https://t.co/uE395hqZq2">https://t.co/uE395hqZq2</a> <a href="https://t.co/xOXWtBkU89">https://t.co/xOXWtBkU89</a></p>
+ <h3 date='Posted on: 2022-11-16; at: 15:18'>Posted on: 2022-11-16; at: 15:18</h3>
+  <p>Thank you to @HoloViz_org for joining us this year!
+Take part in the conference including several sprints by purchasing a ticket for PyData Global 2022 at <a href="https://t.co/l25XGtWarE">https://t.co/l25XGtWarE</a> <a href="https://t.co/OLj5Vv7CAc">https://t.co/OLj5Vv7CAc</a></p>
+ <h3 date='Posted on: 2022-11-15; at: 17:56'>Posted on: 2022-11-15; at: 17:56</h3>
+  <p>We thank @matplotlib for participating in our PyData Global 2022 sprint sessions! The conference will be held online from December 1st to the 3rd so find out more and purchase tickets at <a href="https://t.co/l25XGtWarE">https://t.co/l25XGtWarE</a> <a href="https://t.co/MFNgBYfGX1">https://t.co/MFNgBYfGX1</a></p>
+ <h3 date='Posted on: 2022-11-05; at: 18:01'>Posted on: 2022-11-05; at: 18:01</h3>
+  <p>HUGE thanks to @anacondainc for their Platinum Sponsorship to PyData Global 2022! Our sponsors help make this event possible 🥳
+
+Get your tickets to PyData Global December 1-3, 2022:
+<a href="https://t.co/9zLPFq5LVr">https://t.co/9zLPFq5LVr</a>
+
+#python #data #datascience #dataanalytics #tech <a href="https://t.co/hZvJ6OPUes">https://t.co/hZvJ6OPUes</a></p>
+ <h3 date='Posted on: 2022-11-03; at: 18:02'>Posted on: 2022-11-03; at: 18:02</h3>
+  <p>We're proud to welcome @openteamsinc as a Gold Sponsor for our PyData Global 2022 Conference!
+
+Get your tickets to PyData Global December 1-3, 2022:
+<a href="https://t.co/9zLPFq5LVr">https://t.co/9zLPFq5LVr</a>
+
+#python #data #datascience #dataanalytics #tech <a href="https://t.co/5UatYn5LiU">https://t.co/5UatYn5LiU</a></p>
+ <h3 date='Posted on: 2022-10-28; at: 19:57'>Posted on: 2022-10-28; at: 19:57</h3>
+  <p>Special thanks to @ShopifyData for platinum sponsorship - and for hosting a raffle giveaway at PyData NYC! 🥳 
+
+Win prizes from New York Shopify merchants like Levain Bakery 🍪
+
+To enter, visit the Shopify booth during the event or fill out this form 👉 <a href="https://t.co/q6ln0YGY9h">https://t.co/q6ln0YGY9h</a> <a href="https://t.co/GUdBUsZKhB">https://t.co/GUdBUsZKhB</a></p>
+ <h3 date='Posted on: 2022-10-28; at: 14:43'>Posted on: 2022-10-28; at: 14:43</h3>
+  <p>You will join the Impact Scholars community with regular meetups afterward. Check out a recap of our program last year at <a href="https://t.co/JKhiqb4AJV.">https://t.co/JKhiqb4AJV.</a> This program includes a ticket to the conference (including talks, tutorials, and sprints).</p>
+ <h3 date='Posted on: 2022-10-28; at: 14:43'>Posted on: 2022-10-28; at: 14:43</h3>
+  <p>Through the PyData Impact Scholarship, you will connect to other field professionals and learn from their experiences. Scholars will have their own private track during the conference, with workshops designed to help you increase your visibility and impact.</p>
+ <h3 date='Posted on: 2022-10-21; at: 13:53'>Posted on: 2022-10-21; at: 13:53</h3>
+  <p>Starting in just a few minutes you can learn about our global virtual data science conference! <a href="https://t.co/cbuzKcdcoO">https://t.co/cbuzKcdcoO</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user40'>POSTGRESQL</h2>
  <h3 date='Posted on: 2022-11-26; at: 19:30'>Posted on: 2022-11-26; at: 19:30</h3>
   <p>News: Call for Proposals is open for Citus Con: An Event for Postgres 2023! <a href="https://t.co/i1AcNALJIZ">https://t.co/i1AcNALJIZ</a></p>
  <h3 date='Posted on: 2022-10-21; at: 16:00'>Posted on: 2022-10-21; at: 16:00</h3>
   <p>News: New podcast Postgres FM <a href="https://t.co/Y3S4PSEcqZ">https://t.co/Y3S4PSEcqZ</a></p>
  <h3 date='Posted on: 2022-09-13; at: 19:00'>Posted on: 2022-09-13; at: 19:00</h3>
   <p>News: pgBadger v12.0 released <a href="https://t.co/ENJ8rDbPCs">https://t.co/ENJ8rDbPCs</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user34'>PROJECTJUPYTER</h2>
+ <h3 date='Posted on: 2022-06-02; at: 12:45'>Posted on: 2022-06-02; at: 12:45</h3>
+  <p>News: Citus Con: An Event for Postgres—It’s a wrap! <a href="https://t.co/v5r3JX8XVb">https://t.co/v5r3JX8XVb</a></p>
+ <h3 date='Posted on: 2022-04-21; at: 12:15'>Posted on: 2022-04-21; at: 12:15</h3>
+  <p>News: PostgreSQL Conference Europe: Call for Papers <a href="https://t.co/vjDCJTH2Jy">https://t.co/vjDCJTH2Jy</a></p>
+ <h3 date='Posted on: 2022-04-12; at: 08:15'>Posted on: 2022-04-12; at: 08:15</h3>
+  <p>News: pgBadger v11.8 released <a href="https://t.co/el7XEPUoU6">https://t.co/el7XEPUoU6</a></p>
+ <h3 date='Posted on: 2022-03-14; at: 18:30'>Posted on: 2022-03-14; at: 18:30</h3>
+  <p>News: Citus Con: An Event for Postgres—Schedule &amp; Speakers announced! <a href="https://t.co/9FZIyhQsXE">https://t.co/9FZIyhQsXE</a></p>
+ <h3 date='Posted on: 2022-03-03; at: 18:00'>Posted on: 2022-03-03; at: 18:00</h3>
+  <p>News: Belgian PostgreSQL Conference 2022 &amp; Call for Papers <a href="https://t.co/wy4RLkoAS8">https://t.co/wy4RLkoAS8</a></p>
+ <h3 date='Posted on: 2022-02-01; at: 09:15'>Posted on: 2022-02-01; at: 09:15</h3>
+  <p>News: German PostgreSQL Conference 2022 &amp; Call for Papers <a href="https://t.co/ZD2GQaERM2">https://t.co/ZD2GQaERM2</a></p>
+ <h3 date='Posted on: 2022-01-23; at: 16:00'>Posted on: 2022-01-23; at: 16:00</h3>
+  <p>News: pgBadger v11.7 released <a href="https://t.co/SR037ljGwV">https://t.co/SR037ljGwV</a></p>
+ <h3 date='Posted on: 2021-12-15; at: 11:15'>Posted on: 2021-12-15; at: 11:15</h3>
+  <p>News: Citus Con: An Event for Postgres—the CFP is open <a href="https://t.co/e6vhXr9vlC">https://t.co/e6vhXr9vlC</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user41'>PROJECTJUPYTER</h2>
  <h3 date='Posted on: 2022-12-08; at: 18:42'>Posted on: 2022-12-08; at: 18:42</h3>
   <p>Do you have a great idea for a talk or poster for JupyterCon 2023? Make sure to get your proposals in before the December 15th deadline: <a href="https://t.co/UmAgOenzdB">https://t.co/UmAgOenzdB</a>
 
@@ -909,7 +1810,17 @@ The long-awaited conference is back in the spring of 2023!
 We can't wait to bring everyone together for the return of this conference. Dates and location will be announced soon. <a href="https://t.co/Se7FvyWg2B">https://t.co/Se7FvyWg2B</a></p>
  <h3 date='Posted on: 2022-05-20; at: 16:33'>Posted on: 2022-05-20; at: 16:33</h3>
   <p>Project Jupyter is excited to partner with the @PyData community for a sprint during the upcoming London conference! The sprint will be tackling JupyterLab issues – all levels are welcomed. Check out the schedule below for full conference details <a href="https://t.co/mMwIIuNYlg">https://t.co/mMwIIuNYlg</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user35'>PREFECTIO</h2>
+ <h3 date='Posted on: 2022-01-19; at: 21:24'>Posted on: 2022-01-19; at: 21:24</h3>
+  <p>Stay tuned for the recording of this event and for announcements for additional accessibility workshops in this series.</p>
+ <h3 date='Posted on: 2021-11-19; at: 17:00'>Posted on: 2021-11-19; at: 17:00</h3>
+  <p>the Jupyter Security and Governance call should be both stating in a few minutes. See our events calendar for the links. <a href="https://t.co/19ZWOSD4j1">https://t.co/19ZWOSD4j1</a></p>
+ <h3 date='Posted on: 2021-10-22; at: 14:50'>Posted on: 2021-10-22; at: 14:50</h3>
+  <p>In about 1h15minutes, is the next Jupyter Security call. You can find it on our event calendar: <a href="https://t.co/19ZWOSD4j1.">https://t.co/19ZWOSD4j1.</a> In the meantime we'll get ready for @ClosemberDev. Also does anybody knows how to get google calendar embed **with local timezone** ?</p>
+ <h3 date='Posted on: 2021-08-09; at: 20:16'>Posted on: 2021-08-09; at: 20:16</h3>
+  <p>@hpcchris We joke that the venn diagram of what Jupyter is for, and what we are trying to prevent from happening from a security standpoint is just a circle.</p>
+ <h3 date='Posted on: 2021-07-21; at: 12:24'>Posted on: 2021-07-21; at: 12:24</h3>
+  <p>And of course as Simon pointed out in the discourse thread there is a google calendar to subscribe to in order to not miss any events. There is even multiple calendars: <a href="https://t.co/eGEq7v3ADB">https://t.co/eGEq7v3ADB</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user42'>PREFECTIO</h2>
  <h3 date='Posted on: 2023-01-23; at: 15:36'>Posted on: 2023-01-23; at: 15:36</h3>
   <p>See how Prefect enabled PACC-certified DE John Kang to go from Excel+VBA scripts to fully orchestrated data pipelines. <a href="https://t.co/GOS1hVGblZ">https://t.co/GOS1hVGblZ</a>
 
@@ -934,7 +1845,43 @@ You can move beyond proactive scheduling-based approaches - into a world where y
   <p>Shout out to our very own @anna__geller 🎉 You won't want to miss this episode of @DevOpsPodcast 🎧 <a href="https://t.co/ifiTgwJ27B">https://t.co/ifiTgwJ27B</a></p>
  <h3 date='Posted on: 2022-11-10; at: 17:57'>Posted on: 2022-11-10; at: 17:57</h3>
   <p>@gmiretti We first announced our open source launch at @PyDataDC so PyData conferences have always been special to us - thanks for the shoutout!</p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user36'>SCYLLADB</h2>
+ <h3 date='Posted on: 2022-10-20; at: 13:21'>Posted on: 2022-10-20; at: 13:21</h3>
+  <p>Live at 4p Central today! @dylanbhughes goes over his experience building event-driven pipelines with @dbt_labs and Prefect.
+
+Whether you're in person at @coalesceconf or virtual, don't miss this 🔥 talk.
+
+<a href="https://t.co/lMeIARVskC">https://t.co/lMeIARVskC</a></p>
+ <h3 date='Posted on: 2022-09-15; at: 18:47'>Posted on: 2022-09-15; at: 18:47</h3>
+  <p>Join us in Chicago or Boston this fall for a Prefect certification, nifty badge, and the knowledge to deploy Prefect to any data stack:
+
+<a href="https://t.co/6Jf9SJ6ti6">https://t.co/6Jf9SJ6ti6</a></p>
+ <h3 date='Posted on: 2022-09-07; at: 16:10'>Posted on: 2022-09-07; at: 16:10</h3>
+  <p>The choice is yours:
+
+Legacy orchestrator with expensive and hard-to-maintain daemon processes
+
+OR
+
+Prefect with easy-to-use event-driven workflows
+
+If the latter, check out this post from @anna__geller showing both event-driven and scheduled workflows:
+
+<a href="https://t.co/wlzXFQED6N">https://t.co/wlzXFQED6N</a></p>
+ <h3 date='Posted on: 2022-09-01; at: 18:26'>Posted on: 2022-09-01; at: 18:26</h3>
+  <p>Get Certified with us! The Prefect Associate Certificate Course is coming to Chicago and Boston this fall. The two-day immersive course will teach you how to use Prefect for orchestrating and observing your dataflow. 
+
+Chi: <a href="https://t.co/2jBNwvM94k">https://t.co/2jBNwvM94k</a>
+
+Bos: <a href="https://t.co/iwLOUSpKGz">https://t.co/iwLOUSpKGz</a></p>
+ <h3 date='Posted on: 2022-08-17; at: 18:55'>Posted on: 2022-08-17; at: 18:55</h3>
+  <p>What would you do for a Prefect certification, nifty badge, and the knowledge to deploy Prefect to any data stack?
+
+<a href="https://t.co/Qw5NCAy3Cr">https://t.co/Qw5NCAy3Cr</a></p>
+ <h3 date='Posted on: 2022-07-28; at: 19:02'>Posted on: 2022-07-28; at: 19:02</h3>
+  <p>The first Prefect Associate Certification Course is underway! Two days of instructions &amp; hands-on labs, after which the people you see here will be Prefect certified.
+
+Will we see you at the next one? 👀 <a href="https://t.co/qvBG1w0FeX">https://t.co/qvBG1w0FeX</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user43'>SCYLLADB</h2>
  <h3 date='Posted on: 2023-01-25; at: 23:00'>Posted on: 2023-01-25; at: 23:00</h3>
   <p>Want to learn how to build a #DynamoDB compatible apps that can be deployed anywhere you want? Our on-demand webinar provides a technical roadmap to help you get the most out of your current database infrastructure: <a href="https://t.co/7cvaBdfjez">https://t.co/7cvaBdfjez</a>
 
@@ -971,7 +1918,29 @@ You can move beyond proactive scheduling-based approaches - into a world where y
   <p>Has your company's data flow ever slowed down for no apparent reason? Pavel Emelyanov will dive into this phenomenon that can impact computer networking or storage I/O during a free webinar with @linuxfoundation on January 17. Register today &gt; <a href="https://t.co/06L0YEvXeN">https://t.co/06L0YEvXeN</a>
 
 #ScyllaDB <a href="https://t.co/ST6YdRhUWf">https://t.co/ST6YdRhUWf</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user37'>SNOWFLAKEDB</h2>
+ <h3 date='Posted on: 2023-01-02; at: 16:02'>Posted on: 2023-01-02; at: 16:02</h3>
+  <p>💪 Monday motivation: Ensure you're ready for 2023 with a free on-demand webinar from #ScyllaDB's @TzachL and @TDWI's @JamesKobielus. They discuss the future of #NoSQL databases and some of the top challenges of managing data in the cloud. Watch for free &gt; <a href="https://t.co/4C6UATsYV4">https://t.co/4C6UATsYV4</a></p>
+ <h3 date='Posted on: 2022-12-28; at: 00:01'>Posted on: 2022-12-28; at: 00:01</h3>
+  <p>Experiencing traffic jams with your data? Pavel Emelyanov will describe how the data slowdown effect happens and what can be done to resolve it during a free webinar with @linuxfoundation on January 17. Secure your spot today &gt; <a href="https://t.co/06L0YEvXeN">https://t.co/06L0YEvXeN</a>
+
+#ScyllaDB <a href="https://t.co/lwD1Rkrgh0">https://t.co/lwD1Rkrgh0</a></p>
+ <h3 date='Posted on: 2022-12-21; at: 16:04'>Posted on: 2022-12-21; at: 16:04</h3>
+  <p>Experiencing traffic jams with your data? Pavel Emelyanov will describe how the data slowdown effect happens and what can be done to resolve it during a free webinar with @linuxfoundation on January 17. Secure your spot today &gt; <a href="https://t.co/06L0YEvXeN">https://t.co/06L0YEvXeN</a>
+
+#ScyllaDB <a href="https://t.co/Q4NfiXKaZf">https://t.co/Q4NfiXKaZf</a></p>
+ <h3 date='Posted on: 2022-12-19; at: 16:04'>Posted on: 2022-12-19; at: 16:04</h3>
+  <p>🏋️‍♀️ Monday motivation: Want to learn how to build a #DynamoDB compatible apps that can be deployed anywhere you want? Our on-demand webinar provides a technical roadmap to help you get the most out of your current database infrastructure: <a href="https://t.co/7cvaBdfjez">https://t.co/7cvaBdfjez</a>
+
+#ScyllaDB #NoSQL <a href="https://t.co/2jfVHpAwor">https://t.co/2jfVHpAwor</a></p>
+ <h3 date='Posted on: 2022-12-09; at: 19:01'>Posted on: 2022-12-09; at: 19:01</h3>
+  <p>Consistency, availability, and scaling. These are all important in modern database systems and applications. Guy Shtub, Head of Training at #ScyllaDB, will discuss the innovations needed to achieve performance at scale during a free webinar on December 15. <a href="https://t.co/FPUM4WWYtd">https://t.co/FPUM4WWYtd</a></p>
+ <h3 date='Posted on: 2022-12-08; at: 22:02'>Posted on: 2022-12-08; at: 22:02</h3>
+  <p>With over 100 million unique visitors each month, Expedia can't afford downtime. They came to us with four major issues preventing them from delivering a better user experience. @PeterCorless examines their challenges and how #ScyllaDB solved them. <a href="https://t.co/qmVwuh8coH">https://t.co/qmVwuh8coH</a></p>
+ <h3 date='Posted on: 2022-12-07; at: 20:51'>Posted on: 2022-12-07; at: 20:51</h3>
+  <p>Register Now for ScyllaDB Summit 2023 — Our annual user conference is all online, all free, February 15-16, 2023. #NoSQL #ScyllaDB
+
+<a href="https://t.co/rzdBbp5AnH">https://t.co/rzdBbp5AnH</a> <a href="https://t.co/ik96hEJFYw">https://t.co/ik96hEJFYw</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user44'>SNOWFLAKEDB</h2>
  <h3 date='Posted on: 2023-01-23; at: 22:00'>Posted on: 2023-01-23; at: 22:00</h3>
   <p>Marketing data integration gives you unparalleled visibility into the overall impact of a campaign, event or other marketing effort. 
 
@@ -984,7 +1953,15 @@ So no wonder it was one of the top use cases discovered when Snowflake analyzed 
 The BETA registration has opened for the SnowPro Advanced: Data Analyst Certification (with a reduced fee to boot!) 
 
 Check out the link to learn more: <a href="https://t.co/FrIb2AASBU">https://t.co/FrIb2AASBU</a> <a href="https://t.co/zNd3c9zo9p">https://t.co/zNd3c9zo9p</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user38'>SQLSERVER</h2>
+ <h3 date='Posted on: 2022-12-20; at: 21:04'>Posted on: 2022-12-20; at: 21:04</h3>
+  <p>Retailers have boomeranged from shortages to oversupply over the course of the year. To prevent these extremes, our very own Theo Hourmouzis predicts that we’ll see retailers and #CPGs double down on #datasharing in 2023. Read more in @retail_biz: <a href="https://t.co/4HhgKfa235">https://t.co/4HhgKfa235</a></p>
+ <h3 date='Posted on: 2022-12-19; at: 20:00'>Posted on: 2022-12-19; at: 20:00</h3>
+  <p>🎙 Financial businesses are becoming data businesses. No one knows this better than Neelesh Prabhu, Managing Director of Architecture and Enterprise Services in @The_DTCC IT group. Hear what he has to say in the latest episode of podcast. <a href="https://t.co/NxiYvcgV0h">https://t.co/NxiYvcgV0h</a> #finserv</p>
+ <h3 date='Posted on: 2022-12-05; at: 18:38'>Posted on: 2022-12-05; at: 18:38</h3>
+  <p>For @VDurgin, VP of Data at @saks, adopting a Data Vault methodology has been the ultimate luxury. 
+
+In the latest episode of the Data Vault Podcast she explains how her company uses the #DataCloud to create memorable customer experiences <a href="https://t.co/viz09tpHzw">https://t.co/viz09tpHzw</a></p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user45'>SQLSERVER</h2>
  <h3 date='Posted on: 2023-01-23; at: 17:00'>Posted on: 2023-01-23; at: 17:00</h3>
   <p>Check out this new Microsoft Certification to prove your database administration skills span from on-premises to the #Cloud: <a href="https://t.co/Zl2B9gRVyS">https://t.co/Zl2B9gRVyS</a> <a href="https://t.co/DmDZC5WjVD">https://t.co/DmDZC5WjVD</a></p>
  <h3 date='Posted on: 2022-12-05; at: 20:00'>Posted on: 2022-12-05; at: 20:00</h3>
@@ -1008,7 +1985,17 @@ Tune in to:
 Register: <a href="https://t.co/CcFBd9LVgu">https://t.co/CcFBd9LVgu</a> #AzureSQL #SQLServer</p>
  <h3 date='Posted on: 2022-09-24; at: 18:43'>Posted on: 2022-09-24; at: 18:43</h3>
   <p>@edgaracostahe Hello there, we'll translate to the best of our ability, but can only respond in English. You can find our certifications and exams here: <a href="https://t.co/0UAAWyJQ53">https://t.co/0UAAWyJQ53</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user39'>TABLEAU</h2>
+ <h3 date='Posted on: 2022-07-25; at: 01:20'>Posted on: 2022-07-25; at: 01:20</h3>
+  <p>@Poshpeck Hi there, you can always learn more about SQL Server and even earn certifications here: <a href="https://t.co/mEFw1EuAds">https://t.co/mEFw1EuAds</a></p>
+ <h3 date='Posted on: 2022-06-16; at: 17:00'>Posted on: 2022-06-16; at: 17:00</h3>
+  <p>Looking for a Windows Server and SQL Server 2012 end-of-support plan? We've got you covered. 
+
+Watch this on-demand webinar to learn about your options: <a href="https://t.co/YwZLgf9fp5">https://t.co/YwZLgf9fp5</a> #SQLServer #WinServ</p>
+ <h3 date='Posted on: 2022-06-03; at: 16:00'>Posted on: 2022-06-03; at: 16:00</h3>
+  <p>Stay in the loop about the latest integrations and data management updates coming to Azure Synapse Analytics. Watch our webinar: <a href="https://t.co/u2x3efYJJP">https://t.co/u2x3efYJJP</a> #AzureSynapseAnalytics #PowerBI</p>
+ <h3 date='Posted on: 2022-05-13; at: 16:00'>Posted on: 2022-05-13; at: 16:00</h3>
+  <p>Need a plan for Windows Server and SQL Server 2012 end of support? This on-demand webinar has you covered. Register to learn about your options, including migrating to the cloud: <a href="https://t.co/Wvc4whQ8qV">https://t.co/Wvc4whQ8qV</a> #SQLServer #WindowsServer</p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user46'>TABLEAU</h2>
  <h3 date='Posted on: 2023-01-26; at: 16:59'>Posted on: 2023-01-26; at: 16:59</h3>
   <p>Make the most out of your #TDX23!
 
@@ -1041,7 +2028,15 @@ Join data leaders and viz whizzes for three days of learning and connection at T
 Get ready for the most wonderful time of the year! Mark your calendars to connect with the #DataFam at Tableau Conference: May 9-10, 2023. #Data23
 
 <a href="https://t.co/VkCVLvv8kZ">https://t.co/VkCVLvv8kZ</a> <a href="https://t.co/arm6283mW2">https://t.co/arm6283mW2</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user40'>THECUBEJS</h2>
+ <h3 date='Posted on: 2022-12-01; at: 21:00'>Posted on: 2022-12-01; at: 21:00</h3>
+  <p>DataDevs, let’s get technical at #TDX23! Learn and connect at the developer event of the year happening March 7-8, 2023. 
+
+Sign up and get the latest updates. <a href="https://t.co/EEJYhC5uZR">https://t.co/EEJYhC5uZR</a> <a href="https://t.co/0QHWUuMqwH">https://t.co/0QHWUuMqwH</a></p>
+ <h3 date='Posted on: 2022-11-18; at: 18:10'>Posted on: 2022-11-18; at: 18:10</h3>
+  <p>What will you learn from the Tableau Community? Dig into the latest tips, visualizations, and events from this week's #DataFam Roundup. <a href="https://t.co/eAcfffvKLL">https://t.co/eAcfffvKLL</a> <a href="https://t.co/fEm3bHBSO7">https://t.co/fEm3bHBSO7</a></p>
+ <h3 date='Posted on: 2022-11-01; at: 14:19'>Posted on: 2022-11-01; at: 14:19</h3>
+  <p>Hosted by Tableau, the #DataPlusDiversity virtual event series provides a platform for community conversations surrounding the challenges and solutions to diversity in data.</p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user47'>THECUBEJS</h2>
  <h3 date='Posted on: 2022-11-29; at: 18:15'>Posted on: 2022-11-29; at: 18:15</h3>
   <p>Sorry for the typo🤦, the workshop date is December 7 as it shows on the event page.</p>
  <h3 date='Posted on: 2022-11-29; at: 16:37'>Posted on: 2022-11-29; at: 16:37</h3>
@@ -1060,7 +2055,21 @@ Reserve your spot for the event at <a href="https://t.co/ycUFHdXIpU">https://t.c
 Hurry up, we're kicking it off in 30 minutes!
 
 <a href="https://t.co/u8eF1Tizfr">https://t.co/u8eF1Tizfr</a></p>
-  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user41'>THOUGHTSPOT</h2>
+ <h3 date='Posted on: 2022-08-25; at: 16:22'>Posted on: 2022-08-25; at: 16:22</h3>
+  <p>And... please also join Cube and @FireboltHQ at the webinar on September 15, 2020 (in 3 weeks) to learn more about building sub-second analytics experiences: <a href="https://t.co/u8eF1Tj74Z">https://t.co/u8eF1Tj74Z</a></p>
+ <h3 date='Posted on: 2022-08-25; at: 16:22'>Posted on: 2022-08-25; at: 16:22</h3>
+  <p>More things to enjoy today! Check out this live demo: a #React app with nivo charts powered by Cube and Firebolt. You'll surely learn a lot about @FireboltHQ performance and correlation between @Wikipedia page views and real-world events: <a href="https://t.co/W5LFisAspZ">https://t.co/W5LFisAspZ</a> <a href="https://t.co/jBQyEI6SMU">https://t.co/jBQyEI6SMU</a></p>
+ <h3 date='Posted on: 2022-06-21; at: 13:17'>Posted on: 2022-06-21; at: 13:17</h3>
+  <p>📣 @thecubejs' SQL API and Extended Support for BI tools workshop is happening tomorrow 🚀 You'll hear the latest on Cube's SQL API and how you can work with BI tools and data notebooks. 
+
+If you haven't already, register for the event at <a href="https://t.co/rwMmSbSv8I">https://t.co/rwMmSbSv8I</a>  👈🏽 <a href="https://t.co/ST3oHD9hbU">https://t.co/ST3oHD9hbU</a></p>
+ <h3 date='Posted on: 2022-06-15; at: 15:38'>Posted on: 2022-06-15; at: 15:38</h3>
+  <p>🎉 Our SQL API and Extended Support for BI Tools workshop is now only a week away! Learn the latest on @thecubejs's SQL API and how you can work with your favorite BI tools and data notebooks.  
+
+You can register for the event at <a href="https://t.co/jevKJIEwJY">https://t.co/jevKJIEwJY</a> 👈🏽 <a href="https://t.co/ufjgkfMPUv">https://t.co/ufjgkfMPUv</a></p>
+ <h3 date='Posted on: 2022-06-07; at: 14:17'>Posted on: 2022-06-07; at: 14:17</h3>
+  <p>👋 Anyone in the @thecubejs community attending the #SnowflakeSummit next week? If you’ll be at the event please reply with ❄️. Maybe we’ll see you in Las Vegas 🚀</p>
+  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user48'>THOUGHTSPOT</h2>
  <h3 date='Posted on: 2023-01-19; at: 03:30'>Posted on: 2023-01-19; at: 03:30</h3>
   <p>You heard it here first, dashboards are dead.
 
@@ -1076,6 +2085,21 @@ Thank you to all of our guests and listeners who made season 3 a success!  <a h
  <h3 date='Posted on: 2022-12-14; at: 07:30'>Posted on: 2022-12-14; at: 07:30</h3>
   <p>We're back with the #WinterCodex2022 hackathon, and can't wait to see some of the ideas and demos from our #spotters across our global offices. Here’s how the teams are bonding during our semi-annual hackathon event. Stay tuned for more updates!
 #LifeAtThoughtSpot <a href="https://t.co/1XmTLMhl4A">https://t.co/1XmTLMhl4A</a></p>
+ <h3 date='Posted on: 2022-12-07; at: 17:55'>Posted on: 2022-12-07; at: 17:55</h3>
+  <p>🛣 Starting your analytics journey
+🚀 Modern data stacks and how they’ve evolved
+💪 How business analytics leadership can solve the major problems of our time
+
+@BIScorecard discusses these topics and more on the latest episode of @EM360Tech Podcast <a href="https://t.co/fxlHjVAJuP">https://t.co/fxlHjVAJuP</a></p>
+ <h3 date='Posted on: 2022-12-06; at: 13:23'>Posted on: 2022-12-06; at: 13:23</h3>
+  <p>Analytics Engineers rejoice! ThoughtSpot and 
+@AirbyteHQ  are teaming up to streamline #analytics use case deployment.  Learn how in just 10 minutes at our session at the Airbyte move(data) virtual conference this Thursday Dec 8.
+
+RSVP <a href="https://t.co/5fTdPaVTDO">https://t.co/5fTdPaVTDO</a>
+#moderndatastack <a href="https://t.co/DrihYhX7k1">https://t.co/DrihYhX7k1</a></p>
+ <h3 date='Posted on: 2022-12-01; at: 20:29'>Posted on: 2022-12-01; at: 20:29</h3>
+  <p>Join us and @interworks next week 12/7 at 10 am CST for a webinar where we'll unpack how self-service has gone from fringe buzzword to essential need for any business to be successful and remain #datadriven. 
+Save your seat <a href="https://t.co/kBpuH1gWyy">https://t.co/kBpuH1gWyy</a> We'll see you there! <a href="https://t.co/QJ69hP1CSe">https://t.co/QJ69hP1CSe</a></p>
 </body>
 <footer>
   <p>Made with love for the community by Riccardo</p>
