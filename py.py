@@ -66,7 +66,7 @@ df2 = df2[df2['keyword'] != ""]
 df2 = df2.groupby(['date', 'keyword']).size().reset_index(name='occurrence')
 df2['date'] = pd.to_datetime(df2['date'])
 df2['year_month'] = df2['date'].dt.to_period('M')
-df2_grouped = df2.groupby(['year_month','keyword']).agg({'occurrence': 'max'}).reset_index()
+df2_grouped = df2.groupby(['year_month','keyword']).agg({'occurrence': 'sum'}).reset_index()
 df2_grouped = df2_grouped.sort_values(by=['year_month', 'keyword'],ascending=[False,False])
 
 ###
