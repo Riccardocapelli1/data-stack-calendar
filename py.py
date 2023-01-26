@@ -29,6 +29,7 @@ df = pd.DataFrame(tweets, columns=['Time', 'User', 'Tweet'])
 
 #Conversione della colonna Time
 df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
+df['Posting_Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S')
 
 #Conversione della colonna User
 df["User"] = df["User"].str.upper()
@@ -45,7 +46,7 @@ df2['keyword' ] = ""
 
 # aggiungere una colonna "date" con la data e ora attuali
 ###df2['date'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-df2['date'] = df['Time']
+df2['date'] = df['Posting_Time']
 
 # ciclo for per verificare se una stringa contiene una parola chiave
 for index, row in df2.iterrows():
