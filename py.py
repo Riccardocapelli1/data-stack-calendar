@@ -28,8 +28,8 @@ for profile in profiles:
 df = pd.DataFrame(tweets, columns=['Time', 'User', 'Tweet'])
 
 #Conversione della colonna Time
-df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
 df['Posting_Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S')
+df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
 
 #Conversione della colonna User
 df["User"] = df["User"].str.upper()
