@@ -39,7 +39,7 @@ df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Podcast|podc
 df = df[~df['Tweet'].str.contains('of courses|event log|blog post|steven')]
 
 # salvare i dati in un file csv
-df.to_csv("tweet_data.csv", mode='a', header=False, index=False)
+##df.to_csv("tweet_data.csv", mode='a', header=False, index=False)
 
 # creare una copia del dataframe
 df2 = df.copy()
