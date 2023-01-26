@@ -35,7 +35,7 @@ df["User"] = df["User"].str.upper()
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Podcast|podcast|Badge|badge|Certific|certific|Webinar|webinar|free resources|free courses|free learning')]
-df = df[~df['Tweet'].str.contains('of courses|event log|blog post|steven')]
+df = df[~df['Tweet'].str.contains('of courses|event log|blog post|steven|prevent|event streaming')]
 
 # creare una copia del dataframe
 df2 = df.copy()
@@ -68,8 +68,8 @@ columns=['date', 'keyword','occurrence']
 df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
 df3['date'] = pd.to_datetime(df3['date'])
-df3['year_month'] = df3['date'].dt.to_period('D')
-df3_grouped = df3.groupby(['year_month','keyword']).agg({'occurrence': 'max'}).reset_index()
+df3['year_month_day'] = df3['date'].dt.to_period('D')
+df3_grouped = df3.groupby(['year_month_day','keyword']).agg({'occurrence': 'max'}).reset_index()
 
 ###
 # Crea una stringa vuota per i dati del grafico
@@ -80,7 +80,7 @@ for keyword in df3_grouped["keyword"].unique():
     keyword_data = df3_grouped[df3_grouped["keyword"] == keyword]
     chart_data += f"{{ label: '{keyword}', data: ["
     for index, row in keyword_data.iterrows():
-        chart_data += f"{{x: '{row['year_month']}', y: {row['occurrence']}}},"
+        chart_data += f"{{x: '{row['year_month_day']}', y: {row['occurrence']}}},"
     chart_data = chart_data[:-1] # Rimuovi l'ultima virgola
     chart_data += "]},\n"
 
