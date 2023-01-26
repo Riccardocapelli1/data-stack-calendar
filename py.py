@@ -84,7 +84,7 @@ for keyword in df3_grouped["keyword"].unique():
     chart_data = chart_data[:-1] # Rimuovi l'ultima virgola
     chart_data += "]},\n"
 # Sostituisci certificate
-chart_data = chart_data.replace({'certific': 'certificate'})
+chart_data = chart_data.replace({"certific", "certificate"})
 
 # Rimuovi l'ultima virgola e newline dai dati del grafico
 chart_data = chart_data[:-2]
