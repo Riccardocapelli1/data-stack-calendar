@@ -69,8 +69,8 @@ columns=['date', 'keyword','occurrence']
 df3 = pd.read_csv('tweet_data.csv', names=columns, header=None)
 
 df3['date'] = pd.to_datetime(df3['date'])
-df3['year_month_day'] = df3['date'].dt.to_period('D')
-df3_grouped = df3.groupby(['year_month_day','keyword']).agg({'occurrence': 'max'}).reset_index()
+df3['year_month'] = df3['date'].dt.to_period('M')
+df3_grouped = df3.groupby(['year_month','keyword']).agg({'occurrence': 'max'}).reset_index()
 
 ###
 # Crea una stringa vuota per i dati del grafico
@@ -81,7 +81,7 @@ for keyword in df3_grouped["keyword"].unique():
     keyword_data = df3_grouped[df3_grouped["keyword"] == keyword]
     chart_data += f"{{ label: '{keyword}', data: ["
     for index, row in keyword_data.iterrows():
-        chart_data += f"{{x: '{row['year_month_day']}', y: {row['occurrence']}}},"
+        chart_data += f"{{x: '{row['year_month']}', y: {row['occurrence']}}},"
     chart_data = chart_data[:-1] # Rimuovi l'ultima virgola
     chart_data += "]},\n"
 
@@ -134,9 +134,9 @@ html_content += "    scales: {\n"
 html_content += "      xAxes: [{\n"
 html_content += "        type: 'time',\n"
 html_content += "        time: {\n"
-html_content += "           unit: 'day',\n"
+html_content += "           unit: 'month',\n"
 html_content += "           displayFormats: {\n"
-html_content += "            month: 'YYYY-MM-DD'\n"
+html_content += "            month: 'YYYY-MM'\n"
 html_content += "           }\n"
 html_content += "        }\n"
 html_content += "      }],\n"
