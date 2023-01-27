@@ -191,7 +191,7 @@ for _, row in df.iterrows():
 
 html_content += "</body>\n"
 html_content += "<footer>\n"
-html_content += "  <p>Made with love for the community by Riccardo</p>\n"
+html_content += "  <p>Made with ❤️ for the community by Riccardo</p>\n"
 html_content += "</footer>\n"
 html_content += "</html>\n"
 
