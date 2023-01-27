@@ -113,7 +113,7 @@ html_content += "  <title>Hacked-data-stack intel for the data and analytics com
 
 # Titolo all'html_content
 html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
-html_content += "  <p>A tweet aggregator site dysplaying events, conferences, podcast, traingings that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
+html_content += "  <p>A tweet aggregator site dysplaying events, conferences, podcast, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
 
 # Aggiungi il codice per il grafico all'html_content
 html_content += "<div class='container'>\n"
@@ -149,7 +149,7 @@ html_content += "    }\n"
 html_content += "  }\n"
 html_content += "});\n"
 html_content += "</script>\n"
-html_content += "  <p>Kewords tweeted stats</p>\n"
+html_content += "  <p>Aggregated kewords tweeted stats by month</p>\n"
 
 
 html_content += "</head>\n"
