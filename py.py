@@ -136,7 +136,7 @@ html_content += "        type: 'time',\n"
 html_content += "        time: {\n"
 html_content += "           unit: 'day',\n"
 html_content += "           displayFormats: {\n"
-html_content += "            month: 'YYYY-MM-DD'\n"
+html_content += "            month: 'YY-MM'\n"
 html_content += "           }\n"
 html_content += "        }\n"
 html_content += "      }],\n"
@@ -191,7 +191,7 @@ for _, row in df.iterrows():
 
 html_content += "</body>\n"
 html_content += "<footer>\n"
-html_content += "  <p>Made with love for the community by Riccardo</p>\n"
+html_content += "  <p>Made with ❤️ for the community by Riccardo</p>\n"
 html_content += "</footer>\n"
 html_content += "</html>\n"
 
