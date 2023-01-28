@@ -221,7 +221,7 @@ url = "https://api.countapi.xyz/get/"+ countapi_workspace +"/"+ countapiID +"/"
 response = requests.get(url)
 data = response.json()
 value = data["value"]
-now = datetime.datetime.now()
+now = datetime.now()
 
 with open("countapi.csv", "a") as f:
     writer = csv.writer(f)
