@@ -201,7 +201,7 @@ html_content += "  </ul>\n"
 
 # Utilizza un ciclo for per iterare attraverso ogni riga del dataframe
 current_user = df.iloc[0]["Profile"]
-html_content += f"  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user{users_dict[current_user]}'>{current_user} </h2><br><a href='{row['Profile_web']}'>Official website</a><br><a href='{row['Profile_twi']}'>Twitter profile</a>\n"
+html_content += f"  <h2 class='h2' style='text-transform: uppercase;' id='user{users_dict[current_user]}'>{current_user} </h2><br><a href='{row['Profile_web']}'>Official website</a><br><a href='{row['Profile_twi']}'>Twitter profile</a>\n"
 
 for _, row in df.iterrows():
     user = row["Profile"]
@@ -209,7 +209,7 @@ for _, row in df.iterrows():
         current_user = user
         
 # Crea un'ancora per ogni utente nell'HTML
-        html_content += f"  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user{users_dict[user]}'>{user}</h2><br><a href='{row['Profile_web']}'>Official website</a><br><a href='{row['Profile_twi']}'>Twitter profile</a>\n"
+        html_content += f"  <h2 class='h2' style='text-transform: uppercase;' id='user{users_dict[user]}'>{user}</h2><br><a href='{row['Profile_web']}'>Official website</a><br><a href='{row['Profile_twi']}'>Twitter profile</a>\n"
     date = row["Time"]
     text = make_link(row["Tweet"])
     html_content += f" <h3 date='{date}'>{date}</h3>\n"
