@@ -94,7 +94,7 @@ for keyword in df3_grouped["keyword"].unique():
 chart_data = chart_data[:-2]
 ###
 googleapi = "https://fonts.googleapis.com/css?family=Inconsolata|Roboto"
-googleapi = googleapi.replace(googleapi,f'<link href="{googleapi}" rel="stylesheet"</a>')
+googleapi = googleapi.replace(googleapi,f'<link href="{googleapi}" rel="stylesheet" >')
 
 countapi_workspace = "riccardocapelli1.github.io"
 countapiID = "04f8aa4a-f653-4c6a-84b8-479e3ff90069"
