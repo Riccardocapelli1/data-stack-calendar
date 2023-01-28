@@ -93,9 +93,14 @@ for keyword in df3_grouped["keyword"].unique():
 # Rimuovi l'ultima virgola e newline dai dati del grafico
 chart_data = chart_data[:-2]
 ###
-googleapi = "<href='https://fonts.googleapis.com/css?family=Inconsolata|Roboto'>"
-googleapi = googleapi.replace(googleapi,f'<a href="{googleapi}">{googleapi}</a>')
-                    
+googleapi = "https://fonts.googleapis.com/css?family=Inconsolata|Roboto"
+googleapi = googleapi.replace(googleapi,f'<link href="{googleapi}" rel="stylesheet"</a>')
+
+countapi_workspace = "riccardocapelli1.github.io"
+countapiID = "04f8aa4a-f653-4c6a-84b8-479e3ff90069"
+countapilink = "http://api.countapi.xyz/hit/"+ countapi_workspace +"/"+ countapiID +"?callback=websiteVisits"
+countapi = countapilink.replace(countapilink,f'<script async src="{googleapi}"></script>')
+
 # crea contenuto html principale
 def make_link(text):
     # Cerca tutte le occorrenze di link nella stringa
@@ -113,7 +118,7 @@ html_content  = "<!DOCTYPE html>\n"
 html_content += "<html>\n"
 html_content += "<head>\n"
 html_content += googleapi + "\n"
-html_content += "  <script async src='http://api.countapi.xyz/hit/riccardocapelli1.github.io/04f8aa4a-f653-4c6a-84b8-479e3ff90069?callback=websiteVisits'></script>\n"
+html_content += "  " + countapi + "\n"
 html_content += "  <meta charset='utf-8'>\n"
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=yes'>\n"
 html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css'>\n"
