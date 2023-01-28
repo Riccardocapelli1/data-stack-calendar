@@ -11,7 +11,7 @@ auth.set_access_token(os.environ["ACCESS_TOKEN"], os.environ["ACCESS_TOKEN_SECRE
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 #df Crea una lista dei profili di cui vuoi scaricare i tweet
-profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","astronomerio","awscloud","Azure","Azure_Synapse","census","ClickHouseDB","code","confluentinc","dagster","dask_dev","databricks","dataddo","datafoldcom","datameer","dbt_labs","DeepMind","DeltaLakeOSS","Docker","druidio","duckdb","duckdblabs","elastic","expectgreatdata","fastdotai","fivetran","getdbt","github","gitlab","googlecloud","grafana","HevoData","HightouchData","IBMData","Integrateio","keboola","ksqlDB","kubernetesio","lightdash_devs","mage_ai","mariadb","Materialize","meltanodata","Metabase","MicroStrategy","moderndatastack","motherduck","montecarlodata","MSPowerBI","myadverity","MySQL","MuleSoft","numpy_team","pandas_dev","PyData","PostgreSQL","ProjectJupyter","PrefectIO","preset_data","prestodb","qlik","RiveryData","SASsoftware","ScyllaDB","SkyviaService","singer_io","SnowflakeDB","SQLServer","Supermetrics","tableau","Talend","Teradata","thecubejs","thoughtspot","trinodb","y42dotcom","Workato"]
+profiles = [,"AirbyteHQ":"Airbyte","ApacheAirflow":"Apache Airflow","ApacheArrow":"Apache Arrow","ApacheCalcite":"Apache Calcite","ApacheFlink":"Apache Flink","apachekafka":"Apache Kafka","apachenifi":"Apache Nifi","ApacheParquet":"Apache Parquet","ApachePinot":"Apache Pinot","astronomerio":"Astronomer.io","awscloud":"AWS Cloud","Azure":"Azure","Azure_Synapse":"Azure Synapse","census":"Census","ClickHouseDB":"ClickHouse","code":"VS Code","confluentinc":"Confluent.inc","dagster":"Dagster","dask_dev":"Dask","databricks":"Databricks","dataddo":"Dataddo","datafoldcom":"Datafold","datameer":"Datameer","dbt_labs":"Dbt labs","DeepMind":"Deep Mind","DeltaLakeOSS":"Delta Lake","Docker":"Docker","druidio":"Druidio","duckdb":"Duck DB","duckdblabs":"Duck DB Labs","elastic":"Elastic","expectgreatdata":"Expect Great Data","fastdotai":"Fast.ai","fivetran":"Fivetran","getdbt":"Getdbt.com","github":"Github","gitlab":"Gitlab","googlecloud":"Google Cloud","grafana":"Grafana","HevoData":"Hevo Data","HightouchData":"Hightouch Data","IBMData":"IBM Data","Integrateio":"Integrate.io","keboola":"Keboola","ksqlDB":"Ksql","kubernetesio":"kubernetes.io","lightdash_devs":"Lightdash","mage_ai":"Mage.ai","mariadb":"Mariadb","Materialize":"Materialize","meltanodata":"Meltano","Metabase":"Metabase","MicroStrategy":"MicroStrategy","moderndatastack":"Moderndatastack.xyz","motherduck":"Motherduck","montecarlodata":"Montecarlo","MSPowerBI":"PowerBI","myadverity":"Myadverity","MySQL":"MySQL","MuleSoft":"MuleSoft","numpy_team":"Numpy","pandas_dev":"Pandas","PyData":"Py Spark","PostgreSQL":"PostgreSQL","ProjectJupyter":"Jupyter","PrefectIO":"Prefect.io","preset_data":"Preset","prestodb":"Presto DB","qlik":"Qlik","RiveryData":"Rivery","SASsoftware":"SAS","ScyllaDB":"Scylla DB","SkyviaService":"Skyvia","singer_io":"singer.io","SnowflakeDB":"Snowflake","SQLServer":"SQL Server","Supermetrics":"Supermetrics","tableau":"Tableau","Talend":"Talend","Teradata":"Teradata","thecubejs":"Cube.dev","thoughtspot":"Thoughtspot","trinodb":"Trinodb","y42dotcom":"y42.com","Workato":"Workato"]
 
 #df2 definire le keyword da cercare
 keywords = ["CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "TRAINING"]
@@ -26,6 +26,7 @@ for profile in profiles:
 
 # Crea un dataframe dei tweet scaricati
 df = pd.DataFrame(tweets, columns=['Time', 'User', 'Tweet'])
+df["Profile"] = df["User"].map(profiles)
 
 #Conversione della colonna Time
 df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
@@ -161,7 +162,7 @@ users_dict = {}
 # Utilizza un ciclo for per aggiungere gli utenti al dizionario e tenere traccia della loro posizione nell'HTML
 pos = 0
 for _, row in df.iterrows():
-    user = row["User"]
+    user = row["Profile"]
     if user not in users_dict:
         users_dict[user] = pos
         pos += 1
@@ -174,11 +175,11 @@ for user in users_dict:
 html_content += "  </ul>\n"
 
 # Utilizza un ciclo for per iterare attraverso ogni riga del dataframe
-current_user = df.iloc[0]["User"]
+current_user = df.iloc[0]["Profile"]
 html_content += f"  <h2 class='h2' style='text-transform: uppercase; margin: 2em 0;' id='user{users_dict[current_user]}'>{current_user}</h2>\n"
 
 for _, row in df.iterrows():
-    user = row["User"]
+    user = row["Profile"]
     if user != current_user:
         current_user = user
         
