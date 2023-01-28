@@ -14,7 +14,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","astronomerio","awscloud","Azure","Azure_Synapse","census","ClickHouseDB","code","confluentinc","dagster","dask_dev","databricks","dataddo","datafoldcom","datameer","dbt_labs","DeepMind","DeltaLakeOSS","Docker","druidio","duckdb","duckdblabs","elastic","expectgreatdata","fastdotai","fivetran","getdbt","github","gitlab","googlecloud","grafana","HevoData","HightouchData","IBMData","Integrateio","keboola","ksqlDB","kubernetesio","lightdash_devs","mage_ai","mariadb","Materialize","meltanodata","Metabase","MicroStrategy","moderndatastack","motherduck","montecarlodata","MSPowerBI","myadverity","MySQL","MuleSoft","numpy_team","pandas_dev","PyData","PostgreSQL","ProjectJupyter","PrefectIO","preset_data","prestodb","qlik","RiveryData","SASsoftware","ScyllaDB","SkyviaService","singer_io","SnowflakeDB","SQLServer","Supermetrics","tableau","Talend","Teradata","thecubejs","thoughtspot","trinodb","y42dotcom","Workato"]
 
 #df2 definire le keyword da cercare
-keywords = ["BADGE", "CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "TRAINING"]
+keywords = ["CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "TRAINING"]
 
 # Crea una lista vuota per i tweet
 tweets = []
