@@ -4,7 +4,7 @@ body {
 
 body, p, h1, h2, h3 {
   color: rgb(235, 201, 201);
-  font-family: 'Inconsolata', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -13,6 +13,7 @@ body, p, h1, h2, h3 {
 
 .header {
   margin-top: 10px;
+  font-family: 'Inconsolata', sans-serif;
 }
 
 /* Imposta il colore dei link su azzurro chiaro */
