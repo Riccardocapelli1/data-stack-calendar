@@ -2,7 +2,28 @@ body {
   background-color: rgb(37, 26, 26);
 }
 
-body, p, h1, h2, h3 {
+body {
+  color: rgb(235, 201, 201);
+  font-family: 'Roboto', sans-serif;
+}
+
+ p {
+  color: rgb(235, 201, 201);
+  font-family: 'Roboto', sans-serif;
+}
+
+ h1 {
+  color: rgb(235, 201, 201);
+  font-family: 'Roboto', sans-serif;
+}
+
+ h2 {
+  color: rgb(235, 201, 201);
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: unset;
+}
+
+ h3 {
   color: rgb(235, 201, 201);
   font-family: 'Roboto', sans-serif;
 }
