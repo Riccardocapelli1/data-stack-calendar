@@ -99,7 +99,7 @@ googleapi = googleapi.replace(googleapi,f'<link href="{googleapi}" rel="styleshe
 countapi_workspace = "riccardocapelli1.github.io"
 countapiID = "04f8aa4a-f653-4c6a-84b8-479e3ff90069"
 countapilink = "http://api.countapi.xyz/hit/"+ countapi_workspace +"/"+ countapiID +"?callback=websiteVisits"
-countapi = countapilink.replace(countapilink,f'<script async src="{googleapi}"></script>')
+countapi = countapilink.replace(countapilink,f'<script async src="{countapilink}"></script>')
 
 # crea contenuto html principale
 def make_link(text):
