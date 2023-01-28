@@ -127,6 +127,7 @@ html_content += "  <meta name='viewport' content='width=device-width, initial-sc
 html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css'>\n"
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
+html_content += "  <script src='assets/load.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 
 # Titolo all'html_content
