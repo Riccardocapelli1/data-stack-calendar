@@ -93,8 +93,9 @@ for keyword in df3_grouped["keyword"].unique():
 # Rimuovi l'ultima virgola e newline dai dati del grafico
 chart_data = chart_data[:-2]
 ###
-
-
+googleapi = "<href='https://fonts.googleapis.com/css?family=Inconsolata|Roboto'>"
+googleapi = googleapi.replace(googleapi,f'<a href="{googleapi}">{googleapi}</a>')
+                    
 # crea contenuto html principale
 def make_link(text):
     # Cerca tutte le occorrenze di link nella stringa
@@ -111,7 +112,7 @@ html_content = ""
 html_content  = "<!DOCTYPE html>\n"
 html_content += "<html>\n"
 html_content += "<head>\n"
-html_content += "  <href='https://fonts.googleapis.com/css?family=Inconsolata|Roboto'>\n"
+html_content += googleapi + "\n"
 html_content += "  <script async src='http://api.countapi.xyz/hit/riccardocapelli1.github.io/d6042366-96c5-4f36-a4d1-480a6d44d31b?callback=websiteVisits'></script>\n"
 html_content += "  <meta charset='utf-8'>\n"
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=yes'>\n"
