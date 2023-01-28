@@ -4,11 +4,19 @@ import os
 import re
 from datetime import datetime
 import dateutil.parser as parser
+import requests
+import csv
 
 # Replace these with your own API keys and secrets
 auth = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"], os.environ["CONSUMER_SECRET"])
 auth.set_access_token(os.environ["ACCESS_TOKEN"], os.environ["ACCESS_TOKEN_SECRET"])
 api = tweepy.API(auth, wait_on_rate_limit=True)
+
+#api by countapi
+countapiID = os.environ['COUNTAPI_TOKEN']
+countapi_workspace = "riccardocapelli1.github.io"
+countapilink = "http://api.countapi.xyz/hit/"+ countapi_workspace +"/"+ countapiID +"?callback=websiteVisits"
+countapi = countapilink.replace(countapilink,f'<script async src="{countapilink}"></script>')
 
 #df Crea una lista dei profili di cui vuoi scaricare i tweet
 profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","astronomerio","awscloud","Azure","Azure_Synapse","census","ClickHouseDB","code","confluentinc","dagster","dask_dev","databricks","dataddo","datafoldcom","datameer","dbt_labs","DeepMind","DeltaLakeOSS","Docker","druidio","duckdb","duckdblabs","elastic","expectgreatdata","fastdotai","fivetran","getdbt","github","gitlab","googlecloud","grafana","HevoData","HightouchData","IBMData","Integrateio","keboola","ksqlDB","kubernetesio","lightdash_devs","mage_ai","mariadb","Materialize","meltanodata","Metabase","MicroStrategy","moderndatastack","motherduck","montecarlodata","MSPowerBI","myadverity","MySQL","MuleSoft","numpy_team","pandas_dev","PyData","PostgreSQL","ProjectJupyter","PrefectIO","preset_data","prestodb","qlik","RiveryData","SASsoftware","ScyllaDB","SkyviaService","singer_io","SnowflakeDB","SQLServer","Supermetrics","tableau","Talend","Teradata","thecubejs","thoughtspot","trinodb","y42dotcom","Workato"]
@@ -95,11 +103,6 @@ chart_data = chart_data[:-2]
 ###
 googleapi = "https://fonts.googleapis.com/css?family=Inconsolata|Roboto"
 googleapi = googleapi.replace(googleapi,f'<link href="{googleapi}" rel="stylesheet" >')
-
-countapi_workspace = "riccardocapelli1.github.io"
-countapiID = "04f8aa4a-f653-4c6a-84b8-479e3ff90069"
-countapilink = "http://api.countapi.xyz/hit/"+ countapi_workspace +"/"+ countapiID +"?callback=websiteVisits"
-countapi = countapilink.replace(countapilink,f'<script async src="{countapilink}"></script>')
 
 # crea contenuto html principale
 def make_link(text):
@@ -212,3 +215,15 @@ html_content += "</html>\n"
 
 with open("./index.html", "w") as f:
     f.write(html_content)
+
+# write countapi data in csv file
+url = "https://api.countapi.xyz/get/"+ countapi_workspace +"/"+ countapiID +"/"
+response = requests.get(url)
+data = response.json()
+value = data["value"]
+now = datetime.datetime.now()
+
+with open("countapi.csv", "a") as f:
+    writer = csv.writer(f)
+    writer.writerow([now, value])
+    
