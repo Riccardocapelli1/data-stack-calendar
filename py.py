@@ -210,7 +210,7 @@ categories_dict = {}
 # Utilizza un ciclo for per scorrere attraverso le righe del dataframe df
 for _, row in df.iterrows():
     user = row["Profile"]
-    keyword = row["Keyword"]
+    Keyword = row["Keyword"]
     # Se la categoria non è ancora presente nel dizionario, aggiungila alla posizione corrente e mantieni traccia della posizione in HTML
     if Keyword not in categories_dict:
         categories_dict[Keyword] = pos
