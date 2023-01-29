@@ -38,7 +38,7 @@ df = pd.DataFrame(tweets, columns=['Time', 'User', 'Tweet'])
 #df Mappa la lista dei profili di cui vuoi scaricare i tweet
 profiles_map = {"AirbyteHQ":"Airbyte","ApacheAirflow":"Apache Airflow","ApacheArrow":"Apache Arrow","ApacheCalcite":"Apache Calcite","ApacheFlink":"Apache Flink","apachekafka":"Apache Kafka","apachenifi":"Apache Nifi","ApacheParquet":"Apache Parquet","ApachePinot":"Apache Pinot","astronomerio":"Astronomer.io","awscloud":"AWS Cloud","Azure":"Azure","Azure_Synapse":"Azure Synapse","census":"Census","ClickHouseDB":"ClickHouse","code":"Visual Studio Code","confluentinc":"Confluent.io","dagster":"Dagster","dask_dev":"Dask","databricks":"Databricks","dataddo":"Dataddo","datafoldcom":"Datafold","datameer":"Datameer","dbt_labs":"Dbt labs","DeepMind":"Deep Mind","DeltaLakeOSS":"Delta Lake","Docker":"Docker","druidio":"Druidio","duckdb":"Duck DB","duckdblabs":"Duck DB Labs","elastic":"Elastic","expectgreatdata":"Expect Great Data","fastdotai":"Fast.ai","fivetran":"Fivetran","getdbt":"Getdbt.com","github":"Github","gitlab":"Gitlab","googlecloud":"Google Cloud","grafana":"Grafana","HevoData":"Hevo Data","HightouchData":"Hightouch Data","IBMData":"IBM Data","Integrateio":"Integrate.io","keboola":"Keboola","ksqlDB":"Ksql","kubernetesio":"kubernetes.io","lightdash_devs":"Lightdash","mage_ai":"Mage.ai","mariadb":"Mariadb","Materialize":"Materialize","meltanodata":"Meltano","Metabase":"Metabase.com","MicroStrategy":"MicroStrategy","moderndatastack":"Moderndatastack.xyz","motherduck":"Motherduck","montecarlodata":"Montecarlo","MSPowerBI":"PowerBI","myadverity":"Myadverity","MySQL":"MySQL","MuleSoft":"MuleSoft","numpy_team":"Numpy","pandas_dev":"Pandas","PyData":"Py Spark","PostgreSQL":"PostgreSQL","ProjectJupyter":"Jupyter","PrefectIO":"Prefect.io","preset_data":"Preset","prestodb":"Presto DB","qlik":"Qlik","RiveryData":"Rivery","SASsoftware":"SAS","ScyllaDB":"Scylla DB","SkyviaService":"Skyvia","singer_io":"singer.io","SnowflakeDB":"Snowflake","SQLServer":"SQL Server","Supermetrics":"Supermetrics","tableau":"Tableau","Talend":"Talend","Teradata":"Teradata","thecubejs":"Cube.dev","thoughtspot":"Thoughtspot","trinodb":"Trino DB","y42dotcom":"Y42.com","Workato":"Workato"}
 
-profiles_weblink = {"AirbyteHQ":"https://airbyte.io/","ApacheAirflow":"https://airflow.apache.org/ Airflow","ApacheArrow":"https://arrow.apache.org/ Arrow","ApacheCalcite":"https://calcite.apache.org/ Calcite","ApacheFlink":"https://flink.apache.org/ Flink","apachekafka":"https://kafka.apache.org/ Kafka","apachenifi":"https://nifi.apache.org/ Nifi","ApacheParquet":"https://parquet.apache.org/ Parquet","ApachePinot":"https://pinot.apache.org/ Pinot","astronomerio":"https://astronomer.io/","awscloud":"https://aws.amazon.com/ Cloud","Azure":"https://azure.com/","Azure_Synapse":"https://azure.com/synapse Synapse","census":"https://census.gov/","ClickHouseDB":"https://clickhouse.tech/","code":"https://code.visualstudio.com/ Studio Code","confluentinc":"https://confluent.io/","dagster":"https://dagster.io/","dask_dev":"https://dask.org/","databricks":"https://databricks.com/","dataddo":"https://dataddo.com/","datafoldcom":"https://datafold.com/","datameer":"https://datameer.com/","dbt_labs":"https://getdbt.com/ labs","DeepMind":"https://deepmind.com/ Mind","DeltaLakeOSS":"https://deltalake.io/ Lake","Docker":"https://docker.com/","druidio":"https://druid.io/","duckdb":"https://duckdb.org/ DB","duckdblabs":"https://duckdb.org/ DB Labs","elastic":"https://elastic.co/","expectgreatdata":"https://expectgreatdata.com/ Great Data","fastdotai":"https://fast.ai","fivetran":"https://fivetran.com/","getdbt":"https://getdbt.com","github":"https://github.com/","gitlab":"https://gitlab.com/","googlecloud":"https://cloud.google.com/ Cloud","grafana":"https://grafana.com/","HevoData":"https://hevodata.com/ Data","HightouchData":"https://hightouchdata.com/ Data","IBMData":"https://ibm.com/analytics/data-science Data","Integrateio":"https://integrate.io","keboola":"https://keboola.com/","ksqlDB":"https://confluent.io/ksql/","kubernetesio":"https://kubernetes.io","lightdash_devs":"https://lightdash.dev/","mage_ai":"https://mage.ai","mariadb":"https://mariadb.org/","Materialize":"https://materialize.com/","meltanodata":"https://meltano.com/","Metabase":"https://metabase.com/","MicroStrategy":"https://microstrategy.com/","moderndatastack":"https://moderndatastack.xyz","motherduck":"https://motherduck.io/","montecarlodata":"https://montecarlodata.com/","MSPowerBI":"https://powerbi.microsoft.com/","myadverity":"https://myadverity.com/","MySQL":"https://mysql.com/","MuleSoft":"https://mulesoft.com/","numpy_team":"https://numpy.org/","pandas_dev":"https://pandas.pydata.org/","PyData":"https://spark.apache.org/ Spark","PostgreSQL":"https://postgresql.org/","ProjectJupyter":"https://jupyter.org/","PrefectIO":"https://prefect.io","preset_data":"https://preset.io/","prestodb":"https://prestodb.io/ DB","qlik":"https://qlik.com/","RiveryData":"https://rivery.io/","SASsoftware":"https://sas.com/","ScyllaDB":"https://scylladb.com/ DB","SkyviaService":"https://skyvia.com/","singer_io":"https://singer.io","SnowflakeDB":"https://snowflake.com/","SQLServer":"https://microsoft.com/en-us/sql-server/ Server","Supermetrics":"https://supermetrics.com/","tableau":"https://tableau.com/","Talend":"https://talend.com/","Teradata":"https://teradata.com/","thecubejs":"https://cube.dev","thoughtspot":"https://thoughtspot.com/","trinodb":"https://trino.io/ DB","y42dotcom":"https://y42.com","Workato":"https://workato.com/"}
+profiles_weblink = {"AirbyteHQ":"https://airbyte.io/","ApacheAirflow":"https://airflow.apache.org/ Airflow","ApacheArrow":"https://arrow.apache.org/ Arrow","ApacheCalcite":"https://calcite.apache.org/ Calcite","ApacheFlink":"https://flink.apache.org/ Flink","apachekafka":"https://kafka.apache.org/ Kafka","apachenifi":"https://nifi.apache.org/ Nifi","ApacheParquet":"https://parquet.apache.org/ Parquet","ApachePinot":"https://pinot.apache.org/ Pinot","astronomerio":"https://astronomer.io/.io","awscloud":"https://aws.amazon.com/ Cloud","Azure":"https://azure.com/","Azure_Synapse":"https://azure.com/synapse Synapse","census":"https://census.gov/","ClickHouseDB":"https://clickhouse.tech/","code":"https://code.visualstudio.com/ Studio Code","confluentinc":"https://confluent.io/","dagster":"https://dagster.io/","dask_dev":"https://dask.org/","databricks":"https://databricks.com/","dataddo":"https://dataddo.com/","datafoldcom":"https://datafold.com/","datameer":"https://datameer.com/","dbt_labs":"https://getdbt.com/ labs","DeepMind":"https://deepmind.com/ Mind","DeltaLakeOSS":"https://deltalake.io/ Lake","Docker":"https://docker.com/","druidio":"https://druid.io/","duckdb":"https://duckdb.org/ DB","duckdblabs":"https://duckdb.org/ DB Labs","elastic":"https://elastic.co/","expectgreatdata":"https://expectgreatdata.com/ Great Data","fastdotai":"https://fast.ai","fivetran":"https://fivetran.com/","getdbt":"https://getdbt.com","github":"https://github.com/","gitlab":"https://gitlab.com/","googlecloud":"https://cloud.google.com/ Cloud","grafana":"https://grafana.com/","HevoData":"https://hevodata.com/ Data","HightouchData":"https://hightouchdata.com/ Data","IBMData":"https://ibm.com/analytics/data-science Data","Integrateio":"https://integrate.io","keboola":"https://keboola.com/","ksqlDB":"https://confluent.io/ksql/","kubernetesio":"https://kubernetes.io","lightdash_devs":"https://lightdash.dev/","mage_ai":"https://mage.ai","mariadb":"https://mariadb.org/","Materialize":"https://materialize.com/","meltanodata":"https://meltano.com/","Metabase":"https://metabase.com/","MicroStrategy":"https://microstrategy.com/","moderndatastack":"https://moderndatastack.xyz","motherduck":"https://motherduck.io/","montecarlodata":"https://montecarlodata.com/","MSPowerBI":"https://powerbi.microsoft.com/","myadverity":"https://myadverity.com/","MySQL":"https://mysql.com/","MuleSoft":"https://mulesoft.com/","numpy_team":"https://numpy.org/","pandas_dev":"https://pandas.pydata.org/","PyData":"https://spark.apache.org/ Spark","PostgreSQL":"https://postgresql.org/","ProjectJupyter":"https://jupyter.org/","PrefectIO":"https://prefect.io","preset_data":"https://preset.io/","prestodb":"https://prestodb.io/ DB","qlik":"https://qlik.com/","RiveryData":"https://rivery.io/","SASsoftware":"https://sas.com/","ScyllaDB":"https://scylladb.com/ DB","SkyviaService":"https://skyvia.com/","singer_io":"https://singer.io","SnowflakeDB":"https://snowflake.com/","SQLServer":"https://microsoft.com/en-us/sql-server/ Server","Supermetrics":"https://supermetrics.com/","tableau":"https://tableau.com/","Talend":"https://talend.com/","Teradata":"https://teradata.com/","thecubejs":"https://cube.dev","thoughtspot":"https://thoughtspot.com/","trinodb":"https://trino.io/ DB","y42dotcom":"https://y42.com","Workato":"https://workato.com/"}
 
 profiles_twitter = {"AirbyteHQ":"https://twitter.com/AirbyteHQ","ApacheAirflow":"https://twitter.com/ApacheAirflow Airflow","ApacheArrow":"https://twitter.com/ApacheArrow Arrow","ApacheCalcite":"https://twitter.com/ApacheCalcite Calcite","ApacheFlink":"https://twitter.com/ApacheFlink Flink","apachekafka":"https://twitter.com/apachekafka Kafka","apachenifi":"https://twitter.com/apachenifi Nifi","ApacheParquet":"https://twitter.com/ApacheParquet Parquet","ApachePinot":"https://twitter.com/ApachePinot Pinot","astronomerio":"https://twitter.com/astronomerio","awscloud":"https://twitter.com/awscloud Cloud","Azure":"https://twitter.com/Azure","Azure_Synapse":"https://twitter.com/Azure_Synapse Synapse","census":"https://twitter.com/census","ClickHouseDB":"https://twitter.com/ClickHouseDB","code":"https://twitter.com/code Studio Code","confluentinc":"https://twitter.com/confluentinc","dagster":"https://twitter.com/dagster","dask_dev":"https://twitter.com/dask_dev","databricks":"https://twitter.com/databricks","dataddo":"https://twitter.com/dataddo","datafoldcom":"https://twitter.com/datafoldcom","datameer":"https://twitter.com/datameer","dbt_labs":"https://twitter.com/dbt_labs labs","DeepMind":"https://twitter.com/DeepMind Mind","DeltaLakeOSS":"https://twitter.com/DeltaLakeOSS Lake","Docker":"https://twitter.com/Docker","druidio":"https://twitter.com/druidio","duckdb":"https://twitter.com/duckdb DB","duckdblabs":"https://twitter.com/duckdblabs DB Labs","elastic":"https://twitter.com/elastic","expectgreatdata":"https://twitter.com/expectgreatdata Great Data","fastdotai":"https://twitter.com/fastdotai","fivetran":"https://twitter.com/fivetran","getdbt":"https://twitter.com/getdbt.com","github":"https://twitter.com/github","gitlab":"https://twitter.com/gitlab","googlecloud":"https://twitter.com/googlecloud Cloud","grafana":"https://twitter.com/grafana","HevoData":"https://twitter.com/HevoData Data","HightouchData":"https://twitter.com/HightouchData Data","IBMData":"https://twitter.com/IBMData Data","Integrateio":"https://twitter.com/Integrateio","keboola":"https://twitter.com/keboola","ksqlDB":"https://twitter.com/ksqlDB","kubernetesio":"https://twitter.com/kubernetesio","lightdash_devs":"https://twitter.com/lightdash_devs","mage_ai":"https://twitter.com/mage_ai","mariadb":"https://twitter.com/mariadb","Materialize":"https://twitter.com/Materialize","meltanodata":"https://twitter.com/meltanodata","Metabase":"https://twitter.com/Metabase","MicroStrategy":"https://twitter.com/MicroStrategy","moderndatastack":"https://twitter.com/moderndatastack.xyz","motherduck":"https://twitter.com/motherduck","montecarlodata":"https://twitter.com/montecarlodata","MSPowerBI":"https://twitter.com/MSPowerBI","myadverity":"https://twitter.com/myadverity","MySQL":"https://twitter.com/MySQL","MuleSoft":"https://twitter.com/MuleSoft","numpy_team":"https://twitter.com/numpy_team","pandas_dev":"https://twitter.com/pandas_dev","PyData":"https://twitter.com/PyData Spark","PostgreSQL":"https://twitter.com/PostgreSQL","ProjectJupyter":"https://twitter.com/ProjectJupyter","PrefectIO":"https://twitter.com/PrefectIO","preset_data":"https://twitter.com/preset_data","prestodb":"https://twitter.com/prestodb DB","qlik":"https://twitter.com/qlik","RiveryData":"https://twitter.com/RiveryData","SASsoftware":"https://twitter.com/SASsoftware","ScyllaDB":"https://twitter.com/ScyllaDB DB","SkyviaService":"https://twitter.com/SkyviaService","singer_io":"https://twitter.com/singer_io","SnowflakeDB":"https://twitter.com/SnowflakeDB","SQLServer":"https://twitter.com/SQLServer Server","Supermetrics":"https://twitter.com/Supermetrics","tableau":"https://twitter.com/tableau","Talend":"https://twitter.com/Talend","Teradata":"https://twitter.com/Teradata","thecubejs":"https://twitter.com/thecubejs.dev","thoughtspot":"https://twitter.com/thoughtspot","trinodb":"https://twitter.com/trinodb DB","y42dotcom":"https://twitter.com/y42dotcom","Workato":"https://twitter.com/Workato"}
 
@@ -57,16 +57,6 @@ df["User"] = df["User"].str.upper()
 df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Podcast|podcast|Badge|badge|Certific|certific|Webinar|webinar|free resources|free courses|free learning')]
 df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|Steven|steven|Prevent|prevent|Event streaming|event streaming|SSL certificate|GhEvent|EventTimer')]
 
-# ciclo for per verificare se una stringa contiene una parola chiave
-df['search_tweet'] = df['Tweet'].str.upper()
-for index, row in df.iterrows():
-    search_tweet = row['search_tweet']
-    for keyword in keywords:
-        if keyword in search_tweet:
-            df.at[index, "keyword"] = keyword
-            break
-
-
 # creare una copia del dataframe
 df2 = df.copy()
 
@@ -80,9 +70,9 @@ df2['date'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 df2['Tweet'] = df2['Tweet'].str.upper()
 for index, row in df2.iterrows():
     Tweet = row['Tweet']
-    for Keyword in keywords:
-        if Keyword in Tweet:
-            df2.at[index, "Keyword"] = Keyword
+    for keyword in keywords:
+        if keyword in Tweet:
+            df2.at[index, "keyword"] = keyword
             break
 
 # eliminare righe senza keyword
@@ -191,54 +181,23 @@ html_content += "  <p>Aggregated kewords tweeted stats by month</p>\n"
 html_content += "</head>\n"
 html_content += "<body>\n"
 
-
 #, Crea un dizionario vuoto per gli utenti
 users_dict = {}
 
 # Utilizza un ciclo for per aggiungere gli utenti al dizionario e tenere traccia della loro posizione nell'HTML
 pos = 0
-######
-#for _, row in df.iterrows():
-#    user = row["Profile"]
-#    if user not in users_dict:
-#        users_dict[user] = pos
-#        pos += 1
-######
-# Crea un dizionario vuoto per le categorie
-categories_dict = {}
-
-# Utilizza un ciclo for per scorrere attraverso le righe del dataframe df
 for _, row in df.iterrows():
     user = row["Profile"]
-    Keyword = row["Keyword"]
-    # Se la categoria non è ancora presente nel dizionario, aggiungila alla posizione corrente e mantieni traccia della posizione in HTML
-    if Keyword not in categories_dict:
-        categories_dict[Keyword] = pos
+    if user not in users_dict:
+        users_dict[user] = pos
         pos += 1
-        # Crea un dizionario vuoto per gli utenti e una lista vuota per gli utenti che hanno citato la categoria nei loro tweet
-        categories_dict[Keyword]["Profile"] = []
-    # Verifica se l'utente è già presente nella lista per quella categoria
-    if user not in categories_dict[Keyword]["Profile"]:
-        # In caso contrario, aggiungi l'utente alla lista
-        categories_dict[Keyword]["Profile"].append(user)
 
-#####
 # Utilizza un ciclo for per creare un elenco di link agli utenti nell'HTML
-#html_content += "  <h3>List of Authors</h3>\n"
-#html_content += "  <ul>\n"
-#for user in users_dict:
-#    html_content += f"    <li><a href='#user{users_dict[user]}'>{user}</a></li>\n"
-#html_content += "  </ul>\n"
-#####
-
-# Crea il codice HTML per la categoria e la lista di utenti
-html_content += "  <h3>List of categories and authors</h3>\n"
-for Keyword in categories_dict:
-    html_content += f"  <h4><a href='#Keyword{categories_dict[Keyword]}'>{Keyword}</a></h4>\n"
-    html_content += "  <ul>\n"
-    for user in categories_dict[Keyword]["users"]:
-        html_content += f"    <li><a href='#user{users_dict[user]}'>{user}</a></li>\n"
-    html_content += "  </ul>\n"
+html_content += "  <h3>List of Authors</h3>\n"
+html_content += "  <ul>\n"
+for user in users_dict:
+    html_content += f"    <li><a href='#user{users_dict[user]}'>{user}</a></li>\n"
+html_content += "  </ul>\n"
 
 # Utilizza un ciclo for per iterare attraverso ogni riga del dataframe
 current_user = df.iloc[0]["Profile"]
