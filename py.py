@@ -57,6 +57,16 @@ df["User"] = df["User"].str.upper()
 df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Podcast|podcast|Badge|badge|Certific|certific|Webinar|webinar|free resources|free courses|free learning')]
 df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|Steven|steven|Prevent|prevent|Event streaming|event streaming|SSL certificate|GhEvent|EventTimer')]
 
+# ciclo for per verificare se una stringa contiene una parola chiave
+df['search_tweet'] = df['Tweet'].str.upper()
+for index, row in df.iterrows():
+    search_tweet = row['search_tweet']
+    for keyword in keywords:
+        if keyword in search_tweet:
+            df.at[index, "keyword"] = keyword
+            break
+
+
 # creare una copia del dataframe
 df2 = df.copy()
 
@@ -70,9 +80,9 @@ df2['date'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 df2['Tweet'] = df2['Tweet'].str.upper()
 for index, row in df2.iterrows():
     Tweet = row['Tweet']
-    for keyword in keywords:
-        if keyword in Tweet:
-            df2.at[index, "keyword"] = keyword
+    for Keyword in keywords:
+        if Keyword in Tweet:
+            df2.at[index, "Keyword"] = Keyword
             break
 
 # eliminare righe senza keyword
@@ -181,23 +191,54 @@ html_content += "  <p>Aggregated kewords tweeted stats by month</p>\n"
 html_content += "</head>\n"
 html_content += "<body>\n"
 
+
 #, Crea un dizionario vuoto per gli utenti
 users_dict = {}
 
 # Utilizza un ciclo for per aggiungere gli utenti al dizionario e tenere traccia della loro posizione nell'HTML
 pos = 0
+######
+#for _, row in df.iterrows():
+#    user = row["Profile"]
+#    if user not in users_dict:
+#        users_dict[user] = pos
+#        pos += 1
+######
+# Crea un dizionario vuoto per le categorie
+categories_dict = {}
+
+# Utilizza un ciclo for per scorrere attraverso le righe del dataframe df
 for _, row in df.iterrows():
     user = row["Profile"]
-    if user not in users_dict:
-        users_dict[user] = pos
+    keyword = row["Keyword"]
+    # Se la categoria non è ancora presente nel dizionario, aggiungila alla posizione corrente e mantieni traccia della posizione in HTML
+    if Keyword not in categories_dict:
+        categories_dict[Keyword] = pos
         pos += 1
+        # Crea un dizionario vuoto per gli utenti e una lista vuota per gli utenti che hanno citato la categoria nei loro tweet
+        categories_dict[Keyword]["Profile"] = []
+    # Verifica se l'utente è già presente nella lista per quella categoria
+    if user not in categories_dict[Keyword]["Profile"]:
+        # In caso contrario, aggiungi l'utente alla lista
+        categories_dict[Keyword]["Profile"].append(user)
 
+#####
 # Utilizza un ciclo for per creare un elenco di link agli utenti nell'HTML
-html_content += "  <h3>List of Authors</h3>\n"
-html_content += "  <ul>\n"
-for user in users_dict:
-    html_content += f"    <li><a href='#user{users_dict[user]}'>{user}</a></li>\n"
-html_content += "  </ul>\n"
+#html_content += "  <h3>List of Authors</h3>\n"
+#html_content += "  <ul>\n"
+#for user in users_dict:
+#    html_content += f"    <li><a href='#user{users_dict[user]}'>{user}</a></li>\n"
+#html_content += "  </ul>\n"
+#####
+
+# Crea il codice HTML per la categoria e la lista di utenti
+html_content += "  <h3>List of categories and authors</h3>\n"
+for Keyword in categories_dict:
+    html_content += f"  <h4><a href='#Keyword{categories_dict[Keyword]}'>{Keyword}</a></h4>\n"
+    html_content += "  <ul>\n"
+    for user in categories_dict[Keyword]["users"]:
+        html_content += f"    <li><a href='#user{users_dict[user]}'>{user}</a></li>\n"
+    html_content += "  </ul>\n"
 
 # Utilizza un ciclo for per iterare attraverso ogni riga del dataframe
 current_user = df.iloc[0]["Profile"]
