@@ -160,11 +160,7 @@ html_content += "                        <ul class='nav'>\n"
 html_content += "                            <li><a href='index.html' class='active'>Conferences</a></li>\n"
 html_content += "                            <li><a href='certificate.html'>Certificates</a></li>\n"
 html_content += "                            <li><a href='podcast.html'>Podcasts</a></li>\n"
-html_content += "                        </ul>        \n"
-html_content += "                        <a class='menu-trigger'>\n"
-html_content += "                            <span>Menu</span>\n"
-html_content += "                        </a>\n"
-html_content += "                        <!-- ***** Menu End ***** -->\n"
+html_content += "                        </ul>\n"
 html_content += "                    </nav>\n"
 html_content += "                </div>\n"
 html_content += "            </div>\n"
@@ -220,7 +216,7 @@ users_dict = {}
 
 # Utilizza un ciclo for per aggiungere gli utenti al dizionario e tenere traccia della loro posizione nell'HTML
 pos = 0
-for _, row in df_certification.iterrows():
+for _, row in df_conference.iterrows():
     user = row["Profile"]
     if user not in users_dict:
         users_dict[user] = pos
@@ -234,10 +230,10 @@ for user in users_dict:
 html_content += "  </ul>\n"
 
 # Utilizza un ciclo for per iterare attraverso ogni riga del dataframe
-current_user = df_certification.iloc[0]["Profile"]
+current_user = df_conference.iloc[0]["Profile"]
 html_content += f"  <h2 class='h2' style='text-transform: uppercase;' id='user{users_dict[current_user]}'>{current_user} </h2><br><a href='{row['Profile_web']}'>Official website</a><br><a href='{row['Profile_twi']}'>Twitter profile</a>\n"
 
-for _, row in df_certification.iterrows():
+for _, row in df_conference.iterrows():
     user = row["Profile"]
     if user != current_user:
         current_user = user
@@ -296,11 +292,7 @@ html_content += "                        <ul class='nav'>\n"
 html_content += "                            <li><a href='index.html'>Conferences</a></li>\n"
 html_content += "                            <li><a href='certificate.html' class='active'>Certificates</a></li>\n"
 html_content += "                            <li><a href='podcast.html'>Podcasts</a></li>\n"
-html_content += "                        </ul>        \n"
-html_content += "                        <a class='menu-trigger'>\n"
-html_content += "                            <span>Menu</span>\n"
-html_content += "                        </a>\n"
-html_content += "                        <!-- ***** Menu End ***** -->\n"
+html_content += "                        </ul>\n"
 html_content += "                    </nav>\n"
 html_content += "                </div>\n"
 html_content += "            </div>\n"
@@ -431,11 +423,7 @@ html_content += "                        <ul class='nav'>\n"
 html_content += "                            <li><a href='index.html'>Conferences</a></li>\n"
 html_content += "                            <li><a href='certificate.html'>Certificates</a></li>\n"
 html_content += "                            <li><a href='podcast.html' class='active'>Podcasts</a></li>\n"
-html_content += "                        </ul>        \n"
-html_content += "                        <a class='menu-trigger'>\n"
-html_content += "                            <span>Menu</span>\n"
-html_content += "                        </a>\n"
-html_content += "                        <!-- ***** Menu End ***** -->\n"
+html_content += "                        </ul>\n"
 html_content += "                    </nav>\n"
 html_content += "                </div>\n"
 html_content += "            </div>\n"

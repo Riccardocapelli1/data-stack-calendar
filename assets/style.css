@@ -119,6 +119,15 @@ body {
   opacity: 1;
 }
 
+.header-area.header-sticky .nav {
+  margin-top: 80px !important;
+}
+
+@media (max-width: 767px) {
+  .header-area .main-nav .logo {
+    color: rgb(37, 26, 26);
+}
+
 /* Imposta il colore dei link su azzurro chiaro */
 a {
   color: rgb(75, 209, 243);
