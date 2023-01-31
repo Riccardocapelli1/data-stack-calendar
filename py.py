@@ -53,21 +53,26 @@ df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda
 #Conversione della colonna User
 df["User"] = df["User"].str.upper()
 
+# create copy for argument
+df_conference = df.copy()
+df_certification = df.copy()
+df_podcast = df.copy()
+
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Podcast|podcast|Badge|badge|Certific|certific|Webinar|webinar|free resources|free courses|free learning')]
 df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|Steven|steven|Prevent|prevent|Event streaming|event streaming|SSL certificate|GhEvent|EventTimer')]
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df_conference = df[df['Tweet'].str.contains('Event|event|Conference|conference|Webinar|webinar')]
-df_conference = df[~df['Tweet'].str.contains('event log|Event log|Steven|steven|Prevent|prevent|Event streaming|event streaming|SSL certificate|GhEvent|EventTimer')]
+df_conference = df_conference[df_conference['Tweet'].str.contains('Event|event|Conference|conference|Webinar|webinar')]
+df_conference = df_conference[~df_conference['Tweet'].str.contains('event log|Event log|Steven|steven|Prevent|prevent|Event streaming|event streaming|SSL certificate|GhEvent|EventTimer')]
 
 # Filtra il dataframe per i tweet che contengono le parole "certificate" o "courses" nel testo
-df_certification = df[df['Tweet'].str.contains('Badge|badge|Certific|certific|free resources|free courses|free learning')]
-#df_certification = df[~df['Tweet'].str.contains('Of courses|of courses|SSL certificate')]
+df_certification = df_certification[df_certification['Tweet'].str.contains('Badge|badge|Certific|certific|free resources|free courses|free learning')]
+df_certification = df_certification[~df_certification['Tweet'].str.contains('Of courses|of courses|SSL certificate')]
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df_podcast = df[df['Tweet'].str.contains('Podcast|podcast')]
-#df_podcast = df[~df['Tweet'].str.contains('')]
+df_podcast = df_podcast[df_podcast['Tweet'].str.contains('Podcast|podcast')]
+#df_podcast = df_podcast[~df_podcast['Tweet'].str.contains('')]
 
 
 # creare una copia del dataframe
