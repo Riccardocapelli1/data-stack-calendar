@@ -16,7 +16,7 @@
                             <li><a href='podcast.html'>Podcasts</a></li>
         </div>
   <h1>Events, conferences, podcast and training list up-to-date</h1>
-  <p>A tweet aggregator site dysplaying events, conferences, podcast, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>
+  <p>A tweet aggregator site dysplaying events, conferences, blogs, podcasts, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>
 <div class='container'>
 <canvas id='myChart'></canvas>
 </div>
@@ -27,6 +27,7 @@ var myChart = new Chart(ctx, {
   type: 'line',
   data: {
     datasets: [
+{ label: 'BLOG', data: [{x: '2023-01', y: 18}]},
 { label: 'CERTIFICATION', data: [{x: '2023-01', y: 54}]},
 { label: 'CONFERENCE', data: [{x: '2023-01', y: 113}]},
 { label: 'COURSE', data: [{x: '2023-01', y: 77}]},
