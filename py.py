@@ -63,7 +63,7 @@ df_conference = df[~df['Tweet'].str.contains('event log|Event log|Steven|steven|
 
 # Filtra il dataframe per i tweet che contengono le parole "certificate" o "courses" nel testo
 df_certification = df[df['Tweet'].str.contains('Badge|badge|Certific|certific|free resources|free courses|free learning')]
-df_certification = df[~df['Tweet'].str.contains('Of courses|of courses|SSL certificate')]
+#df_certification = df[~df['Tweet'].str.contains('Of courses|of courses|SSL certificate')]
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df_podcast = df[df['Tweet'].str.contains('Podcast|podcast')]
