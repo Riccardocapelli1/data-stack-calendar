@@ -157,9 +157,9 @@ html_content += "  <script src='assets/load.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 
 html_content += "        <div class='container'>\n"
-html_content += "                            <li><a href='index.html' class='active'>Conferences</a></li>\n"
-html_content += "                            <li><a href='certificate.html'>Certificates</a></li>\n"
-html_content += "                            <li><a href='podcast.html'>Podcasts</a></li>\n"
+html_content += "                            <li><a href='index.html' class='active'>Conferences & Events</a></li>\n"
+html_content += "                            <li><a href='certificate.html'>Certificates & Badges</a></li>\n"
+html_content += "                            <li><a href='podcast.html'>Podcasts & Blogs & Blogs</a></li>\n"
 html_content += "        </div>\n"
 
 # Titolo all'html_content
@@ -279,9 +279,9 @@ html_content += "  <script src='assets/load.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 
 html_content += "        <div class='container'>\n"
-html_content += "                            <li><a href='index.html'>Conferences</a></li>\n"
-html_content += "                            <li><a href='certificate.html' class='active'>Certificates</a></li>\n"
-html_content += "                            <li><a href='podcast.html'>Podcasts</a></li>\n"
+html_content += "                            <li><a href='index.html'>Conferences & Events</a></li>\n"
+html_content += "                            <li><a href='certificate.html' class='active'>Certificates & Badges</a></li>\n"
+html_content += "                            <li><a href='podcast.html'>Podcasts & Blogs</a></li>\n"
 html_content += "        </div>\n"
 
 # Titolo all'html_content
@@ -400,9 +400,9 @@ html_content += "  <script src='assets/load.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 
 html_content += "        <div class='container'>\n"
-html_content += "                            <li><a href='index.html'>Conferences</a></li>\n"
-html_content += "                            <li><a href='certificate.html'>Certificates</a></li>\n"
-html_content += "                            <li><a href='podcast.html' class='active'>Podcasts</a></li>\n"
+html_content += "                            <li><a href='index.html'>Conferences & Events</a></li>\n"
+html_content += "                            <li><a href='certificate.html'>Certificates & Badges</a></li>\n"
+html_content += "                            <li><a href='podcast.html' class='active'>Podcasts & Blogs</a></li>\n"
 html_content += "        </div>\n"
 
 # Titolo all'html_content
