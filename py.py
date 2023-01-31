@@ -22,7 +22,7 @@ countapi = countapilink.replace(countapilink,f'<script async src="{countapilink}
 profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","astronomerio","awscloud","Azure","Azure_Synapse","census","ClickHouseDB","code","confluentinc","dagster","dask_dev","databricks","dataddo","datafoldcom","datameer","dbt_labs","DeepMind","DeltaLakeOSS","Docker","druidio","duckdb","duckdblabs","elastic","expectgreatdata","fastdotai","fivetran","getdbt","github","gitlab","googlecloud","grafana","HevoData","HightouchData","IBMData","Integrateio","keboola","ksqlDB","kubernetesio","lightdash_devs","mage_ai","mariadb","Materialize","meltanodata","Metabase","MicroStrategy","moderndatastack","motherduck","montecarlodata","MSPowerBI","myadverity","MySQL","MuleSoft","numpy_team","pandas_dev","PyData","PostgreSQL","ProjectJupyter","PrefectIO","preset_data","prestodb","qlik","RiveryData","SASsoftware","ScyllaDB","SkyviaService","singer_io","SnowflakeDB","SQLServer","Supermetrics","tableau","Talend","Teradata","thecubejs","thoughtspot","trinodb","y42dotcom","Workato"]
 
 #df2 definire le keyword da cercare
-keywords = ["CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "TRAINING"]
+keywords = ["BLOG","CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "TRAINING"]
 
 # Crea una lista vuota per i tweet
 tweets = []
@@ -71,7 +71,7 @@ df_certification = df_certification[df_certification['Tweet'].str.contains('Badg
 df_certification = df_certification[~df_certification['Tweet'].str.contains('Of courses|of courses|SSL certificate')]
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df_podcast = df_podcast[df_podcast['Tweet'].str.contains('Podcast|podcast')]
+df_podcast = df_podcast[df_podcast['Tweet'].str.contains('Podcast|podcast|Blog|blog')]
 #df_podcast = df_podcast[~df_podcast['Tweet'].str.contains('')]
 
 
@@ -164,7 +164,7 @@ html_content += "        </div>\n"
 
 # Titolo all'html_content
 html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
-html_content += "  <p>A tweet aggregator site dysplaying events, conferences, podcast, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
+html_content += "  <p>A tweet aggregator site dysplaying events, conferences, blogs, podcasts, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
 
 # Aggiungi il codice per il grafico all'html_content
 html_content += "<div class='container'>\n"
@@ -286,7 +286,7 @@ html_content += "        </div>\n"
 
 # Titolo all'html_content
 html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
-html_content += "  <p>A tweet aggregator site dysplaying events, conferences, podcast, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
+html_content += "  <p>A tweet aggregator site dysplaying events, conferences, blogs, podcasts, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
 
 # Aggiungi il codice per il grafico all'html_content
 html_content += "<div class='container'>\n"
@@ -407,7 +407,7 @@ html_content += "        </div>\n"
 
 # Titolo all'html_content
 html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
-html_content += "  <p>A tweet aggregator site dysplaying events, conferences, podcast, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
+html_content += "  <p>A tweet aggregator site dysplaying events, conferences, blogs, podcasts, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
 
 # Aggiungi il codice per il grafico all'html_content
 html_content += "<div class='container'>\n"
