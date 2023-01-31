@@ -159,7 +159,7 @@ html_content += "  <title>Hacked-data-stack intel for the data and analytics com
 html_content += "        <div class='container'>\n"
 html_content += "                            <li><a href='index.html' class='active'>Conferences & Events</a></li>\n"
 html_content += "                            <li><a href='certificate.html'>Certificates & Badges</a></li>\n"
-html_content += "                            <li><a href='podcast.html'>Podcasts & Blogs & Blogs</a></li>\n"
+html_content += "                            <li><a href='podcast.html'>Podcasts & Blogs</a></li>\n"
 html_content += "        </div>\n"
 
 # Titolo all'html_content
