@@ -23,9 +23,9 @@ profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFli
 
 #df2 definire le keyword da cercare
 keywords = ["BLOG","CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "TRAINING"]
-keywords_conference = ["CONFERENCE", "EVENT"]
-keywords_certificate = ["CERTIFICATION", "COURSE", "TRAINING"]
-keywords_podcast = ["BLOG", "PODCAST"]
+keywords_conference = ["CONFERENCE|EVENT"]
+keywords_certificate = ["CERTIFICATION|COURSE|TRAINING"]
+keywords_podcast = ["BLOG|PODCAST"]
 
 # Crea una lista vuota per i tweet
 tweets = []
@@ -114,13 +114,13 @@ df3['year_month'] = df3['date'].dt.to_period('M')
 df3_grouped = df3.groupby(['year_month','keyword']).agg({'occurrence': 'max'}).reset_index()
 
 df3_conference = df3_grouped.copy()
-df3_conference = df3_conference[df3_conference['Tweet'].str.contains(keywords_conference)]
+df3_conference = df3_conference[df3_conference['keyword'].str.contains(keywords_conference)]
 
 df3_certification = df3_grouped.copy()
-df3_certification = df3_certification[df3_certification['Tweet'].str.contains(keywords_certificate)]
+df3_certification = df3_certification[df3_certification['keyword'].str.contains(keywords_certificate)]
 
 df3_podcast = df3_grouped.copy()
-df3_podcast = df3_podcast[df3_podcast['Tweet'].str.contains(keywords_podcast)]
+df3_podcast = df3_podcast[df3_podcast['keyword'].str.contains(keywords_podcast)]
 
 ### df3_conference
 # Crea una stringa vuota per i dati del grafico
