@@ -23,9 +23,9 @@ profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFli
 
 #df2 definire le keyword da cercare
 keywords = ["BLOG","CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "TRAINING"]
-keywords_conference = {"CONFERENCE","EVENT"}
-keywords_certificate = {"CERTIFICATION","COURSE","TRAINING"}
-keywords_podcast = {"BLOG","PODCAST"}
+keywords_conference = 'CONFERENCE|EVENT'
+keywords_certificate = 'CERTIFICATION|COURSE|TRAINING'
+keywords_podcast = 'BLOG|PODCAST'
 
 # Crea una lista vuota per i tweet
 tweets = []
