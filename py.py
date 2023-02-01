@@ -23,6 +23,9 @@ profiles = ["AirbyteHQ","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFli
 
 #df2 definire le keyword da cercare
 keywords = ["BLOG","CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "TRAINING"]
+keywords_conference = ["CONFERENCE", "EVENT"]
+keywords_certificate = ["CERTIFICATION", "COURSE", "TRAINING"]
+keywords_podcast = ["BLOG", "PODCAST"]
 
 # Crea una lista vuota per i tweet
 tweets = []
@@ -110,21 +113,30 @@ df3['date'] = pd.to_datetime(df3['date'])
 df3['year_month'] = df3['date'].dt.to_period('M')
 df3_grouped = df3.groupby(['year_month','keyword']).agg({'occurrence': 'max'}).reset_index()
 
-###
+df3_conference = df3_grouped.copy()
+df3_conference = df3_conference[df3_conference['Tweet'].str.contains(keywords_conference)]
+
+df3_certification = df3_grouped.copy()
+df3_certification = df3_certification[df3_certification['Tweet'].str.contains(keywords_certificate)]
+
+df3_podcast = df3_grouped.copy()
+df3_podcast = df3_podcast[df3_podcast['Tweet'].str.contains(keywords_podcast)]
+
+### df3_conference
 # Crea una stringa vuota per i dati del grafico
-chart_data = ""
+chart_data_conference = ""
 
 # Ciclo for per generare i dati del grafico per ogni keyword
-for keyword in df3_grouped["keyword"].unique():
-    keyword_data = df3_grouped[df3_grouped["keyword"] == keyword]
-    chart_data += f"{{ label: '{keyword}', data: ["
+for keyword in df3_conference["keyword"].unique():
+    keyword_data = df3_conference[df3_conference["keyword"] == keyword]
+    chart_data_conference += f"{{ label: '{keyword}', data: ["
     for index, row in keyword_data.iterrows():
-        chart_data += f"{{x: '{row['year_month']}', y: {row['occurrence']}}},"
-    chart_data = chart_data[:-1] # Rimuovi l'ultima virgola
-    chart_data += "]},\n"
+        chart_data_conference += f"{{x: '{row['year_month']}', y: {row['occurrence']}}},"
+    chart_data_conference = chart_data_conference[:-1] # Rimuovi l'ultima virgola
+    chart_data_conference += "]},\n"
 
 # Rimuovi l'ultima virgola e newline dai dati del grafico
-chart_data = chart_data[:-2]
+chart_data_conference = chart_data_conference[:-2]
 ###
 googleapi = "https://fonts.googleapis.com/css?family=Inconsolata|Roboto"
 googleapi = googleapi.replace(googleapi,f'<link href="{googleapi}" rel="stylesheet" >')
@@ -177,7 +189,7 @@ html_content += "var myChart = new Chart(ctx, {\n"
 html_content += "  type: 'line',\n"
 html_content += "  data: {\n"
 html_content += "    datasets: [\n"
-html_content += chart_data + "\n"
+html_content += chart_data_conference + "\n"
 html_content += "    ]\n"
 html_content += "  },\n"
 html_content += "  options: {\n"
@@ -250,6 +262,21 @@ with open("./index.html", "w") as f:
     f.write(html_content)
 ###
 
+### df3_conference
+# Crea una stringa vuota per i dati del grafico
+chart_data_certification = ""
+
+# Ciclo for per generare i dati del grafico per ogni keyword
+for keyword in df3_certification["keyword"].unique():
+    keyword_data = df3_certification[df3_certification["keyword"] == keyword]
+    chart_data_certification += f"{{ label: '{keyword}', data: ["
+    for index, row in keyword_data.iterrows():
+        chart_data_certification += f"{{x: '{row['year_month']}', y: {row['occurrence']}}},"
+    chart_data_certification = chart_data_certification[:-1] # Rimuovi l'ultima virgola
+    chart_data_certification += "]},\n"
+
+# Rimuovi l'ultima virgola e newline dai dati del grafico
+chart_data_certification = chart_data_certification[:-2]
 
 ###
 # crea contenuto html principale
@@ -299,7 +326,7 @@ html_content += "var myChart = new Chart(ctx, {\n"
 html_content += "  type: 'line',\n"
 html_content += "  data: {\n"
 html_content += "    datasets: [\n"
-html_content += chart_data + "\n"
+html_content += chart_data_certification + "\n"
 html_content += "    ]\n"
 html_content += "  },\n"
 html_content += "  options: {\n"
@@ -372,6 +399,22 @@ with open("./certificate.html", "w") as f:
     f.write(html_content)
 ###
 
+### df3_conference
+# Crea una stringa vuota per i dati del grafico
+chart_data_podcast = ""
+
+# Ciclo for per generare i dati del grafico per ogni keyword
+for keyword in df3_podcast["keyword"].unique():
+    keyword_data = df3_podcast[df3_podcast["keyword"] == keyword]
+    chart_data_podcast += f"{{ label: '{keyword}', data: ["
+    for index, row in keyword_data.iterrows():
+        chart_data_podcast += f"{{x: '{row['year_month']}', y: {row['occurrence']}}},"
+    chart_data_podcast = chart_data_podcast[:-1] # Rimuovi l'ultima virgola
+    chart_data_podcast += "]},\n"
+
+# Rimuovi l'ultima virgola e newline dai dati del grafico
+chart_data_podcast = chart_data_podcast[:-2]
+
 ###
 # crea contenuto html principale
 def make_link(text):
@@ -420,7 +463,7 @@ html_content += "var myChart = new Chart(ctx, {\n"
 html_content += "  type: 'line',\n"
 html_content += "  data: {\n"
 html_content += "    datasets: [\n"
-html_content += chart_data + "\n"
+html_content += chart_data_podcast + "\n"
 html_content += "    ]\n"
 html_content += "  },\n"
 html_content += "  options: {\n"
