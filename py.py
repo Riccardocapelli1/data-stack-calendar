@@ -63,11 +63,11 @@ df_podcast = df.copy()
 
 # Filtra il dataframe per i tweet che contengono le parole 
 df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Summit|summit|Podcast|podcast|Badge|badge|Certific|certific|Webinar|webinar|free resources|free courses|free learning')]
-df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|CDC event|event systems|Steven|steven|Prevent|prevent|Event streaming|event streaming|SSL certificate|end-to-end certificate|GhEvent|EventTimer|ISO 27001 certific')]
+df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|CDC event|event systems|Steven|steven|Prevent|prevent|Event streaming|event streaming|streaming event|SSL certificate|end-to-end certificate|GhEvent|EventTimer|ISO 27001 certific')]
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df_conference = df_conference[df_conference['Tweet'].str.contains('Event|event|Conference|conference|Webinar|webinar')]
-df_conference = df_conference[~df_conference['Tweet'].str.contains('event log|Event log|CDC event|event systems|Steven|steven|Prevent|prevent|Event streaming|event streaming|SSL certificate|end-to-end certificate|GhEvent|EventTimer')]
+df_conference = df_conference[~df_conference['Tweet'].str.contains('event log|Event log|CDC event|event systems|Steven|steven|Prevent|prevent|Event streaming|event streaming|streaming event|SSL certificate|end-to-end certificate|GhEvent|EventTimer')]
 
 # Filtra il dataframe per i tweet che contengono le parole "certificate" o "courses" nel testo
 df_certificate = df_certificate[df_certificate['Tweet'].str.contains('Badge|badge|Certific|certific|free resources|free courses|free learning')]
