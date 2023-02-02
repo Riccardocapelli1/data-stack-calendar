@@ -27,8 +27,8 @@ var myChart = new Chart(ctx, {
   type: 'line',
   data: {
     datasets: [
-{ label: 'BLOG', data: [{x: '2023-01', y: 18},{x: '2023-02', y: 18}]},
-{ label: 'PODCAST', data: [{x: '2023-01', y: 90},{x: '2023-02', y: 86}]}
+{ label: 'BLOG', data: [{x: '2023-01', y: 18},{x: '2023-02', y: 24}]},
+{ label: 'PODCAST', data: [{x: '2023-01', y: 90},{x: '2023-02', y: 110}]}
     ]
   },
   options: {
@@ -56,82 +56,122 @@ var myChart = new Chart(ctx, {
 <body>
   <h3>List of Authors</h3>
   <ul>
-    <li><a href='#user0'>Airbyte</a></li>
-    <li><a href='#user1'>Apache Airflow</a></li>
-    <li><a href='#user2'>Apache Arrow</a></li>
-    <li><a href='#user3'>Apache Calcite</a></li>
-    <li><a href='#user4'>Apache Flink</a></li>
-    <li><a href='#user5'>Apache Kafka</a></li>
-    <li><a href='#user6'>Apache Nifi</a></li>
-    <li><a href='#user7'>Apache Pinot</a></li>
-    <li><a href='#user8'>Astronomer.io</a></li>
-    <li><a href='#user9'>AWS Cloud</a></li>
-    <li><a href='#user10'>Azure</a></li>
-    <li><a href='#user11'>Azure Synapse</a></li>
-    <li><a href='#user12'>Census</a></li>
-    <li><a href='#user13'>ClickHouse</a></li>
-    <li><a href='#user14'>Confluent.io</a></li>
-    <li><a href='#user15'>Dask</a></li>
-    <li><a href='#user16'>Databricks</a></li>
-    <li><a href='#user17'>Dataddo</a></li>
-    <li><a href='#user18'>Datafold</a></li>
-    <li><a href='#user19'>Dbt labs</a></li>
-    <li><a href='#user20'>Deep Mind</a></li>
-    <li><a href='#user21'>Delta Lake</a></li>
-    <li><a href='#user22'>Docker</a></li>
-    <li><a href='#user23'>Druidio</a></li>
-    <li><a href='#user24'>Duck DB</a></li>
-    <li><a href='#user25'>Elastic</a></li>
-    <li><a href='#user26'>Expect Great Data</a></li>
-    <li><a href='#user27'>Fast.ai</a></li>
-    <li><a href='#user28'>Fivetran</a></li>
-    <li><a href='#user29'>Getdbt.com</a></li>
-    <li><a href='#user30'>Github</a></li>
-    <li><a href='#user31'>Gitlab</a></li>
-    <li><a href='#user32'>Google Cloud</a></li>
-    <li><a href='#user33'>Grafana</a></li>
-    <li><a href='#user34'>Hevo Data</a></li>
-    <li><a href='#user35'>Hightouch Data</a></li>
-    <li><a href='#user36'>IBM Data</a></li>
-    <li><a href='#user37'>Integrate.io</a></li>
-    <li><a href='#user38'>Keboola</a></li>
-    <li><a href='#user39'>Ksql</a></li>
-    <li><a href='#user40'>kubernetes.io</a></li>
-    <li><a href='#user41'>Lightdash</a></li>
-    <li><a href='#user42'>Mage.ai</a></li>
-    <li><a href='#user43'>Mariadb</a></li>
-    <li><a href='#user44'>Meltano</a></li>
-    <li><a href='#user45'>nan</a></li>
-    <li><a href='#user46'>Motherduck</a></li>
-    <li><a href='#user47'>Montecarlo</a></li>
-    <li><a href='#user48'>Myadverity</a></li>
-    <li><a href='#user49'>MySQL</a></li>
-    <li><a href='#user50'>MuleSoft</a></li>
-    <li><a href='#user51'>Numpy</a></li>
-    <li><a href='#user52'>Pandas</a></li>
-    <li><a href='#user53'>Py Spark</a></li>
-    <li><a href='#user54'>PostgreSQL</a></li>
-    <li><a href='#user55'>Jupyter</a></li>
-    <li><a href='#user56'>Prefect.io</a></li>
-    <li><a href='#user57'>Preset</a></li>
-    <li><a href='#user58'>Presto DB</a></li>
-    <li><a href='#user59'>Qlik</a></li>
-    <li><a href='#user60'>Rivery</a></li>
-    <li><a href='#user61'>Scylla DB</a></li>
-    <li><a href='#user62'>Skyvia</a></li>
-    <li><a href='#user63'>Snowflake</a></li>
-    <li><a href='#user64'>SQL Server</a></li>
-    <li><a href='#user65'>Supermetrics</a></li>
-    <li><a href='#user66'>Tableau</a></li>
-    <li><a href='#user67'>Talend</a></li>
-    <li><a href='#user68'>Teradata</a></li>
-    <li><a href='#user69'>Cube.dev</a></li>
-    <li><a href='#user70'>Thoughtspot</a></li>
-    <li><a href='#user71'>Trino DB</a></li>
-    <li><a href='#user72'>Y42.com</a></li>
-    <li><a href='#user73'>Workato</a></li>
+    <li><a href='#user0'>Airbnb Engineer</a></li>
+    <li><a href='#user1'>Airbyte</a></li>
+    <li><a href='#user2'>Apache Airflow</a></li>
+    <li><a href='#user3'>Apache Arrow</a></li>
+    <li><a href='#user4'>Apache Calcite</a></li>
+    <li><a href='#user5'>Apache Flink</a></li>
+    <li><a href='#user6'>Apache Kafka</a></li>
+    <li><a href='#user7'>Apache Nifi</a></li>
+    <li><a href='#user8'>Apache Pinot</a></li>
+    <li><a href='#user9'>Astronomer.io</a></li>
+    <li><a href='#user10'>AWS Cloud</a></li>
+    <li><a href='#user11'>Azure</a></li>
+    <li><a href='#user12'>Azure Synapse</a></li>
+    <li><a href='#user13'>Brooklyn Data</a></li>
+    <li><a href='#user14'>ClickHouse</a></li>
+    <li><a href='#user15'>Census</a></li>
+    <li><a href='#user16'>Confluent.io</a></li>
+    <li><a href='#user17'>Dask</a></li>
+    <li><a href='#user18'>Databricks</a></li>
+    <li><a href='#user19'>Dataddo</a></li>
+    <li><a href='#user20'>Datafold</a></li>
+    <li><a href='#user21'>Dbt labs</a></li>
+    <li><a href='#user22'>Deep Mind</a></li>
+    <li><a href='#user23'>Delta Lake</a></li>
+    <li><a href='#user24'>Docker</a></li>
+    <li><a href='#user25'>Druidio</a></li>
+    <li><a href='#user26'>Duck DB</a></li>
+    <li><a href='#user27'>Elastic</a></li>
+    <li><a href='#user28'>Expect Great Data</a></li>
+    <li><a href='#user29'>Fast.ai</a></li>
+    <li><a href='#user30'>Fivetran</a></li>
+    <li><a href='#user31'>Getdbt.com</a></li>
+    <li><a href='#user32'>Github</a></li>
+    <li><a href='#user33'>Gitlab</a></li>
+    <li><a href='#user34'>Google Cloud</a></li>
+    <li><a href='#user35'>Google Cloud Tech</a></li>
+    <li><a href='#user36'>Grafana</a></li>
+    <li><a href='#user37'>Hevo Data</a></li>
+    <li><a href='#user38'>Hightouch Data</a></li>
+    <li><a href='#user39'>IBM Data</a></li>
+    <li><a href='#user40'>Integrate.io</a></li>
+    <li><a href='#user41'>Keboola</a></li>
+    <li><a href='#user42'>Ksql</a></li>
+    <li><a href='#user43'>kubernetes.io</a></li>
+    <li><a href='#user44'>Lightdash</a></li>
+    <li><a href='#user45'>Logi Analytics</a></li>
+    <li><a href='#user46'>Mage.ai</a></li>
+    <li><a href='#user47'>Mariadb</a></li>
+    <li><a href='#user48'>Meltano</a></li>
+    <li><a href='#user49'>Meta Engineer</a></li>
+    <li><a href='#user50'>Metaphor.io</a></li>
+    <li><a href='#user51'>Mode</a></li>
+    <li><a href='#user52'>Motherduck</a></li>
+    <li><a href='#user53'>Montecarlo</a></li>
+    <li><a href='#user54'>Montreal Analytics</a></li>
+    <li><a href='#user55'>Myadverity</a></li>
+    <li><a href='#user56'>MySQL</a></li>
+    <li><a href='#user57'>MuleSoft</a></li>
+    <li><a href='#user58'>Netflix Engineer</a></li>
+    <li><a href='#user59'>Numpy</a></li>
+    <li><a href='#user60'>Pandas</a></li>
+    <li><a href='#user61'>Plotly</a></li>
+    <li><a href='#user62'>Popsql</a></li>
+    <li><a href='#user63'>PostgreSQL</a></li>
+    <li><a href='#user64'>Prefect.io</a></li>
+    <li><a href='#user65'>Preset</a></li>
+    <li><a href='#user66'>Presto DB</a></li>
+    <li><a href='#user67'>Jupyter</a></li>
+    <li><a href='#user68'>Py Spark</a></li>
+    <li><a href='#user69'>Qlik</a></li>
+    <li><a href='#user70'>Retool</a></li>
+    <li><a href='#user71'>Rivery</a></li>
+    <li><a href='#user72'>nan</a></li>
+    <li><a href='#user73'>Scylla DB</a></li>
+    <li><a href='#user74'>Skyvia</a></li>
+    <li><a href='#user75'>Sisense</a></li>
+    <li><a href='#user76'>Snowflake</a></li>
+    <li><a href='#user77'>Spotify Engineer</a></li>
+    <li><a href='#user78'>SQL Server</a></li>
+    <li><a href='#user79'>Stitch</a></li>
+    <li><a href='#user80'>Streamlit</a></li>
+    <li><a href='#user81'>Supermetrics</a></li>
+    <li><a href='#user82'>Tableau</a></li>
+    <li><a href='#user83'>Talend</a></li>
+    <li><a href='#user84'>Teradata</a></li>
+    <li><a href='#user85'>Cube.dev</a></li>
+    <li><a href='#user86'>Tibco</a></li>
+    <li><a href='#user87'>Thoughtspot</a></li>
+    <li><a href='#user88'>Trino DB</a></li>
+    <li><a href='#user89'>Twitter Engineer</a></li>
+    <li><a href='#user90'>Uber Engineer</a></li>
+    <li><a href='#user91'>Y42.com</a></li>
+    <li><a href='#user92'>Workato</a></li>
   </ul>
-  <h2 class='h2' style='text-transform: uppercase;' id='user0'>Airbyte </h2><br><a href='https://workato.com'>Official website</a><br><a href='https://twitter.com/Workato'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user0'>Airbnb Engineer </h2><br><a href='https://workato.com'>Official website</a><br><a href='https://twitter.com/Workato'>Twitter profile</a>
+ <h3 date='Posted on: 2022-09-26; at: 18:32'>Posted on: 2022-09-26; at: 18:32</h3>
+  <p>Learn about how we upgraded our Data Warehouse Infrastructure in our latest blog post  <a href="https://t.co/0ZenqpcEGX">https://t.co/0ZenqpcEGX</a></p>
+ <h3 date='Posted on: 2021-08-10; at: 16:55'>Posted on: 2021-08-10; at: 16:55</h3>
+  <p>Check out today's blog post to learn how we're using the latest task-oriented AI technology to enhance our host and guest experience! <a href="https://t.co/pquLIcECZL">https://t.co/pquLIcECZL</a></p>
+ <h3 date='Posted on: 2021-06-01; at: 18:07'>Posted on: 2021-06-01; at: 18:07</h3>
+  <p>We're back with Part 2 in our Minerva Blog Series. In this post we explore the six design principles of Minerva compute infrastructure. <a href="https://t.co/LK3nhc5cZI">https://t.co/LK3nhc5cZI</a></p>
+ <h3 date='Posted on: 2021-02-09; at: 19:06'>Posted on: 2021-02-09; at: 19:06</h3>
+  <p>Superset started as an Airbnb hackathon project in 2015. After being open sourced, and nearly four years of incubating, the Apache Software Foundation announced Superset as a top-level project. Check out our latest blog post to learn more: <a href="https://t.co/oWXGj6Qyth">https://t.co/oWXGj6Qyth</a></p>
+ <h3 date='Posted on: 2020-12-01; at: 20:10'>Posted on: 2020-12-01; at: 20:10</h3>
+  <p>Part 2 of our Data Quality blog post series is live!   <a href="https://t.co/XE02jgZH0N">https://t.co/XE02jgZH0N</a></p>
+ <h3 date='Posted on: 2020-11-18; at: 21:51'>Posted on: 2020-11-18; at: 21:51</h3>
+  <p>We're keeping pods fresh by leveraging the mutating admission controller webhook. Learn about "Krispr" in our latest blog post: <a href="https://t.co/UDgF1MMOoD">https://t.co/UDgF1MMOoD</a></p>
+ <h3 date='Posted on: 2020-10-27; at: 22:28'>Posted on: 2020-10-27; at: 22:28</h3>
+  <p>Check out our blog post on building Airbnb’s Internationalization Platform!! <a href="https://t.co/xjdxXczIZs">https://t.co/xjdxXczIZs</a></p>
+ <h3 date='Posted on: 2020-10-06; at: 17:27'>Posted on: 2020-10-06; at: 17:27</h3>
+  <p>Check out our latest blog post on Improving Deep Learning for Ranking Stays at Airbnb!  <a href="https://t.co/rfQRgHsbni">https://t.co/rfQRgHsbni</a></p>
+ <h3 date='Posted on: 2019-12-10; at: 22:57'>Posted on: 2019-12-10; at: 22:57</h3>
+  <p>Having a scalable and reliable job queueing system is essential to what we do - that's why we built Dynein. Check out our latest blog post to learn about how we built it and the challenges we faced along the way. @andyfang_dz <a href="https://t.co/dWTQJN0wuc">https://t.co/dWTQJN0wuc</a></p>
+ <h3 date='Posted on: 2019-07-24; at: 18:38'>Posted on: 2019-07-24; at: 18:38</h3>
+  <p>Building an app that is accessible to our entire community is mission critical, and is why we support Dynamic Type at Airbnb. Check out our recent blog post to hear how we started using Dynamic Type and what we learned along the way.  <a href="https://t.co/arLPiHUkgi">https://t.co/arLPiHUkgi</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user1'>Airbyte</h2><br><a href='https://airbyte.io'>Official website</a><br><a href='https://twitter.com/AirbyteHQ'>Twitter profile</a>
  <h3 date='Posted on: 2023-02-01; at: 16:52'>Posted on: 2023-02-01; at: 16:52</h3>
   <p>Are you torn between a data analyst or engineer role? You can have both with the exciting role of an analytics engineer.
 
@@ -163,7 +203,7 @@ And weigh in on:
 - best data community
 
 Be the first to get results + special🐙 swag! <a href="https://t.co/Gvz2hpErrK">https://t.co/Gvz2hpErrK</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user1'>Apache Airflow</h2><br><a href='https://airflow.apache.org'>Official website</a><br><a href='https://twitter.com/ApacheAirflow'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user2'>Apache Airflow</h2><br><a href='https://airflow.apache.org'>Official website</a><br><a href='https://twitter.com/ApacheAirflow'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-10; at: 22:28'>Posted on: 2023-01-10; at: 22:28</h3>
   <p>Community Blog Alert: 
 
@@ -186,7 +226,7 @@ We are busy with rehearsals and preparing swags for the local events, but we had
 <a href="https://t.co/JKVxnaT3cA">https://t.co/JKVxnaT3cA</a>
 
 Register if you have not done so yet!</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user2'>Apache Arrow</h2><br><a href='https://arrow.apache.org'>Official website</a><br><a href='https://twitter.com/ApacheArrow'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user3'>Apache Arrow</h2><br><a href='https://arrow.apache.org'>Official website</a><br><a href='https://twitter.com/ApacheArrow'>Twitter profile</a>
  <h3 date='Posted on: 2022-11-08; at: 14:21'>Posted on: 2022-11-08; at: 14:21</h3>
   <p>Blog post on how to do fast multi-column sorting with the rust implementation: 
 
@@ -204,10 +244,10 @@ Read more for what's new and look out for more blog posts about new features in 
 <a href="https://t.co/7BQiZuYFmu">https://t.co/7BQiZuYFmu</a></p>
  <h3 date='Posted on: 2019-01-25; at: 13:24'>Posted on: 2019-01-25; at: 13:24</h3>
   <p>Why should the #pydata programmers have all the fun? We're working to turbocharge R #rstats and @ApacheSpark with @ApacheArrow, read @javierluraschi's blog post about what's in store <a href="https://t.co/jeN882JNCy">https://t.co/jeN882JNCy</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user3'>Apache Calcite</h2><br><a href='https://calcite.apache.org'>Official website</a><br><a href='https://twitter.com/ApacheCalcite'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user4'>Apache Calcite</h2><br><a href='https://calcite.apache.org'>Official website</a><br><a href='https://twitter.com/ApacheCalcite'>Twitter profile</a>
  <h3 date='Posted on: 2018-12-24; at: 17:03'>Posted on: 2018-12-24; at: 17:03</h3>
   <p>A blog post from @hortonworks about how @ApacheHive version 3 uses @ApacheCalcite for query federation <a href="https://t.co/z19CQ5rgvP">https://t.co/z19CQ5rgvP</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user4'>Apache Flink</h2><br><a href='https://flink.apache.org'>Official website</a><br><a href='https://twitter.com/ApacheFlink'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user5'>Apache Flink</h2><br><a href='https://flink.apache.org'>Official website</a><br><a href='https://twitter.com/ApacheFlink'>Twitter profile</a>
  <h3 date='Posted on: 2022-11-25; at: 09:36'>Posted on: 2022-11-25; at: 09:36</h3>
   <p>We just published a new blog post about the pluggable rate limiting in the Async Sink in Flink 
 <a href="https://t.co/980xOqhqkd">https://t.co/980xOqhqkd</a> <a href="https://t.co/IuV8HxgRp5">https://t.co/IuV8HxgRp5</a></p>
@@ -265,7 +305,7 @@ How can monitoring backpressure ease the process of debugging and performance an
 
 Check out @PiotrNowojski's example below! 👇
 <a href="https://t.co/4PAROda4dq">https://t.co/4PAROda4dq</a> <a href="https://t.co/P9BHdRVQ1P">https://t.co/P9BHdRVQ1P</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user5'>Apache Kafka</h2><br><a href='https://kafka.apache.org'>Official website</a><br><a href='https://twitter.com/apachekafka'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user6'>Apache Kafka</h2><br><a href='https://kafka.apache.org'>Official website</a><br><a href='https://twitter.com/apachekafka'>Twitter profile</a>
  <h3 date='Posted on: 2022-10-03; at: 16:30'>Posted on: 2022-10-03; at: 16:30</h3>
   <p>Apache Kafka 3.3 is released! This version marks KRaft as production ready &amp; includes exactly once support for source connectors.
 
@@ -303,12 +343,12 @@ and release notes
 <a href="https://t.co/EQ5m40PScf">https://t.co/EQ5m40PScf</a> 
 
 Also check out our updated website! <a href="https://t.co/etJE3zYhTC">https://t.co/etJE3zYhTC</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user6'>Apache Nifi</h2><br><a href='https://nifi.apache.org'>Official website</a><br><a href='https://twitter.com/apachenifi'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user7'>Apache Nifi</h2><br><a href='https://nifi.apache.org'>Official website</a><br><a href='https://twitter.com/apachenifi'>Twitter profile</a>
  <h3 date='Posted on: 2018-10-29; at: 16:38'>Posted on: 2018-10-29; at: 16:38</h3>
   <p>Apache NiFi 1.8.0 available now!  New processors, tons of performance gains for clustering, support scale down of clusters with automatic workload spreading and more.  See this blog to read about the powerful multi-tenant/node friendly load balancing! <a href="https://t.co/IwJGJ5SVej">https://t.co/IwJGJ5SVej</a></p>
  <h3 date='Posted on: 2018-06-22; at: 20:27'>Posted on: 2018-06-22; at: 20:27</h3>
   <p>@DataEngPodcast Our PMC and committers list is full of good people. For a start, @YolandaMDavis , @joewitt26 , @aldrinpiri , @mattgilman , @BBende , @trixpan , @kevdoran , @Ijokarumawak , @mattyb149 , and @yolopey are all options. <a href="https://t.co/xhGFskP6ha">https://t.co/xhGFskP6ha</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user7'>Apache Pinot</h2><br><a href='https://pinot.apache.org'>Official website</a><br><a href='https://twitter.com/ApachePinot'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user8'>Apache Pinot</h2><br><a href='https://pinot.apache.org'>Official website</a><br><a href='https://twitter.com/ApachePinot'>Twitter profile</a>
  <h3 date='Posted on: 2022-09-22; at: 15:33'>Posted on: 2022-09-22; at: 15:33</h3>
   <p>On behalf of the entire community, we're pleased to announce the 0.11 release of #ApachePinot. Read all about it in this latest blog post. 👇 <a href="https://t.co/FV2tX72Zfm">https://t.co/FV2tX72Zfm</a></p>
  <h3 date='Posted on: 2022-09-07; at: 19:58'>Posted on: 2022-09-07; at: 19:58</h3>
@@ -322,7 +362,7 @@ Learn all about it in this contributor blog post! 👇 <a href="https://t.co/yeH
  <h3 date='Posted on: 2021-07-22; at: 19:06'>Posted on: 2021-07-22; at: 19:06</h3>
   <p>Pinot 🍷 &amp; Pasta 🍝 @surajkamath wrote this fabulous blog which breaks down #ApachePinot with an analogy to cooking up spaghetti in your kitchen!  
 <a href="https://t.co/ryEf1F8zuh">https://t.co/ryEf1F8zuh</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user8'>Astronomer.io</h2><br><a href='https://astronomer.io'>Official website</a><br><a href='https://twitter.com/astronomerio'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user9'>Astronomer.io</h2><br><a href='https://astronomer.io'>Official website</a><br><a href='https://twitter.com/astronomerio'>Twitter profile</a>
  <h3 date='Posted on: 2022-12-27; at: 16:13'>Posted on: 2022-12-27; at: 16:13</h3>
   <p>The new DAG-only deploy feature in the #AstroCLI makes deploys to Astro significantly faster and allows for more flexibility in CI/CD workflows! Learn more on our #blog!
 <a href="https://t.co/jS7Imq7QjA">https://t.co/jS7Imq7QjA</a></p>
@@ -389,7 +429,7 @@ On the #blog: <a href="https://t.co/X8tFiWDVOJ">https://t.co/X8tFiWDVOJ</a> <a h
  <h3 date='Posted on: 2022-09-21; at: 21:30'>Posted on: 2022-09-21; at: 21:30</h3>
   <p>In a guest #blogpost, Astronomer's Tamara Fingerlin shows how to leverage dynamic orchestration for data quality checks with Airflow and @cratedb, a distributed database solution.
 <a href="https://t.co/7wDfmvbItf">https://t.co/7wDfmvbItf</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user9'>AWS Cloud</h2><br><a href='https://aws.amazon.com'>Official website</a><br><a href='https://twitter.com/awscloud'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user10'>AWS Cloud</h2><br><a href='https://aws.amazon.com'>Official website</a><br><a href='https://twitter.com/awscloud'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-30; at: 18:00'>Posted on: 2023-01-30; at: 18:00</h3>
   <p>Today’s episode of the #TheOfficialAWSPodcast is here. 🎙️ Learn about Simplifying Kubernetes on bare metal with #AWS EKS Anywhere. 🔊👩‍💻☁️👨‍💻🎧 #CloudComputing #Developer #Podcast Listen in now! 👉 <a href="https://t.co/AEjpNhmVx3">https://t.co/AEjpNhmVx3</a> <a href="https://t.co/vhkvOGkTP7">https://t.co/vhkvOGkTP7</a></p>
  <h3 date='Posted on: 2023-01-17; at: 21:25'>Posted on: 2023-01-17; at: 21:25</h3>
@@ -412,7 +452,7 @@ We chat with the team to learn how this service can help you analyze petabytes o
   <p>Check out the last #reInvent recap episode from #TheOfficialAWSPodcast. 🎙️ Host Simon Elisha dives into a quick recap of Werner's keynote &amp; all the news you won't want to miss. 🎧 #AWS <a href="https://t.co/gXVmv6X5pL">https://t.co/gXVmv6X5pL</a> <a href="https://t.co/oeHiKfoFpn">https://t.co/oeHiKfoFpn</a></p>
  <h3 date='Posted on: 2022-12-07; at: 19:09'>Posted on: 2022-12-07; at: 19:09</h3>
   <p>#TheOfficialAWSPodcast is here with a quick recap of all the data &amp; #MachineLearning goodness from Swami's #reInvent keynote! ☁️🗝️ Tune in to hear all the details. 👩‍💻🎧👨‍💻 <a href="https://t.co/OQAEWxTnUh">https://t.co/OQAEWxTnUh</a> <a href="https://t.co/URPttbiS3Y">https://t.co/URPttbiS3Y</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user10'>Azure</h2><br><a href='https://azure.com'>Official website</a><br><a href='https://twitter.com/Azure'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user11'>Azure</h2><br><a href='https://azure.com'>Official website</a><br><a href='https://twitter.com/Azure'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-23; at: 18:30'>Posted on: 2023-01-23; at: 18:30</h3>
   <p>Now available—the Microsoft Responsible AI Dashboard empowers companies to apply data and AI responsibly. Retailers can leverage this to optimize the shopping experience. 
 
@@ -425,7 +465,7 @@ Read the blog: <a href="https://t.co/jrLtCUQ39I">https://t.co/jrLtCUQ39I</a> #Az
 ✅ Accelerating integrated response 
 
 See how we layer protection through every phase of security at: <a href="https://t.co/ELbSn3qeiI">https://t.co/ELbSn3qeiI</a> <a href="https://t.co/4NybP1BlMH">https://t.co/4NybP1BlMH</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user11'>Azure Synapse</h2><br><a href='https://azure.com/synapse'>Official website</a><br><a href='https://twitter.com/Azure_Synapse'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user12'>Azure Synapse</h2><br><a href='https://azure.com/synapse'>Official website</a><br><a href='https://twitter.com/Azure_Synapse'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-26; at: 19:31'>Posted on: 2023-01-26; at: 19:31</h3>
   <p>In part two of @ryanjadams's blog series on How to Read Data Lake with Synapse #Serverless, he explores using an external table to query a path within the lake: <a href="https://t.co/SyqiQBERyC">https://t.co/SyqiQBERyC</a>
 
@@ -544,17 +584,21 @@ Send us a DM—we'd love to send you a #SwagSaturday gift package 🎁🎉
   <p>In Avinanda Chattapadday's latest blog post, she discusses the new informative Livy errors codes for Apache Spark in #AzureSynapse Analytics: <a href="https://t.co/vWjPKwcILR">https://t.co/vWjPKwcILR</a>
 
 #Apache #Spark #Livy #Azure #Analytics</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user12'>Census</h2><br><a href='https://census.gov'>Official website</a><br><a href='https://twitter.com/census'>Twitter profile</a>
- <h3 date='Posted on: 2022-10-28; at: 19:30'>Posted on: 2022-10-28; at: 19:30</h3>
-  <p>If you’ve been around the block a time or ✌️, you know not all leads convert 👉 paying customers.
+  <h2 class='h2' style='text-transform: uppercase;' id='user13'>Brooklyn Data</h2><br><a href='https://brooklyndata.co'>Official website</a><br><a href='https://twitter.com/BrooklynData'>Twitter profile</a>
+ <h3 date='Posted on: 2023-02-01; at: 16:29'>Posted on: 2023-02-01; at: 16:29</h3>
+  <p>Who's excited about the new automated billing feature from @HightouchData?! (spoiler: we are 🤩) 
 
-So that begs the question: How do you identify which accounts your sales team should target from the sea of leads? 🌊
+Check out their blog to learn more 👉<a href="https://t.co/VQ9SOFOa1i">https://t.co/VQ9SOFOa1i</a></p>
+ <h3 date='Posted on: 2021-07-06; at: 15:28'>Posted on: 2021-07-06; at: 15:28</h3>
+  <p>Deciding between @LookerData and @tableau? 🆘  
 
-Find out in our recent blog 👇
-<a href="https://t.co/qunPin5sO0">https://t.co/qunPin5sO0</a></p>
- <h3 date='Posted on: 2022-09-30; at: 20:12'>Posted on: 2022-09-30; at: 20:12</h3>
-  <p>1/ Happy #InternationalPodcastDay, folks! 🎙️ If you’re looking for something to celebrate w/, we’ve got you covered. A new episode of The Sequel Show is out now @ <a href="https://t.co/axhIVGUlzl">https://t.co/axhIVGUlzl</a> &amp; on your favorite platforms. Sneak peek 👇 &amp; key takeaways in 🧵 <a href="https://t.co/9DtXnYwKVx">https://t.co/9DtXnYwKVx</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user13'>ClickHouse</h2><br><a href='https://clickhouse.tech'>Official website</a><br><a href='https://twitter.com/ClickHouseDB'>Twitter profile</a>
+We’re here to help 🤝. Check out our blog on the differences between the two, and how to know which one is right for you. 
+
+<a href="https://t.co/rGZBjMXl44">https://t.co/rGZBjMXl44</a></p>
+ <h3 date='Posted on: 2020-06-03; at: 17:00'>Posted on: 2020-06-03; at: 17:00</h3>
+  <p>What tools keep your data team running smoothly? We’ve shared some of our favorites over on the BDC blog + some thought starters for picking out your own.
+<a href="https://t.co/FBKMnp1PDP">https://t.co/FBKMnp1PDP</a> <a href="https://t.co/DMwLqymckh">https://t.co/DMwLqymckh</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user14'>ClickHouse</h2><br><a href='https://clickhouse.tech'>Official website</a><br><a href='https://twitter.com/ClickHouseDB'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-27; at: 19:36'>Posted on: 2023-01-27; at: 19:36</h3>
   <p>Postgres is our favorite application database, but did you know you can also use it for analytics (without having to setup a complicated ETL workflow)?
 
@@ -618,7 +662,17 @@ The fastest way to do it is to use @ClickHouseDB, which comes with built-in supp
   <p>We are excited to announce the availability of an integration between @DeepnoteHQ and ClickHouse. Your data now in a collaborative notebook. Read the blog, try it out, and when you build something amazing let us know for a chance to pick up some swag.
 
 <a href="https://t.co/uUs8PyRQF4">https://t.co/uUs8PyRQF4</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user14'>Confluent.io</h2><br><a href='https://confluent.io'>Official website</a><br><a href='https://twitter.com/confluentinc'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user15'>Census</h2><br><a href='https://www.getcensus.com'>Official website</a><br><a href='https://twitter.com/census'>Twitter profile</a>
+ <h3 date='Posted on: 2022-10-28; at: 19:30'>Posted on: 2022-10-28; at: 19:30</h3>
+  <p>If you’ve been around the block a time or ✌️, you know not all leads convert 👉 paying customers.
+
+So that begs the question: How do you identify which accounts your sales team should target from the sea of leads? 🌊
+
+Find out in our recent blog 👇
+<a href="https://t.co/qunPin5sO0">https://t.co/qunPin5sO0</a></p>
+ <h3 date='Posted on: 2022-09-30; at: 20:12'>Posted on: 2022-09-30; at: 20:12</h3>
+  <p>1/ Happy #InternationalPodcastDay, folks! 🎙️ If you’re looking for something to celebrate w/, we’ve got you covered. A new episode of The Sequel Show is out now @ <a href="https://t.co/axhIVGUlzl">https://t.co/axhIVGUlzl</a> &amp; on your favorite platforms. Sneak peek 👇 &amp; key takeaways in 🧵 <a href="https://t.co/9DtXnYwKVx">https://t.co/9DtXnYwKVx</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user16'>Confluent.io</h2><br><a href='https://confluent.io'>Official website</a><br><a href='https://twitter.com/confluentinc'>Twitter profile</a>
  <h3 date='Posted on: 2022-12-09; at: 06:00'>Posted on: 2022-12-09; at: 06:00</h3>
   <p>Learn how to use #dotnet @apachekafka clients along with the Task Parallel Library to build a robust, high-throughput event streaming application that will process data as it becomes available! @bbejeck shows how in his new blog post. Read it here: <a href="https://t.co/xIX1LuVXz3">https://t.co/xIX1LuVXz3</a> <a href="https://t.co/VLSn6T4qKz">https://t.co/VLSn6T4qKz</a></p>
  <h3 date='Posted on: 2022-12-06; at: 19:27'>Posted on: 2022-12-06; at: 19:27</h3>
@@ -649,7 +703,7 @@ Explore 4️⃣ reasons why Confluent needs to be on your #reInvent 2022 agenda 
   <p>The latest addition to the @apachekafka diagnose and debug blog series is live! 🎉 @TheDanicaFine and @NerdyNikoleta teach you how to investigate increased request rates and other things that might impact load on your brokers. Read it here: <a href="https://t.co/DDjw6DROGN">https://t.co/DDjw6DROGN</a> <a href="https://t.co/sM9KHPYaJ6">https://t.co/sM9KHPYaJ6</a></p>
  <h3 date='Posted on: 2022-11-04; at: 00:18'>Posted on: 2022-11-04; at: 00:18</h3>
   <p>Level up your @apachekafka debugging game with a new blog series by @TheDanicaFine and @NerdyNikoleta! 😎  They’re kicking off with how to tackle reduced message throughput in Kafka. Read it here to start diagnosing and debugging your clusters! ➡️ <a href="https://t.co/kgFUTO5dL8">https://t.co/kgFUTO5dL8</a> <a href="https://t.co/6ExY19rUtF">https://t.co/6ExY19rUtF</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user15'>Dask</h2><br><a href='https://dask.org'>Official website</a><br><a href='https://twitter.com/dask_dev'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user17'>Dask</h2><br><a href='https://dask.org'>Official website</a><br><a href='https://twitter.com/dask_dev'>Twitter profile</a>
  <h3 date='Posted on: 2022-08-09; at: 14:11'>Posted on: 2022-08-09; at: 14:11</h3>
   <p>New blog post: Understanding Dask's meta keyword argument✨
 
@@ -674,7 +728,7 @@ You can read it here: <a href="https://t.co/7LSrBQNz7L">https://t.co/7LSrBQNz7L<
 <a href="https://t.co/7RbPxeGdLY">https://t.co/7RbPxeGdLY</a>
 
 Written by Volker Hilsenstein, @_malberto and @DataNerdery</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user16'>Databricks</h2><br><a href='https://databricks.com'>Official website</a><br><a href='https://twitter.com/databricks'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user18'>Databricks</h2><br><a href='https://databricks.com'>Official website</a><br><a href='https://twitter.com/databricks'>Twitter profile</a>
  <h3 date='Posted on: 2022-12-28; at: 04:40'>Posted on: 2022-12-28; at: 04:40</h3>
   <p>Find peace ✌️ and balance ⚖️ with Databricks Admin Tools.
 
@@ -714,7 +768,7 @@ Using five different scenarios, this blog post explores some of the most common 
 
 This blog post dives into the importance of data modeling, common techniques and best practice + recommendations for data modeling on the @databricks #Lakehouse. Give it a read ⬇️
 <a href="https://t.co/QCURgjLvyx">https://t.co/QCURgjLvyx</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user17'>Dataddo</h2><br><a href='https://dataddo.com'>Official website</a><br><a href='https://twitter.com/dataddo'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user19'>Dataddo</h2><br><a href='https://dataddo.com'>Official website</a><br><a href='https://twitter.com/dataddo'>Twitter profile</a>
  <h3 date='Posted on: 2022-11-30; at: 13:46'>Posted on: 2022-11-30; at: 13:46</h3>
   <p>"For your organization to operate like a sleek, well-oiled machine, it’s crucial to make the most of the information at your disposal. But what’s the best way of achieving that?"
 
@@ -775,7 +829,7 @@ Click the link in bio for more!
   <p>What are the biggest challenges for #DigitalMedia in the era of data-driven businesses and how to deal with it? Check our new blog post!
 #webAnalytics #dataIntegration #dataAutomation #OnlineMedia #OnlineMarketing #digitalmediamarketing
 <a href="https://t.co/BJmKRl2um5">https://t.co/BJmKRl2um5</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user18'>Datafold</h2><br><a href='https://datafold.com'>Official website</a><br><a href='https://twitter.com/datafoldcom'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user20'>Datafold</h2><br><a href='https://datafold.com'>Official website</a><br><a href='https://twitter.com/datafoldcom'>Twitter profile</a>
  <h3 date='Posted on: 2022-08-11; at: 19:48'>Posted on: 2022-08-11; at: 19:48</h3>
   <p>Replication needs validation. That’s why we created open source data-diff.
 @glebmm and @Sirupsen recently joined Tobias on the @DataEngPodcast to discuss open source data-diff.
@@ -823,14 +877,14 @@ Excited for more teams to try out <a href="https://t.co/RvdqdwJikB">https://t.co
  <h3 date='Posted on: 2021-07-29; at: 15:20'>Posted on: 2021-07-29; at: 15:20</h3>
   <p>@xavier2bois Of course, throwing our logo into the ring! 😎
 Also, we wrote a blog that might help with your map. <a href="https://t.co/4O5exeXmRM">https://t.co/4O5exeXmRM</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user19'>Dbt labs</h2><br><a href='https://getdbt.com'>Official website</a><br><a href='https://twitter.com/dbt_labs'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user21'>Dbt labs</h2><br><a href='https://getdbt.com'>Official website</a><br><a href='https://twitter.com/dbt_labs'>Twitter profile</a>
  <h3 date='Posted on: 2021-09-15; at: 13:32'>Posted on: 2021-09-15; at: 13:32</h3>
   <p>dbt Labs ❤️ open source.
 
 That’s why we’re joining some friends to discuss open source data strategy on Sept 28-30. Don’t miss @j_schottenstein, current PM (and podcast co-host) at dbt Labs, former VC, and all-around open source savvy human. 
 
 <a href="https://t.co/dUabLJu2Ne">https://t.co/dUabLJu2Ne</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user20'>Deep Mind</h2><br><a href='https://deepmind.com'>Official website</a><br><a href='https://twitter.com/DeepMind'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user22'>Deep Mind</h2><br><a href='https://deepmind.com'>Official website</a><br><a href='https://twitter.com/DeepMind'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-10; at: 14:18'>Posted on: 2023-01-10; at: 14:18</h3>
   <p>We’re thrilled that DeepMind: The Podcast has won Best Host in Listener's Choice for @FryRSquared at the @SignalAwards! 🏆
 
@@ -882,7 +936,7 @@ If you enjoyed our exploration of AGI, robotics, the Serengeti (&amp; more) with
   <p>Former intern turned intern mentor, @reverettai,  describes his journey to DeepMind, sharing tips and advice for aspiring DeepMinders. 
 
 Learn more about #internships and #LifeAtDeepMind on our blog: <a href="https://t.co/xfdf8CnmZt">https://t.co/xfdf8CnmZt</a> <a href="https://t.co/iSy2LOxpg9">https://t.co/iSy2LOxpg9</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user21'>Delta Lake</h2><br><a href='https://deltalake.io'>Official website</a><br><a href='https://twitter.com/DeltaLakeOSS'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user23'>Delta Lake</h2><br><a href='https://deltalake.io'>Official website</a><br><a href='https://twitter.com/DeltaLakeOSS'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-30; at: 13:20'>Posted on: 2023-01-30; at: 13:20</h3>
   <p>In this #DeltaLake blog post, learn how to compact small files into larger files with the Delta Lake OPTIMIZE command. ✅ Learn about common causes of small #datafiles and how to architect ETL pipelines that are less likely to create small data files. ⬇️ <a href="https://t.co/8ub9XQnGsC">https://t.co/8ub9XQnGsC</a></p>
  <h3 date='Posted on: 2023-01-25; at: 18:15'>Posted on: 2023-01-25; at: 18:15</h3>
@@ -979,11 +1033,11 @@ Deploy a Delta Sharing Server on AWS 👉 <a href="https://t.co/8jXiFJKinP">http
 Delta Lake Schema Enforcement 👉 <a href="https://t.co/ZGnZ0jZ3NL">https://t.co/ZGnZ0jZ3NL</a>
 
 #datalakes #oss #opensource #linuxfoundation #data <a href="https://t.co/EVMZ0nNR4d">https://t.co/EVMZ0nNR4d</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user22'>Docker</h2><br><a href='https://docker.com'>Official website</a><br><a href='https://twitter.com/Docker'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user24'>Docker</h2><br><a href='https://docker.com'>Official website</a><br><a href='https://twitter.com/Docker'>Twitter profile</a>
  <h3 date='Posted on: 2022-12-09; at: 20:01'>Posted on: 2022-12-09; at: 20:01</h3>
   <p>It is I, Gordon (@gordonATortoise). I have hacked the Docker account. [Insert evil laugh.] I don't have much time…read this blog by #SuperTokens cofounder @Advait_Ruia and Captain @ajeetsraina because it’s cool and about authentication: <a href="https://t.co/s8cnXOeAvJ">https://t.co/s8cnXOeAvJ</a> 
 Bye for now. 🐢 <a href="https://t.co/ee3znuh2Hg">https://t.co/ee3znuh2Hg</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user23'>Druidio</h2><br><a href='https://druid.io'>Official website</a><br><a href='https://twitter.com/druidio'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user25'>Druidio</h2><br><a href='https://druid.io'>Official website</a><br><a href='https://twitter.com/druidio'>Twitter profile</a>
  <h3 date='Posted on: 2022-06-22; at: 14:56'>Posted on: 2022-06-22; at: 14:56</h3>
   <p>Sometimes data retention is not as simple as removing rows by time. In this @nielsen tech blog, @ettigur explains selective data deletion on dimensions in #ApacheDruid: <a href="https://t.co/wRDD0kvMI9">https://t.co/wRDD0kvMI9</a></p>
  <h3 date='Posted on: 2022-06-21; at: 16:03'>Posted on: 2022-06-21; at: 16:03</h3>
@@ -1012,7 +1066,7 @@ Bye for now. 🐢 <a href="https://t.co/ee3znuh2Hg">https://t.co/ee3znuh2Hg</a><
  <h3 date='Posted on: 2021-10-07; at: 14:20'>Posted on: 2021-10-07; at: 14:20</h3>
   <p>The @Pinterest Engineering team created a blog post sharing why they decided to adopt #ApacheDruid as their next-generation analytical data store. Check out part one here:
  <a href="https://t.co/ibyF0De7KH">https://t.co/ibyF0De7KH</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user24'>Duck DB</h2><br><a href='https://duckdb.org'>Official website</a><br><a href='https://twitter.com/duckdb'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user26'>Duck DB</h2><br><a href='https://duckdb.org'>Official website</a><br><a href='https://twitter.com/duckdb'>Twitter profile</a>
  <h3 date='Posted on: 2022-12-16; at: 15:11'>Posted on: 2022-12-16; at: 15:11</h3>
   <p>Para os usuários lusófonos, @holanda_pe publicou um post no blog do @datahackersofic sobre como utilizar o DuckDB em Python para aplicações de ciência de dados! Link abaixo:
 <a href="https://t.co/6swvPdhZ66">https://t.co/6swvPdhZ66</a></p>
@@ -1051,7 +1105,7 @@ Bye for now. 🐢 <a href="https://t.co/ee3znuh2Hg">https://t.co/ee3znuh2Hg</a><
   <p>New blog post by @holanda_pe: "DuckDB - The Lord of Enums: The Fellowship of the Categorical and Factors." #rstats #pandas
 
 <a href="https://t.co/pQc4un2ERa">https://t.co/pQc4un2ERa</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user25'>Elastic</h2><br><a href='https://elastic.co'>Official website</a><br><a href='https://twitter.com/elastic'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user27'>Elastic</h2><br><a href='https://elastic.co'>Official website</a><br><a href='https://twitter.com/elastic'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-03; at: 21:35'>Posted on: 2023-01-03; at: 21:35</h3>
   <p>Take a walk down memory lane with our round-up of top blog posts from 2022 → <a href="https://t.co/8wy3pQSkox">https://t.co/8wy3pQSkox</a>
  
@@ -1060,7 +1114,7 @@ Bye for now. 🐢 <a href="https://t.co/ee3znuh2Hg">https://t.co/ee3znuh2Hg</a><
   <p>Log data and system logs can be a treasure trove of information and insights for #SREs and #DevOps teams. Read our blog to learn some best practices when it comes to log management, log analytics, and visualizations for Elastic Observability: <a href="https://t.co/UYeNxrgWMy">https://t.co/UYeNxrgWMy</a></p>
  <h3 date='Posted on: 2022-11-14; at: 22:02'>Posted on: 2022-11-14; at: 22:02</h3>
   <p>From product demos and lightning talks to workshops and breakout sessions, we’re excited for an action-packed week at #AWSreInvent later this month! Read our blog to learn more about what to expect from us at the show: <a href="https://t.co/OP3dvO0Gtd">https://t.co/OP3dvO0Gtd</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user26'>Expect Great Data</h2><br><a href='https://expectgreatdata.com'>Official website</a><br><a href='https://twitter.com/expectgreatdata'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user28'>Expect Great Data</h2><br><a href='https://expectgreatdata.com'>Official website</a><br><a href='https://twitter.com/expectgreatdata'>Twitter profile</a>
  <h3 date='Posted on: 2023-02-01; at: 20:00'>Posted on: 2023-02-01; at: 20:00</h3>
   <p>Our friends at @Astronomerio have made some really cool updates to the Great Expectations Airflow operator—it can now do a lot of the initial GX configuration for you! Check out their blog for details 🚀  <a href="https://t.co/OtSrVmKPq7">https://t.co/OtSrVmKPq7</a></p>
  <h3 date='Posted on: 2023-01-25; at: 16:56'>Posted on: 2023-01-25; at: 16:56</h3>
@@ -1090,7 +1144,7 @@ Thanks to the author @sarahmk125 and Maggie Hays from @AcrylData for contributin
   <p>Our June Community Roundup blog is up! Check out product roadmap videos and a demo of how @trinodb works with Great Expectations 👉 <a href="https://t.co/KeY4qgmDIf">https://t.co/KeY4qgmDIf</a> #Data #DataQuality #OpenSource</p>
  <h3 date='Posted on: 2022-06-14; at: 18:27'>Posted on: 2022-06-14; at: 18:27</h3>
   <p>If we had a dollar for every time we heard "data governance" and "data quality" used interchangeably... Well, then we probably wouldn't have bothered to write this blog  👉🏼 <a href="https://t.co/blJ3dPjHj8">https://t.co/blJ3dPjHj8</a> <a href="https://t.co/Wgt446WfiD">https://t.co/Wgt446WfiD</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user27'>Fast.ai</h2><br><a href='https://fast.ai'>Official website</a><br><a href='https://twitter.com/fastdotai'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user29'>Fast.ai</h2><br><a href='https://fast.ai'>Official website</a><br><a href='https://twitter.com/fastdotai'>Twitter profile</a>
  <h3 date='Posted on: 2022-09-16; at: 00:21'>Posted on: 2022-09-16; at: 00:21</h3>
   <p>New #nbdev release: v2.3.3. <a href="https://t.co/YUYUpMfC0j">https://t.co/YUYUpMfC0j</a>
 
@@ -1098,7 +1152,7 @@ New Features
 
 - auto-upgrade `_quarto.yml` for v1.2
 - Add Blog Tutorial, thanks to @HamelHusain</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user28'>Fivetran</h2><br><a href='https://fivetran.com'>Official website</a><br><a href='https://twitter.com/fivetran'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user30'>Fivetran</h2><br><a href='https://fivetran.com'>Official website</a><br><a href='https://twitter.com/fivetran'>Twitter profile</a>
  <h3 date='Posted on: 2023-02-01; at: 20:22'>Posted on: 2023-02-01; at: 20:22</h3>
   <p>Build or Buy? Question that needs answers! 👀
 
@@ -1149,7 +1203,7 @@ You’re a click away from learning all about it. 🖱️ Check it out:  <a href
   <p>What is database replication? 🤔 How does database replication work? How do I get started with database replication? Look no further. 👀 
 
 Check out our blog to find the answers to all of these questions ➕ more: <a href="https://t.co/02UhulwMQK">https://t.co/02UhulwMQK</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user29'>Getdbt.com</h2><br><a href='https://getdbt.com'>Official website</a><br><a href='https://twitter.com/getdbt.com'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user31'>Getdbt.com</h2><br><a href='https://getdbt.com'>Official website</a><br><a href='https://twitter.com/getdbt.com'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-26; at: 16:01'>Posted on: 2023-01-26; at: 16:01</h3>
   <p>The only thing better than Slim CI is Slim CI that automatically scales with your commits 💥
 
@@ -1292,7 +1346,7 @@ Simon Podhajsky gives you the blueprint to implement Slim CI/CD anywhere in the 
 The dbt Developer Blog, a platform for the dbt community to share knowledge you can only earn by doing the work. 
 
 Dive in at <a href="https://t.co/HBySUXtqzm">https://t.co/HBySUXtqzm</a> - some fantastic posts live today in 🧵</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user30'>Github</h2><br><a href='https://github.com'>Official website</a><br><a href='https://twitter.com/github'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user32'>Github</h2><br><a href='https://github.com'>Official website</a><br><a href='https://twitter.com/github'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-21; at: 18:02'>Posted on: 2023-01-21; at: 18:02</h3>
   <p>Tune into The ReadME Podcast to hear from @sudobunni about livestreaming and chasing inspiration. Plus, decluttering for developers, open source mentors, and the 6-month effort to define GitOps. <a href="https://t.co/cXOLBjabc1">https://t.co/cXOLBjabc1</a> <a href="https://t.co/SW0dxcMMfV">https://t.co/SW0dxcMMfV</a></p>
  <h3 date='Posted on: 2023-01-20; at: 15:09'>Posted on: 2023-01-20; at: 15:09</h3>
@@ -1319,7 +1373,7 @@ Stay tuned for our next episode coming this Tuesday.
   <p>Our next podcast episode drops next week. In the meantime, want to learn more about the myth of the lone hacker or what it takes to manage an open source business? Then check out our last episode. <a href="https://t.co/7U7oQ5ESkE">https://t.co/7U7oQ5ESkE</a></p>
  <h3 date='Posted on: 2022-12-02; at: 20:52'>Posted on: 2022-12-02; at: 20:52</h3>
   <p>We want to make tools, processes, and communities that develop technology inclusive, along every dimension of identity. Learn more about the vision and prime directive of the GitHub accessibility program in this blog post. <a href="https://t.co/QxKF9yZuLk">https://t.co/QxKF9yZuLk</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user31'>Gitlab</h2><br><a href='https://gitlab.com'>Official website</a><br><a href='https://twitter.com/gitlab'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user33'>Gitlab</h2><br><a href='https://gitlab.com'>Official website</a><br><a href='https://twitter.com/gitlab'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-26; at: 17:48'>Posted on: 2023-01-26; at: 17:48</h3>
   <p>🔮 Our 2023 #DevSecOps prediction blog tells a familiar story - security is still a big focus for orgs and DevOps teams. 
 
@@ -1338,7 +1392,7 @@ But there's more, and GitLab team members across product, education, and #DevRel
 🔍 Every quarter, we’ll highlight a few features we think you should know about, along with use cases, in a blog post. 
 
 🧵 Check out the first post below.</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user32'>Google Cloud</h2><br><a href='https://cloud.google.com'>Official website</a><br><a href='https://twitter.com/googlecloud'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user34'>Google Cloud</h2><br><a href='https://cloud.google.com'>Official website</a><br><a href='https://twitter.com/googlecloud'>Twitter profile</a>
  <h3 date='Posted on: 2023-02-01; at: 01:03'>Posted on: 2023-02-01; at: 01:03</h3>
   <p>Looking for more industry-shaping trends?
 
@@ -1346,7 +1400,36 @@ Check out this living blog for insights across topics that matter to today’s o
 <a href="https://t.co/UPv0JJKzPm">https://t.co/UPv0JJKzPm</a></p>
  <h3 date='Posted on: 2023-01-17; at: 07:47'>Posted on: 2023-01-17; at: 07:47</h3>
   <p>@sondelali Hello Delali, thanks for reaching out. Right now we do not have any more information on expansion to other regions. Please stay tunned for new updates on this topic at our blog <a href="https://t.co/4z7HpvdPHT">https://t.co/4z7HpvdPHT</a> Cheers! -LM</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user33'>Grafana</h2><br><a href='https://grafana.com'>Official website</a><br><a href='https://twitter.com/grafana'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user35'>Google Cloud Tech</h2><br><a href='https://cloud.withgoogle.com'>Official website</a><br><a href='https://twitter.com/GoogleCloudTech'>Twitter profile</a>
+ <h3 date='Posted on: 2023-01-17; at: 00:05'>Posted on: 2023-01-17; at: 00:05</h3>
+  <p>In the event that you're interested in learning about responding to changes in cloud resources with Eventarc and Cloud Run, here's a technical blog just for you ➡️ <a href="https://t.co/vL0AWp4TeA">https://t.co/vL0AWp4TeA</a> <a href="https://t.co/8fiJN63gT4">https://t.co/8fiJN63gT4</a></p>
+ <h3 date='Posted on: 2023-01-04; at: 18:01'>Posted on: 2023-01-04; at: 18:01</h3>
+  <p>The Dataproc Persistent History Server (PHS) provides web interfaces to view job history for jobs run on active or deleted Dataproc clusters.
+
+Check out this blog for best practices of PHS ↓
+<a href="https://t.co/zORT20Gm14">https://t.co/zORT20Gm14</a></p>
+ <h3 date='Posted on: 2023-01-03; at: 21:07'>Posted on: 2023-01-03; at: 21:07</h3>
+  <p>With Google Cloud, @Cruise goes from road to code—and from code to road—faster and safer.
+
+🚗 Cruise over to this blog from last March to learn how this self-driving service tests its autonomous vehicles (AVs) on Google Cloud → <a href="https://t.co/qFRrG3fvSm">https://t.co/qFRrG3fvSm</a> <a href="https://t.co/wAbZWC1aMC">https://t.co/wAbZWC1aMC</a></p>
+ <h3 date='Posted on: 2023-01-02; at: 21:03'>Posted on: 2023-01-02; at: 21:03</h3>
+  <p>Migrating from on-premises EDW to Google Cloud is no walk in the park. Luckily, Priyanka Vergadia is here to help. Take a look back at this blog that maps out a successful migration strategy → <a href="https://t.co/AwRsbp92Qi">https://t.co/AwRsbp92Qi</a> <a href="https://t.co/Co8szr2zco">https://t.co/Co8szr2zco</a></p>
+ <h3 date='Posted on: 2022-12-31; at: 15:01'>Posted on: 2022-12-31; at: 15:01</h3>
+  <p>If you are a leader, manager, or executive focused on how your team can leverage Google's SRE practices or wider DevOps practices, you've come to the right blog. 
+
+Learn how you can use DevOps and SRE principles to manage your Looker ecosystem ↓ 
+
+<a href="https://t.co/AsNZlRWYqA">https://t.co/AsNZlRWYqA</a></p>
+ <h3 date='Posted on: 2022-12-20; at: 00:07'>Posted on: 2022-12-20; at: 00:07</h3>
+  <p>Head into the new year with new knowledge: 
+
+💡 12 no-cost Google Cloud learning opportunities → <a href="https://t.co/am7EPk5wqO">https://t.co/am7EPk5wqO</a>
+💡 10 predictions about what to expect from IT by 2025 → <a href="https://t.co/LO6EgMcLeS">https://t.co/LO6EgMcLeS</a>
+💡 1 blog on our December trust update → <a href="https://t.co/TbpKpQnguz">https://t.co/TbpKpQnguz</a> <a href="https://t.co/1jOSzPNMk9">https://t.co/1jOSzPNMk9</a></p>
+ <h3 date='Posted on: 2022-12-08; at: 23:07'>Posted on: 2022-12-08; at: 23:07</h3>
+  <p>Check out this blog to learn the basics of exactly-once delivery, how it works, best practices, and more ↓
+<a href="https://t.co/e1O4rt4mrL">https://t.co/e1O4rt4mrL</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user36'>Grafana</h2><br><a href='https://grafana.com'>Official website</a><br><a href='https://twitter.com/grafana'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-25; at: 16:35'>Posted on: 2023-01-25; at: 16:35</h3>
   <p>What are the most important metrics to track for your #Kubernetes cluster?  In today's blog post, discover the the key metrics you need to know to have a solid foundation for monitoring all the layers of your Kubernetes cluster.
 <a href="https://t.co/FHZ9ofIvUs">https://t.co/FHZ9ofIvUs</a></p>
@@ -1378,7 +1461,7 @@ We’re excited to announce a more predictable, monthly Grafana release cadence,
  <h3 date='Posted on: 2022-11-03; at: 20:17'>Posted on: 2022-11-03; at: 20:17</h3>
   <p>Check out today's blog post to learn all the details about the k6 x Tempo private beta program on Grafana Cloud that we revealed at #ObservabilityCON and how to correlate performance testing and distributed tracing to improve reliability.
 <a href="https://t.co/4kL56PeDdc">https://t.co/4kL56PeDdc</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user34'>Hevo Data</h2><br><a href='https://hevodata.com'>Official website</a><br><a href='https://twitter.com/HevoData'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user37'>Hevo Data</h2><br><a href='https://hevodata.com'>Official website</a><br><a href='https://twitter.com/HevoData'>Twitter profile</a>
  <h3 date='Posted on: 2022-04-06; at: 08:00'>Posted on: 2022-04-06; at: 08:00</h3>
   <p>Correct #Positioning is key to growing your #brand &amp; gaining the attention of your #targetgroup. It can help your #messaging shine. Learn how we came up with &amp; applied our design successfully through @avikataria's blog!
 
@@ -1396,7 +1479,7 @@ We’re excited to announce a more predictable, monthly Grafana release cadence,
 <a href="https://t.co/Svg4pqcqNn">https://t.co/Svg4pqcqNn</a>
 
 #hiring #SaaS #saasjobs #talentacquisition #talentpool #recruiting <a href="https://t.co/6fXE0sUe9C">https://t.co/6fXE0sUe9C</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user35'>Hightouch Data</h2><br><a href='https://hightouchdata.com'>Official website</a><br><a href='https://twitter.com/HightouchData'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user38'>Hightouch Data</h2><br><a href='https://hightouchdata.com'>Official website</a><br><a href='https://twitter.com/HightouchData'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-31; at: 18:14'>Posted on: 2023-01-31; at: 18:14</h3>
   <p>Check out the blog to learn if a warehouse-centric billing approach is right for your team: <a href="https://t.co/XlKzh8gE1t">https://t.co/XlKzh8gE1t</a></p>
  <h3 date='Posted on: 2023-01-12; at: 17:36'>Posted on: 2023-01-12; at: 17:36</h3>
@@ -1441,14 +1524,14 @@ Check out the blog to learn more about audit logs and some of our other Enterpri
   <p>Check out the blog to learn more 👇
 
 <a href="https://t.co/MihIpU7Iv4">https://t.co/MihIpU7Iv4</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user36'>IBM Data</h2><br><a href='https://ibm.com/analytics/data-science'>Official website</a><br><a href='https://twitter.com/IBMData'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user39'>IBM Data</h2><br><a href='https://ibm.com/analytics/data-science'>Official website</a><br><a href='https://twitter.com/IBMData'>Twitter profile</a>
  <h3 date='Posted on: 2022-11-16; at: 15:37'>Posted on: 2022-11-16; at: 15:37</h3>
   <p>For more on #AI models from @IBMResearch, visit their blog here: <a href="https://t.co/AvUAFAC0j6">https://t.co/AvUAFAC0j6</a></p>
  <h3 date='Posted on: 2022-10-21; at: 15:17'>Posted on: 2022-10-21; at: 15:17</h3>
   <p>For more insight on building and scaling trustworthy AI framework check out our latest blog: <a href="https://t.co/V0GVe1Tp5x">https://t.co/V0GVe1Tp5x</a>  🤝  <a href="https://t.co/W1wnxtAtuf">https://t.co/W1wnxtAtuf</a></p>
  <h3 date='Posted on: 2022-09-22; at: 12:10'>Posted on: 2022-09-22; at: 12:10</h3>
   <p>For more on sustainable material advancement from @IBMResearch, visit their blog here: <a href="https://t.co/EI3M4nCZKm.">https://t.co/EI3M4nCZKm.</a> <a href="https://t.co/6ofsFy9FrK">https://t.co/6ofsFy9FrK</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user37'>Integrate.io</h2><br><a href='https://integrate.io'>Official website</a><br><a href='https://twitter.com/Integrateio'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user40'>Integrate.io</h2><br><a href='https://integrate.io'>Official website</a><br><a href='https://twitter.com/Integrateio'>Twitter profile</a>
  <h3 date='Posted on: 2022-07-06; at: 22:51'>Posted on: 2022-07-06; at: 22:51</h3>
   <p>👉Check out our CEO, Donal Tobin, on The Alldus #Podcast!
 
@@ -1477,7 +1560,7 @@ Read our latest blog on finding the right digital tools to take your e-commerce 
 We go over everything you need to know in our blog below: <a href="https://t.co/v1pGvGtAzo">https://t.co/v1pGvGtAzo</a>
 
 #bigdata #ecommerce #techstack</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user38'>Keboola</h2><br><a href='https://keboola.com'>Official website</a><br><a href='https://twitter.com/keboola'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user41'>Keboola</h2><br><a href='https://keboola.com'>Official website</a><br><a href='https://twitter.com/keboola'>Twitter profile</a>
  <h3 date='Posted on: 2022-12-13; at: 10:52'>Posted on: 2022-12-13; at: 10:52</h3>
   <p>Michael Kapr is a data legend with an incredible career and life journey. Listen to our latest episode of the #DataHeroes podcast to learn more about what shaped him, and be prepared for even more!
 
@@ -1505,7 +1588,7 @@ Learn more about it in our latest blog post: <a href="https://t.co/N94FwHDPxQ">h
 
 Read blog:
 <a href="https://t.co/tPdMKtV9Zz">https://t.co/tPdMKtV9Zz</a> <a href="https://t.co/5JZBAr4boO">https://t.co/5JZBAr4boO</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user39'>Ksql</h2><br><a href='https://confluent.io/ksql'>Official website</a><br><a href='https://twitter.com/ksqlDB'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user42'>Ksql</h2><br><a href='https://confluent.io/ksql'>Official website</a><br><a href='https://twitter.com/ksqlDB'>Twitter profile</a>
  <h3 date='Posted on: 2021-04-26; at: 17:10'>Posted on: 2021-04-26; at: 17:10</h3>
   <p>🎁 We’re excited to announce ksqlDB 0.17! Say hello to continuous integration support, inline functions (map, filter, reduce), table scans with pull queries, 1st class timestamps, &amp; more. Check out our blog for the full summary! <a href="https://t.co/SZnzYkjDpe">https://t.co/SZnzYkjDpe</a> <a href="https://t.co/7u8hcv95jF">https://t.co/7u8hcv95jF</a></p>
  <h3 date='Posted on: 2021-02-19; at: 17:05'>Posted on: 2021-02-19; at: 17:05</h3>
@@ -1532,7 +1615,7 @@ Victoria Xia explains in our blog about how the latest release completes the sto
   <p>ksqlDB 0.9.0 is here!💥This release includes the long-awaited support for multi-way joins, which obviates the need for creating intermediary streams and tables. Check out the blog post by Sergio Peña! <a href="https://t.co/K5kJgb1wj2">https://t.co/K5kJgb1wj2</a> <a href="https://t.co/L29hArpEim">https://t.co/L29hArpEim</a></p>
  <h3 date='Posted on: 2020-03-20; at: 16:08'>Posted on: 2020-03-20; at: 16:08</h3>
   <p>ksqlDB 0.8.0 has landed!🔥This release improves aggregations across the board with support for tunable retention, grace periods, and a new function to easily aggregate a stream into a table. Check out the blog post by Victoria Xia! <a href="https://t.co/oMih0tJ9tR">https://t.co/oMih0tJ9tR</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user40'>kubernetes.io</h2><br><a href='https://kubernetes.io'>Official website</a><br><a href='https://twitter.com/kubernetesio'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user43'>kubernetes.io</h2><br><a href='https://kubernetes.io'>Official website</a><br><a href='https://twitter.com/kubernetesio'>Twitter profile</a>
  <h3 date='Posted on: 2022-09-13; at: 12:39'>Posted on: 2022-09-13; at: 12:39</h3>
   <p>On the blog 👉 "Announcing the Auto-refreshing Official #Kubernetes CVE Feed" via @PuDiJoglekar <a href="https://t.co/ZTXlbBHNRN">https://t.co/ZTXlbBHNRN</a> <a href="https://t.co/HvLvSJLtbM">https://t.co/HvLvSJLtbM</a></p>
  <h3 date='Posted on: 2022-08-26; at: 12:47'>Posted on: 2022-08-26; at: 12:47</h3>
@@ -1627,7 +1710,7 @@ Read more about it on the blog 👇<a href="https://t.co/NzCuyTDuao">https://t.c
   <p>On the blog 👉 #Kubernetes #API and feature removals in 1.22: Here’s what you need to know" via Krishna Kilari + Tim Bannister <a href="https://t.co/nL9zadle1U">https://t.co/nL9zadle1U</a></p>
  <h3 date='Posted on: 2021-06-25; at: 20:10'>Posted on: 2021-06-25; at: 20:10</h3>
   <p>Some great weekend reading from @ArthurBusser on the blog 👉 "Writing a Controller for Pod Labels" <a href="https://t.co/Pwdhhvx6Xk">https://t.co/Pwdhhvx6Xk</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user41'>Lightdash</h2><br><a href='https://lightdash.dev'>Official website</a><br><a href='https://twitter.com/lightdash_devs'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user44'>Lightdash</h2><br><a href='https://lightdash.dev'>Official website</a><br><a href='https://twitter.com/lightdash_devs'>Twitter profile</a>
  <h3 date='Posted on: 2022-10-12; at: 15:28'>Posted on: 2022-10-12; at: 15:28</h3>
   <p>Check out the top 5 ways you can encourage people to click! Number 3 will shock you 😱 
 
@@ -1654,7 +1737,48 @@ What do you think?
 <a href="https://t.co/N4CI3t2MIa">https://t.co/N4CI3t2MIa</a>
 
 #opensource #buildinginpublic</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user42'>Mage.ai</h2><br><a href='https://mage.ai'>Official website</a><br><a href='https://twitter.com/mage_ai'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user45'>Logi Analytics</h2><br><a href='https://logianalytics.com'>Official website</a><br><a href='https://twitter.com/LogiAnalytics'>Twitter profile</a>
+ <h3 date='Posted on: 2022-02-03; at: 20:01'>Posted on: 2022-02-03; at: 20:01</h3>
+  <p>Every other day, there’s a new data tool promising to optimize performance for your business. 
+
+So how do you weed out the noise to find the optimal analytics tool for higher profit and productivity?  @Strategy_Gal has some tips in a guest blog: <a href="https://t.co/IHVhqLx8bx">https://t.co/IHVhqLx8bx</a> <a href="https://t.co/noeux44b4Z">https://t.co/noeux44b4Z</a></p>
+ <h3 date='Posted on: 2022-01-24; at: 21:00'>Posted on: 2022-01-24; at: 21:00</h3>
+  <p>Change doesn't occur because of 1 person. People affect change en masse. 
+
+The same applies to software: user experience drives innovation. This is a 2022 trend that will continue. More predictions on our blog: <a href="https://t.co/5BWI5DYwcZ">https://t.co/5BWI5DYwcZ</a> 
+
+#UX #software #2022predictions #technology <a href="https://t.co/Mmb709RA6O">https://t.co/Mmb709RA6O</a></p>
+ <h3 date='Posted on: 2021-11-30; at: 22:01'>Posted on: 2021-11-30; at: 22:01</h3>
+  <p>As a company, you are likely to have multiple #data sources. This is difficult when trying collate data into an analytics dashboard for insights.  
+
+The solution? An #EmbeddedBI tool that can handle disparate and large data sources. More on our blog: <a href="https://t.co/6J843rKere">https://t.co/6J843rKere</a> <a href="https://t.co/2hg5xRdiCz">https://t.co/2hg5xRdiCz</a></p>
+ <h3 date='Posted on: 2021-11-18; at: 20:01'>Posted on: 2021-11-18; at: 20:01</h3>
+  <p>Common business issue: My company is rapidly growing, but we’re struggling to keep up.  
+
+Solution: Adopt a modern analytics tool that helps you scale your business while improving your application at the same time.  
+
+Get our full breakdown on our blog: <a href="https://t.co/Bd2aZ93vO7">https://t.co/Bd2aZ93vO7</a> <a href="https://t.co/gvdF5swSUm">https://t.co/gvdF5swSUm</a></p>
+ <h3 date='Posted on: 2021-11-11; at: 19:01'>Posted on: 2021-11-11; at: 19:01</h3>
+  <p>#Analytics platforms are no longer “nice-to-haves"— they are a requirement for #data visualization and quicker insights.  
+
+In fact, there are 6 industries who use top tier data analytics software for their unique use cases. Read about them on our blog:  <a href="https://t.co/Hm8XKuVVo3">https://t.co/Hm8XKuVVo3</a> <a href="https://t.co/nvXFN3VzOm">https://t.co/nvXFN3VzOm</a></p>
+ <h3 date='Posted on: 2021-11-09; at: 17:02'>Posted on: 2021-11-09; at: 17:02</h3>
+  <p>POV: You’re having trouble getting your entire company on the same page about #data.  That’s why every company needs a data evangelist: someone who know how to rally a team behind the power of data.  
+
+Read our blog to learn the 5 steps to become one:
+
+<a href="https://t.co/I9Or0mrMqI">https://t.co/I9Or0mrMqI</a> <a href="https://t.co/fHWM0zCZaz">https://t.co/fHWM0zCZaz</a></p>
+ <h3 date='Posted on: 2021-11-04; at: 16:02'>Posted on: 2021-11-04; at: 16:02</h3>
+  <p>Acquiring new customers is hard, and more expensive than retaining existing ones—about 5-25% more expensive, according to @HarvardBiz.
+
+Read Mya Nguyen, Logi Product Marketing Manager’s blog in @MindtheProduct about 3 insider secrets to user adoption: <a href="https://t.co/j00ekdj9Dj">https://t.co/j00ekdj9Dj</a> <a href="https://t.co/HntAJOQtHK">https://t.co/HntAJOQtHK</a></p>
+ <h3 date='Posted on: 2021-10-28; at: 17:31'>Posted on: 2021-10-28; at: 17:31</h3>
+  <p>Every company has varying levels of data competence. The issue is, they vastly overestimate how literate their employees are.  
+
+@bosconference cites our research with @HanoverResearch in their new blog. Read more:  
+
+<a href="https://t.co/u7iYQCDnOF">https://t.co/u7iYQCDnOF</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user46'>Mage.ai</h2><br><a href='https://mage.ai'>Official website</a><br><a href='https://twitter.com/mage_ai'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-25; at: 17:42'>Posted on: 2023-01-25; at: 17:42</h3>
   <p>AMAGING podcast with our very own CEO &amp; Co-founder, @TommyDANGerouss &amp; @OssStartup hosts,  @amanda_robs &amp; @tnachen as they discuss @mage_ai's journey to becoming the modern replacement for Airflow. 🧙‍♂️✨ <a href="https://t.co/DWuc7fQhHD">https://t.co/DWuc7fQhHD</a></p>
  <h3 date='Posted on: 2022-11-09; at: 00:13'>Posted on: 2022-11-09; at: 00:13</h3>
@@ -1665,7 +1789,7 @@ What do you think?
 <a href="https://t.co/f3KCxvlmsP">https://t.co/f3KCxvlmsP</a></p>
  <h3 date='Posted on: 2022-08-22; at: 18:49'>Posted on: 2022-08-22; at: 18:49</h3>
   <p>Check out the recent episode of Infinite Machine Learning podcast with our CEO and co-founder, @TommyDANGerouss and host @prateekvjoshi! 🎧🔊 <a href="https://t.co/GCAnYBycGt">https://t.co/GCAnYBycGt</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user43'>Mariadb</h2><br><a href='https://mariadb.org'>Official website</a><br><a href='https://twitter.com/mariadb'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user47'>Mariadb</h2><br><a href='https://mariadb.org'>Official website</a><br><a href='https://twitter.com/mariadb'>Twitter profile</a>
  <h3 date='Posted on: 2023-02-01; at: 19:01'>Posted on: 2023-02-01; at: 19:01</h3>
   <p>#DidYouKnow you can run micro-benchmarks to test or evaluate a #Java connector with #MariaDB?
 
@@ -1749,7 +1873,7 @@ You can download, install, and use MariaDB using Docker to create containers.
 Our blog covers it all. 👇
 
 <a href="https://t.co/AB57eBgbRu">https://t.co/AB57eBgbRu</a> <a href="https://t.co/YVsCpwK9o7">https://t.co/YVsCpwK9o7</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user44'>Meltano</h2><br><a href='https://meltano.com'>Official website</a><br><a href='https://twitter.com/meltanodata'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user48'>Meltano</h2><br><a href='https://meltano.com'>Official website</a><br><a href='https://twitter.com/meltanodata'>Twitter profile</a>
  <h3 date='Posted on: 2022-10-13; at: 16:04'>Posted on: 2022-10-13; at: 16:04</h3>
   <p>Every company needs to analyze their #data in order to make smart business decisions. @tayloramurphy, shared with the #TechLeaderTalk podcast valuable tips on analyzing your data, questions to consider and many more to help you grow your company. 💪  <a href="https://t.co/Y5SrlmbChP">https://t.co/Y5SrlmbChP</a> <a href="https://t.co/ZiQbyyzu5S">https://t.co/ZiQbyyzu5S</a></p>
  <h3 date='Posted on: 2022-08-08; at: 14:47'>Posted on: 2022-08-08; at: 14:47</h3>
@@ -1772,24 +1896,92 @@ Our blog covers it all. 👇
 ➡️ Link: <a href="https://t.co/Eea5sjgyhX">https://t.co/Eea5sjgyhX</a>
 
 #meltano #opensource #dataops #data #dataengineer #dataanalysis #remote #casestudy #blog <a href="https://t.co/TM6fEaY5Tf">https://t.co/TM6fEaY5Tf</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user45'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
- <h3 date='Posted on: 2022-09-21; at: 20:14'>Posted on: 2022-09-21; at: 20:14</h3>
-  <p>Want to see more? 
-Check out our most recent blog post for more on how we’re using Metabase. 
-<a href="https://t.co/6Bg3rWbaaC">https://t.co/6Bg3rWbaaC</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user46'>Motherduck</h2><br><a href='https://motherduck.io'>Official website</a><br><a href='https://twitter.com/motherduck'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user49'>Meta Engineer</h2><br><a href='https://facebook.com/engineering'>Official website</a><br><a href='https://twitter.com/fb_engineering'>Twitter profile</a>
+ <h3 date='Posted on: 2023-01-26; at: 17:01'>Posted on: 2023-01-26; at: 17:01</h3>
+  <p>Check out our last blog on how we developed Tulip: <a href="https://t.co/1lsBmHYqqr">https://t.co/1lsBmHYqqr</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user50'>Metaphor.io</h2><br><a href='https://metaphor.io'>Official website</a><br><a href='https://twitter.com/MetaphorData'>Twitter profile</a>
+ <h3 date='Posted on: 2022-11-17; at: 17:39'>Posted on: 2022-11-17; at: 17:39</h3>
+  <p>Do you often ask or get asked ‘Who owns the data?’? Find out how a Federated Ownership with Shared Accountability model can help solve your most complex data ownership problems in @PardhuGunnam's latest blog post. #dataownership #Data #datagovernance  <a href="https://t.co/EEmNGMo3lT">https://t.co/EEmNGMo3lT</a></p>
+ <h3 date='Posted on: 2022-06-16; at: 19:24'>Posted on: 2022-06-16; at: 19:24</h3>
+  <p>Is your data team still struggling to manage data about your business? In our latest blog post, we outline 3 easy steps on how you can best capture, document, and manage data knowledge in your organization! <a href="https://t.co/XievQKOUID">https://t.co/XievQKOUID</a></p>
+ <h3 date='Posted on: 2022-03-23; at: 13:58'>Posted on: 2022-03-23; at: 13:58</h3>
+  <p>Do you feel like your #datacatalog is not gaining adoption? Check out our latest blog post by Kirit Basu about what is fundamentally missing in the catalog discussion today and how Metaphor is solving it. <a href="https://t.co/zIHTEoZBEo">https://t.co/zIHTEoZBEo</a> #data #datadocumentation <a href="https://t.co/c8ASvmzSUJ">https://t.co/c8ASvmzSUJ</a></p>
+ <h3 date='Posted on: 2022-01-12; at: 17:26'>Posted on: 2022-01-12; at: 17:26</h3>
+  <p>Thanks, Tobias Macey, for having the Metaphor team on the @DataEngPodcast where they discuss everything from designing the architecture and UX, to building the unified metadata layer that connects both technical and social intelligence. Listen here 👉 <a href="https://t.co/V0QNoM7Dtj">https://t.co/V0QNoM7Dtj</a></p>
+ <h3 date='Posted on: 2021-07-21; at: 14:33'>Posted on: 2021-07-21; at: 14:33</h3>
+  <p>What is the connection between startups and counter-terrorism :) If you are curious, checkout this podcast from one of our amazing investors @sarahcat21  from @AmplifyPartners ! <a href="https://t.co/Vq8q2TV3mJ">https://t.co/Vq8q2TV3mJ</a></p>
+ <h3 date='Posted on: 2020-12-24; at: 01:30'>Posted on: 2020-12-24; at: 01:30</h3>
+  <p>Lot of data insights - software engineering &amp; Data engineering parallels, udf mess, benefits of views, Data Warehouse/Data Lakes convergence - overall a great podcast @cwsteinbach and @mlopscommunity <a href="https://t.co/kOWbbsD4S1">https://t.co/kOWbbsD4S1</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user51'>Mode</h2><br><a href='https://mode.com'>Official website</a><br><a href='https://twitter.com/ModeAnalytics'>Twitter profile</a>
+ <h3 date='Posted on: 2023-01-12; at: 20:53'>Posted on: 2023-01-12; at: 20:53</h3>
+  <p>What are the key differences between Tableau, Power BI, and Mode? Our latest blog breaks down how you can visualize, explore, and share data in each tool. <a href="https://t.co/BvPa1VF6L4">https://t.co/BvPa1VF6L4</a> #DataTools #ModernBI #Data #BusinessIntelligence <a href="https://t.co/mRnqZ0YjQf">https://t.co/mRnqZ0YjQf</a></p>
+ <h3 date='Posted on: 2023-01-04; at: 17:24'>Posted on: 2023-01-04; at: 17:24</h3>
+  <p>Our dbt Integration and Datasets features both ensure that folks are using the right metrics across your org—but have different use cases and strengths. 
+
+Here's a blog from @bennstancil outlining the details: <a href="https://t.co/ITfZpwg10H">https://t.co/ITfZpwg10H</a> #businessintelligence <a href="https://t.co/3oXn2ayPo3">https://t.co/3oXn2ayPo3</a></p>
+ <h3 date='Posted on: 2022-10-18; at: 16:06'>Posted on: 2022-10-18; at: 16:06</h3>
+  <p>To learn more about what this integration means for Modern BI, read our blog post --&gt; <a href="https://t.co/jvfEc9wmuI">https://t.co/jvfEc9wmuI</a>
+
+Or ask us in person at #dbtcoalesce! Schedule a 1:1 or visit us at any of our activities! --&gt; <a href="https://t.co/W9ru0RROPb">https://t.co/W9ru0RROPb</a> <a href="https://t.co/Hq9egM6IAy">https://t.co/Hq9egM6IAy</a></p>
+ <h3 date='Posted on: 2022-07-18; at: 23:50'>Posted on: 2022-07-18; at: 23:50</h3>
+  <p>We've published guides about the modern data stack since 2019. Now, we've compiled our best content about it into a single blog post. #moderndatastack <a href="https://t.co/Z3Ks5l3RNh">https://t.co/Z3Ks5l3RNh</a> <a href="https://t.co/hpMpSf4heZ">https://t.co/hpMpSf4heZ</a></p>
+ <h3 date='Posted on: 2022-05-31; at: 16:09'>Posted on: 2022-05-31; at: 16:09</h3>
+  <p>New to Mode? In our latest blog post, we're walking through some key features that help you explore Mode reports, so you don't have to wait on the data team for answers. <a href="https://t.co/zyjhjWxAP0">https://t.co/zyjhjWxAP0</a> <a href="https://t.co/dOSDcuX6to">https://t.co/dOSDcuX6to</a></p>
+ <h3 date='Posted on: 2022-03-25; at: 21:37'>Posted on: 2022-03-25; at: 21:37</h3>
+  <p>Excel's flexibility makes enforcing consistency and accuracy in large datasets nearly impossible. Read our blog and explore the benefits of switching from Excel to SQL. <a href="https://t.co/Xj8BDMwaSZ">https://t.co/Xj8BDMwaSZ</a> <a href="https://t.co/UYJtVxwQXj">https://t.co/UYJtVxwQXj</a></p>
+ <h3 date='Posted on: 2022-02-14; at: 18:26'>Posted on: 2022-02-14; at: 18:26</h3>
+  <p>Our Chief Analytics Officer, @bennstancil, sat down with the @saasclubio podcast to share lessons he has learned about the best ways for founders to stay motivated so they can get through the hard times. Tune in: <a href="https://t.co/hEgT74cqnR">https://t.co/hEgT74cqnR</a> <a href="https://t.co/TPNbkrBF96">https://t.co/TPNbkrBF96</a></p>
+ <h3 date='Posted on: 2022-02-14; at: 14:47'>Posted on: 2022-02-14; at: 14:47</h3>
+  <p>When you combine webhooks with the Mode API, the possibilities are only limited by what you can dream up. Read our blog to learn how you can build workflows or real-time notifications based on events in your Mode workspace. <a href="https://t.co/jkDKI79ImS">https://t.co/jkDKI79ImS</a> <a href="https://t.co/mrsSDvLsXC">https://t.co/mrsSDvLsXC</a></p>
+ <h3 date='Posted on: 2022-02-09; at: 17:03'>Posted on: 2022-02-09; at: 17:03</h3>
+  <p>Our Chief Analytics Officer @bennstancil sat down with the @Baremetrics podcast to share how leaders should use data. Tune in: <a href="https://t.co/0lnCzeOxBY">https://t.co/0lnCzeOxBY</a> <a href="https://t.co/vuZFCji2Th">https://t.co/vuZFCji2Th</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user52'>Motherduck</h2><br><a href='https://motherduck.io'>Official website</a><br><a href='https://twitter.com/motherduck'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-04; at: 16:42'>Posted on: 2023-01-04; at: 16:42</h3>
   <p>While we're busy building, our Chief Duck Herder @jrdntgn and others have shared some kernels of our beliefs and plans in podcasts, news articles, blog posts and conference talks.  
 
 Read and watch: <a href="https://t.co/zD3mVGR0rH">https://t.co/zD3mVGR0rH</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user47'>Montecarlo</h2><br><a href='https://montecarlodata.com'>Official website</a><br><a href='https://twitter.com/montecarlodata'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user53'>Montecarlo</h2><br><a href='https://montecarlodata.com'>Official website</a><br><a href='https://twitter.com/montecarlodata'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-30; at: 20:36'>Posted on: 2023-01-30; at: 20:36</h3>
   <p>How does @MercariDev ensure the reliability of their data platform? 🚀
 
 Three words: data reliability engineering. 🖥️
 
 Learn how their U.S. team scales data quality at scale via their Eng Blog: <a href="https://t.co/J1APTtTRc5">https://t.co/J1APTtTRc5</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user48'>Myadverity</h2><br><a href='https://myadverity.com'>Official website</a><br><a href='https://twitter.com/myadverity'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user54'>Montreal Analytics</h2><br><a href='https://montrealanalytics.com'>Official website</a><br><a href='https://twitter.com/MTL_Analytics'>Twitter profile</a>
+ <h3 date='Posted on: 2023-01-11; at: 14:37'>Posted on: 2023-01-11; at: 14:37</h3>
+  <p>From continuous integration (CI) to data observability, more and more teams are focusing on validating and verifying their data. Here’s the state of testing for data teams as we look into 2023. 
+
+Read on our blog: <a href="https://t.co/mr6pTWlwT4">https://t.co/mr6pTWlwT4</a></p>
+ <h3 date='Posted on: 2022-12-15; at: 14:22'>Posted on: 2022-12-15; at: 14:22</h3>
+  <p>Intermediate models are both the glue or the bridge that holds your pipeline together. Our Senior Data Consultant Jeremie @_jpineau  shows ways to leverage intermediate models to improve a dbt project. 
+
+Read on our blog: <a href="https://t.co/Q4uJVxlzwR">https://t.co/Q4uJVxlzwR</a></p>
+ <h3 date='Posted on: 2022-11-22; at: 13:49'>Posted on: 2022-11-22; at: 13:49</h3>
+  <p>Looker? Data Studio? Looker Studio? 
+
+Our Data Consultant Wei Wei walks you through Google's latest announcement on Looker Studio in our new blog. 
+
+Read now 👉 <a href="https://t.co/9JM9s0H504">https://t.co/9JM9s0H504</a></p>
+ <h3 date='Posted on: 2022-11-10; at: 18:34'>Posted on: 2022-11-10; at: 18:34</h3>
+  <p>To avoid inconsistencies and delays, we need best practice standards and a way to enforce them automatically. 
+
+In our new blog post, our Data Consultant Dang walks you through dbt best practices and how we use dbt-gloss to keep our projects consistent. 
+
+<a href="https://t.co/AIGBXiskdy">https://t.co/AIGBXiskdy</a> <a href="https://t.co/Rc9mcxzShI">https://t.co/Rc9mcxzShI</a></p>
+ <h3 date='Posted on: 2022-08-24; at: 14:43'>Posted on: 2022-08-24; at: 14:43</h3>
+  <p>Everywhere you look, people are writing about the ROI of data teams. But how exactly do we define and measure the success of a data team?
+
+In part 1 of our blog series on @fivetran, we share how to identify, maintain and extend the value of a data team.
+
+<a href="https://t.co/01BYm1gq39">https://t.co/01BYm1gq39</a></p>
+ <h3 date='Posted on: 2022-05-05; at: 13:40'>Posted on: 2022-05-05; at: 13:40</h3>
+  <p>Keep track of historical changes to a mutable data source with dbt snapshots. How? Our Data Consultant @jpineau_mtla walks you through the steps in our new blog post: <a href="https://t.co/JWYwBPJ7OJ">https://t.co/JWYwBPJ7OJ</a> 
+@getdbt #snapshots #analyticsengineering #dataanalytics</p>
+ <h3 date='Posted on: 2022-03-22; at: 17:21'>Posted on: 2022-03-22; at: 17:21</h3>
+  <p>Real-time KPI tracking? Yes, and in 5 steps! In this week's blog, our Senior Analytics Consultant Holly shares how you can leverage table calculations in Looker and create an easy way to track your KPIs. 
+✨Read here: <a href="https://t.co/lkxU8Lny8o">https://t.co/lkxU8Lny8o</a>
+#analytics #moderndatastack</p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user55'>Myadverity</h2><br><a href='https://myadverity.com'>Official website</a><br><a href='https://twitter.com/myadverity'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-26; at: 16:54'>Posted on: 2023-01-26; at: 16:54</h3>
   <p>Our latest blog from Lorenz Weinzierl explains what APIs and API connectors are, and how they help marketing and data teams to get a single view of all their data.
 
@@ -1895,13 +2087,7 @@ Find out in the state of play blog here: <a href="https://t.co/RbYztHlLnh">https
 Find out in the latest Adverity blog here: <a href="https://t.co/9e8BvTui4b">https://t.co/9e8BvTui4b</a>
 
 #Predictiveanalytics #Marketinginsight</p>
- <h3 date='Posted on: 2021-11-24; at: 14:56'>Posted on: 2021-11-24; at: 14:56</h3>
-  <p>51% of #CTOs and #CDOs lack trust in the data compared to only 34% of #CMOs.  This disconnect should raise alarm bells. 
-
-Find out more in our latest blog 'Why analysts don't trust data that fuels marketing decisions'
- 
-<a href="https://t.co/Vz90S5d7Zf">https://t.co/Vz90S5d7Zf</a> <a href="https://t.co/1PPyMX6dis">https://t.co/1PPyMX6dis</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user49'>MySQL</h2><br><a href='https://mysql.com'>Official website</a><br><a href='https://twitter.com/MySQL'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user56'>MySQL</h2><br><a href='https://mysql.com'>Official website</a><br><a href='https://twitter.com/MySQL'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-31; at: 21:40'>Posted on: 2023-01-31; at: 21:40</h3>
   <p>[Blog] Learn how the MySQL Shell for VS Code Extension makes it very easy for developers to connect, manage and work with MySQL HeatWave instances right from within VS Code. <a href="https://t.co/uNR0rXgjzu">https://t.co/uNR0rXgjzu</a>
 #MySQL #MySQLHeatWave <a href="https://t.co/LHXe1ENObl">https://t.co/LHXe1ENObl</a></p>
@@ -1994,7 +2180,7 @@ Find out more in our latest blog 'Why analysts don't trust data that fuels marke
 #MySQL #MySQLHeatWave #machinelearning <a href="https://t.co/E8hmqzsEEq">https://t.co/E8hmqzsEEq</a></p>
  <h3 date='Posted on: 2022-03-31; at: 17:00'>Posted on: 2022-03-31; at: 17:00</h3>
   <p>🎵“It’s like a HeatWave, burning in my heart…”🔥 listen as Chief Cloud Economist @QuinnyPig interviews Nipun Agarwal about the #MySQL HeatWave #MachineLearning news on his “Screaming in the Cloud” podcast series: <a href="https://t.co/CoguamDR77">https://t.co/CoguamDR77</a> <a href="https://t.co/DIy5erLA5b">https://t.co/DIy5erLA5b</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user50'>MuleSoft</h2><br><a href='https://mulesoft.com'>Official website</a><br><a href='https://twitter.com/MuleSoft'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user57'>MuleSoft</h2><br><a href='https://mulesoft.com'>Official website</a><br><a href='https://twitter.com/MuleSoft'>Twitter profile</a>
  <h3 date='Posted on: 2022-12-19; at: 18:37'>Posted on: 2022-12-19; at: 18:37</h3>
   <p>📆 Your work calendar is slowing down, your personal calendar is filling up, and it’s just about time to say goodbye to 2022. But before you slam your laptop shut, go grab some hot cocoa and cozy up with some top-tier content from the MuleSoft blog: <a href="https://t.co/NSf6Ex5hfm">https://t.co/NSf6Ex5hfm</a></p>
  <h3 date='Posted on: 2022-11-30; at: 20:02'>Posted on: 2022-11-30; at: 20:02</h3>
@@ -2005,10 +2191,21 @@ Find out more in our latest blog 'Why analysts don't trust data that fuels marke
   <p>🚀 Join the next generation of #MuleSoftCertified professionals in democratizing integration, automating manual tasks, and leading the way in designing best-in-class experiences at the world’s top companies in our #MuleSoftCommunity: <a href="https://t.co/AlaYvzwFF7">https://t.co/AlaYvzwFF7</a> <a href="https://t.co/1gRv0Blogw">https://t.co/1gRv0Blogw</a></p>
  <h3 date='Posted on: 2022-11-04; at: 14:38'>Posted on: 2022-11-04; at: 14:38</h3>
   <p>MuleSoft came together with Salesforce, Tableau, and Slack to share product demos and discuss the latest ways leading organizations connect and automate their business at #GartnerITSymposium22. 💡 Read our recap blog now: <a href="https://t.co/6e2l4GmUkj">https://t.co/6e2l4GmUkj</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user51'>Numpy</h2><br><a href='https://numpy.org'>Official website</a><br><a href='https://twitter.com/numpy_team'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user58'>Netflix Engineer</h2><br><a href='https://netflixtechblog.com/?gi=81bd8f10bde2'>Official website</a><br><a href='https://twitter.com/NetflixEng'>Twitter profile</a>
+ <h3 date='Posted on: 2022-11-04; at: 01:25'>Posted on: 2022-11-04; at: 01:25</h3>
+  <p>Want to learn more about the consistent caching mechanism in Titus Gateway? @tomaszbak_ca and @fabiokung have put together an excellent blog post <a href="https://t.co/2GdBwIQY57">https://t.co/2GdBwIQY57</a></p>
+ <h3 date='Posted on: 2022-09-20; at: 16:28'>Posted on: 2022-09-20; at: 16:28</h3>
+  <p>On the latest episode of the @FrontEndHH podcast, Janaki Ramachandran, Benoit Fontaine, and @burgessdryan discussed how Netflix has approached automated testing at a large scale <a href="https://t.co/UC6LZTankG">https://t.co/UC6LZTankG</a></p>
+ <h3 date='Posted on: 2022-08-24; at: 18:30'>Posted on: 2022-08-24; at: 18:30</h3>
+  <p>How do constraints like time impact recommendations? @EhtshamElahi has shared some of these insights in a blog post <a href="https://t.co/MvpM7pBVG3">https://t.co/MvpM7pBVG3</a></p>
+ <h3 date='Posted on: 2022-07-25; at: 16:40'>Posted on: 2022-07-25; at: 16:40</h3>
+  <p>Want to learn more about Remix? @shaundai shares some knowledge on the latest @FrontEndHH podcast <a href="https://t.co/IuBNvEoy41">https://t.co/IuBNvEoy41</a></p>
+ <h3 date='Posted on: 2022-06-08; at: 22:50'>Posted on: 2022-06-08; at: 22:50</h3>
+  <p>Netflix engineers @carloscastrodev, @JemYoung, and @burgessdryan talk about the latest frontend trends on the @FrontEndHH podcast <a href="https://t.co/d0FbedGuo5">https://t.co/d0FbedGuo5</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user59'>Numpy</h2><br><a href='https://numpy.org'>Official website</a><br><a href='https://twitter.com/numpy_team'>Twitter profile</a>
  <h3 date='Posted on: 2021-06-04; at: 08:43'>Posted on: 2021-06-04; at: 08:43</h3>
   <p>We are very happy to have @mtdewgorl join us as a Technical Writer for Google Season of Docs this year. You can read about her experience applying and joining the project in her blog post: <a href="https://t.co/8AFFU200E2">https://t.co/8AFFU200E2</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user52'>Pandas</h2><br><a href='https://pandas.pydata.org'>Official website</a><br><a href='https://twitter.com/pandas_dev'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user60'>Pandas</h2><br><a href='https://pandas.pydata.org'>Official website</a><br><a href='https://twitter.com/pandas_dev'>Twitter profile</a>
  <h3 date='Posted on: 2022-09-23; at: 15:15'>Posted on: 2022-09-23; at: 15:15</h3>
   <p>Would you like to process hundreds of millions of rows of data with pandas? That's not only possible, but easy. Learn how Marc Garcia's new blog post!
 
@@ -2035,29 +2232,26 @@ You can run the analysis yourself on binder
 Read the blog post introducing the pandas extension array interface: <a href="https://t.co/B0het5FR69">https://t.co/B0het5FR69</a>
 
 Thanks to all the contributors! <a href="https://t.co/ZCFr31W9X3">https://t.co/ZCFr31W9X3</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user53'>Py Spark</h2><br><a href='https://spark.apache.org'>Official website</a><br><a href='https://twitter.com/PyData'>Twitter profile</a>
- <h3 date='Posted on: 2023-01-18; at: 17:30'>Posted on: 2023-01-18; at: 17:30</h3>
-  <p>At PyData Global 2022, a group of 20 data science leaders convened to discuss complex challenges around successfully running and delivering industrial projects. Organizers Ian Ozsvald and Lauren Oldja led the 2-hour discussion. Check out our blog below!
+  <h2 class='h2' style='text-transform: uppercase;' id='user61'>Plotly</h2><br><a href='https://plotly.com'>Official website</a><br><a href='https://twitter.com/plotlygraphs'>Twitter profile</a>
+ <h3 date='Posted on: 2022-11-03; at: 16:27'>Posted on: 2022-11-03; at: 16:27</h3>
+  <p>#Dash users may start with apps with one chart, then add additional components like lego blocks over time. The key is autonomy and the absence of friction, allowing the business to tell their own story. 
 
-<a href="https://t.co/eIjXletF9P">https://t.co/eIjXletF9P</a> <a href="https://t.co/xW9PNTitRU">https://t.co/xW9PNTitRU</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user54'>PostgreSQL</h2><br><a href='https://postgresql.org'>Official website</a><br><a href='https://twitter.com/PostgreSQL'>Twitter profile</a>
+Listen to the @TheBusOfData podcast. 🎧 <a href="https://t.co/V4Nexhn2Fk">https://t.co/V4Nexhn2Fk</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user62'>Popsql</h2><br><a href='https://popsql.com'>Official website</a><br><a href='https://twitter.com/popsql'>Twitter profile</a>
+ <h3 date='Posted on: 2022-07-26; at: 17:01'>Posted on: 2022-07-26; at: 17:01</h3>
+  <p>Blog: *New* ways to focus, work faster and more efficiently with BigQuery using PopSQL 
+
+#analytics #sql
+
+<a href="https://t.co/PaYw9SXyzK">https://t.co/PaYw9SXyzK</a></p>
+ <h3 date='Posted on: 2020-06-25; at: 22:25'>Posted on: 2020-06-25; at: 22:25</h3>
+  <p>5/ Read the full details on our blog post, and PS, we're hiring for a senior backend engineer (Ruby) 👀<a href="https://t.co/wu5xevGbev">https://t.co/wu5xevGbev</a></p>
+ <h3 date='Posted on: 2020-05-04; at: 23:18'>Posted on: 2020-05-04; at: 23:18</h3>
+  <p>5/ Get all the details on our blog post <a href="https://t.co/CCCbmguq1u">https://t.co/CCCbmguq1u</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user63'>PostgreSQL</h2><br><a href='https://postgresql.org'>Official website</a><br><a href='https://twitter.com/PostgreSQL'>Twitter profile</a>
  <h3 date='Posted on: 2022-10-21; at: 16:00'>Posted on: 2022-10-21; at: 16:00</h3>
   <p>News: New podcast Postgres FM <a href="https://t.co/Y3S4PSEcqZ">https://t.co/Y3S4PSEcqZ</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user55'>Jupyter</h2><br><a href='https://jupyter.org'>Official website</a><br><a href='https://twitter.com/ProjectJupyter'>Twitter profile</a>
- <h3 date='Posted on: 2022-09-06; at: 15:15'>Posted on: 2022-09-06; at: 15:15</h3>
-  <p>New on the Jupyter Blog: Packaging for Jupyter in 2022.  <a href="https://t.co/mahcRm3XXu">https://t.co/mahcRm3XXu</a></p>
- <h3 date='Posted on: 2021-12-20; at: 17:55'>Posted on: 2021-12-20; at: 17:55</h3>
-  <p>Check out our latest blog post: "Jupyter Community 2021 Update"
-
-<a href="https://t.co/xMdvIRdUv0">https://t.co/xMdvIRdUv0</a></p>
- <h3 date='Posted on: 2021-09-15; at: 18:12'>Posted on: 2021-09-15; at: 18:12</h3>
-  <p>New blog post from @r_c_thomas  about @TrustedCI involvement with Jupyter <a href="https://t.co/70jr1kyD1Q">https://t.co/70jr1kyD1Q</a> . Thanks to everyone involved in the security working group !</p>
- <h3 date='Posted on: 2021-09-01; at: 21:48'>Posted on: 2021-09-01; at: 21:48</h3>
-  <p>We know you had questions about Jupyter involvement with #ChaosDB. Short blog post to clarify things: <a href="https://t.co/uYsuo91rgG.">https://t.co/uYsuo91rgG.</a> TL;DR: we believe this only affects the Microsoft deployments. We had no advance knowledge of the vulnerability. We do our best to keep Jupyter secure.</p>
- <h3 date='Posted on: 2021-08-09; at: 20:09'>Posted on: 2021-08-09; at: 20:09</h3>
-  <p>Remote Code Execution in Jupyter Notebook and JupyterLab, please update to latest patch release and read on to know more.
-<a href="https://t.co/TyYet6Qwd7,">https://t.co/TyYet6Qwd7,</a> Feel free to ask questions, I will keep updating the blogpost. Thanks @google for the disclosure and auditing Jupyter.</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user56'>Prefect.io</h2><br><a href='https://prefect.io'>Official website</a><br><a href='https://twitter.com/PrefectIO'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user64'>Prefect.io</h2><br><a href='https://prefect.io'>Official website</a><br><a href='https://twitter.com/PrefectIO'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-19; at: 23:03'>Posted on: 2023-01-19; at: 23:03</h3>
   <p>ICYMI @anna__geller joined the Adventures in DevOps podcast earlier this month to chat #Scheduling vs #EventDriven #DataPipelines
 
@@ -2073,7 +2267,7 @@ Read the Why Prefect blog to make this a reality for you.
 <a href="https://t.co/pFATrMKq53">https://t.co/pFATrMKq53</a>
 
 #dataengineering  #orchestration #observability #automation #dag</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user57'>Preset</h2><br><a href='https://preset.io'>Official website</a><br><a href='https://twitter.com/preset_data'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user65'>Preset</h2><br><a href='https://preset.io'>Official website</a><br><a href='https://twitter.com/preset_data'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-19; at: 17:00'>Posted on: 2023-01-19; at: 17:00</h3>
   <p>New blog post alert🚀! In this post, we introduce the concept of #DataDemocratization, it’s purpose, why it matters, and how to approach it!💡👉 <a href="https://t.co/ot0e2D6Nfg">https://t.co/ot0e2D6Nfg</a>
 
@@ -2253,12 +2447,31 @@ Learn more about this major milestone in Max's @mistercrunch latest blog post �
 <a href="https://t.co/pN5lXjUdOQ">https://t.co/pN5lXjUdOQ</a></p>
  <h3 date='Posted on: 2021-01-21; at: 16:09'>Posted on: 2021-01-21; at: 16:09</h3>
   <p>Superset 1.0 has arrived! This release marks a huge milestone in the project's journey to delight data teams with the most comprehensive and modern analytics platform. Read the launch blog post by @mistercrunch here: <a href="https://t.co/zmd7yhKYYe">https://t.co/zmd7yhKYYe</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user58'>Presto DB</h2><br><a href='https://prestodb.io'>Official website</a><br><a href='https://twitter.com/prestodb'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user66'>Presto DB</h2><br><a href='https://prestodb.io'>Official website</a><br><a href='https://twitter.com/prestodb'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-03; at: 17:51'>Posted on: 2023-01-03; at: 17:51</h3>
   <p>Presto Foundation's @stevenmih joins other industry luminaries to offer predictions for 2023 in this VMblog video @prestodb. Steven's forecast starts at 5:43   <a href="https://t.co/2cHaPwlRre">https://t.co/2cHaPwlRre</a></p>
  <h3 date='Posted on: 2022-02-01; at: 17:15'>Posted on: 2022-02-01; at: 17:15</h3>
   <p>Connecting to #Presto With Superset. Open book This #blog will provide you with an understanding of how to connect #Superset, the open source #BI tool, to Presto, the #opensource #SQL query engine. Check it! 👉 <a href="https://t.co/yrmhPeLekC">https://t.co/yrmhPeLekC</a> h/t @apachesuperset</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user59'>Qlik</h2><br><a href='https://qlik.com'>Official website</a><br><a href='https://twitter.com/qlik'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user67'>Jupyter</h2><br><a href='https://jupyter.org'>Official website</a><br><a href='https://twitter.com/ProjectJupyter'>Twitter profile</a>
+ <h3 date='Posted on: 2022-09-06; at: 15:15'>Posted on: 2022-09-06; at: 15:15</h3>
+  <p>New on the Jupyter Blog: Packaging for Jupyter in 2022.  <a href="https://t.co/mahcRm3XXu">https://t.co/mahcRm3XXu</a></p>
+ <h3 date='Posted on: 2021-12-20; at: 17:55'>Posted on: 2021-12-20; at: 17:55</h3>
+  <p>Check out our latest blog post: "Jupyter Community 2021 Update"
+
+<a href="https://t.co/xMdvIRdUv0">https://t.co/xMdvIRdUv0</a></p>
+ <h3 date='Posted on: 2021-09-15; at: 18:12'>Posted on: 2021-09-15; at: 18:12</h3>
+  <p>New blog post from @r_c_thomas  about @TrustedCI involvement with Jupyter <a href="https://t.co/70jr1kyD1Q">https://t.co/70jr1kyD1Q</a> . Thanks to everyone involved in the security working group !</p>
+ <h3 date='Posted on: 2021-09-01; at: 21:48'>Posted on: 2021-09-01; at: 21:48</h3>
+  <p>We know you had questions about Jupyter involvement with #ChaosDB. Short blog post to clarify things: <a href="https://t.co/uYsuo91rgG.">https://t.co/uYsuo91rgG.</a> TL;DR: we believe this only affects the Microsoft deployments. We had no advance knowledge of the vulnerability. We do our best to keep Jupyter secure.</p>
+ <h3 date='Posted on: 2021-08-09; at: 20:09'>Posted on: 2021-08-09; at: 20:09</h3>
+  <p>Remote Code Execution in Jupyter Notebook and JupyterLab, please update to latest patch release and read on to know more.
+<a href="https://t.co/TyYet6Qwd7,">https://t.co/TyYet6Qwd7,</a> Feel free to ask questions, I will keep updating the blogpost. Thanks @google for the disclosure and auditing Jupyter.</p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user68'>Py Spark</h2><br><a href='https://spark.apache.org'>Official website</a><br><a href='https://twitter.com/PyData'>Twitter profile</a>
+ <h3 date='Posted on: 2023-01-18; at: 17:30'>Posted on: 2023-01-18; at: 17:30</h3>
+  <p>At PyData Global 2022, a group of 20 data science leaders convened to discuss complex challenges around successfully running and delivering industrial projects. Organizers Ian Ozsvald and Lauren Oldja led the 2-hour discussion. Check out our blog below!
+
+<a href="https://t.co/eIjXletF9P">https://t.co/eIjXletF9P</a> <a href="https://t.co/xW9PNTitRU">https://t.co/xW9PNTitRU</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user69'>Qlik</h2><br><a href='https://qlik.com'>Official website</a><br><a href='https://twitter.com/qlik'>Twitter profile</a>
  <h3 date='Posted on: 2022-12-19; at: 14:12'>Posted on: 2022-12-19; at: 14:12</h3>
   <p>The world is changing faster than ever, and data-driven businesses have to adapt quickly. @DanSommer joins @JoeDosSantos on the #DataBrilliant podcast to discuss the trends that'll set the pace for 2023 ➡️ <a href="https://t.co/RKh4lvfCyZ">https://t.co/RKh4lvfCyZ</a> <a href="https://t.co/9ZMd57dFXC">https://t.co/9ZMd57dFXC</a></p>
  <h3 date='Posted on: 2022-12-07; at: 16:01'>Posted on: 2022-12-07; at: 16:01</h3>
@@ -2271,7 +2484,46 @@ Tune into the latest #DataBrilliant podcast to hear Venturi Racing’s former CE
 Here are some key lessons from @JulieKae's conversation with @JCGanter on how data can drive necessary change. 
 
 #QlikImpact <a href="https://t.co/jKH8puaMA9">https://t.co/jKH8puaMA9</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user60'>Rivery</h2><br><a href='https://rivery.io'>Official website</a><br><a href='https://twitter.com/RiveryData'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user70'>Retool</h2><br><a href='https://retool.com'>Official website</a><br><a href='https://twitter.com/retool'>Twitter profile</a>
+ <h3 date='Posted on: 2022-12-20; at: 17:49'>Posted on: 2022-12-20; at: 17:49</h3>
+  <p>There’s a lot more that’s new and coming to Retool! 
+
+To stay up to date on new products and features, follow our changelog (<a href="https://t.co/62UDhLL9QZ)">https://t.co/62UDhLL9QZ)</a> and blog (<a href="https://t.co/46Y9aI3ytq)">https://t.co/46Y9aI3ytq)</a></p>
+ <h3 date='Posted on: 2022-12-14; at: 22:16'>Posted on: 2022-12-14; at: 22:16</h3>
+  <p>Our new Command Palette helps you both find content and take action in one unified surface. Check out our design blog post to learn more about why and how our Command Palette works: 
+<a href="https://t.co/UwdaHln5Ux">https://t.co/UwdaHln5Ux</a></p>
+ <h3 date='Posted on: 2022-12-14; at: 17:20'>Posted on: 2022-12-14; at: 17:20</h3>
+  <p>Learn more about the Command Palette including the over 90 actions that you can take to build faster in our blog post: 
+<a href="https://t.co/oVfK2EFRKL">https://t.co/oVfK2EFRKL</a></p>
+ <h3 date='Posted on: 2022-12-07; at: 17:43'>Posted on: 2022-12-07; at: 17:43</h3>
+  <p>Today is the first day of the 12 Days of Retool! Every working day between today and December 22nd, visit the Retool blog for a new technical tutorial.
+
+On the first day of Retool, we'd like to share with you - a parser for an abstract syntax tree 🎄 <a href="https://t.co/S8HuOzW7Ny">https://t.co/S8HuOzW7Ny</a></p>
+ <h3 date='Posted on: 2022-12-07; at: 12:23'>Posted on: 2022-12-07; at: 12:23</h3>
+  <p>Retool’s new sidebar frame unlocks a vertical navigation and new layouts that can make complex interfaces more intuitive to use. Read more in @mayaqgao's latest product blog: <a href="https://t.co/jGfJSWLJiL">https://t.co/jGfJSWLJiL</a> <a href="https://t.co/dji5HiqVMb">https://t.co/dji5HiqVMb</a></p>
+ <h3 date='Posted on: 2022-11-22; at: 18:00'>Posted on: 2022-11-22; at: 18:00</h3>
+  <p>Highlights and full transcript on the Retool blog: 
+<a href="https://t.co/O8aIv7umKp">https://t.co/O8aIv7umKp</a>
+
+Full session on YouTube: <a href="https://t.co/urh98KORxW">https://t.co/urh98KORxW</a></p>
+ <h3 date='Posted on: 2022-10-19; at: 19:50'>Posted on: 2022-10-19; at: 19:50</h3>
+  <p>Make Retool apps that make calls; @EvanPWeiss shows how in this guest tutorial on the @twilio blog. 
+
+@retool               @twilio
+
+                   🤝
+
+✨✨✨✨✨✨✨✨
+<a href="https://t.co/8L79J6n4kG">https://t.co/8L79J6n4kG</a></p>
+ <h3 date='Posted on: 2022-09-16; at: 17:59'>Posted on: 2022-09-16; at: 17:59</h3>
+  <p>Retool sales leader Eleanor Dorfman recently spoke to @HarryStebbings on the @twentyminutevc podcast about startup sales: getting into it, building &amp; scaling a team, and much, much more.  
+
+📡⤳🎧
+Apple: 
+<a href="https://t.co/7CllxpFMOs">https://t.co/7CllxpFMOs</a>
+
+Spotify: <a href="https://t.co/g54OCoyfD0">https://t.co/g54OCoyfD0</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user71'>Rivery</h2><br><a href='https://rivery.io'>Official website</a><br><a href='https://twitter.com/RiveryData'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-22; at: 13:14'>Posted on: 2023-01-22; at: 13:14</h3>
   <p>We know that a lot of you are curious to hear about the rise of the data industry. Get the scoop from our very own Taylor McGrath on the @SheCanCodeHQ’s ‘Spilling the T’ podcast!
 
@@ -2287,7 +2539,82 @@ For Taylor's take on the advancement of the data industry, listen here 🎧 &gt;
 AND— make sure to follow our twitter list to see what they're up to! &gt;&gt; <a href="https://t.co/KnFBo8im3t">https://t.co/KnFBo8im3t</a></p>
  <h3 date='Posted on: 2023-01-04; at: 14:22'>Posted on: 2023-01-04; at: 14:22</h3>
   <p>2⃣0⃣ Mehdi Ouazza, @mehd_io, a data engineer pro, leading social influencer, blogger, content creator and consultant.</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user61'>Scylla DB</h2><br><a href='https://scylladb.com'>Official website</a><br><a href='https://twitter.com/ScyllaDB'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2023-01-30; at: 16:32'>Posted on: 2023-01-30; at: 16:32</h3>
+  <p>The data and analytics workflow plays a major role in #SAPBTP. 
+
+In this blog, @IvervandeZand outlines SAP's strategy for becoming a data-driven enterprise. Don't miss it: <a href="https://t.co/2pBnieWNa8">https://t.co/2pBnieWNa8</a> <a href="https://t.co/Vw6B0Tx9Kv">https://t.co/Vw6B0Tx9Kv</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2023-01-23; at: 14:00'>Posted on: 2023-01-23; at: 14:00</h3>
+  <p>NTT Data was able to develop personalized education with #SAPInnovation, resulting in the improved lives of children! We talk about their story, AI and child education in our latest podcast. 
+
+Listen now: <a href="https://t.co/Yv1e8oxmC3">https://t.co/Yv1e8oxmC3</a> <a href="https://t.co/1NLZ7TR25k">https://t.co/1NLZ7TR25k</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2022-09-21; at: 19:00'>Posted on: 2022-09-21; at: 19:00</h3>
+  <p>Looking to align business goals with your data and analytics?
+
+Read this blog for best practices, tips, and resources. 👉<a href="https://t.co/p6ySRDe5Hx">https://t.co/p6ySRDe5Hx</a> <a href="https://t.co/mgNxw9cVHJ">https://t.co/mgNxw9cVHJ</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2022-09-13; at: 16:33'>Posted on: 2022-09-13; at: 16:33</h3>
+  <p>.@ingentisgmbh has revolutionized organizational charting and HR data visualization using #SAPBTP to create the #SAPEndorsedApp, Ingentis org.manager. 
+
+Read the blog by SAP's @CamillaDahlen ➡️ <a href="https://t.co/UkxaM5XcL1">https://t.co/UkxaM5XcL1</a> <a href="https://t.co/qUVYKDEsCQ">https://t.co/qUVYKDEsCQ</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2022-07-23; at: 17:00'>Posted on: 2022-07-23; at: 17:00</h3>
+  <p>Find out how @tarongazoo is leveraging analytics to streamline their data, save time, and allocate more funds towards wildlife conservation 🌏
+
+Read more in the @SAP BTP #BetterTogetherStories blog: <a href="https://t.co/7fKcYkI5Aa">https://t.co/7fKcYkI5Aa</a> <a href="https://t.co/wZ8eeChDhH">https://t.co/wZ8eeChDhH</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2022-07-15; at: 23:00'>Posted on: 2022-07-15; at: 23:00</h3>
+  <p>Did you know the future of energy is a 2-way street? ↔️ 
+
+Find out more @timoelliott's latest @SAP BTP #BetterTogetherStories blog, where he shares key takeaways from his conversation with @centricaplc. 
+
+<a href="https://t.co/WR9QsvFziv">https://t.co/WR9QsvFziv</a> <a href="https://t.co/5lU728BpGz">https://t.co/5lU728BpGz</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2022-07-02; at: 20:00'>Posted on: 2022-07-02; at: 20:00</h3>
+  <p>Tune into the @SAP BTP #BetterTogetherStories podcast with Helen Mallet of @BritishGas and Serdar Simsekler of @centricaplc. 
+
+Find out why the future of clean energy will be driven by digital solutions 🌲💻  <a href="https://t.co/096JrbVxa9">https://t.co/096JrbVxa9</a> <a href="https://t.co/PbkiVtPJp1">https://t.co/PbkiVtPJp1</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2022-06-28; at: 23:00'>Posted on: 2022-06-28; at: 23:00</h3>
+  <p>@centricaplc's Serdar Simsekler &amp; @BritishGas' Helen Mallett sit down with @timoelliott on the all-new @SAP BTP #BetterTogetherStories podcast to discuss the future of clean energy.⚡
+
+🎧 Tune in:<a href="https://t.co/byejkfRxEN">https://t.co/byejkfRxEN</a> <a href="https://t.co/63zKHx5b55">https://t.co/63zKHx5b55</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2022-06-17; at: 23:00'>Posted on: 2022-06-17; at: 23:00</h3>
+  <p>How did @SAP BTP help Schnellecke Logistics increase: 
+
+✅ efficient processes
+✅ informed decisions
+✅ proactive actions
+
+Read @timoelliott's #BetterTogetherStories blog to find out: <a href="https://t.co/vrWZvg8o0Z">https://t.co/vrWZvg8o0Z</a> <a href="https://t.co/AsB6zhgA2E">https://t.co/AsB6zhgA2E</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2022-06-12; at: 19:00'>Posted on: 2022-06-12; at: 19:00</h3>
+  <p>Want to stay up-to-date on all things #SAPBTP? 🎙 Let’s Talk Data, with a special #podcast series of real-world stories straight from #SAPPartners.
+
+Listen and learn how the platform helps companies and their customers stay connected: <a href="https://t.co/NxRnS4cETJ">https://t.co/NxRnS4cETJ</a> <a href="https://t.co/YW5yRQ1e1z">https://t.co/YW5yRQ1e1z</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2022-06-10; at: 23:00'>Posted on: 2022-06-10; at: 23:00</h3>
+  <p>🤔 Curious about supply chain digital control towers? 
+
+Tune into the @SAP BTP #BetterTogetherStories podcast with Schnellecke Logistics' Karsten Keil to learn more: <a href="https://t.co/9i07PNka1b">https://t.co/9i07PNka1b</a> <a href="https://t.co/SBTzuDlDzG">https://t.co/SBTzuDlDzG</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2022-06-04; at: 02:00'>Posted on: 2022-06-04; at: 02:00</h3>
+  <p>📈 🙌 Karsten Keil joins @TamaraMcCleary to explore how Schnellecke Logistics puts data in the hands of their employees with their digital control tower. 
+
+Find out more in the @SAP BTP #BetterTogetherStories podcast: <a href="https://t.co/NiRdXrkkoG">https://t.co/NiRdXrkkoG</a> <a href="https://t.co/q9lHo8nolA">https://t.co/q9lHo8nolA</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user72'>nan</h2><br><a href='nan'>Official website</a><br><a href='nan'>Twitter profile</a>
+ <h3 date='Posted on: 2022-05-18; at: 02:00'>Posted on: 2022-05-18; at: 02:00</h3>
+  <p>@Royal_Greenland is leveraging @SAP BTP to: 
+
+💪 strengthen supplier loyalty
+🎯 optimize internal processes
+📈 increase data transparency
+
+Find out how in the #BetterTogetherStories podcast: <a href="https://t.co/i6VcJDRiIm">https://t.co/i6VcJDRiIm</a> <a href="https://t.co/l1v8I6sz5C">https://t.co/l1v8I6sz5C</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user73'>Scylla DB</h2><br><a href='https://scylladb.com'>Official website</a><br><a href='https://twitter.com/ScyllaDB'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-27; at: 16:04'>Posted on: 2023-01-27; at: 16:04</h3>
   <p>📖 Your Weekend Read: In his latest blog, Guy Shtub shares a thorough tutorial on using the #ScyllaDB CDC source connector to push the row-level change events in the tables of a ScyllaDB cluster to a #Kafka server. Let us know your thoughts. <a href="https://t.co/MErDUlAWhc">https://t.co/MErDUlAWhc</a>
 
@@ -2312,7 +2639,7 @@ AND— make sure to follow our twitter list to see what they're up to! &gt;&gt; 
   <p>Users, open source contributors, engineers, and anyone who added to forum discussions, we're grateful for your thoughtfulness and eagerness to challenge the status quo. Here are our most popular #NoSQL blogs to prepare you for 2023. <a href="https://t.co/HOPqTS24zR">https://t.co/HOPqTS24zR</a>
 
 #ScyllaDB <a href="https://t.co/xGm0tXlFtI">https://t.co/xGm0tXlFtI</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user62'>Skyvia</h2><br><a href='https://skyvia.com'>Official website</a><br><a href='https://twitter.com/SkyviaService'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user74'>Skyvia</h2><br><a href='https://skyvia.com'>Official website</a><br><a href='https://twitter.com/SkyviaService'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-03; at: 14:47'>Posted on: 2023-01-03; at: 14:47</h3>
   <p>Let's start 2023 with #Snowflake and #AmazonS3 connection guide! In our recent blog post we discuss why people choose them, highlight their benefits, and review their native connectivity options and possible alternatives.
 Read now: <a href="https://t.co/YArZscnK6C">https://t.co/YArZscnK6C</a>
@@ -2476,7 +2803,25 @@ Find out at our partner blog @PeriscopeData!
 
 Find the answer on the @SEIBERTMEDIAeng blog
 <a href="https://t.co/iA5hmr6TCY">https://t.co/iA5hmr6TCY</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user63'>Snowflake</h2><br><a href='https://snowflake.com'>Official website</a><br><a href='https://twitter.com/SnowflakeDB'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user75'>Sisense</h2><br><a href='https://sisense.com'>Official website</a><br><a href='https://twitter.com/Sisense'>Twitter profile</a>
+ <h3 date='Posted on: 2022-02-11; at: 20:15'>Posted on: 2022-02-11; at: 20:15</h3>
+  <p>Learn how to optimize your Snowflake querying techniques and improve users' dashboard experience in this new blog from Sisense Community BETA.
+#AnalyticsEverywhere
+<a href="https://t.co/GdaRwwLo7Q">https://t.co/GdaRwwLo7Q</a> <a href="https://t.co/l4SrvlNhia">https://t.co/l4SrvlNhia</a></p>
+ <h3 date='Posted on: 2022-02-02; at: 22:52'>Posted on: 2022-02-02; at: 22:52</h3>
+  <p>New blog from @kdnuggets on the typical career trajectory of #data science professionals. 
+#AnalyticsEverywhere
+<a href="https://t.co/X9eo4bChTR">https://t.co/X9eo4bChTR</a></p>
+ <h3 date='Posted on: 2022-01-28; at: 20:43'>Posted on: 2022-01-28; at: 20:43</h3>
+  <p>New Sisense blog with infographic: 
+Are you considering whether to build or buy an analytics application?
+
+Here are three questions to help guide you to the right decision:
+
+<a href="https://t.co/Of5nVcVwEM">https://t.co/Of5nVcVwEM</a>
+
+#AnalyticsEverywhere</p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user76'>Snowflake</h2><br><a href='https://snowflake.com'>Official website</a><br><a href='https://twitter.com/SnowflakeDB'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-30; at: 19:12'>Posted on: 2023-01-30; at: 19:12</h3>
   <p>Without question, the new year will definitely bring with it more growth, innovation, and digital transformation—all driven by data. 
 
@@ -2509,7 +2854,38 @@ Today’s blog post breaks down all the obstacles and opportunities to look out 
   <p>Modernizing your security operations center sounds great—but how do you get there? 
 
 Get a closer look at how SOC modernization impacts a business and tips on justifying an investment in the latest #PoweredbySnowflake blog post by @WeAreAnvilogic <a href="https://t.co/k4do5msUJO">https://t.co/k4do5msUJO</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user64'>SQL Server</h2><br><a href='https://microsoft.com/en-us/sql-server'>Official website</a><br><a href='https://twitter.com/SQLServer'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user77'>Spotify Engineer</h2><br><a href='https://engineering.atspotify.com'>Official website</a><br><a href='https://twitter.com/SpotifyEng'>Twitter profile</a>
+ <h3 date='Posted on: 2022-10-25; at: 18:05'>Posted on: 2022-10-25; at: 18:05</h3>
+  <p>More from @spamaps and incidents on the @Spotify Engineering Blog: <a href="https://t.co/vfZhdFU1D6">https://t.co/vfZhdFU1D6</a> <a href="https://t.co/1tbHEnUjyb">https://t.co/1tbHEnUjyb</a></p>
+ <h3 date='Posted on: 2022-09-29; at: 14:58'>Posted on: 2022-09-29; at: 14:58</h3>
+  <p>Create a web performance story in 3 easy (okay, easy-ish🙈) steps courtesy of @WebTwitr! Check it out on the @Spotify Engineering Blog: <a href="https://t.co/LK4oGFkVWP">https://t.co/LK4oGFkVWP</a> <a href="https://t.co/WyBuNLwXw9">https://t.co/WyBuNLwXw9</a></p>
+ <h3 date='Posted on: 2022-09-19; at: 13:14'>Posted on: 2022-09-19; at: 13:14</h3>
+  <p>Through our "Scaling Translations" effort, the teams at @Spotify were able to support 36 new languages in 6 months. @tommysdk and @martinoprada reveal the ins and outs of this work in our latest Engineering blog post: <a href="https://t.co/X663fxhbyZ">https://t.co/X663fxhbyZ</a> <a href="https://t.co/dSF1FmzGMB">https://t.co/dSF1FmzGMB</a></p>
+ <h3 date='Posted on: 2022-06-22; at: 13:24'>Posted on: 2022-06-22; at: 13:24</h3>
+  <p>To find out when the NerdOut@Spotify episode feat. Kelsey drops, follow us on Spotify (or wherever you get your podcasts😉): <a href="https://t.co/u4UF5U1aVH">https://t.co/u4UF5U1aVH</a> And check out our episode on <a href="https://t.co/5thD7v6GHc">https://t.co/5thD7v6GHc</a> and Pedalboard #opensource while you’re there! <a href="https://t.co/wQjJpnVzTQ">https://t.co/wQjJpnVzTQ</a></p>
+ <h3 date='Posted on: 2022-05-02; at: 17:52'>Posted on: 2022-05-02; at: 17:52</h3>
+  <p>Need a convenient solution to recording and sharing live podcasts or audio streams? @Spotify Live is here for you. <a href="https://t.co/N2RFsLG4lv">https://t.co/N2RFsLG4lv</a> <a href="https://t.co/djCKXEz7SB">https://t.co/djCKXEz7SB</a></p>
+ <h3 date='Posted on: 2022-04-28; at: 16:55'>Posted on: 2022-04-28; at: 16:55</h3>
+  <p>Ever wonder what a programming demo would sound like on a podcast? Wonder no more. Learn more about Pedalboard, #opensource, and #machinelearning on the new episode of NerdOut@Spotify. 🎧
+<a href="https://t.co/TvnxZQPrkr">https://t.co/TvnxZQPrkr</a></p>
+ <h3 date='Posted on: 2022-03-30; at: 14:52'>Posted on: 2022-03-30; at: 14:52</h3>
+  <p>Yep! Next episode is on coding puzzle competitions 🧩. And next month, we’ll start a new miniseries, this time on machine learning at Spotify🤖. 
+
+So make sure to follow the podcast. Thanks for listening! <a href="https://t.co/oSydX5rsJb">https://t.co/oSydX5rsJb</a> <a href="https://t.co/PjA2WdXXQq">https://t.co/PjA2WdXXQq</a></p>
+ <h3 date='Posted on: 2022-03-17; at: 14:09'>Posted on: 2022-03-17; at: 14:09</h3>
+  <p>Here’s the problem: you want to search for a podcast, but you can’t remember the name, only what it’s about.😖 Here comes Natural Search 🔍 to save the day! 
+<a href="https://t.co/rBT5mPZbcA">https://t.co/rBT5mPZbcA</a> <a href="https://t.co/40CPpKwPWG">https://t.co/40CPpKwPWG</a></p>
+ <h3 date='Posted on: 2022-03-11; at: 16:12'>Posted on: 2022-03-11; at: 16:12</h3>
+  <p>Curious about what went down at Spotify on March 8? Take a look at our latest blog post for more details: <a href="https://t.co/Ydl4yM1n3f">https://t.co/Ydl4yM1n3f</a></p>
+ <h3 date='Posted on: 2022-03-07; at: 15:13'>Posted on: 2022-03-07; at: 15:13</h3>
+  <p>Hey, nerds! We have a new podcast called NerdOut@Spotify — produced by the nerds in Spotify R&amp;D, made for the nerd inside all of us. <a href="https://t.co/PWVJdJ7Hee">https://t.co/PWVJdJ7Hee</a> <a href="https://t.co/Luz2Hb2Gex">https://t.co/Luz2Hb2Gex</a></p>
+ <h3 date='Posted on: 2021-11-16; at: 14:18'>Posted on: 2021-11-16; at: 14:18</h3>
+  <p>A 70% decrease in clean build times 🤯. That’s what XCRemoteCache does for our iOS projects — and it’s what it can do for yours too. 
+
+Learn more about it on our blog: <a href="https://t.co/AanLxw1gsE">https://t.co/AanLxw1gsE</a>
+
+#opensource <a href="https://t.co/ljBqw2hqHJ">https://t.co/ljBqw2hqHJ</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user78'>SQL Server</h2><br><a href='https://microsoft.com/en-us/sql-server'>Official website</a><br><a href='https://twitter.com/SQLServer'>Twitter profile</a>
  <h3 date='Posted on: 2022-11-23; at: 17:00'>Posted on: 2022-11-23; at: 17:00</h3>
   <p>Customers running their SQL Server workloads using SQL Server on Azure Virtual Machines and Azure SQL Managed Instance are now eligible for high availability and disaster recovery benefits. 
 
@@ -2544,7 +2920,38 @@ Read more on the blog: <a href="https://t.co/iyJBZpCtjd">https://t.co/iyJBZpCtjd
 From product insights to best practices, you'll learn about SQL Server 2022 directly from the engineering team that built it.
 
 Read more about the subtopics this series will cover: <a href="https://t.co/A0FgFDgiuX">https://t.co/A0FgFDgiuX</a> #AzureSQL <a href="https://t.co/wZ8EdPPgkj">https://t.co/wZ8EdPPgkj</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user65'>Supermetrics</h2><br><a href='https://supermetrics.com'>Official website</a><br><a href='https://twitter.com/Supermetrics'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user79'>Stitch</h2><br><a href='https://stitchdata.com'>Official website</a><br><a href='https://twitter.com/stitch_data'>Twitter profile</a>
+ <h3 date='Posted on: 2020-05-20; at: 21:09'>Posted on: 2020-05-20; at: 21:09</h3>
+  <p>#Data, data everywhere, but who’s got time to think? Hear from our own @frasermarlow and speakers from @Ayasdi and @YobsTech on the democratization of data on @DMRadioOnline, hosted by @thebloorgroup's @eric_kavanagh.
+Listen at <a href="https://t.co/hvonmn9VRX">https://t.co/hvonmn9VRX</a>
+#podcast #dataintegration <a href="https://t.co/J4sZKEq6QH">https://t.co/J4sZKEq6QH</a></p>
+ <h3 date='Posted on: 2020-02-26; at: 17:02'>Posted on: 2020-02-26; at: 17:02</h3>
+  <p>"From April 2018 to May 2019 I was the manager of the Data team for GitLab. While I was Data team manager, GitLab grew in size by ~300%." Lessons learned managing the GitLab Data team — interesting blog post by @tayloramurphy <a href="https://t.co/M0a4iDBGlH">https://t.co/M0a4iDBGlH</a> <a href="https://t.co/Q9bePtHHHl">https://t.co/Q9bePtHHHl</a></p>
+ <h3 date='Posted on: 2020-02-11; at: 22:04'>Posted on: 2020-02-11; at: 22:04</h3>
+  <p>Application integration and data integration are both approaches organizations can take to make use of data from different systems, but they meet different needs. Learn when to use one vs. the other in our latest blog post. <a href="https://t.co/pUZdZLq1DS">https://t.co/pUZdZLq1DS</a> <a href="https://t.co/TSfZwteNYS">https://t.co/TSfZwteNYS</a></p>
+ <h3 date='Posted on: 2020-02-03; at: 17:02'>Posted on: 2020-02-03; at: 17:02</h3>
+  <p>Data analysts and data engineers who learned their trades in the era of OLAP cubes need to adjust their thinking in light of cloud-native data warehouses, according to an excellent @holistics_bi blog post <a href="https://t.co/SkXTHQKeHh">https://t.co/SkXTHQKeHh</a> <a href="https://t.co/RvERq4RORQ">https://t.co/RvERq4RORQ</a></p>
+ <h3 date='Posted on: 2020-01-21; at: 22:04'>Posted on: 2020-01-21; at: 22:04</h3>
+  <p>We've updated our "Top conferences for data professionals" blog post to reflect newly announced dates for Digital Analytics Hub, which will be held in Berlin in June <a href="https://t.co/5pOlEKjxpU">https://t.co/5pOlEKjxpU</a> <a href="https://t.co/oKQHZhQSNU">https://t.co/oKQHZhQSNU</a></p>
+ <h3 date='Posted on: 2019-12-18; at: 17:02'>Posted on: 2019-12-18; at: 17:02</h3>
+  <p>This week's Stitch blog post is a sign of the App-ocalypse <a href="https://t.co/WDiZQq0YhP">https://t.co/WDiZQq0YhP</a> Data-driven organizations are struggling to create a unified picture from disparate systems. Stitch can help. <a href="https://t.co/K76xpQJ6zw">https://t.co/K76xpQJ6zw</a></p>
+ <h3 date='Posted on: 2019-11-04; at: 17:02'>Posted on: 2019-11-04; at: 17:02</h3>
+  <p>Check out this interesting post on the @gitlab blog by @emilieschario on assessing the maturity of an organization's data analytics team <a href="https://t.co/Mex809cL3i">https://t.co/Mex809cL3i</a> #DataAnalytics <a href="https://t.co/yY4geRDHDX">https://t.co/yY4geRDHDX</a></p>
+ <h3 date='Posted on: 2019-10-18; at: 21:04'>Posted on: 2019-10-18; at: 21:04</h3>
+  <p>From the Stitch blog: our thoughts on SaaS pricing and doing the right thing for our customers <a href="https://t.co/rOt7ahy84i">https://t.co/rOt7ahy84i</a> <a href="https://t.co/kha2mxVYNR">https://t.co/kha2mxVYNR</a></p>
+ <h3 date='Posted on: 2019-10-16; at: 13:02'>Posted on: 2019-10-16; at: 13:02</h3>
+  <p>New blog post: You have alternatives when selecting a data ingestion platform, so we try to make it easy for you to choose Stitch — and to stay with us once you've made that choice. <a href="https://t.co/OZ8BUkZF6Q">https://t.co/OZ8BUkZF6Q</a> <a href="https://t.co/2UosP1K6k0">https://t.co/2UosP1K6k0</a></p>
+ <h3 date='Posted on: 2019-10-15; at: 16:02'>Posted on: 2019-10-15; at: 16:02</h3>
+  <p>New on the Stitch blog: our thoughts on SaaS pricing and doing the right thing for our customers <a href="https://t.co/rOt7ahy84i">https://t.co/rOt7ahy84i</a> <a href="https://t.co/Lf4DiWcJeE">https://t.co/Lf4DiWcJeE</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user80'>Streamlit</h2><br><a href='https://streamlit.io'>Official website</a><br><a href='https://twitter.com/streamlit'>Twitter profile</a>
+ <h3 date='Posted on: 2023-01-26; at: 19:23'>Posted on: 2023-01-26; at: 19:23</h3>
+  <p>Check out the winning entries below:
+
+📖 Lisa's blog post: <a href="https://t.co/DMqMUENVLC">https://t.co/DMqMUENVLC</a>
+📖 Andy's blog post: <a href="https://t.co/epMYDCnMTL">https://t.co/epMYDCnMTL</a>
+📖 Vinícius's blog post: <a href="https://t.co/n5YTs14amt">https://t.co/n5YTs14amt</a>
+📺 Hansen's video: <a href="https://t.co/eu87RcHaq3">https://t.co/eu87RcHaq3</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user81'>Supermetrics</h2><br><a href='https://supermetrics.com'>Official website</a><br><a href='https://twitter.com/Supermetrics'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-23; at: 06:41'>Posted on: 2023-01-23; at: 06:41</h3>
   <p>Running marketing campaigns across multiple platforms and channels? You're going to love this one: marketing data integration! 🤓 
 
@@ -2744,12 +3151,12 @@ Head to our blog for 'The ultimate guide to CRO' 🔗 <a href="https://t.co/AdmC
 On our blog, you'll find the full breakdown of key differences between these two. Which one's right for you?  
 
 Find out here! 🔗 <a href="https://t.co/Af3VHtFIjS">https://t.co/Af3VHtFIjS</a> <a href="https://t.co/e9jCChrgLB">https://t.co/e9jCChrgLB</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user66'>Tableau</h2><br><a href='https://tableau.com'>Official website</a><br><a href='https://twitter.com/tableau'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user82'>Tableau</h2><br><a href='https://tableau.com'>Official website</a><br><a href='https://twitter.com/tableau'>Twitter profile</a>
  <h3 date='Posted on: 2022-12-15; at: 17:41'>Posted on: 2022-12-15; at: 17:41</h3>
   <p>Congratulations to the 2023 #IronViz finalists—we can't wait to cheer you on with the #DataFam at the global championship! 🏆
 
 Head to the blog to get inspired by the top 15 Iron Viz Qualifier visualizations. <a href="https://t.co/YJ5LsQHkuy">https://t.co/YJ5LsQHkuy</a> <a href="https://t.co/wWnaz5dzmM">https://t.co/wWnaz5dzmM</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user67'>Talend</h2><br><a href='https://talend.com'>Official website</a><br><a href='https://twitter.com/Talend'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user83'>Talend</h2><br><a href='https://talend.com'>Official website</a><br><a href='https://twitter.com/Talend'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-24; at: 18:35'>Posted on: 2023-01-24; at: 18:35</h3>
   <p>🎸 2023 is off to a rockin' start for our sales team, partners, and customers who care about modern data management that drives real value! <a href="https://t.co/1JjVsur4dZ">https://t.co/1JjVsur4dZ</a> #TalendEngage #TogetherWeRock! #blog</p>
  <h3 date='Posted on: 2023-01-20; at: 17:54'>Posted on: 2023-01-20; at: 17:54</h3>
@@ -2782,7 +3189,7 @@ Head to the blog to get inspired by the top 15 Iron Viz Qualifier visualizations
   <p>Yes, data analytics really CAN change the world. Catch @FICO Chief Analytics Officer @ScottZoldi explain the value of making things better through science and collaboration. 🎧 <a href="https://t.co/avWwvDUkIN">https://t.co/avWwvDUkIN</a> #TruthBeKnown #podcast <a href="https://t.co/rf30xlSLfw">https://t.co/rf30xlSLfw</a></p>
  <h3 date='Posted on: 2022-07-29; at: 23:40'>Posted on: 2022-07-29; at: 23:40</h3>
   <p>🎧 With great power comes great responsibility — especially when it comes to AI. @FICO Chief Analytics Officer @ScottZoldi breaks down how things can go wrong in a new episode of #TruthBeKnown: <a href="https://t.co/avWwvDUkIN">https://t.co/avWwvDUkIN</a> #podcast <a href="https://t.co/QUAtmIP4gz">https://t.co/QUAtmIP4gz</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user68'>Teradata</h2><br><a href='https://teradata.com'>Official website</a><br><a href='https://twitter.com/Teradata'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user84'>Teradata</h2><br><a href='https://teradata.com'>Official website</a><br><a href='https://twitter.com/Teradata'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-24; at: 04:00'>Posted on: 2023-01-24; at: 04:00</h3>
   <p>Is your business ready to move towards a fully digitised #supplychain? 
 To explore how Teradata’s modern #dataanalytics can help your enterprise achieve it, read our latest blog post: <a href="https://t.co/f1WWxeHo57">https://t.co/f1WWxeHo57</a> <a href="https://t.co/hISVIi3mel">https://t.co/hISVIi3mel</a></p>
@@ -2843,7 +3250,7 @@ Craig Kurtzweil of @UHC talks Teradata #Vantage and its benefits for improved qu
   <p>Teradata CEO Steve McMillan (@smcm_pro) joins the stage to talk about how Teradata empowers its customers to use #data and #analytics, to transform not just their businesses, but entire industries. More on the blog: <a href="https://t.co/lDmRPlOZhG">https://t.co/lDmRPlOZhG</a>
 
 #RethinkPossible <a href="https://t.co/5exEYvo6z7">https://t.co/5exEYvo6z7</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user69'>Cube.dev</h2><br><a href='https://cube.dev'>Official website</a><br><a href='https://twitter.com/thecubejs.dev'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user85'>Cube.dev</h2><br><a href='https://cube.dev'>Official website</a><br><a href='https://twitter.com/thecubejs.dev'>Twitter profile</a>
  <h3 date='Posted on: 2022-11-08; at: 19:34'>Posted on: 2022-11-08; at: 19:34</h3>
   <p>Trino @trinodb, an open-source, fast, and distributed query engine for big data now works with Cube 🎉
 
@@ -2888,7 +3295,20 @@ See how Observable @observablehq, a wonderful JavaScript-native data notebook, w
   <p>In the footsteps of our SQL API launch comes the first Cube-BI tool tutorial: Tableau! This blog outlines exactly how easy it is to power Tableau Online with Cube—for the sake of consistent, secure, and performant data across your BI efforts.
 
 <a href="https://t.co/OO63rh2YUL">https://t.co/OO63rh2YUL</a> <a href="https://t.co/2VcA469brW">https://t.co/2VcA469brW</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user70'>Thoughtspot</h2><br><a href='https://thoughtspot.com'>Official website</a><br><a href='https://twitter.com/thoughtspot'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user86'>Tibco</h2><br><a href='https://tibco.com'>Official website</a><br><a href='ttps://twitter.com/TIBCO'>Twitter profile</a>
+ <h3 date='Posted on: 2022-11-14; at: 15:00'>Posted on: 2022-11-14; at: 15:00</h3>
+  <p>Machine learning is a technical discipline, and it ultimately need to serve enterprises. 
+
+Since scaling data-driven automation and discovery, this blog by @loriaustex lays out 3 common use cases that will help how ML can help or harm your business. 
+
+<a href="https://t.co/aiLdW3O7Gw">https://t.co/aiLdW3O7Gw</a> <a href="https://t.co/HNMF0lHu3p">https://t.co/HNMF0lHu3p</a></p>
+ <h3 date='Posted on: 2022-11-07; at: 15:00'>Posted on: 2022-11-07; at: 15:00</h3>
+  <p>Despite the most robust data management solutions, you cannot effectively extract all the value locked away in your data without organization-wide data literacy.
+
+Time to close that data value gap with data literacy support in our blog.
+
+<a href="https://t.co/RavXP9na5X">https://t.co/RavXP9na5X</a> <a href="https://t.co/Y7huh99jwO">https://t.co/Y7huh99jwO</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user87'>Thoughtspot</h2><br><a href='https://thoughtspot.com'>Official website</a><br><a href='https://twitter.com/thoughtspot'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-11; at: 20:50'>Posted on: 2023-01-11; at: 20:50</h3>
   <p>Catch up with @BIscorecard as she reflects on #TheDataChief’s top hits for 2022— #podcast edition. 
 
@@ -2901,7 +3321,7 @@ Thank you to all of our guests and listeners who made season 3 a success!  <a h
 💪 How business analytics leadership can solve the major problems of our time
 
 @BIScorecard discusses these topics and more on the latest episode of @EM360Tech Podcast <a href="https://t.co/fxlHjVAJuP">https://t.co/fxlHjVAJuP</a></p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user71'>Trino DB</h2><br><a href='https://trino.io'>Official website</a><br><a href='https://twitter.com/trinodb'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user88'>Trino DB</h2><br><a href='https://trino.io'>Official website</a><br><a href='https://twitter.com/trinodb'>Twitter profile</a>
  <h3 date='Posted on: 2023-01-09; at: 22:12'>Posted on: 2023-01-09; at: 22:12</h3>
   <p>Ever wondered how an open source project manages code contributions coming in from so many places? See our latest blog on how we've cleaned up the Trino pull request backlog, making the project a better place to contribute.
 
@@ -2974,7 +3394,566 @@ As Victor mentions the use of these tools are not mutually exclusive but a, “M
 🔗: <a href="https://t.co/noE1naGIfs">https://t.co/noE1naGIfs</a>
 
 #presto #prestosql</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user72'>Y42.com</h2><br><a href='https://y42.com'>Official website</a><br><a href='https://twitter.com/y42dotcom'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user89'>Twitter Engineer</h2><br><a href='https://blog.twitter.com/engineering/'>Official website</a><br><a href='https://twitter.com/fb_engineering'>Twitter profile</a>
+ <h3 date='Posted on: 2022-10-14; at: 17:51'>Posted on: 2022-10-14; at: 17:51</h3>
+  <p>Stability and Scalability? That's a must for Twitter search! Software engineers @shelbyc0hen and @gifjakes share the ins and outs of how the Search Infrastructure team has built guardrails for operating Twitter's search platform. Read more on the blog. 👇
+
+<a href="https://t.co/srY9nmeNte">https://t.co/srY9nmeNte</a></p>
+ <h3 date='Posted on: 2022-06-29; at: 18:26'>Posted on: 2022-06-29; at: 18:26</h3>
+  <p>.@TwitterDev and our friends at @googlecloud can now help you more easily harness insights from Tweets at scale within minutes via BigQuery.
+
+If you want to know more, check out the Google Cloud blog 👇
+<a href="https://t.co/sQQo3bmw8t">https://t.co/sQQo3bmw8t</a> <a href="https://t.co/P1f75ycxRx">https://t.co/P1f75ycxRx</a></p>
+ <h3 date='Posted on: 2022-06-09; at: 23:48'>Posted on: 2022-06-09; at: 23:48</h3>
+  <p>Conducted in 2021, the study on which the paper is based found that prompted users were 20% less likely to compose five or more Tweets receiving prompts in the future. Head on over to the blog to check out the full findings!</p>
+ <h3 date='Posted on: 2022-06-09; at: 23:48'>Posted on: 2022-06-09; at: 23:48</h3>
+  <p>In the heat of the moment, we've all said things we've wanted to take back. In our latest blog post, based on our #ICWSM22 paper, we examine how real-time prompts can reduce these types of replies, both in the moment and in the longer term. 
+<a href="https://t.co/lo2YB4EH0Y">https://t.co/lo2YB4EH0Y</a></p>
+ <h3 date='Posted on: 2022-05-17; at: 19:51'>Posted on: 2022-05-17; at: 19:51</h3>
+  <p>In our latest blog, we share how we transformed our approach to data processing by migrating an exabyte of data to @googlecloud. To learn more about how this work allowed us to scale data access within Twitter, head on over to the blog.
+
+<a href="https://t.co/rmvvc6Q4Wa">https://t.co/rmvvc6Q4Wa</a></p>
+ <h3 date='Posted on: 2022-05-13; at: 18:14'>Posted on: 2022-05-13; at: 18:14</h3>
+  <p>Achieving large-scale real-time data analytics on Twitter's high volume of data is uniquely challenging. In our latest blog post, @ruchinkabra and @chunxu_tang share how we approached it by evolving Druid as a real-time centralized analytics platform. 
+
+<a href="https://t.co/npMv7NiJZH">https://t.co/npMv7NiJZH</a></p>
+ <h3 date='Posted on: 2022-05-03; at: 16:55'>Posted on: 2022-05-03; at: 16:55</h3>
+  <p>In our latest blog post, we dive into the Wordle craze on Twitter. Check it out to see how Wordle spread across the world, which words were relatively hard and easy, and other cool stats!
+
+<a href="https://t.co/6IlGEj5c5p">https://t.co/6IlGEj5c5p</a></p>
+ <h3 date='Posted on: 2022-03-29; at: 16:07'>Posted on: 2022-03-29; at: 16:07</h3>
+  <p>While most Graph Neural Networks assume a full set of features for all nodes, real-world graphs often have missing node features. On the blog, @emaros96, @migorinova, and @mmbronstein discuss how we can learn on graphs like this using Feature Propagation.
+
+<a href="https://t.co/yZV14DVD8g">https://t.co/yZV14DVD8g</a></p>
+ <h3 date='Posted on: 2022-02-10; at: 21:02'>Posted on: 2022-02-10; at: 21:02</h3>
+  <p>Link to this blog post below! 👇
+<a href="https://t.co/7QeS6YED9A">https://t.co/7QeS6YED9A</a></p>
+ <h3 date='Posted on: 2022-02-10; at: 21:02'>Posted on: 2022-02-10; at: 21:02</h3>
+  <p>On the blog, @hey_vishakha and the Data Insights team share the first version of our next generation data insights platform that enables our internal business customers to get answers to their analytical queries using natural language questions. Powered by @googlecloud &amp; #DataQnA</p>
+ <h3 date='Posted on: 2022-02-04; at: 20:23'>Posted on: 2022-02-04; at: 20:23</h3>
+  <p>New post and open source iOS library is now available over on the blog! <a href="https://t.co/z3fjnrWzSo">https://t.co/z3fjnrWzSo</a></p>
+ <h3 date='Posted on: 2022-01-25; at: 03:01'>Posted on: 2022-01-25; at: 03:01</h3>
+  <p>To learn more about how we’re hiring in Singapore, check out this blog  below!👇
+
+<a href="https://t.co/rV7bYF2cgz">https://t.co/rV7bYF2cgz</a></p>
+ <h3 date='Posted on: 2022-01-18; at: 17:00'>Posted on: 2022-01-18; at: 17:00</h3>
+  <p>Ever wonder how @Twitter decides how many notifications to send? Check out our latest blog post, where @prakharbiyani and @stephen_ragain describe the hybrid ML system we use to personalize the number of notifications we share.
+
+<a href="https://t.co/5nt9Y49kNG">https://t.co/5nt9Y49kNG</a></p>
+ <h3 date='Posted on: 2022-01-11; at: 16:05'>Posted on: 2022-01-11; at: 16:05</h3>
+  <p>In our latest blog, @xiaozhu and the Cortex Experimentation Tools team share how we use and customize Jupyter Notebook for Data Science and Machine Learning at Twitter. To dive in, check out the link below: 
+
+<a href="https://t.co/oG2Cppd1mT">https://t.co/oG2Cppd1mT</a></p>
+ <h3 date='Posted on: 2021-12-17; at: 20:01'>Posted on: 2021-12-17; at: 20:01</h3>
+  <p>Ever wonder how a highly reliable distributed system is designed and built @Twitter? 
+
+In our latest blog post, @Eddiex and @YuanjunYang walk through the challenges and our solutions to make the ads pacing service reliable. Link below!
+
+<a href="https://t.co/Zycw7hhw4D">https://t.co/Zycw7hhw4D</a></p>
+ <h3 date='Posted on: 2021-12-09; at: 18:11'>Posted on: 2021-12-09; at: 18:11</h3>
+  <p>We’re at the @NeurIPSConf! Today, @Francesco_dgv @b_p_chamberlain and @mmbronstein presented on Beltrami Flow and Neural Diffusion on Graphs at the poster session. To learn more, check out our blog post describing the broader scientific context.
+
+<a href="https://t.co/YL9YyIyepm">https://t.co/YL9YyIyepm</a></p>
+ <h3 date='Posted on: 2021-11-16; at: 19:30'>Posted on: 2021-11-16; at: 19:30</h3>
+  <p>If you want to dive deeper, you can also find more about this topic on the blog.
+ 
+<a href="https://t.co/YdfvxectKo">https://t.co/YdfvxectKo</a></p>
+ <h3 date='Posted on: 2021-11-05; at: 16:58'>Posted on: 2021-11-05; at: 16:58</h3>
+  <p>Achieving high scalability and availability when working with increasing volumes of data is a challenging task. In our latest blog post, @chunxu_tang talks about how we approached it through the development and maintenance of SQL systems. Link below! 
+
+<a href="https://t.co/RKnn6Vy7Jl">https://t.co/RKnn6Vy7Jl</a></p>
+ <h3 date='Posted on: 2021-10-27; at: 18:36'>Posted on: 2021-10-27; at: 18:36</h3>
+  <p>And many more! For deeper insights on how Twitter works, browse our engineering blog - <a href="https://t.co/ZSja6PrUXY">https://t.co/ZSja6PrUXY</a> 
+5/5</p>
+ <h3 date='Posted on: 2021-10-27; at: 18:36'>Posted on: 2021-10-27; at: 18:36</h3>
+  <p>Interview pro-tip: To those interviewing for our engineering roles - checkout some of these key blog posts that can help you understand our architecture and prepare for the System Design rounds. 1/5
+
+👇👇</p>
+ <h3 date='Posted on: 2021-10-22; at: 15:14'>Posted on: 2021-10-22; at: 15:14</h3>
+  <p>At Twitter, we process *a lot* of data in real time every day. Doing this with high accuracy and low latency poses interesting challenges. In our latest blog, @zhlu2006 talks about how we process billions of events in real time across one data pipeline.
+
+<a href="https://t.co/EQCkVtCo5r">https://t.co/EQCkVtCo5r</a></p>
+ <h3 date='Posted on: 2021-10-18; at: 19:18'>Posted on: 2021-10-18; at: 19:18</h3>
+  <p>More details on Twitter Data Science work will be introduced in our upcoming Engineering Blog posts.</p>
+ <h3 date='Posted on: 2021-09-07; at: 20:58'>Posted on: 2021-09-07; at: 20:58</h3>
+  <p>In August, we held our first-ever algorithmic bias bounty at #defcon. Today, we’re sharing what we learned and what’s next in our latest post on the Twitter Engineering blog.
+<a href="https://t.co/kpvX4dyZl9">https://t.co/kpvX4dyZl9</a></p>
+ <h3 date='Posted on: 2021-08-13; at: 22:20'>Posted on: 2021-08-13; at: 22:20</h3>
+  <p>.@k8r_io and team have been working with our friends @Splunk to migrate our centralized logging. To hear more about the migration process and some of the technical challenges we overcame, check out our latest blog post.
+
+<a href="https://t.co/78nHxtzbdX">https://t.co/78nHxtzbdX</a></p>
+ <h3 date='Posted on: 2021-08-11; at: 22:37'>Posted on: 2021-08-11; at: 22:37</h3>
+  <p>New blog alert! Read about how @ddelnano and team used @brendangregg’s flame graph visualization to analyze metric usage for our internal time series database. 
+
+<a href="https://t.co/X54b81yQan">https://t.co/X54b81yQan</a></p>
+ <h3 date='Posted on: 2021-07-30; at: 16:04'>Posted on: 2021-07-30; at: 16:04</h3>
+  <p>Calling all bounty hunters - it’s officially go time! We’ve just released the full details of our algorithmic bias bounty challenge which is open through August 6.  For more details on the challenge, head over to our blog 👇 <a href="https://t.co/foXUdMGwRc">https://t.co/foXUdMGwRc</a></p>
+ <h3 date='Posted on: 2021-07-23; at: 22:01'>Posted on: 2021-07-23; at: 22:01</h3>
+  <p>New post alert! We’ve spent this week at the @icmlconf #icml2021 conference and had the chance to talk about a variety of topics, including Graph Neural Diffusion.
+
+See our post on the topic on the Twitter Engineering blog. Link below.👇
+<a href="https://t.co/YL9YyIyepm">https://t.co/YL9YyIyepm</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user90'>Uber Engineer</h2><br><a href='https://uber.com/blog/engineering/data/'>Official website</a><br><a href='https://twitter.com/UberEng'>Twitter profile</a>
+ <h3 date='Posted on: 2023-01-26; at: 17:45'>Posted on: 2023-01-26; at: 17:45</h3>
+  <p>New blog! We recently containerized Hadoop NameNodes and upgraded hardware, improving NameNode RPC queue time from ~200 to ~20ms - A 10x improvement! With this radical change, Uber’s Hadoop customers are happier and admins rest more at night.
+
+read more: <a href="https://t.co/uh7BaPvMno">https://t.co/uh7BaPvMno</a></p>
+ <h3 date='Posted on: 2023-01-19; at: 17:45'>Posted on: 2023-01-19; at: 17:45</h3>
+  <p>Uber heavily relies on open source technologies for the Data analytics stack. In this blog post we dive into technical details behind solutions that helped us scale adoption of Kerberos for the entire Data analytics infrastructure.
+
+read more: <a href="https://t.co/mlzk9TeW7i">https://t.co/mlzk9TeW7i</a>
+
+#OpenSource</p>
+ <h3 date='Posted on: 2023-01-11; at: 18:25'>Posted on: 2023-01-11; at: 18:25</h3>
+  <p>In case you missed it, the New York Times gave our engineering blog and amazing engineers some love over the weekend! Check out what they had to say!
+
+NYT Article link: <a href="https://t.co/bvaQWcIwSp">https://t.co/bvaQWcIwSp</a>
+
+#UberEngineering #UberEng #NewYorkTimes #NYT #EngBlog #EngineeringBlog #LifeatUber <a href="https://t.co/3Iyt9I2W6P">https://t.co/3Iyt9I2W6P</a></p>
+ <h3 date='Posted on: 2022-12-13; at: 17:45'>Posted on: 2022-12-13; at: 17:45</h3>
+  <p>New blog! We share how we improved the daily edit-build-run developer experience using DevPods, Uber’s remote development environment. We cover the challenges, pain points, our architecture, and lastly the future of remote development at Uber.
+
+read more: <a href="https://t.co/9iDuRs54W4">https://t.co/9iDuRs54W4</a></p>
+ <h3 date='Posted on: 2022-11-17; at: 17:45'>Posted on: 2022-11-17; at: 17:45</h3>
+  <p>New blog! A former engineering intern recounts how working at Uber opened up her creative and professional horizons, expanding and enriching any preconceived notions she had about working in Big Tech.
+
+read more: <a href="https://t.co/fT6xDdmJgr">https://t.co/fT6xDdmJgr</a>
+
+#UberEngineering #UberEng #LifeatUber</p>
+ <h3 date='Posted on: 2022-11-03; at: 16:50'>Posted on: 2022-11-03; at: 16:50</h3>
+  <p>New blog! The Uber Eats team shares how they built a novel system with machine learning and linear programming to send the right message at the right time to its users.
+
+read more: <a href="https://t.co/HrerYqVN3b">https://t.co/HrerYqVN3b</a>
+
+#ML #MachineLearning #LinearProgramming #UberEngineering #UberEng</p>
+ <h3 date='Posted on: 2022-10-26; at: 16:56'>Posted on: 2022-10-26; at: 16:56</h3>
+  <p>New blog! Uber's Interactive Analytics team shares how they integrated Allxuio's data caching into the big data SQL query engine, Presto, to dramatically reduce data scan latencies through leveraging Presto on local disks.
+
+read more: <a href="https://t.co/fJAyimabJt">https://t.co/fJAyimabJt</a></p>
+ <h3 date='Posted on: 2022-10-20; at: 17:09'>Posted on: 2022-10-20; at: 17:09</h3>
+  <p>New blog! Uber's Fulfillment team talks about how they built an on-demand end-to-end sanity and automation testing environment - SLATE.
+
+read more: <a href="https://t.co/KspHaLfj0y">https://t.co/KspHaLfj0y</a>
+
+#UberEngineering #UberEng</p>
+ <h3 date='Posted on: 2022-10-13; at: 16:45'>Posted on: 2022-10-13; at: 16:45</h3>
+  <p>New Blog! Introducing WorkflowGuard: a service to govern executions, prioritize resources, &amp; manage life cycle for repetitive data jobs. See how it improved workflow reliability and cost efficiency while bringing more observability to users. 
+
+read more: <a href="https://t.co/ci15Amfg6v">https://t.co/ci15Amfg6v</a></p>
+ <h3 date='Posted on: 2022-10-06; at: 16:45'>Posted on: 2022-10-06; at: 16:45</h3>
+  <p>New blog! Our container image build team reveals how they safely build tens of thousands of container images every week to support our microservice architecture, explaining key performance optimizations that reduced build latencies dramatically.
+
+read more:<a href="https://t.co/Swj5FP4QQq">https://t.co/Swj5FP4QQq</a></p>
+ <h3 date='Posted on: 2022-09-29; at: 16:45'>Posted on: 2022-09-29; at: 16:45</h3>
+  <p>New blog! Uber’s Data team discusses how they used CLP to scale log ingestion, retention, and analytics for petabytes of Spark logs, reducing log storage and management costs by 169x.
+
+read more: <a href="https://t.co/yyiZgSugSm">https://t.co/yyiZgSugSm</a>
+
+#UberEngineering #UberEng</p>
+ <h3 date='Posted on: 2022-09-15; at: 16:45'>Posted on: 2022-09-15; at: 16:45</h3>
+  <p>New blog! Uber’s infrastructure engineers deep dive into how they leverage infrastructure as code to manage hundreds of thousands of servers across multiple cloud and on-prem providers.
+
+read more: <a href="https://t.co/GSo1e30SyH">https://t.co/GSo1e30SyH</a>
+
+#UberEngineering #UberEng #Infrastructure</p>
+ <h3 date='Posted on: 2022-09-08; at: 17:02'>Posted on: 2022-09-08; at: 17:02</h3>
+  <p>New blog! Our engineers discuss how we dedupe and store millions of product images at @UberEats using a content-addressable caching layer which saves millions of image downloads every hour, and ensures that every image is only stored once.
+
+read more: <a href="https://t.co/c1gXabl8lq">https://t.co/c1gXabl8lq</a></p>
+ <h3 date='Posted on: 2022-09-01; at: 17:00'>Posted on: 2022-09-01; at: 17:00</h3>
+  <p>New blog! Uber's Storage Platform team talks about the massive strategic undertaking to migrate their Distributed Databases from MySQL to MyRocks resulting in significant Storage usage reduction.
+
+read more: <a href="https://t.co/Rp2QrvDmby">https://t.co/Rp2QrvDmby</a>
+
+#UberEng #UberEngineering</p>
+ <h3 date='Posted on: 2022-08-25; at: 16:45'>Posted on: 2022-08-25; at: 16:45</h3>
+  <p>Check out our latest blog to learn about how Uber Freight built the Carrier Scorecard feature in the user-facing app using #ApachePinot, #Flink, &amp; #Kafka!
+
+read more: <a href="https://t.co/hfzjYIFbDC">https://t.co/hfzjYIFbDC</a>
+
+#UberEngineering #UberEng #UberFreight</p>
+ <h3 date='Posted on: 2022-08-16; at: 16:45'>Posted on: 2022-08-16; at: 16:45</h3>
+  <p>New blog! In this blog, Uber’s API platform team talks about how they built their Next Generation Push Platform on gRPC which helped improve the reliability and latency of messages significantly.
+
+read more: <a href="https://t.co/G8IsVGLbFI">https://t.co/G8IsVGLbFI</a>
+
+#UberEngineering #UberEng</p>
+ <h3 date='Posted on: 2022-08-02; at: 16:45'>Posted on: 2022-08-02; at: 16:45</h3>
+  <p>New blog! This article pulls back the curtain on novel aspects of Uber's Global Machine Learning Education Program, like content modules and delivery styles, as well as highlights key outcomes realized since the programs' incorporation in 2021.
+
+<a href="https://t.co/InMVTuNXl3">https://t.co/InMVTuNXl3</a>
+
+#ML #Uber</p>
+ <h3 date='Posted on: 2022-07-28; at: 16:45'>Posted on: 2022-07-28; at: 16:45</h3>
+  <p>New blog! Uber's ML Education team introduces how they've deployed learning solutions as means for scaling ML internally, and explain the benefits of applying engineering principles like modularity &amp; extensibility to tech learning program frameworks.
+
+<a href="https://t.co/HwDcSDFABH">https://t.co/HwDcSDFABH</a>
+
+#ML</p>
+ <h3 date='Posted on: 2022-07-21; at: 16:45'>Posted on: 2022-07-21; at: 16:45</h3>
+  <p>New blog! Uber’s Experimentation Team dives into the architecture of our new A/B experimentation platform upleveling product development agility by providing correct, reliable, flexible, and easy-to-use experimentation to teams across Uber.
+
+read more: <a href="https://t.co/kIYaRv0ddA">https://t.co/kIYaRv0ddA</a></p>
+ <h3 date='Posted on: 2022-07-07; at: 16:45'>Posted on: 2022-07-07; at: 16:45</h3>
+  <p>New blog! In this blog post, we’ll take a deep dive into our Remote Shuffle Service (RSS) architecture and how we scaled the RSS service to billions of shuffle messages and petabytes of shuffle data at Uber.
+
+<a href="https://t.co/0CIxChKeud">https://t.co/0CIxChKeud</a>
+
+#UberEngineering #UberEng #ML #AI #OpenSource</p>
+ <h3 date='Posted on: 2022-06-30; at: 16:55'>Posted on: 2022-06-30; at: 16:55</h3>
+  <p>Do load tests really mimic production? Check out our new blog on how our Maps Production Engineering team is simplifying the toil associated with writing accurate load tests.
+
+read more: <a href="https://t.co/2NOvPd3gbQ">https://t.co/2NOvPd3gbQ</a>
+
+#UberEngineering #UberEng #LoadTesting</p>
+ <h3 date='Posted on: 2022-06-23; at: 16:45'>Posted on: 2022-06-23; at: 16:45</h3>
+  <p>New blog! Come check out how our Developer Experience Engineering team modernized the CI infrastructure for our largest monolithic repository, and boosted the performance of commit validation for thousands of daily changes in minutes!
+
+read more: <a href="https://t.co/6FNbQGRIKl">https://t.co/6FNbQGRIKl</a>
+
+#UberEng</p>
+ <h3 date='Posted on: 2022-06-15; at: 16:45'>Posted on: 2022-06-15; at: 16:45</h3>
+  <p>The Customer Obsession Eng team describes the end-to-end data processing &amp; ML workflow framework they designed for deriving insights from user support interactions to create better, more delightful experiences for Uber users in our newest blog!
+
+read more: <a href="https://t.co/ltWBKQYbhf">https://t.co/ltWBKQYbhf</a></p>
+ <h3 date='Posted on: 2022-06-09; at: 16:50'>Posted on: 2022-06-09; at: 16:50</h3>
+  <p>Curious about how Uber improves driver safety? Check out our new blog post on Uber’s Real Time Document Check technology.
+
+read more: <a href="https://t.co/7XQ0wGMIV9">https://t.co/7XQ0wGMIV9</a>
+
+#UberEngineering #UberEng #StandforSafety</p>
+ <h3 date='Posted on: 2022-06-02; at: 16:15'>Posted on: 2022-06-02; at: 16:15</h3>
+  <p>Learn how @Uber's Program Analysis Researchers discover the interplay between Golang programming idioms and data race bugs in their newest Engineering Blog: Data Race Patterns in Go.
+
+read more: <a href="https://t.co/xIsZbwLCnZ">https://t.co/xIsZbwLCnZ</a>
+
+#UberEngineering #UberEng #Golang #DataRace</p>
+ <h3 date='Posted on: 2022-05-26; at: 16:45'>Posted on: 2022-05-26; at: 16:45</h3>
+  <p>New blog! Members of our engineering team discuss USL: Uber's Unified Signup and Login stack used across different lines of business.
+
+read more: <a href="https://t.co/8VR24xPCQU">https://t.co/8VR24xPCQU</a>
+
+#UberEngineering #UberEng</p>
+ <h3 date='Posted on: 2022-05-17; at: 16:45'>Posted on: 2022-05-17; at: 16:45</h3>
+  <p>New blog! Our Software Networking engineering team dives into an iterative improvement to Uber’s service mesh: Real-time Dynamic Subsetting for large scale distributed systems. Learn how it improved load balancing with CPU utilization efficiency gains!
+
+<a href="https://t.co/LCST9mUQVF">https://t.co/LCST9mUQVF</a></p>
+ <h3 date='Posted on: 2022-04-28; at: 16:45'>Posted on: 2022-04-28; at: 16:45</h3>
+  <p>New blog! Uber's researchers explore the various dimensions of deploying dynamic data race detection to design an effective developer workflow that has helped fix more than 1,000 non-deterministic concurrency bugs in our ~50 MLoC Go codebase.
+
+read more: <a href="https://t.co/NhgEMCdcTR">https://t.co/NhgEMCdcTR</a></p>
+ <h3 date='Posted on: 2022-04-14; at: 16:47'>Posted on: 2022-04-14; at: 16:47</h3>
+  <p>New blog! Members of our engineering team discuss how we enable SQL query directly over Kafka via Presto at Uber scale.
+
+read more: <a href="https://t.co/b2m5UlOd3q">https://t.co/b2m5UlOd3q</a>
+
+#UberEngineering #UberEng #Presto #Apache #Kafka #BigData #SQL</p>
+ <h3 date='Posted on: 2022-04-07; at: 16:45'>Posted on: 2022-04-07; at: 16:45</h3>
+  <p>New on our blog today! Members from our Kafka and Security engineering teams take a deeper dive into how security features were incorporated into Uber's Kafka infrastructure.
+
+read more: <a href="https://t.co/FraKufvPjE">https://t.co/FraKufvPjE</a>
+
+#UberEngineering #UberEng #Kafka #Security #DistributedSystems</p>
+ <h3 date='Posted on: 2022-03-31; at: 16:45'>Posted on: 2022-03-31; at: 16:45</h3>
+  <p>Check out our new blog! Our Uber Engineers dive into how the in-app emergency button works and the reliable systems that power this feature.
+
+read more: <a href="https://t.co/4wLrF82ZS9">https://t.co/4wLrF82ZS9</a>
+
+#StandforSafety #UberEngineering #UberEng @dkhos</p>
+ <h3 date='Posted on: 2022-03-22; at: 16:45'>Posted on: 2022-03-22; at: 16:45</h3>
+  <p>New blog! Engineers from our Stateful Platform team show how switching from CPU quotas to cpusets allowed them to reduce fleet-wide core allocation by up to 11% across the 65,000 physical hosts the platform runs on.
+
+read more: <a href="https://t.co/GBkUhjiSNc">https://t.co/GBkUhjiSNc</a>
+
+#UberEngineering #UberEng</p>
+ <h3 date='Posted on: 2022-03-10; at: 17:45'>Posted on: 2022-03-10; at: 17:45</h3>
+  <p>Check out our new blog! Our Uber Engineers dive into how to use Apache Parquet fine-grained encryption to solve three challenges: encryption, access control, and data retention.
+
+read more: <a href="https://t.co/gJ6xgDQvUs">https://t.co/gJ6xgDQvUs</a>
+
+#OpenSource #Apache #Data #Engineering #Uber #encryption</p>
+ <h3 date='Posted on: 2022-03-01; at: 17:45'>Posted on: 2022-03-01; at: 17:45</h3>
+  <p>New blog! Introducing Ballast, Uber Production Engineering’s adaptive load testing framework. Discover how it enables continuous load testing across some of our most mission-critical services with minimal operational effort.
+
+read more: <a href="https://t.co/2QGRSOMyDY">https://t.co/2QGRSOMyDY</a></p>
+ <h3 date='Posted on: 2022-02-16; at: 18:08'>Posted on: 2022-02-16; at: 18:08</h3>
+  <p>New blog! Introducing Carbon Feed for Earners: Carbon Feed provides personalized, relevant information to earners by utilizing machine learning in concert with our content aggregation backend.
+
+read more: <a href="https://t.co/nHkd4oFCvM…">https://t.co/nHkd4oFCvM…</a>
+
+#MachineLearning #Engineering <a href="https://t.co/YRBG2rk6P2">https://t.co/YRBG2rk6P2</a></p>
+ <h3 date='Posted on: 2022-02-10; at: 18:00'>Posted on: 2022-02-10; at: 18:00</h3>
+  <p>At Uber magical customer experiences depend on accurate arrival time predictions. In this blog post we introduce how Uber predicts arrival time using deep learning.
+
+read more: <a href="https://t.co/VaivmmXddz">https://t.co/VaivmmXddz</a>
+
+#machinelearning #deeplearning #ai</p>
+ <h3 date='Posted on: 2022-02-01; at: 17:45'>Posted on: 2022-02-01; at: 17:45</h3>
+  <p>Check out our new blog featuring Project RADAR which brings together algorithms, technology, and experts to efficiently block payment fraud.
+
+read more: <a href="https://t.co/G4Nuur2XcA">https://t.co/G4Nuur2XcA</a></p>
+ <h3 date='Posted on: 2022-01-25; at: 17:45'>Posted on: 2022-01-25; at: 17:45</h3>
+  <p>Check out our new blog! Learn about how the Uber Big Data Format team improved cost efficiency with innovations in Apache Parquet and ZSTD, saved millions of dollars for storage cost, and reduced vCores consumption significantly.
+
+read more: <a href="https://t.co/3cy4Mf73mH">https://t.co/3cy4Mf73mH</a></p>
+ <h3 date='Posted on: 2022-01-19; at: 17:45'>Posted on: 2022-01-19; at: 17:45</h3>
+  <p>New blog! Uber Production Engineers discuss a new and rapidly evolving engine (CRE) that uses techniques inspired from AIOps to recommend capacity accurately across mission critical microservices that serve users/traffic on a planetary scale.
+
+read more: <a href="https://t.co/kbkq6g1Vjf">https://t.co/kbkq6g1Vjf</a></p>
+ <h3 date='Posted on: 2022-01-11; at: 17:45'>Posted on: 2022-01-11; at: 17:45</h3>
+  <p>New on our blog today! Members of our Uber Applied Science team share exciting changes for the upcoming Orbit version (v1.1). Orbit is an Open Source Package using a Bayesian framework for probabilistic forecasting and econometric modeling.
+
+read more: <a href="https://t.co/Rf5hUYXyKn">https://t.co/Rf5hUYXyKn</a></p>
+ <h3 date='Posted on: 2021-12-22; at: 18:15'>Posted on: 2021-12-22; at: 18:15</h3>
+  <p>Check out our new blog! Learn about how Uber Production Engineers improved garbage collection observability, and saved thousands of cores by automating garbage collection tuning in Go.
+
+read more: <a href="https://t.co/h9z9GiwcV6">https://t.co/h9z9GiwcV6</a></p>
+ <h3 date='Posted on: 2021-12-16; at: 17:47'>Posted on: 2021-12-16; at: 17:47</h3>
+  <p>Learn about the Cadence team's effort in improving resource isolation and multi-tenancy for its background task processing components in our new blog: Cadence Multi-Tenant Task Processing.
+
+read more: <a href="https://t.co/1EVGIEjtmp">https://t.co/1EVGIEjtmp</a></p>
+ <h3 date='Posted on: 2021-12-15; at: 23:10'>Posted on: 2021-12-15; at: 23:10</h3>
+  <p>Check out our new blog featuring Anwaya Aras! #UberEng
+
+<a href="https://t.co/ejL5YUAyUk">https://t.co/ejL5YUAyUk</a> <a href="https://t.co/sMYnKZWfnT">https://t.co/sMYnKZWfnT</a></p>
+ <h3 date='Posted on: 2021-11-18; at: 18:30'>Posted on: 2021-11-18; at: 18:30</h3>
+  <p>New on our blog today! Uber researchers develop a critical path analysis technique to bubble up latency issues in large-scale microservice architectures.
+
+read more: <a href="https://t.co/F1OEskuEQV">https://t.co/F1OEskuEQV</a></p>
+ <h3 date='Posted on: 2021-11-10; at: 17:30'>Posted on: 2021-11-10; at: 17:30</h3>
+  <p>New on our blog today! Learn about how Uber redesigned its homegrown, immutable, ledger-style database, LedgerStore, involving critical live data migration of billions of records from DynamoDB.
+
+read more: <a href="https://t.co/cu0gQdEteB">https://t.co/cu0gQdEteB</a></p>
+ <h3 date='Posted on: 2021-10-21; at: 16:30'>Posted on: 2021-10-21; at: 16:30</h3>
+  <p>New on our blog today! Introducing uGroup, Uber’s universal Kafka consumer group state management &amp; lag tracking service.
+
+read more: <a href="https://t.co/48sTVv3dip">https://t.co/48sTVv3dip</a></p>
+ <h3 date='Posted on: 2021-10-13; at: 16:30'>Posted on: 2021-10-13; at: 16:30</h3>
+  <p>New on our blog today! Members of our Data team share efforts and ideas in scaling Data Infrastructure while improving the system utilization for efficiency.
+
+read more: <a href="https://t.co/d7vzr0JjCb">https://t.co/d7vzr0JjCb</a></p>
+ <h3 date='Posted on: 2021-09-29; at: 20:43'>Posted on: 2021-09-29; at: 20:43</h3>
+  <p>New blog! Learn about the Uber Fulfillment team's journey to build a transactionally consistent, planet-scale hybrid cloud platform to support Delivery &amp; Mobility verticals by transitioning from NoSQL to NewSQL using Google's Cloud Spanner.
+
+read more: <a href="https://t.co/reRADT2Pkr">https://t.co/reRADT2Pkr</a></p>
+ <h3 date='Posted on: 2021-09-23; at: 16:30'>Posted on: 2021-09-23; at: 16:30</h3>
+  <p>New on our blog today! Our engineers discuss how exactly-once stream processing is one of the hardest problems to solve in distributed systems, and how they solved it while building our real-time Uber Ads events processing system.
+
+read more: <a href="https://t.co/M0a1jfDWJ7">https://t.co/M0a1jfDWJ7</a></p>
+ <h3 date='Posted on: 2021-09-16; at: 16:30'>Posted on: 2021-09-16; at: 16:30</h3>
+  <p>New on our blog today! Our engineers introduce YAML Generator: an application that builds user funnel files in real time, streamlining the large-scale mobile data workflow process at Uber.
+
+read more: <a href="https://t.co/CCY6JzNuXg">https://t.co/CCY6JzNuXg</a></p>
+ <h3 date='Posted on: 2021-09-09; at: 16:30'>Posted on: 2021-09-09; at: 16:30</h3>
+  <p>New on our blog today! Introducing Jellyfish: data tiering created to tame the cost of Uber's fast growing data stores.
+
+read more: <a href="https://t.co/81T89sZ7bs">https://t.co/81T89sZ7bs</a></p>
+ <h3 date='Posted on: 2021-09-02; at: 16:30'>Posted on: 2021-09-02; at: 16:30</h3>
+  <p>New on our blog today! Our engineers describe a method of streaming real-time analytics with Redis, AWS Fargate, and Dash Framework to address operational challenges of working remotely due to COVID-19.
+
+read more: <a href="https://t.co/38NqK6HJLO">https://t.co/38NqK6HJLO</a></p>
+ <h3 date='Posted on: 2021-08-31; at: 16:30'>Posted on: 2021-08-31; at: 16:30</h3>
+  <p>New on our blog today! Introducing Consumer Proxy: a service that enables seamless Kafka asynchronous queuing for hundreds of microservices at Uber.
+
+read more: <a href="https://t.co/110vqgYEbV">https://t.co/110vqgYEbV</a></p>
+ <h3 date='Posted on: 2021-08-26; at: 16:30'>Posted on: 2021-08-26; at: 16:30</h3>
+  <p>New on our blog today! Join our Data Team in learning about how data shapes the Uber Rider App!
+
+read more: <a href="https://t.co/jN077uP5NA">https://t.co/jN077uP5NA</a></p>
+ <h3 date='Posted on: 2021-08-19; at: 16:30'>Posted on: 2021-08-19; at: 16:30</h3>
+  <p>New on our blog! Our engineers provide an overview of how the Eats Safety team ensures that we're fully equipped to provide prompt, high-quality service—anywhere in the world, 24/7.
+
+read more: <a href="https://t.co/R0YWvfQCDG">https://t.co/R0YWvfQCDG</a></p>
+ <h3 date='Posted on: 2021-08-17; at: 16:30'>Posted on: 2021-08-17; at: 16:30</h3>
+  <p>New on our blog today! Our Customer Obsession engineering team describes the platform that powers authoring and management of support content to deliver empathetic and personalized customer care experiences.
+
+read more: <a href="https://t.co/V8MXhw0xLT">https://t.co/V8MXhw0xLT</a></p>
+ <h3 date='Posted on: 2021-08-13; at: 16:30'>Posted on: 2021-08-13; at: 16:30</h3>
+  <p>New on our blog today! Take a journey with our Data team to learn about efficiently managing the supply and demand on Uber’s Big Data Platform.
+
+read more: <a href="https://t.co/q0EQgN72qz">https://t.co/q0EQgN72qz</a></p>
+ <h3 date='Posted on: 2021-08-11; at: 16:30'>Posted on: 2021-08-11; at: 16:30</h3>
+  <p>New on our blog today! Members of our Data team share efforts and ideas in improving the platform efficiency of Uber’s Big Data Platform, including file format improvements, HDFS erasure coding, YARN scheduling policy improvements, and more.
+
+read more: <a href="https://t.co/CGhneghF6P">https://t.co/CGhneghF6P</a></p>
+ <h3 date='Posted on: 2021-08-09; at: 17:35'>Posted on: 2021-08-09; at: 17:35</h3>
+  <p>New on our blog today! Our Data Team explores the top challenges and opportunities in reducing the cost of Uber’s big data, including storage, scale, recovery, and utilization. 
+
+read more: <a href="https://t.co/mNiHhD6TN6">https://t.co/mNiHhD6TN6</a></p>
+ <h3 date='Posted on: 2021-08-05; at: 16:30'>Posted on: 2021-08-05; at: 16:30</h3>
+  <p>New on our blog today! Our engineers take you through Uber's journey toward high data quality with standardization and operational excellence. 
+
+read more: <a href="https://t.co/ScQsuMX7D8">https://t.co/ScQsuMX7D8</a></p>
+ <h3 date='Posted on: 2021-08-03; at: 16:30'>Posted on: 2021-08-03; at: 16:30</h3>
+  <p>New on our blog today! Our engineers describe how they built Uber’s Finance Computation Platform (FCP) —A solution designed to accommodate our scale, while providing strong guarantees on accuracy and explainability. 
+
+read more: <a href="https://t.co/N1ZrHWlcOW">https://t.co/N1ZrHWlcOW</a></p>
+ <h3 date='Posted on: 2021-07-29; at: 16:42'>Posted on: 2021-07-29; at: 16:42</h3>
+  <p>New on our blog today! Our Uber Engineers &amp; Apache Pinot community discuss how they build a 7x24 data ingestion pipeline in the article Pinot Real-Time Ingestion with Cloud Segment Storage. @UberOpenSource @LinkedInEng 
+
+read more: <a href="https://t.co/Sx5Mbt3nSs">https://t.co/Sx5Mbt3nSs</a></p>
+ <h3 date='Posted on: 2021-07-27; at: 16:52'>Posted on: 2021-07-27; at: 16:52</h3>
+  <p>Learn about our team's journey to rebuild the fulfillment platform that handles millions of concurrent users to accelerate Uber's Go/Get strategy - New on our blog today!
+
+read more: <a href="https://t.co/vjXAs31Lwd">https://t.co/vjXAs31Lwd</a></p>
+ <h3 date='Posted on: 2021-07-22; at: 16:30'>Posted on: 2021-07-22; at: 16:30</h3>
+  <p>New on our blog today! Members of Uber's Data team discuss the journey of containerizing Apache Hadoop infrastructure with Docker. @uberopensource
+
+read more: <a href="https://t.co/rn6119HcoS">https://t.co/rn6119HcoS</a></p>
+ <h3 date='Posted on: 2021-07-20; at: 16:30'>Posted on: 2021-07-20; at: 16:30</h3>
+  <p>New on our blog today! Members of our engineering team highlight the Orders Near You feature from the Uber Eats app, illustrating how Uber generates insights across our geospatial data.
+
+read more: <a href="https://t.co/lULVzJjXrD">https://t.co/lULVzJjXrD</a></p>
+ <h3 date='Posted on: 2021-07-16; at: 16:30'>Posted on: 2021-07-16; at: 16:30</h3>
+  <p>New on our blog today! Members of our engineering team take a deeper dive into analyzing customer issues to improve user experience.
+
+read more: <a href="https://t.co/Ng6MnZcmBA">https://t.co/Ng6MnZcmBA</a></p>
+ <h3 date='Posted on: 2021-07-14; at: 16:30'>Posted on: 2021-07-14; at: 16:30</h3>
+  <p>New on our blog today! Members of our engineering team take a deeper dive into the customer support automation platform at Uber.
+
+read more: <a href="https://t.co/WK3tp4dss3">https://t.co/WK3tp4dss3</a></p>
+ <h3 date='Posted on: 2021-07-09; at: 16:30'>Posted on: 2021-07-09; at: 16:30</h3>
+  <p>New on our blog today! Members of our engineering team take a deeper dive into tuning model performance.
+
+read more: <a href="https://t.co/TVrrpBrQD6">https://t.co/TVrrpBrQD6</a></p>
+ <h3 date='Posted on: 2021-07-07; at: 18:19'>Posted on: 2021-07-07; at: 18:19</h3>
+  <p>New on our blog today! Members of our engineering team describe how they co-developed Distributed XGBoost on Ray with the Ray team @raydistributed to tackle various production challenges of doing distributed machine learning at scale. 
+
+read more: <a href="https://t.co/sMGS3NZ3x1">https://t.co/sMGS3NZ3x1</a></p>
+ <h3 date='Posted on: 2021-06-30; at: 16:30'>Posted on: 2021-06-30; at: 16:30</h3>
+  <p>New on our blog today! Members of our engineering team take a deeper dive into continuous integration and deployment for machine learning online serving and models.
+
+read more: <a href="https://t.co/B9KJe1gaGi">https://t.co/B9KJe1gaGi</a></p>
+ <h3 date='Posted on: 2021-06-22; at: 16:30'>Posted on: 2021-06-22; at: 16:30</h3>
+  <p>New on our blog today! A member of our engineering team takes a deeper dive into how to approach an efficient and reliable compute cluster management at scale.
+
+read more: <a href="https://t.co/lexSm2S1O7">https://t.co/lexSm2S1O7</a></p>
+ <h3 date='Posted on: 2021-06-15; at: 17:48'>Posted on: 2021-06-15; at: 17:48</h3>
+  <p>New on our blog today! Members of our engineering team takes a deeper dive into how our approach to mitigating the impact of flaky tests and the design of a Test Analyzer Service. 
+
+read more: <a href="https://t.co/QkvouWEmTb">https://t.co/QkvouWEmTb</a></p>
+ <h3 date='Posted on: 2021-06-15; at: 15:42'>Posted on: 2021-06-15; at: 15:42</h3>
+  <p>Meet Leandro Fernandez, a São Paulo-based Safety &amp; Insurance Engineering Manager, in our latest careers blog #lifeatuber 
+ -&gt; <a href="https://t.co/zUC1bALgdd">https://t.co/zUC1bALgdd</a></p>
+ <h3 date='Posted on: 2021-06-10; at: 17:04'>Posted on: 2021-06-10; at: 17:04</h3>
+  <p>New on our blog today! Members of our engineering team takes a deeper dive into how Data Science Workbench has evolved and supercharge the workflows  and how designing the platform has helped them scale. 
+
+read more: <a href="https://t.co/CDg1auAJoB">https://t.co/CDg1auAJoB</a></p>
+ <h3 date='Posted on: 2021-06-08; at: 16:21'>Posted on: 2021-06-08; at: 16:21</h3>
+  <p>New on our blog today! Members of our engineering team takes a deeper dive into how @Uber's API gateway system scaled to be used by hundreds of engineers at Uber daily.
+
+read more: <a href="https://t.co/RfeAquIrpN">https://t.co/RfeAquIrpN</a></p>
+ <h3 date='Posted on: 2021-05-21; at: 16:28'>Posted on: 2021-05-21; at: 16:28</h3>
+  <p>New on our blog today! Members of our engineering team takes a deeper dive into Fraud Detection, using relational graph learning to detect collusion. 
+
+Read more: <a href="https://t.co/sxCTOLzlY9">https://t.co/sxCTOLzlY9</a></p>
+ <h3 date='Posted on: 2021-05-19; at: 16:35'>Posted on: 2021-05-19; at: 16:35</h3>
+  <p>New on our blog today! Members of our engineering team takes a deeper dive into the technical components of a self-serve @Uber's API gateway system.
+
+read more: <a href="https://t.co/Iybq1HqGQQ">https://t.co/Iybq1HqGQQ</a></p>
+ <h3 date='Posted on: 2021-05-14; at: 16:43'>Posted on: 2021-05-14; at: 16:43</h3>
+  <p>New on our blog today! Members of our data science team introducing Orbit, An Open Source Package for Time Series Inference and Forecasting. Orbit is a general interface for Bayesian time series modeling. @UberOpenSource 
+
+read more: <a href="https://t.co/K6KQQsV5c9">https://t.co/K6KQQsV5c9</a></p>
+ <h3 date='Posted on: 2021-05-11; at: 17:28'>Posted on: 2021-05-11; at: 17:28</h3>
+  <p>New on our blog today! Members of our engineering team introducing pprof++, a tool for Go program profiling using Hardware Performance Monitoring 
+
+read more: <a href="https://t.co/rr06r4x94s">https://t.co/rr06r4x94s</a></p>
+ <h3 date='Posted on: 2021-05-06; at: 16:58'>Posted on: 2021-05-06; at: 16:58</h3>
+  <p>New on our blog today! Members of our engineering team introducing Optimal Feature Discovery: Better, Leaner Machine Learning Models Through Information Theory. 
+
+read more: <a href="https://t.co/ecwn0Uy1Xg">https://t.co/ecwn0Uy1Xg</a></p>
+ <h3 date='Posted on: 2021-04-29; at: 16:44'>Posted on: 2021-04-29; at: 16:44</h3>
+  <p>New on our blog today! Uber’s data platform team introducing Charon, a tool to reduce impact of poor marketplace reliability on the merchants. Learn how Charon COVID-19 use case to demonstrate and empowered the team to build and adapt faster.
+
+read more: <a href="https://t.co/wfNAeRr0Aw">https://t.co/wfNAeRr0Aw</a></p>
+ <h3 date='Posted on: 2021-04-27; at: 17:01'>Posted on: 2021-04-27; at: 17:01</h3>
+  <p>New on our blog today! Members of our engineering Freight team describe our framework to generate the optimal sequence of upfront prices of tens of thousands of loads per day. @UberFreight 
+
+read more: <a href="https://t.co/1IRCVILVhR">https://t.co/1IRCVILVhR</a></p>
+ <h3 date='Posted on: 2021-04-12; at: 17:45'>Posted on: 2021-04-12; at: 17:45</h3>
+  <p>New on our blog today! Members of our engineering team introducing Flipr, a tool that was created for dynamic configuration management. Learn how it is used to make a large volume of changes quickly and easily, without sacrificing reliability.
+
+Read more: <a href="https://t.co/209lUxE9Ig">https://t.co/209lUxE9Ig</a></p>
+ <h3 date='Posted on: 2021-03-17; at: 17:50'>Posted on: 2021-03-17; at: 17:50</h3>
+  <p>Podcast with Atindriyo Sanyal, Technical Lead on the Machine Learning Platform team at Uber, shares Uber’s feature store journey, the benefits feature stores have provided for their data science team, and where they're going next! 
+
+<a href="https://t.co/Hv3a5iTA8W">https://t.co/Hv3a5iTA8W</a></p>
+ <h3 date='Posted on: 2021-03-16; at: 16:16'>Posted on: 2021-03-16; at: 16:16</h3>
+  <p>New on our blog today! Members of our engineering team highlight some of the most useful and interesting takeaways from their experience about Uber’s Journey Toward Better Data Culture From First Principles! 
+
+read more: <a href="https://t.co/cg9Wg0dXkr">https://t.co/cg9Wg0dXkr</a></p>
+ <h3 date='Posted on: 2021-03-12; at: 18:28'>Posted on: 2021-03-12; at: 18:28</h3>
+  <p>New on our blog today! Meet members of our Technical Program Management and Learning (TPML) team and their stories of how they bring high-impact process to increase the effectiveness of our product and engineering organizations at Uber. 
+
+Read more: <a href="https://t.co/nUfE1ySJlJ">https://t.co/nUfE1ySJlJ</a></p>
+ <h3 date='Posted on: 2021-03-08; at: 17:42'>Posted on: 2021-03-08; at: 17:42</h3>
+  <p>New on our blog today! The engineering team describe Elastic Deep Learning with Horovod on Ray. How it is bringing common infrastructure and standardization to the production machine learning ecosystem. @UberOpenSource  #DeepLearning 
+
+Read more: <a href="https://t.co/lCnCcRzvTe">https://t.co/lCnCcRzvTe</a></p>
+ <h3 date='Posted on: 2021-03-02; at: 17:24'>Posted on: 2021-03-02; at: 17:24</h3>
+  <p>New on our blog today! The blog demonstrate how we used machine learning to solve one particular auditing problem at Uber, and how our methodology and architecture can be leveraged to address other data problems in the greater audit industry! 
+
+Read more: <a href="https://t.co/jnLQfVAWgB">https://t.co/jnLQfVAWgB</a></p>
+ <h3 date='Posted on: 2021-02-26; at: 17:01'>Posted on: 2021-02-26; at: 17:01</h3>
+  <p>New on our blog today! Members of our engineering team describe how we reduced the code size of Uber’s iOS Rider app by using advanced compiler technologies. 
+
+read more: <a href="https://t.co/uksSt08Hbs">https://t.co/uksSt08Hbs</a></p>
+ <h3 date='Posted on: 2021-02-23; at: 17:39'>Posted on: 2021-02-23; at: 17:39</h3>
+  <p>New on our blog today! Members of our infra engineering team introducing the evolution of Schemaless into a general-purpose transactional database called Docstore!
+
+read more: <a href="https://t.co/C00uDSNuz6">https://t.co/C00uDSNuz6</a></p>
+ <h3 date='Posted on: 2021-02-19; at: 17:13'>Posted on: 2021-02-19; at: 17:13</h3>
+  <p>New on our blog today! Members of our engineering team introducing a Fast and Reliable Schema-Agnostic Log Analytics Platform. It's a next-gen platform to fundamentally improve the reliability, scalability, performance! 
+
+read more: <a href="https://t.co/ZSTure5gEm">https://t.co/ZSTure5gEm</a></p>
+ <h3 date='Posted on: 2021-01-19; at: 17:08'>Posted on: 2021-01-19; at: 17:08</h3>
+  <p>New on our blog today! Members of our engineering team introducing Gairos. Uber’s real-time data processing, storage, and querying platform to facilitate  streamlined and efficient data exploration at scale. 
+
+read more: <a href="https://t.co/oqE6B7byew">https://t.co/oqE6B7byew</a></p>
+ <h3 date='Posted on: 2021-01-12; at: 17:19'>Posted on: 2021-01-12; at: 17:19</h3>
+  <p>New on our blog today! Members of our engineering team introducing uMetric. A unified internal metric platform that powers the full lifecycle of a metric from definition, discovery, planning, computation, and quality to consumption
+
+Read more: <a href="https://t.co/84z58sxkp6">https://t.co/84z58sxkp6</a></p>
+ <h3 date='Posted on: 2020-12-21; at: 17:02'>Posted on: 2020-12-21; at: 17:02</h3>
+  <p>New on our blog today! Members of the engineering team share one challenge of recovering from disasters like cluster downtime, and describe how we build a multi–region Apache Kafka infrastructure at Uber. @UberOpenSource 
+
+Read more:
+<a href="https://t.co/BhB7xTlxPI">https://t.co/BhB7xTlxPI</a></p>
+ <h3 date='Posted on: 2020-12-18; at: 17:56'>Posted on: 2020-12-18; at: 17:56</h3>
+  <p>New on our blog today! Members of our engineering team introducing Uber's Real-time Push Platform. Learn about how it went from a simple polling API to a gRPC-based streaming protocol to build our real-time app experiences for millions of users.
+Read more: <a href="https://t.co/pywgh2DHdG">https://t.co/pywgh2DHdG</a></p>
+ <h3 date='Posted on: 2020-12-11; at: 17:04'>Posted on: 2020-12-11; at: 17:04</h3>
+  <p>New on our blog today! Our engineering team introducing uWorc. A Universal Workflow Orchestrator, a simple drag and drop interface that allows users to build and manage a batch, streaming workflows without having to write a single line of code.
+
+Read more: <a href="https://t.co/kyU7res35z">https://t.co/kyU7res35z</a></p>
+ <h3 date='Posted on: 2020-11-24; at: 17:13'>Posted on: 2020-11-24; at: 17:13</h3>
+  <p>New on our blog today! Horovod v0.21 
+Read more: <a href="https://t.co/E98H8cNGar">https://t.co/E98H8cNGar</a> <a href="https://t.co/xXYUuH1N0N">https://t.co/xXYUuH1N0N</a></p>
+ <h3 date='Posted on: 2020-11-10; at: 17:06'>Posted on: 2020-11-10; at: 17:06</h3>
+  <p>New on our blog today! Members of our engineering team introducing Databook. Uber’s in-house platform which surfaces and manages the metadata related to various data entities such as datasets, internal dashboards, business metrics, and more.
+
+Read more: <a href="https://t.co/QZGlNpEuQ7">https://t.co/QZGlNpEuQ7</a></p>
+ <h3 date='Posted on: 2020-10-29; at: 16:01'>Posted on: 2020-10-29; at: 16:01</h3>
+  <p>New on our blog today! Meet our amazing 2020 Safety Engineering Interns at Uber.  Across six cities, three time zones, working on eight different products for 12 weeks. With the transition to remote work due to COVID-19. #internship 
+
+read more: <a href="https://t.co/FDRYjXbaX0">https://t.co/FDRYjXbaX0</a></p>
+ <h3 date='Posted on: 2020-10-20; at: 16:02'>Posted on: 2020-10-20; at: 16:02</h3>
+  <p>New on our blog today! Members of our engineering team share the evolution of Apache Pinot within Uber and how we scaled from a few use cases to a multi-cluster! @ApachePinot @UberOpenSource 
+
+Read more: <a href="https://t.co/4iLwdjNL1M">https://t.co/4iLwdjNL1M</a></p>
+ <h3 date='Posted on: 2020-10-15; at: 06:07'>Posted on: 2020-10-15; at: 06:07</h3>
+  <p>New on our blog today! Meet the Uber Engineering Team in Vilnius, Lithuania! The Uber Vilnius office is home to members of our Production Engineering, Infrastructure, Storage Platform, and Developer Tools team. #developers  
+
+read more: <a href="https://t.co/Q7OCe1ateI">https://t.co/Q7OCe1ateI</a></p>
+ <h3 date='Posted on: 2020-10-06; at: 16:12'>Posted on: 2020-10-06; at: 16:12</h3>
+  <p>New on our blog today! Ludwig version 0.3, featuring several updates that take the framework to the next level! <a href="https://t.co/iLcpNmOFDT">https://t.co/iLcpNmOFDT</a></p>
+ <h3 date='Posted on: 2020-10-02; at: 16:03'>Posted on: 2020-10-02; at: 16:03</h3>
+  <p>New on our blog today! Members of our engineering team introducing a disbursement payment platform. Migrating hundreds of millions customers between two asynchronous systems while maintaining data-consistency! 
+
+Read more: 
+<a href="https://t.co/bVxjmt6PcL">https://t.co/bVxjmt6PcL</a></p>
+  <h2 class='h2' style='text-transform: uppercase;' id='user91'>Y42.com</h2><br><a href='https://y42.com'>Official website</a><br><a href='https://twitter.com/y42dotcom'>Twitter profile</a>
  <h3 date='Posted on: 2022-11-25; at: 16:20'>Posted on: 2022-11-25; at: 16:20</h3>
   <p>🚨For our German audience: A new podcast episode is live!
 
@@ -3046,7 +4025,7 @@ If you want to dive deeper into these tips, then check out Hugo's blog post on h
 Want to learn how to outdo yourself and become an outstanding data analyst?🚀 Then check out this blog post 🤓: <a href="https://t.co/i5pUzuNgzB">https://t.co/i5pUzuNgzB</a>
 
 #dataanalyst #dataanalysis</p>
-  <h2 class='h2' style='text-transform: uppercase;' id='user73'>Workato</h2><br><a href='https://workato.com'>Official website</a><br><a href='https://twitter.com/Workato'>Twitter profile</a>
+  <h2 class='h2' style='text-transform: uppercase;' id='user92'>Workato</h2><br><a href='https://workato.com'>Official website</a><br><a href='https://twitter.com/Workato'>Twitter profile</a>
  <h3 date='Posted on: 2022-12-12; at: 14:21'>Posted on: 2022-12-12; at: 14:21</h3>
   <p>SOAR, or security orchestration, automation, and response, is a type of solution that can collect security data from various sources and trigger a workflow automation that’s geared towards address it. 
 
