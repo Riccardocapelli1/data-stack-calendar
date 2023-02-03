@@ -61,6 +61,7 @@ current_month_start = current_time.replace(day=1)
 
 # Calcola il primo giorno del mese precedente
 last_month_start = (current_month_start - timedelta(days=30)).replace(day=1)
+last_month_start = pd.to_datetime(last_month_start, format='%Y-%m-%d %H:%M:%S')
 
 #Conversione della colonna User
 df["User"] = df["User"].str.upper()
