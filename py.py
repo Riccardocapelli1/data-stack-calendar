@@ -55,7 +55,7 @@ df['Created_at'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S')
 df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
 
 # Calcola il primo giorno del mese corrente
-current_time = datetime.datetime.now()
+current_time = datetime.now()
 current_month_start = current_time.replace(day=1)
 
 # Calcola il primo giorno del mese precedente
