@@ -60,7 +60,7 @@ current_time = datetime.now()
 current_month_start = current_time.replace(day=1)
 
 # Calcola il primo giorno del mese precedente
-last_month_start = (current_month_start - timedelta.timedelta(days=30)).replace(day=1)
+last_month_start = (current_month_start - timedelta(days=30)).replace(day=1)
 
 #Conversione della colonna User
 df["User"] = df["User"].str.upper()
