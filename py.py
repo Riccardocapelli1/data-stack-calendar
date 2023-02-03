@@ -22,10 +22,10 @@ countapi = countapilink.replace(countapilink,f'<script async src="{countapilink}
 profiles = ["AirbnbEng","AirbyteHQ","alteryx","anacondainc","ansible","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","astronomerio","awscloud","Azure","Azure_Synapse","BrooklynData","castordoc_data","ClickHouseDB","census","confluentinc","coursera","thecubejs","dagster","dask_dev","databricks","datacamp","datadoghq","dataddo","datafoldcom","datameer","dataquestio","dbt_labs","DeepMind","DeltaLakeOSS","Docker","druidio","duckdb","duckdblabs","elastic","expectgreatdata","fastdotai","fivetran","getdbt","github","gitlab","googlecloud","GoogleCloudTech","GoogleColab","grafana","HevoData","HightouchData","HitachiVantara","IBMData","Integrateio","jenkinsci","khanacademy","kaggle","kdnuggets","keboola","ksqlDB","kubernetesio","lightdash_devs","LogiAnalytics","mage_ai","mariadb","Materialize","meltanodata","fb_engineering","metabase","MetaphorData","MicroStrategy","ModeAnalytics","moderndatastack","motherduck","montecarlodata","MTL_Analytics","myadverity","MySQL","MuleSoft","NetflixEng","numpy_team","observablehq","openshift","pandas_dev","phdatainc","PinterestEng","plotlygraphs","DataPolars","popsql","PostgreSQL","MSPowerBI","PrefectIO","preset_data","prestodb","ProjectJupyter","PyData","qlik","RAPIDSai","realpython","retool","RiveryData","SAPBTP","SASsoftware","ScyllaDB","SkyviaService","singer_io","Sisense","SnowflakeDB","SpotifyEng","SQLServer","stitch_data","streamlit","Supermetrics","tableau","Talend","Teradata","HashiCorp","TIBCO","thoughtspot","TDataScience","trinodb","TwitterEng","UberEng","udacity","y42dotcom","Workato"]
 
 #df2 definire le keyword da cercare
-keywords = ["BLOG","CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "SUMMIT", "TRAINING"]
+keywords = ["BLOG","CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "SUMMIT", "TRAINING","WEBINAR"]
 keywords_conference = 'CONFERENCE|EVENT|SUMMIT'
 keywords_certificate = 'CERTIFICATION|COURSE|TRAINING'
-keywords_podcast = 'BLOG|PODCAST'
+keywords_podcast = 'BLOG|PODCAST|WEBINAR'
 
 # Crea una lista vuota per i tweet
 tweets = []
@@ -66,7 +66,7 @@ df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Summit|summi
 df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|CDC event|event systems|event-driven|event data|Event data|event-time|event attribute|Steven|steven|Prevent|prevent|Event streaming|event streaming|streaming event|SSL certificate|end-to-end certificate|GhEvent|EventTimer|ISO 27001 certific')]
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df_conference = df_conference[df_conference['Tweet'].str.contains('Event|event|Conference|conference|Webinar|webinar')]
+df_conference = df_conference[df_conference['Tweet'].str.contains('Event|event|Conference|conference|Summit|summit')]
 df_conference = df_conference[~df_conference['Tweet'].str.contains('event log|Event log|CDC event|event systems|event-driven|event data|Event data|event-time|event attribute|Steven|steven|Prevent|prevent|Event streaming|event streaming|streaming event|GhEvent|EventTimer')]
 
 # Filtra il dataframe per i tweet che contengono le parole "certificate" o "courses" nel testo
@@ -74,7 +74,7 @@ df_certificate = df_certificate[df_certificate['Tweet'].str.contains('Badge|badg
 df_certificate = df_certificate[~df_certificate['Tweet'].str.contains('Of courses|of courses|SSL certificate|end-to-end certificate|ISO 27001 certific')]
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df_podcast = df_podcast[df_podcast['Tweet'].str.contains('Podcast|podcast|Blog|blog')]
+df_podcast = df_podcast[df_podcast['Tweet'].str.contains('Podcast|podcast|Blog|blog|Webinar|webinar')]
 
 # creare una copia del dataframe
 df2 = df.copy()
@@ -167,9 +167,9 @@ html_content += "  <script src='assets/load.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 
 html_content += "        <div class='container'>\n"
-html_content += "                            <li><a href='index.html' class='active'>Conferences & Events</a></li>\n"
-html_content += "                            <li><a href='certificate.html'>Certificates & Badges</a></li>\n"
-html_content += "                            <li><a href='podcast.html'>Podcasts & Blogs</a></li>\n"
+html_content += "                            <li><a href='index.html' class='active'>Conferences, Events & Summit</a></li>\n"
+html_content += "                            <li><a href='certificate.html'>Badges, Certificates & Trainings</a></li>\n"
+html_content += "                            <li><a href='podcast.html'>Blogs, Podcasts & Webinars</a></li>\n"
 html_content += "        </div>\n"
 
 # Titolo all'html_content
@@ -304,9 +304,9 @@ html_content += "  <script src='assets/load.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 
 html_content += "        <div class='container'>\n"
-html_content += "                            <li><a href='index.html'>Conferences & Events</a></li>\n"
-html_content += "                            <li><a href='certificate.html' class='active'>Certificates & Badges</a></li>\n"
-html_content += "                            <li><a href='podcast.html'>Podcasts & Blogs</a></li>\n"
+html_content += "                            <li><a href='index.html'>Conferences, Events & Summit</a></li>\n"
+html_content += "                            <li><a href='certificate.html' class='active'>Badges, Certificates & Trainings</a></li>\n"
+html_content += "                            <li><a href='podcast.html'>Blogs, Podcasts & Webinars</a></li>\n"
 html_content += "        </div>\n"
 
 # Titolo all'html_content
@@ -441,9 +441,9 @@ html_content += "  <script src='assets/load.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 
 html_content += "        <div class='container'>\n"
-html_content += "                            <li><a href='index.html'>Conferences & Events</a></li>\n"
-html_content += "                            <li><a href='certificate.html'>Certificates & Badges</a></li>\n"
-html_content += "                            <li><a href='podcast.html' class='active'>Podcasts & Blogs</a></li>\n"
+html_content += "                            <li><a href='index.html'>Conferences, Events & Summit</a></li>\n"
+html_content += "                            <li><a href='certificate.html'>Badges, Certificates & Trainings</a></li>\n"
+html_content += "                            <li><a href='podcast.html' class='active'>Blogs, Podcasts & Webinars</a></li>\n"
 html_content += "        </div>\n"
 
 # Titolo all'html_content
