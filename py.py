@@ -51,9 +51,8 @@ df["Profile"] = df["User"].map(profiles_map)
 df["Profile_web"] = df["User"].map(profiles_weblink)
 df["Profile_twi"] = df["User"].map(profiles_twitter)
 
-#Conversione della colonna Time
-df['Created_at'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S')
-df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
+#Colonna della colonna Crnceeated at per filtro su df confere
+df['Created_at'] = pd.to_datetime(df['Time'])
 
 # Calcola il primo giorno del mese corrente
 current_time = datetime.now()
@@ -61,7 +60,10 @@ current_month_start = current_time.replace(day=1)
 
 # Calcola il primo giorno del mese precedente
 last_month_start = (current_month_start - timedelta(days=30)).replace(day=1)
-last_month_start = pd.to_datetime(last_month_start, format='%Y-%m-%d %H:%M:%S')
+last_month_start = pd.to_datetime(last_month_start)
+
+#Conversione della colonna Time
+df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
 
 #Conversione della colonna User
 df["User"] = df["User"].str.upper()
