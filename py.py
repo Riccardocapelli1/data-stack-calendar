@@ -23,9 +23,9 @@ profiles = ["AirbnbEng","AirbyteHQ","alteryx","anacondainc","ansible","ApacheAir
 
 #df2 definire le keyword da cercare
 keywords = ["BLOG","CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "SUMMIT", "TRAINING","WEBINAR"]
-keywords_conference = 'CONFERENCE|EVENT|SUMMIT'
+keywords_conference = 'CONFERENCE|SUMMIT'
 keywords_certificate = 'CERTIFICATION|COURSE|TRAINING'
-keywords_podcast = 'BLOG|PODCAST|WEBINAR'
+keywords_generical = 'BLOG|EVENT|PODCAST|WEBINAR'
 
 # Crea una lista vuota per i tweet
 tweets = []
@@ -59,22 +59,22 @@ df["User"] = df["User"].str.upper()
 # create copy for argument
 df_conference = df.copy()
 df_certificate = df.copy()
-df_podcast = df.copy()
+df_generical = df.copy()
 
 # Filtra il dataframe per i tweet che contengono le parole 
 df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Summit|summit|Podcast|podcast|Badge|badge|Certific|certific|Webinar|webinar|free resources|free courses|free learning')]
 df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|CDC event|event systems|event-driven|event data|Event data|event-time|event attribute|Steven|steven|Prevent|prevent|Event streaming|event streaming|streaming event|SSL certificate|end-to-end certificate|GhEvent|EventTimer|ISO 27001 certific')]
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df_conference = df_conference[df_conference['Tweet'].str.contains('Event|event|Conference|conference|Summit|summit')]
-df_conference = df_conference[~df_conference['Tweet'].str.contains('event log|Event log|CDC event|event systems|event-driven|event data|Event data|event-time|event attribute|Steven|steven|Prevent|prevent|Event streaming|event streaming|streaming event|GhEvent|EventTimer')]
+df_conference = df_conference[df_conference['Tweet'].str.contains('Conference|conference|Summit|summit')]
 
 # Filtra il dataframe per i tweet che contengono le parole "certificate" o "courses" nel testo
 df_certificate = df_certificate[df_certificate['Tweet'].str.contains('Badge|badge|Certific|certific|free resources|free courses|free learning')]
 df_certificate = df_certificate[~df_certificate['Tweet'].str.contains('Of courses|of courses|SSL certificate|end-to-end certificate|ISO 27001 certific')]
 
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
-df_podcast = df_podcast[df_podcast['Tweet'].str.contains('Podcast|podcast|Blog|blog|Webinar|webinar')]
+df_generical = df_generical[df_generical['Tweet'].str.contains('Blog|blog|Event|event|Podcast|podcast|Webinar|webinar')]
+df_generical = df_generical[~df_generical['Tweet'].str.contains('event log|Event log|CDC event|event systems|event-driven|event data|Event data|event-time|event attribute|Steven|steven|Prevent|prevent|Event streaming|event streaming|streaming event|GhEvent|EventTimer')]
 
 # creare una copia del dataframe
 df2 = df.copy()
@@ -117,8 +117,8 @@ df3_conference = df3_conference[df3_conference['keyword'].str.contains(keywords_
 df3_certification = df3_grouped.copy()
 df3_certification = df3_certification[df3_certification['keyword'].str.contains(keywords_certificate)]
 
-df3_podcast = df3_grouped.copy()
-df3_podcast = df3_podcast[df3_podcast['keyword'].str.contains(keywords_podcast)]
+df3_generical = df3_grouped.copy()
+df3_generical = df3_generical[df3_generical['keyword'].str.contains(keywords_generical)]
 
 ### df3_conference
 # Crea una stringa vuota per i dati del grafico
@@ -399,19 +399,19 @@ with open("./certificate.html", "w") as f:
 
 ### df3_conference
 # Crea una stringa vuota per i dati del grafico
-chart_data_podcast = ""
+chart_data_generical = ""
 
 # Ciclo for per generare i dati del grafico per ogni keyword
-for keyword in df3_podcast["keyword"].unique():
-    keyword_data = df3_podcast[df3_podcast["keyword"] == keyword]
-    chart_data_podcast += f"{{ label: '{keyword}', data: ["
+for keyword in df3_generical["keyword"].unique():
+    keyword_data = df3_generical[df3_generical["keyword"] == keyword]
+    chart_data_generical += f"{{ label: '{keyword}', data: ["
     for index, row in keyword_data.iterrows():
-        chart_data_podcast += f"{{x: '{row['year_month']}', y: {row['occurrence']}}},"
-    chart_data_podcast = chart_data_podcast[:-1] # Rimuovi l'ultima virgola
-    chart_data_podcast += "]},\n"
+        chart_data_generical += f"{{x: '{row['year_month']}', y: {row['occurrence']}}},"
+    chart_data_generical = chart_data_generical[:-1] # Rimuovi l'ultima virgola
+    chart_data_generical += "]},\n"
 
 # Rimuovi l'ultima virgola e newline dai dati del grafico
-chart_data_podcast = chart_data_podcast[:-2]
+chart_data_generical = chart_data_generical[:-2]
 
 ###
 # crea contenuto html principale
@@ -461,7 +461,7 @@ html_content += "var myChart = new Chart(ctx, {\n"
 html_content += "  type: 'line',\n"
 html_content += "  data: {\n"
 html_content += "    datasets: [\n"
-html_content += chart_data_podcast + "\n"
+html_content += chart_data_generical + "\n"
 html_content += "    ]\n"
 html_content += "  },\n"
 html_content += "  options: {\n"
@@ -495,7 +495,7 @@ users_dict = {}
 
 # Utilizza un ciclo for per aggiungere gli utenti al dizionario e tenere traccia della loro posizione nell'HTML
 pos = 0
-for _, row in df_podcast.iterrows():
+for _, row in df_generical.iterrows():
     user = row["Profile"]
     if user not in users_dict:
         users_dict[user] = pos
@@ -509,10 +509,10 @@ for user in users_dict:
 html_content += "  </ul>\n"
 
 # Utilizza un ciclo for per iterare attraverso ogni riga del dataframe
-current_user = df_podcast.iloc[0]["Profile"]
+current_user = df_generical.iloc[0]["Profile"]
 html_content += f"  <h2 class='h2' style='text-transform: uppercase;' id='user{users_dict[current_user]}'>{current_user} </h2><br><a href='{row['Profile_web']}'>Official website</a><br><a href='{row['Profile_twi']}'>Twitter profile</a>\n"
 
-for _, row in df_podcast.iterrows():
+for _, row in df_generical.iterrows():
     user = row["Profile"]
     if user != current_user:
         current_user = user
