@@ -51,7 +51,15 @@ df["Profile_web"] = df["User"].map(profiles_weblink)
 df["Profile_twi"] = df["User"].map(profiles_twitter)
 
 #Conversione della colonna Time
+df['Created_at'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S')
 df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
+
+# Calcola il primo giorno del mese corrente
+current_time = datetime.datetime.now()
+current_month_start = current_time.replace(day=1)
+
+# Calcola il primo giorno del mese precedente
+last_month_start = (current_month_start - datetime.timedelta(days=30)).replace(day=1)
 
 #Conversione della colonna User
 df["User"] = df["User"].str.upper()
@@ -65,8 +73,11 @@ df_generical = df.copy()
 df = df[df['Tweet'].str.contains('Event|event|Conference|conference|Summit|summit|Podcast|podcast|Badge|badge|Certific|certific|Webinar|webinar|free resources|free courses|free learning')]
 df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|CDC event|event systems|event-driven|event data|Event data|event-time|event attribute|Steven|steven|Prevent|prevent|Event streaming|event streaming|streaming event|SSL certificate|end-to-end certificate|GhEvent|EventTimer|ISO 27001 certific')]
 
+### FILTRI SUI DATAFRAME PER IL CONTENUTO DEI TWEET
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df_conference = df_conference[df_conference['Tweet'].str.contains('Conference|conference|Summit|summit')]
+# Filtra i tweet che hanno data maggiore o uguale al primo giorno del mese precedente
+df_conference = df_conference[df_conference['created_at'].dt.normalize() >= last_month_start]
 
 # Filtra il dataframe per i tweet che contengono le parole "certificate" o "courses" nel testo
 df_certificate = df_certificate[df_certificate['Tweet'].str.contains('Badge|badge|Certific|certific|free resources|free courses|free learning')]
