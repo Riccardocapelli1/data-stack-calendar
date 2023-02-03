@@ -167,9 +167,9 @@ html_content += "  <script src='assets/load.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 
 html_content += "        <div class='container'>\n"
-html_content += "                            <li><a href='index.html' class='active'>Conferences, Events & Summit</a></li>\n"
+html_content += "                            <li><a href='index.html' class='active'>Conferences & Summit</a></li>\n"
 html_content += "                            <li><a href='certificate.html'>Badges, Certificates & Trainings</a></li>\n"
-html_content += "                            <li><a href='podcast.html'>Blogs, Podcasts & Webinars</a></li>\n"
+html_content += "                            <li><a href='generic.html'>Blogs, Events, Podcasts & Webinars</a></li>\n"
 html_content += "        </div>\n"
 
 # Titolo all'html_content
@@ -304,9 +304,9 @@ html_content += "  <script src='assets/load.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 
 html_content += "        <div class='container'>\n"
-html_content += "                            <li><a href='index.html'>Conferences, Events & Summit</a></li>\n"
+html_content += "                            <li><a href='index.html'>Conferences & Summit</a></li>\n"
 html_content += "                            <li><a href='certificate.html' class='active'>Badges, Certificates & Trainings</a></li>\n"
-html_content += "                            <li><a href='podcast.html'>Blogs, Podcasts & Webinars</a></li>\n"
+html_content += "                            <li><a href='generic.html'>Blogs, Events, Podcasts & Webinars</a></li>\n"
 html_content += "        </div>\n"
 
 # Titolo all'html_content
@@ -441,9 +441,9 @@ html_content += "  <script src='assets/load.js'></script>\n"
 html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
 
 html_content += "        <div class='container'>\n"
-html_content += "                            <li><a href='index.html'>Conferences, Events & Summit</a></li>\n"
+html_content += "                            <li><a href='index.html'>Conferences & Summit</a></li>\n"
 html_content += "                            <li><a href='certificate.html'>Badges, Certificates & Trainings</a></li>\n"
-html_content += "                            <li><a href='podcast.html' class='active'>Blogs, Podcasts & Webinars</a></li>\n"
+html_content += "                            <li><a href='generic.html' class='active'>Blogs, Events, Podcasts & Webinars</a></li>\n"
 html_content += "        </div>\n"
 
 # Titolo all'html_content
@@ -530,7 +530,7 @@ html_content += "  <p>Made with ❤️ for the community by Riccardo</p>\n"
 html_content += "</footer>\n"
 html_content += "</html>\n"
 
-with open("./podcast.html", "w") as f:
+with open("./generic.html", "w") as f:
     f.write(html_content)
 ###
 
