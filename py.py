@@ -81,7 +81,7 @@ df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|CDC
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df_conference = df_conference[df_conference['Tweet'].str.contains('Conference|conference|Summit|summit')]
 # Filtra i tweet che hanno data maggiore o uguale al primo giorno del mese precedente
-df_conference = df_conference[df_conference['Created_at'].dt.normalize() >= last_month_start]
+df_conference = df_conference[df_conference['Created_at'].dt.normalize() >= last_month_start.to_datetime()]
 
 # Filtra il dataframe per i tweet che contengono le parole "certificate" o "courses" nel testo
 df_certificate = df_certificate[df_certificate['Tweet'].str.contains('Badge|badge|Certific|certific|free resources|free courses|free learning')]
