@@ -34,7 +34,7 @@ tweets = []
 # Scarica i tweet dei profili specificati
 for profile in profiles:
     for tweet in api.user_timeline(screen_name=profile, count=300, include_rts=False, tweet_mode="extended"):
-        tweets.append([datetime.now().strftime("%Y-%m-%d %H:%M:%S"), tweet.created_at, tweet.created_at, tweet.user.screen_name, tweet.full_text])
+        tweets.append([datetime.now(), tweet.created_at, tweet.created_at, tweet.user.screen_name, tweet.full_text])
 
 # Crea un dataframe dei tweet scaricati
 df = pd.DataFrame(tweets, columns=['Datetime_now','Created_at', 'Time', 'User', 'Tweet'])
@@ -52,8 +52,7 @@ df["Profile_web"] = df["User"].map(profiles_weblink)
 df["Profile_twi"] = df["User"].map(profiles_twitter)
 
 # Calcola il primo giorno del mese precedente
-df['Datetime_now'] = pd.to_datetime(df['Datetime_now'])
-df['Datetime_now'] = df['Datetime_now'].dt.strftime("%Y-%m-%d %H:%M:%S")
+df['Datetime_now'] = df['Datetime_now'].dt.strftime("%Y-%m-%d")
 df['Datetime_now'] = (pd.to_datetime(df['Datetime_now']) - timedelta(days=60))
 
 #Conversione della colonna Time
@@ -75,8 +74,9 @@ df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|CDC
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df_conference = df_conference[df_conference['Tweet'].str.contains('Conference|conference|Summit|summit')]
 # Filtra i tweet che hanno data maggiore o uguale al primo giorno del mese precedente
-df_conference['Created_at'] = pd.to_datetime(df_conference['Created_at'], format='%Y-%m-%d %H:%M:%S') 
-df_conference['Datetime_now'] = pd.to_datetime(df_conference['Datetime_now'], format='%Y-%m-%d %H:%M:%S')
+df_conference['Created_at'] = df['Created_at'].dt.strftime("%Y-%m-%d")
+df_conference['Datetime_now'] = df['Datetime_now'].dt.strftime("%Y-%m-%d")
+# Filtra per ottenere le conferenze con date formato stringa
 df_conference = df_conference[df_conference['Created_at'] >= df_conference['Datetime_now']]
 
 # Filtra il dataframe per i tweet che contengono le parole "certificate" o "courses" nel testo
