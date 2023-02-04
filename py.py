@@ -51,15 +51,10 @@ df["Profile"] = df["User"].map(profiles_map)
 df["Profile_web"] = df["User"].map(profiles_weblink)
 df["Profile_twi"] = df["User"].map(profiles_twitter)
 
-#Colonna della colonna created at per filtro su df
-#df['Created_at'] = pd.to_datetime(df['Time'])
-
-# Calcola il primo giorno del mese corrente
-#current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-#current_month_start = current_time.replace(day=1)
-
 # Calcola il primo giorno del mese precedente
-last_month_start = (df['Datetime_now'] - timedelta(days=60))
+df['Datetime_now'] = pd.to_datetime(df['Datetime_now'])
+df['Datetime_now'] = df['Datetime_now'].dt.strftime("%Y-%m-%d %H:%M:%S")
+df['Datetime_now'] = (pd.to_datetime(df['Datetime_now']) - timedelta(days=60))
 
 #Conversione della colonna Time
 df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
@@ -80,7 +75,9 @@ df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|CDC
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df_conference = df_conference[df_conference['Tweet'].str.contains('Conference|conference|Summit|summit')]
 # Filtra i tweet che hanno data maggiore o uguale al primo giorno del mese precedente
-df_conference = df_conference[pd.to_datetime(df_conference['Created_at'], format='%Y-%m-%d %H:%M:%S') >= pd.to_datetime(last_month_start, format='%Y-%m-%d %H:%M:%S')]
+df_conference['Created_at'] = pd.to_datetime(df_conference['Created_at'], format='%Y-%m-%d %H:%M:%S') 
+df_conference['Datetime_now'] = pd.to_datetime(df_conference['Datetime_now'], format='%Y-%m-%d %H:%M:%S')
+df_conference = df_conference[df_conference['Created_at'] >= df_conference['Datetime_now']]
 
 # Filtra il dataframe per i tweet che contengono le parole "certificate" o "courses" nel testo
 df_certificate = df_certificate[df_certificate['Tweet'].str.contains('Badge|badge|Certific|certific|free resources|free courses|free learning')]
