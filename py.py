@@ -34,7 +34,7 @@ tweets = []
 # Scarica i tweet dei profili specificati
 for profile in profiles:
     for tweet in api.user_timeline(screen_name=profile, count=300, include_rts=False, tweet_mode="extended"):
-        tweets.append([tweet.created_at, tweet.user.screen_name, tweet.full_text])
+        tweets.append([tweet.created_at, tweet.created_at, tweet.user.screen_name, tweet.full_text])
 
 # Crea un dataframe dei tweet scaricati
 df = pd.DataFrame(tweets, columns=['Created_at', 'Time', 'User', 'Tweet'])
