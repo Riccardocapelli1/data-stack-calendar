@@ -34,10 +34,10 @@ tweets = []
 # Scarica i tweet dei profili specificati
 for profile in profiles:
     for tweet in api.user_timeline(screen_name=profile, count=300, include_rts=False, tweet_mode="extended"):
-        tweets.append([tweet.created_at, tweet.created_at, tweet.user.screen_name, tweet.full_text])
+        tweets.append([datetime.now().strftime("%Y-%m-%d %H:%M:%S"), tweet.created_at, tweet.created_at, tweet.user.screen_name, tweet.full_text])
 
 # Crea un dataframe dei tweet scaricati
-df = pd.DataFrame(tweets, columns=['Created_at', 'Time', 'User', 'Tweet'])
+df = pd.DataFrame(tweets, columns=['Datetime_now','Created_at', 'Time', 'User', 'Tweet'])
 
 #df Mappa la lista dei profili di cui vuoi scaricare i tweet
 profiles_map = {"AirbnbEng":"Airbnb Engineer","AirbyteHQ":"Airbyte","alteryx":"Alteryx","anacondainc":"Anaconda","ansible":"Ansible","ApacheAirflow":"Apache Airflow","ApacheArrow":"Apache Arrow","ApacheCalcite":"Apache Calcite","ApacheFlink":"Apache Flink","apachekafka":"Apache Kafka","apachenifi":"Apache Nifi","ApacheParquet":"Apache Parquet","ApachePinot":"Apache Pinot","astronomerio":"Astronomer.io","awscloud":"AWS Cloud","Azure":"Azure","Azure_Synapse":"Azure Synapse","BrooklynData":"Brooklyn Data","castordoc_data":"Castor","ClickHouseDB":"ClickHouse","census":"Census","confluentinc":"Confluent.io","coursera":"Coursera","thecubejs":"Cube.dev","dagster":"Dagster","dask_dev":"Dask","databricks":"Databricks","datacamp":"DataCamp","datadoghq":"Datadog","dataddo":"Dataddo","datafoldcom":"Datafold","datameer":"Datameer","dataquestio":"Dataquest","dbt_labs":"Dbt labs","DeepMind":"Deep Mind","DeltaLakeOSS":"Delta Lake","Docker":"Docker","druidio":"Druidio","duckdb":"Duck DB","duckdblabs":"Duck DB Labs","elastic":"Elastic","expectgreatdata":"Expect Great Data","fastdotai":"Fast.ai","fivetran":"Fivetran","getdbt":"Getdbt.com","github":"Github","gitlab":"Gitlab","googlecloud":"Google Cloud","GoogleCloudTech":"Google Cloud Tech","GoogleColab":"Google Colab","grafana":"Grafana","HevoData":"Hevo Data","HightouchData":"Hightouch Data","HitachiVantara":"Pentaho","IBMData":"IBM Data","Integrateio":"Integrate.io","jenkinsci":"Jenkins","khanacademy":"Khan Academy","kaggle":"Kaggle","kdnuggets":"Kdnuggets","keboola":"Keboola","ksqlDB":"Ksql","kubernetesio":"kubernetes.io","lightdash_devs":"Lightdash","LogiAnalytics":"Logi Analytics","mage_ai":"Mage.ai","mariadb":"Mariadb","Materialize":"Materialize","meltanodata":"Meltano","fb_engineering":"Meta Engineer","metabase":"Metabase","MetaphorData":"Metaphor.io","MicroStrategy":"MicroStrategy","ModeAnalytics":"Mode","moderndatastack":"Moderndatastack.xyz","motherduck":"Motherduck","montecarlodata":"Montecarlo","MTL_Analytics":"Montreal Analytics","myadverity":"Myadverity","MySQL":"MySQL","MuleSoft":"MuleSoft","NetflixEng":"Netflix Engineer","numpy_team":"Numpy","observablehq":"Observable","openshift":"Red Hat Openshift","pandas_dev":"Pandas","phdatainc":"Phdata","PinterestEng":"Pinterest Engineer","plotlygraphs":"Plotly","DataPolars":"Polars","popsql":"Popsql","PostgreSQL":"PostgreSQL","MSPowerBI":"PowerBI","PrefectIO":"Prefect.io","preset_data":"Preset","prestodb":"Presto DB","ProjectJupyter":"Jupyter","PyData":"Py Spark","qlik":"Qlik","RAPIDSai":"Rapids AI","realpython":"Real Python","retool":"Retool","RiveryData":"Rivery","SAPBTP":"SAP Analytics","SASsoftware":"SAS","ScyllaDB":"Scylla DB","SkyviaService":"Skyvia","singer_io":"singer.io","Sisense":"Sisense","SnowflakeDB":"Snowflake","SpotifyEng":"Spotify Engineer","SQLServer":"SQL Server","stitch_data":"Stitch","streamlit":"Streamlit","Supermetrics":"Supermetrics","tableau":"Tableau","Talend":"Talend","Teradata":"Teradata","HashiCorp":"Terraform","TIBCO":"Tibco","thoughtspot":"Thoughtspot","TDataScience":"Towards Data Science","trinodb":"Trino DB","TwitterEng":"Twitter Engineer","UberEng":"Uber Engineer","udacity":"Udacity","y42dotcom":"Y42.com","Workato":"Workato"}
@@ -52,14 +52,14 @@ df["Profile_web"] = df["User"].map(profiles_weblink)
 df["Profile_twi"] = df["User"].map(profiles_twitter)
 
 #Colonna della colonna created at per filtro su df
-df['Created_at'] = pd.to_datetime(df['Time'])
+#df['Created_at'] = pd.to_datetime(df['Time'])
 
 # Calcola il primo giorno del mese corrente
-current_time = datetime.now()
-current_month_start = current_time.replace(day=1)
+#current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+#current_month_start = current_time.replace(day=1)
 
 # Calcola il primo giorno del mese precedente
-last_month_start = (current_month_start - timedelta(days=30)).replace(day=1)
+last_month_start = (df['Datetime_now'] - timedelta(days=60))
 
 #Conversione della colonna Time
 df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S').apply(lambda x: 'Posted on: ' + x.strftime('%Y-%m-%d') + '; at: ' + x.strftime('%H:%M'))
@@ -80,7 +80,7 @@ df = df[~df['Tweet'].str.contains('Of courses|of courses|event log|Event log|CDC
 # Filtra il dataframe per i tweet che contengono le parole "event" o "conference" nel testo
 df_conference = df_conference[df_conference['Tweet'].str.contains('Conference|conference|Summit|summit')]
 # Filtra i tweet che hanno data maggiore o uguale al primo giorno del mese precedente
-df_conference = df_conference[pd.to_datetime(df_conference['Created_at'], format='%Y-%m-%d %H:%M:%S').dt.normalize() >= pd.to_datetime(last_month_start, format='%Y-%m-%d %H:%M:%S')]
+df_conference = df_conference[pd.to_datetime(df_conference['Created_at'], format='%Y-%m-%d %H:%M:%S') >= pd.to_datetime(last_month_start, format='%Y-%m-%d %H:%M:%S')]
 
 # Filtra il dataframe per i tweet che contengono le parole "certificate" o "courses" nel testo
 df_certificate = df_certificate[df_certificate['Tweet'].str.contains('Badge|badge|Certific|certific|free resources|free courses|free learning')]
