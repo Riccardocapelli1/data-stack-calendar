@@ -228,9 +228,7 @@ html_content += "    }\n"
 html_content += "  }\n"
 html_content += "});\n"
 html_content += "</script>\n"
-html_content += "  <p>Aggregated kewords tweeted stats by month</p>\n"
-
-
+html_content += "  <p>Last 60 days kewords tweeted stats by month</p>\n"
 html_content += "</head>\n"
 html_content += "<body>\n"
 
@@ -365,9 +363,7 @@ html_content += "    }\n"
 html_content += "  }\n"
 html_content += "});\n"
 html_content += "</script>\n"
-html_content += "  <p>Aggregated kewords tweeted stats by month</p>\n"
-
-
+html_content += "  <p>Last 60 days kewords tweeted stats by month</p>\n"
 html_content += "</head>\n"
 html_content += "<body>\n"
 
@@ -502,9 +498,7 @@ html_content += "    }\n"
 html_content += "  }\n"
 html_content += "});\n"
 html_content += "</script>\n"
-html_content += "  <p>Aggregated kewords tweeted stats by month</p>\n"
-
-
+html_content += "  <p>Last 60 days kewords tweeted stats by month</p>\n"
 html_content += "</head>\n"
 html_content += "<body>\n"
 
