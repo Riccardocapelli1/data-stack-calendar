@@ -96,6 +96,13 @@ df2['keyword' ] = ""
 # aggiungere una colonna "date" con la data e ora attuali
 df2['date'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+# Filtra i tweet che hanno data maggiore o uguale al primo giorno del mese precedente
+df2['Created_at'] = df2['Created_at'].dt.strftime("%Y-%m-%d")
+df2['Datetime_now'] = df2['Datetime_now'].dt.strftime("%Y-%m-%d")
+
+# Filtra per ottenere le conferenze con date formato stringa
+df2 = df2[df2['Created_at'] >= df2['Datetime_now']]
+
 # ciclo for per verificare se una stringa contiene una parola chiave
 df2['Tweet'] = df2['Tweet'].str.upper()
 for index, row in df2.iterrows():
