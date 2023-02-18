@@ -196,7 +196,7 @@ html_content += "                            <li><a href='generic.html'>Blogs, E
 html_content += "        </div>\n"
 
 # Titolo all'html_content
-html_content += "  <h1> Stay up-to-date with" + conferences + "</h1>\n"
+html_content += "  <h1> Stay up-to-date with " + conferences + "</h1>\n"
 html_content += "  <p>A tweet aggregator site of " + conferences + " that brings together valuable resources. Hope you enjoy ;) </p>\n"
 
 # Aggiungi il codice per il grafico all'html_content
@@ -331,7 +331,7 @@ html_content += "                            <li><a href='generic.html'>Blogs, E
 html_content += "        </div>\n"
 
 # Titolo all'html_content
-html_content += "  <h1> Stay up-to-date with" + certifications + "</h1>\n"
+html_content += "  <h1> Stay up-to-date with " + certifications + "</h1>\n"
 html_content += "  <p>A tweet aggregator site of " + certifications + " that brings together valuable resources. Hope you enjoy ;) </p>\n"
 
 # Aggiungi il codice per il grafico all'html_content
@@ -466,7 +466,7 @@ html_content += "                            <li><a href='generic.html' class='a
 html_content += "        </div>\n"
 
 # Titolo all'html_content
-html_content += "  <h1> Stay up-to-date with" + generic + "</h1>\n"
+html_content += "  <h1> Stay up-to-date with " + generic + "</h1>\n"
 html_content += "  <p>A tweet aggregator site of " + generic + " that brings together valuable resources. Hope you enjoy ;) </p>\n"
 
 # Aggiungi il codice per il grafico all'html_content
