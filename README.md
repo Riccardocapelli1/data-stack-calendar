@@ -1,5 +1,5 @@
 # Summary
-A modern data stack calendar aggregating events and conferences from Twitter for data engineers, analytics engineers and data analyst.
+A modern data stack wall aggregating events and conferences from Twitter for data engineers, analytics engineers and data analyst.
 
 This code helps you to visualize selected tweets that contain different keywords from profile names of your Twitter Dev account using Twitter's official API Tweepy. This code requires API keys and secrets to use Tweepy's functionality. The user can replace their API keys and secrets by adding the secret name and the secret key in the Github settings.
 
@@ -41,4 +41,4 @@ This project is licensed under the MIT License.
 This code is written by Riccardo Capelli and ChatGpt, to help the data and analytics community discover conference, course and generic information from the modern-data-stack.
 
 See the output at:\
-https://riccardocapelli1.github.io/data-stack-calendar
+https://riccardocapelli1.github.io/data-stack-wall

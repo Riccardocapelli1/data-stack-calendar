@@ -187,7 +187,7 @@ html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
 html_content += "  <script src='assets/load.js'></script>\n"
-html_content += "  <title>Data-stack essential tool for data practitioners of all kinds</title>\n"
+html_content += "  <title>Data-stack-wall: the essential tool for data practitioners</title>\n"
 
 html_content += "        <div class='container'>\n"
 html_content += "                            <li><a href='index.html' class='active'>Conferences & Summit</a></li>\n"
@@ -322,7 +322,7 @@ html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
 html_content += "  <script src='assets/load.js'></script>\n"
-html_content += "  <title>Data-stack essential tool for data practitioners of all kinds</title>\n"
+html_content += "  <title>Data-stack-wall: the essential tool for data practitioners</title>\n"
 
 html_content += "        <div class='container'>\n"
 html_content += "                            <li><a href='index.html'>Conferences & Summit</a></li>\n"
@@ -457,7 +457,7 @@ html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
 html_content += "  <script src='assets/load.js'></script>\n"
-html_content += "  <title>Data-stack essential tool for data practitioners of all kinds</title>\n"
+html_content += "  <title>Data-stack-wall: the essential tool for data practitioners</title>\n"
 
 html_content += "        <div class='container'>\n"
 html_content += "                            <li><a href='index.html'>Conferences & Summit</a></li>\n"
