@@ -168,6 +168,11 @@ def make_link(text):
     return text
 
 # Crea una stringa vuota per il contenuto del file HTML
+conferences = "conferences, events and summit"
+certifications = "certification, courses and trainings"
+generic = "blogs, podcasts and webinar"
+
+# Crea una stringa vuota per il contenuto del file HTML
 html_content = ""
 
 # Aggiungi il contenuto iniziale del file HTML
@@ -182,7 +187,7 @@ html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
 html_content += "  <script src='assets/load.js'></script>\n"
-html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
+html_content += "  <title>Data-stack essential tool for data practitioners of all kinds</title>\n"
 
 html_content += "        <div class='container'>\n"
 html_content += "                            <li><a href='index.html' class='active'>Conferences & Summit</a></li>\n"
@@ -191,8 +196,8 @@ html_content += "                            <li><a href='generic.html'>Blogs, E
 html_content += "        </div>\n"
 
 # Titolo all'html_content
-html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
-html_content += "  <p>A tweet aggregator site dysplaying events, conferences, blogs, podcasts, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
+html_content += "  <h1> Stay up-to-date with" + conferences + "</h1>\n"
+html_content += "  <p>A tweet aggregator site of " + conferences + " that brings together valuable resources. Hope you enjoy ;) </p>\n"
 
 # Aggiungi il codice per il grafico all'html_content
 html_content += "<div class='container'>\n"
@@ -228,7 +233,7 @@ html_content += "    }\n"
 html_content += "  }\n"
 html_content += "});\n"
 html_content += "</script>\n"
-html_content += "  <p>Last 60 days kewords tweeted stats by month</p>\n"
+html_content += "  <p>Last 60 days kewords tweeted by month</p>\n"
 html_content += "</head>\n"
 html_content += "<body>\n"
 
@@ -317,7 +322,7 @@ html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
 html_content += "  <script src='assets/load.js'></script>\n"
-html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
+html_content += "  <title>Data-stack essential tool for data practitioners of all kinds</title>\n"
 
 html_content += "        <div class='container'>\n"
 html_content += "                            <li><a href='index.html'>Conferences & Summit</a></li>\n"
@@ -326,8 +331,8 @@ html_content += "                            <li><a href='generic.html'>Blogs, E
 html_content += "        </div>\n"
 
 # Titolo all'html_content
-html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
-html_content += "  <p>A tweet aggregator site dysplaying events, conferences, blogs, podcasts, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
+html_content += "  <h1> Stay up-to-date with" + certifications + "</h1>\n"
+html_content += "  <p>A tweet aggregator site of " + certifications + " that brings together valuable resources. Hope you enjoy ;) </p>\n"
 
 # Aggiungi il codice per il grafico all'html_content
 html_content += "<div class='container'>\n"
@@ -363,7 +368,7 @@ html_content += "    }\n"
 html_content += "  }\n"
 html_content += "});\n"
 html_content += "</script>\n"
-html_content += "  <p>Last 60 days kewords tweeted stats by month</p>\n"
+html_content += "  <p>Last 60 days kewords tweeted by month</p>\n"
 html_content += "</head>\n"
 html_content += "<body>\n"
 
@@ -452,7 +457,7 @@ html_content += "  <link rel='stylesheet' type='text/css' href='assets/style.css
 html_content += "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
 html_content += "  <script src='assets/script.js'></script>\n"
 html_content += "  <script src='assets/load.js'></script>\n"
-html_content += "  <title>Hacked-data-stack intel for the data and analytics communities</title>\n"
+html_content += "  <title>Data-stack essential tool for data practitioners of all kinds</title>\n"
 
 html_content += "        <div class='container'>\n"
 html_content += "                            <li><a href='index.html'>Conferences & Summit</a></li>\n"
@@ -461,8 +466,8 @@ html_content += "                            <li><a href='generic.html' class='a
 html_content += "        </div>\n"
 
 # Titolo all'html_content
-html_content += "  <h1>Events, conferences, podcast and training list up-to-date</h1>\n"
-html_content += "  <p>A tweet aggregator site dysplaying events, conferences, blogs, podcasts, certification and courses links that can be useful for data practitioners of all kinds. Hope you enjoy ;) </p>\n"
+html_content += "  <h1> Stay up-to-date with" + generic + "</h1>\n"
+html_content += "  <p>A tweet aggregator site of " + generic + " that brings together valuable resources. Hope you enjoy ;) </p>\n"
 
 # Aggiungi il codice per il grafico all'html_content
 html_content += "<div class='container'>\n"
@@ -498,7 +503,7 @@ html_content += "    }\n"
 html_content += "  }\n"
 html_content += "});\n"
 html_content += "</script>\n"
-html_content += "  <p>Last 60 days kewords tweeted stats by month</p>\n"
+html_content += "  <p>Last 60 days kewords tweeted by month</p>\n"
 html_content += "</head>\n"
 html_content += "<body>\n"
 
