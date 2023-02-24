@@ -99,7 +99,7 @@ a:visited {
 
 .container a.active,
 .container a:hover {
-  background-color: rgb(37, 26, 26);
+  background-color: #fff;
   color: rgb(0, 102, 255);
 }
 
