@@ -164,7 +164,7 @@ def make_link(text):
     links = re.findall(r'(https?:\/\/\S+)', text)
     # Sostituisci ogni occorrenza di link con il link cliccabile
     for link in links:
-        text = text.replace(link, f'<a href="{link}">{link}</a>')
+        text = text.replace(link, f'<a href="{link}" target="_blank">{link}</a>')
     return text
 
 # Crea una stringa vuota per il contenuto del file HTML
@@ -304,7 +304,7 @@ def make_link(text):
     links = re.findall(r'(https?:\/\/\S+)', text)
     # Sostituisci ogni occorrenza di link con il link cliccabile
     for link in links:
-        text = text.replace(link, f'<a href="{link}">{link}</a>')
+        text = text.replace(link, f'<a href="{link}" target="_blank">{link}</a>')
     return text
 
 # Crea una stringa vuota per il contenuto del file HTML
@@ -439,7 +439,7 @@ def make_link(text):
     links = re.findall(r'(https?:\/\/\S+)', text)
     # Sostituisci ogni occorrenza di link con il link cliccabile
     for link in links:
-        text = text.replace(link, f'<a href="{link}">{link}</a>')
+        text = text.replace(link, f'<a href="{link}" target="_blank">{link}</a>')
     return text
 
 # Crea una stringa vuota per il contenuto del file HTML
