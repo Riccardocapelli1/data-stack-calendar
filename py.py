@@ -21,6 +21,7 @@ countapi = countapilink.replace(countapilink,f'<script async src="{countapilink}
 
 #df Crea una lista dei profili di cui vuoi scaricare i tweet
 profiles = ["AirbnbEng","AirbyteHQ","alteryx","anacondainc","ansible","ApacheAirflow","ApacheArrow","ApacheCalcite","ApacheFlink","apachekafka","apachenifi","ApacheParquet","ApachePinot","astronomerio","AtScale","awscloud","Azure","Azure_Synapse","BrooklynData","castordoc_data","ClickHouseDB","census","confluentinc","coursera","thecubejs","dagster","dask_dev","databricks","datacamp","datadoghq","dataddo","datafoldcom","datameer","dataquestio","dbt_labs","DeepMind","DeltaLakeOSS","Docker","druidio","duckdb","duckdblabs","elastic","expectgreatdata","fastdotai","fivetran","getdbt","github","gitlab","googlecloud","GoogleCloudTech","GoogleColab","grafana","HevoData","_hex_tech","HightouchData","hydradatabase","IBMData","Integrateio","jenkinsci","khanacademy","kaggle","kdnuggets","keboola","ksqlDB","kubernetesio","lightdash_devs","LogiAnalytics","mage_ai","mariadb","Materialize","meltanodata","meroxadata","fb_engineering","metabase","MetaphorData","MicroStrategy","ModeAnalytics","moderndatastack","motherduck","montecarlodata","MTL_Analytics","myadverity","MySQL","MuleSoft","neondatabase","NetflixEng","numpy_team","observablehq","openshift","pandas_dev","HitachiVantara","phdatainc","PinterestEng","plotlygraphs","DataPolars","popsql","PostgreSQL","MSPowerBI","PrefectIO","preset_data","prestodb","ProjectJupyter","PyData","ThePSF","qlik","RAPIDSai","realpython","retool","RiveryData","SAPBTP","SASsoftware","ScyllaDB","SkyviaService","singer_io","Sisense","SnowflakeDB","snowplow","SpotifyEng","SQLServer","starburstdata","stitch_data","streamlit","Supermetrics","tableau","Talend","Teradata","HashiCorp","TIBCO","thoughtspot","TDataScience","transformio","trinodb","TwitterEng","UberEng","udacity","y42dotcom","YellowfinBI","Workato"]
+count=300
 
 #df2 definire le keyword da cercare
 keywords = ["BLOG","CERTIFICATION", "CONFERENCE", "COURSE", "EVENT", "PODCAST", "SUMMIT", "TRAINING","WEBINAR"]
@@ -30,11 +31,12 @@ keywords_generical = 'BLOG|EVENT|PODCAST|WEBINAR'
 
 # Crea una lista vuota per i tweet
 tweets = []
-
+screen_name = []
 # Scarica i tweet dei profili specificati
 for profile in profiles:
-    for tweet in api.user_timeline(screen_name=profile, count=300, include_rts=False, tweet_mode="extended"):
-        tweets.append([datetime.now(), tweet.created_at, tweet.created_at, tweet.user.screen_name, tweet.full_text])
+    screen_name = profile
+    for tweet in api.user_timeline(screen_name=screen_name, count=count, include_rts=False, tweet_mode="extended"):
+        tweets.append([datetime.now(), tweet.created_at.strftime('%Y-%m-%d %H:%M:%S %Z'), tweet.created_at.strftime('%Y-%m-%d %H:%M:%S %Z'), tweet.user.screen_name, tweet.full_text])
 
 # Crea un dataframe dei tweet scaricati
 df = pd.DataFrame(tweets, columns=['Datetime_now','Created_at', 'Time', 'User', 'Tweet'])
