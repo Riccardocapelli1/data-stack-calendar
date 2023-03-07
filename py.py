@@ -36,7 +36,7 @@ screen_name = []
 for profile in profiles:
     screen_name = profile
     for tweet in api.user_timeline(screen_name=screen_name, count=count, include_rts=False, tweet_mode="extended"):
-        tweets.append([datetime.now(), tweet.created_at.strftime('%Y-%m-%d %H:%M:%S %Z'), tweet.created_at.strftime('%Y-%m-%d %H:%M:%S %Z'), tweet.user.screen_name, tweet.full_text])
+        tweets.append([datetime.now(), tweet.created_at, tweet.created_at, tweet.user.screen_name, tweet.full_text])
 
 # Crea un dataframe dei tweet scaricati
 df = pd.DataFrame(tweets, columns=['Datetime_now','Created_at', 'Time', 'User', 'Tweet'])
